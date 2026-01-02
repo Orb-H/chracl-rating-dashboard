@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "npx biome lint",
+    "format": "npx biome format",
+    "check": "npx biome check"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
