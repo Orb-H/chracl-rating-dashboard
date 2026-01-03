@@ -1,3 +1,5 @@
+"use client";
+
 import {
   BookTextIcon,
   BrainIcon,
@@ -11,6 +13,7 @@ import {
   UsersIcon,
 } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Sidebar,
   SidebarContent,
@@ -24,14 +27,20 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-// TODO(#9): Add active state to the menu items based on the current route.
 export function MySidebar() {
+  const pathname = usePathname() ?? undefined;
+
+  const isActive = (href: string) => {
+    if (!href || !pathname) return false;
+    return pathname === href;
+  };
+
   return (
     <Sidebar>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild>
+            <SidebarMenuButton asChild isActive={isActive("/")}>
               <Link href="/">
                 {/* TODO(#9): Add custom icon if possible. */}
                 <HomeIcon className="inline" />{" "}
@@ -47,7 +56,7 @@ export function MySidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild isActive={isActive("#")}>
                   <Link href="#">
                     <TrophyIcon className="inline" />{" "}
                     <span>리더보드 (준비중)</span>
@@ -56,7 +65,7 @@ export function MySidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 {/* TODO(#9): Add collapsible to show players */}
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild isActive={isActive("#")}>
                   <Link href="#">
                     <UsersIcon className="inline" />{" "}
                     <span>참가자 목록 (준비중)</span>
@@ -65,7 +74,7 @@ export function MySidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 {/* TODO(#9): Add collapsible to show competitions */}
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild isActive={isActive("#")}>
                   <Link href="#">
                     <HistoryIcon className="inline" />{" "}
                     <span>대회 목록 (준비중)</span>
@@ -80,7 +89,7 @@ export function MySidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild isActive={isActive("#")}>
                   <Link href="#">
                     <BookTextIcon className="inline" />{" "}
                     <span>레이팅 시스템 소개 (준비중)</span>
@@ -88,7 +97,7 @@ export function MySidebar() {
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild isActive={isActive("#")}>
                   <Link href="#">
                     <BrainIcon className="inline" />{" "}
                     <span>레이팅 기반 예측 (준비중)</span>
@@ -96,7 +105,7 @@ export function MySidebar() {
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild isActive={isActive("#")}>
                   <Link href="#">
                     <ScrollTextIcon className="inline" />{" "}
                     <span>업데이트 로그 (준비중)</span>
