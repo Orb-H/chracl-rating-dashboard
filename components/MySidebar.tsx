@@ -1,6 +1,9 @@
+"use client";
+
 import {
   BookTextIcon,
   BrainIcon,
+  ChartLineIcon,
   GithubIcon,
   GlobeIcon,
   HistoryIcon,
@@ -11,6 +14,7 @@ import {
   UsersIcon,
 } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Sidebar,
   SidebarContent,
@@ -24,28 +28,35 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-// TODO(#9): Add active state to the menu items based on the current route.
 export function MySidebar() {
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (!href || !pathname) return false;
+    return pathname === href;
+  };
+
   return (
     <Sidebar>
       <SidebarHeader>
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton asChild>
-              <Link href="/">
-                {/* TODO(#9): Add custom icon if possible. */}
-                <HomeIcon className="inline" />{" "}
-                <span>치레동 레이팅 대시보드</span>
-              </Link>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
+        <SidebarMenuItem className="px-4 py-3 text-lg font-semibold">
+          {/* TODO(#9): Add custom icon if possible. */}
+          <ChartLineIcon className="inline" />{" "}
+          <span>치레동 레이팅 대시보드</span>
+        </SidebarMenuItem>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>메인</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild isActive={isActive("/")}>
+                  <Link href="/">
+                    <HomeIcon className="inline" /> <span>메인 페이지</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <Link href="#">
@@ -109,6 +120,8 @@ export function MySidebar() {
       </SidebarContent>
       <SidebarFooter>
         <SidebarGroup>
+          {/* TODO(#9): Add links to the replays of past competitions, as a collapsible item */}
+          {/* TODO(#9): Add a link to live Chzzk channel for live competition */}
           <SidebarGroupLabel>외부 링크</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
