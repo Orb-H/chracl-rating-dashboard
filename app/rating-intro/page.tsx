@@ -1,4 +1,4 @@
-import Markdown from "react-markdown";
+import Markdown, { Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 const markdown = `
@@ -76,7 +76,7 @@ export default function RatingIntro() {
     <main className="min-h-screen w-full max-w-3xl items-center py-32 px-16 bg-white dark:bg-black sm:items-start">
       <Markdown
         remarkPlugins={[remarkGfm]}
-        components={ShadcnTypographyRenderer}
+        components={ShadcnTypographyRenderer as Components}
       >
         {markdown}
       </Markdown>
