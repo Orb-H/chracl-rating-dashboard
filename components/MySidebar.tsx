@@ -3,6 +3,7 @@
 import {
   BookTextIcon,
   BrainIcon,
+  ChartLineIcon,
   GithubIcon,
   GlobeIcon,
   HistoryIcon,
@@ -38,23 +39,24 @@ export function MySidebar() {
   return (
     <Sidebar>
       <SidebarHeader>
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton asChild isActive={isActive("/")}>
-              <Link href="/">
-                {/* TODO(#9): Add custom icon if possible. */}
-                <HomeIcon className="inline" />{" "}
-                <span>치레동 레이팅 대시보드</span>
-              </Link>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
+        <SidebarMenuItem className="px-4 py-3 text-lg font-semibold">
+          {/* TODO(#9): Add custom icon if possible. */}
+          <ChartLineIcon className="inline" />{" "}
+          <span>치레동 레이팅 대시보드</span>
+        </SidebarMenuItem>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>메인</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild isActive={isActive("/")}>
+                  <Link href="/">
+                    <HomeIcon className="inline" /> <span>메인 페이지</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={isActive("#")}>
                   <Link href="#">
