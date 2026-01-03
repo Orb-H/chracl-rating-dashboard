@@ -45,61 +45,65 @@ export function MySidebar() {
         <SidebarGroup>
           <SidebarGroupLabel>메인</SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href="#">
-                  <TrophyIcon className="inline" />{" "}
-                  <span>리더보드 (준비중)</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              {/* TODO(#9): Add collapsible to show players */}
-              <SidebarMenuButton asChild>
-                <Link href="#">
-                  <UsersIcon className="inline" />{" "}
-                  <span>참가자 목록 (준비중)</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              {/* TODO(#9): Add collapsible to show competitions */}
-              <SidebarMenuButton asChild>
-                <Link href="#">
-                  <HistoryIcon className="inline" />{" "}
-                  <span>대회 목록 (준비중)</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="#">
+                    <TrophyIcon className="inline" />{" "}
+                    <span>리더보드 (준비중)</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                {/* TODO(#9): Add collapsible to show players */}
+                <SidebarMenuButton asChild>
+                  <Link href="#">
+                    <UsersIcon className="inline" />{" "}
+                    <span>참가자 목록 (준비중)</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                {/* TODO(#9): Add collapsible to show competitions */}
+                <SidebarMenuButton asChild>
+                  <Link href="#">
+                    <HistoryIcon className="inline" />{" "}
+                    <span>대회 목록 (준비중)</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
         <SidebarGroup>
           <SidebarGroupLabel>기타</SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href="#">
-                  <BookTextIcon className="inline" />{" "}
-                  <span>레이팅 시스템 소개 (준비중)</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href="#">
-                  <BrainIcon className="inline" />{" "}
-                  <span>레이팅 기반 예측 (준비중)</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href="#">
-                  <ScrollTextIcon className="inline" />{" "}
-                  <span>업데이트 로그 (준비중)</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="#">
+                    <BookTextIcon className="inline" />{" "}
+                    <span>레이팅 시스템 소개 (준비중)</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="#">
+                    <BrainIcon className="inline" />{" "}
+                    <span>레이팅 기반 예측 (준비중)</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="#">
+                    <ScrollTextIcon className="inline" />{" "}
+                    <span>업데이트 로그 (준비중)</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
@@ -107,27 +111,31 @@ export function MySidebar() {
         <SidebarGroup>
           <SidebarGroupLabel>외부 링크</SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href="https://github.com/Orb-H/chracl-rating-dashboard">
-                  <GithubIcon className="inline" /> <span>깃허브</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href="https://namu.wiki/w/%EC%B9%98%EB%A0%88%EB%8F%99">
-                  <GlobeIcon className="inline" /> <span>치레동 나무위키</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href="https://www.chzzk-racing.club/">
-                  <PresentationIcon className="inline" /> <span>치레보드</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="https://github.com/Orb-H/chracl-rating-dashboard">
+                    <GithubIcon className="inline" /> <span>깃허브</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="https://namu.wiki/w/%EC%B9%98%EB%A0%88%EB%8F%99">
+                    <GlobeIcon className="inline" />{" "}
+                    <span>치레동 나무위키</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="https://www.chzzk-racing.club/">
+                    <PresentationIcon className="inline" />{" "}
+                    <span>치레보드</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarFooter>
