@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { MySidebar } from "@/components/MySidebar";
-import { SidebarProvider } from "@/components/ui/sidebar";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${geistMono.variable} antialiased`}>
         <SidebarProvider>
           <MySidebar />
-          {children}
+          <SidebarInset>{children}</SidebarInset>
         </SidebarProvider>
       </body>
     </html>
