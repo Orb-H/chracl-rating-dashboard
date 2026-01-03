@@ -118,6 +118,8 @@ export function MySidebar() {
       </SidebarContent>
       <SidebarFooter>
         <SidebarGroup>
+          {/* TODO(#9): Add links to the replays of past competitions, as a collapsible item */}
+          {/* TODO(#9): Add a link to live Chzzk channel for live competition */}
           <SidebarGroupLabel>외부 링크</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
