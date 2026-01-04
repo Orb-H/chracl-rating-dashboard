@@ -77,7 +77,8 @@ export function MySidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 {/* TODO(#9): Add collapsible to show competitions */}
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild isActive={isActive("/competitions")}>
+                  {/* TODO(#14): Enable link to the real page when ready */}
                   <Link href="#">
                     <HistoryIcon className="inline" />{" "}
                     <span>대회 목록 (준비중)</span>
