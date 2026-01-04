@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "npx biome lint",
     "format": "npx biome format",
-    "check": "npx biome check"
+    "check": "npx biome check",
+    "prepare": "husky"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
