@@ -18,8 +18,8 @@ function loadData(): Record<string, Rating> {
   } catch (err) {
     const message =
       err instanceof Error
-        ? `Failed to load participants data from ${dataPath}: ${err.message}`
-        : `Failed to load participants data from ${dataPath}.`;
+        ? `Failed to load current rating data from ${dataPath}: ${err.message}`
+        : `Failed to load current rating data from ${dataPath}.`;
     throw new Error(message);
   }
 }
