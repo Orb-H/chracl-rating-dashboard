@@ -8,8 +8,8 @@ export type Participant = {
   // Optional list of aliases for the participant. E.g., ["형 독"]
   aliases?: string[];
 
-  // Map of seasons to tiers for the participant. E.g., [{ SEASON1: TIER2, SEASON2: TIER1 }]
-  tiers?: Map<string, Tier>[];
+  // Map of seasons to tiers for the participant. E.g., [{ "season1": "4", "season2": "4", "season3": "6" }]
+  tiers?: Record<string, Tier>[];
 
   // Optional racing number for the participant. E.g., 42
   racingNumber?: number;
