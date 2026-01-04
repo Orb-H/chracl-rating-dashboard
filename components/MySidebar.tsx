@@ -61,7 +61,7 @@ export function MySidebar() {
                 <SidebarMenuButton asChild>
                   <Link href="#">
                     <TrophyIcon className="inline" />{" "}
-                    <span>리더보드 (준비중)</span>
+                    <span>레이팅 리더보드 (준비중)</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -105,7 +105,7 @@ export function MySidebar() {
                 <SidebarMenuButton asChild>
                   <Link href="#">
                     <BrainIcon className="inline" />{" "}
-                    <span>레이팅 기반 예측 (준비중)</span>
+                    <span>가상 대결 예측 (준비중)</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -113,7 +113,7 @@ export function MySidebar() {
                 <SidebarMenuButton asChild>
                   <Link href="#">
                     <ScrollTextIcon className="inline" />{" "}
-                    <span>업데이트 로그 (준비중)</span>
+                    <span>업데이트 내역 (준비중)</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
