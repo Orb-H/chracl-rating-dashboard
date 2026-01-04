@@ -7,8 +7,22 @@ let participantsById: Record<string, Participant> | undefined = undefined;
 
 function loadData(): Participant[] {
   const dataPath = path.join(process.cwd(), "data", "participants.json");
-  const jsonData = fs.readFileSync(dataPath, "utf-8");
-  return JSON.parse(jsonData) as Participant[];
+
+  if (!fs.existsSync(dataPath)) {
+    throw new Error(`Participants data file not found at path: ${dataPath}`);
+  }
+
+  try {
+    const jsonData = fs.readFileSync(dataPath, "utf-8");
+    const parsed = JSON.parse(jsonData);
+    return parsed as Participant[];
+  } catch (err) {
+    const message =
+      err instanceof Error
+        ? `Failed to load participants data from ${dataPath}: ${err.message}`
+        : `Failed to load participants data from ${dataPath}.`;
+    throw new Error(message);
+  }
 }
 
 export function loadParticipants(): Participant[] {
