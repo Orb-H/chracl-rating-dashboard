@@ -1,4 +1,5 @@
 import { ConstructionIcon } from "lucide-react";
+import { notFound } from "next/navigation";
 import {
   Empty,
   EmptyDescription,
@@ -25,6 +26,10 @@ export default async function Participant({
 }) {
   const id = (await params).id;
   const participant = loadParticipantById(id);
+
+  if (!participant) {
+    return notFound();
+  }
 
   return (
     <main className="min-h-screen w-full max-w-3xl items-center py-32 px-16 bg-white dark:bg-black sm:items-start">
