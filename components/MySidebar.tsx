@@ -67,7 +67,8 @@ export function MySidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 {/* TODO(#9): Add collapsible to show players */}
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild isActive={isActive("/participants")}>
+                  {/* TODO(#10): Enable link to the real page when ready */}
                   <Link href="#">
                     <UsersIcon className="inline" />{" "}
                     <span>참가자 목록 (준비중)</span>
