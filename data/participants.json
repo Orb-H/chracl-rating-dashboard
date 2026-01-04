@@ -1,0 +1,395 @@
+[
+  {
+    "id": "yona",
+    "displayName": "요나",
+    "aliases": [],
+    "tiers": {
+      "season1": "3",
+      "season2": "3",
+      "season3": "5"
+    },
+    "racingNumber": 2,
+    "channelId": "7c52f0becffdf297fcd74c037aeca750"
+  },
+  {
+    "id": "chochou",
+    "displayName": "쵸쵸우",
+    "aliases": [],
+    "tiers": {
+      "season1": "2",
+      "season2": "1",
+      "season3": "3"
+    },
+    "racingNumber": 3,
+    "channelId": "6ec2829475b485474e7bd1df449cb160"
+  },
+  {
+    "id": "reana",
+    "displayName": "레아나",
+    "aliases": ["레아나 Reana"],
+    "tiers": {
+      "season3": "1"
+    },
+    "racingNumber": 4,
+    "channelId": "dcf8337aa57ed257b1c76bafbdb5c054"
+  },
+  {
+    "id": "park-insoo",
+    "displayName": "박인수",
+    "aliases": ["박인수님"],
+    "tiers": {
+      "season2": "4",
+      "season3": "6"
+    },
+    "racingNumber": 6,
+    "channelId": "b606f3cf911e989caf67b9a1794891dd"
+  },
+  {
+    "id": "hyungdok",
+    "displayName": "형독",
+    "aliases": ["형 독"],
+    "tiers": {
+      "season1": "4",
+      "season2": "4",
+      "season3": "6"
+    },
+    "racingNumber": 7,
+    "channelId": "aeb5b654cad7a2c0a0e6633a6d6de4aa"
+  },
+  {
+    "id": "kim-toki",
+    "displayName": "김토키",
+    "aliases": [],
+    "tiers": {
+      "season2": "2",
+      "season3": "4"
+    },
+    "racingNumber": 8,
+    "channelId": "fc1141b66bf941e151e467ceef713acc"
+  },
+  {
+    "id": "sdsd97",
+    "displayName": "새담",
+    "aliases": ["새 담"],
+    "tiers": {
+      "season3": "1+"
+    },
+    "racingNumber": 9,
+    "channelId": "ca76c17a026bb41e6ff9e3fc5641de63"
+  },
+  {
+    "id": "kanetv8",
+    "displayName": "케인",
+    "aliases": [],
+    "tiers": {
+      "season2": "1",
+      "season3": "1"
+    },
+    "racingNumber": 11,
+    "channelId": "7b1acb37b35928ff690d011296a9e5ab"
+  },
+  {
+    "id": "namgung-hyuk",
+    "displayName": "남궁혁",
+    "aliases": [],
+    "tiers": {
+      "season1": "4",
+      "season2": "4",
+      "season3": "6"
+    },
+    "racingNumber": 14,
+    "channelId": "2cc562e9370970d567c1a25c5c7d0e77"
+  },
+  {
+    "id": "yu-yeonghyeok",
+    "displayName": "유영혁",
+    "aliases": ["유 영 혁"],
+    "tiers": {
+      "season3": "4+"
+    },
+    "racingNumber": 17,
+    "channelId": "1e552e3c8ac6abefb4f22f314bbb6b30"
+  },
+  {
+    "id": "mytyl-maerchen",
+    "displayName": "미치르 메르헨",
+    "aliases": ["미치르"],
+    "tiers": {
+      "season3": "1+"
+    },
+    "racingNumber": 19,
+    "channelId": "390efc6c5186f85427b2d61297a9d4ed"
+  },
+  {
+    "id": "zen1th-hwang",
+    "displayName": "제황",
+    "aliases": [],
+    "tiers": {
+      "season2": "4",
+      "season3": "5"
+    },
+    "racingNumber": 21,
+    "channelId": "746c8b5620110859dd5bc37509f2048c"
+  },
+  {
+    "id": "psy-haruto",
+    "displayName": "하루토",
+    "aliases": [],
+    "tiers": {
+      "season3": "3"
+    },
+    "racingNumber": 24,
+    "channelId": "4f891095bc91025428ba2e8c375ef86c"
+  },
+  {
+    "id": "reo",
+    "displayName": "김레오",
+    "aliases": ["김 레 오"],
+    "tiers": {
+      "season1": "3",
+      "season2": "3",
+      "season3": "5"
+    },
+    "racingNumber": 25,
+    "channelId": "39bfa909acb03a83977e39e7ca29d9ed"
+  },
+  {
+    "id": "oversleepzzz",
+    "displayName": "늦잠",
+    "aliases": [],
+    "tiers": {
+      "season1": "2",
+      "season2": "2",
+      "season3": "3+"
+    },
+    "racingNumber": 31,
+    "channelId": "e9ff6a0d42f604ac57fcd53f1c3b9bc0"
+  },
+  {
+    "id": "u-lili",
+    "displayName": "유리리",
+    "aliases": [],
+    "tiers": {
+      "season3": "1+"
+    },
+    "racingNumber": 33,
+    "channelId": "29a1ed5c0829fa620fab900dba7e011b"
+  },
+  {
+    "id": "samozang",
+    "displayName": "사모장",
+    "aliases": [],
+    "tiers": {
+      "season3": "4+"
+    },
+    "racingNumber": 35,
+    "channelId": "23d5909c6b808d80ee28a9a2d509fecc"
+  },
+  {
+    "id": "cheongalice",
+    "displayName": "강지형",
+    "aliases": [],
+    "tiers": {
+      "season1": "3",
+      "season2": "4",
+      "season3": "5"
+    },
+    "racingNumber": 38,
+    "channelId": "9eef2be9e25d137c0f55b13673e40749"
+  },
+  {
+    "id": "kevinstudio",
+    "displayName": "최케빈",
+    "aliases": ["최케빈님"],
+    "tiers": {
+      "season3": "2"
+    },
+    "racingNumber": 40,
+    "channelId": "a72c9f9c3d835078b97a520dded8e6d2"
+  },
+  {
+    "id": "hamkubby",
+    "displayName": "햄쿠비",
+    "aliases": [],
+    "tiers": {
+      "season1": "1",
+      "season2": "2",
+      "season3": "3"
+    },
+    "racingNumber": 44,
+    "channelId": "9351fb8417f73405c84e0846409e3263"
+  },
+  {
+    "id": "half",
+    "displayName": "하쁘",
+    "aliases": ["하 쁘"],
+    "tiers": {
+      "season3": "1"
+    },
+    "racingNumber": 50,
+    "channelId": "79bc9b927d5c187f9d8fa5a56b194c37"
+  },
+  {
+    "id": "hera",
+    "displayName": "헤라",
+    "aliases": ["HERA 헤라"],
+    "tiers": {
+      "season1": "2",
+      "season2": "2",
+      "season3": "4"
+    },
+    "racingNumber": 55,
+    "channelId": "b14e49789bae3c00b6b4c98d60ff036d"
+  },
+  {
+    "id": "odanming",
+    "displayName": "오단밍",
+    "aliases": [],
+    "tiers": {
+      "season1": "1",
+      "season2": "2",
+      "season3": "3+"
+    },
+    "racingNumber": 61,
+    "channelId": "f3b204dd3fd6925835ca1848cd4b6d3c"
+  },
+  {
+    "id": "ichika-hibi",
+    "displayName": "이치카 히비",
+    "aliases": ["히비"],
+    "tiers": {
+      "season3": "1+"
+    },
+    "racingNumber": 67,
+    "channelId": "206afc6829e734e662ed0bf24dcbac0e"
+  },
+  {
+    "id": "parkgee",
+    "displayName": "박지",
+    "aliases": ["박지 Parkgee"],
+    "tiers": {
+      "season2": "3",
+      "season3": "4"
+    },
+    "racingNumber": 69,
+    "channelId": "bfb6ce1590bb82b28f0f69b7b4290b4c"
+  },
+  {
+    "id": "auro",
+    "displayName": "아로",
+    "aliases": ["아로AURO"],
+    "tiers": {
+      "season3": "1"
+    },
+    "racingNumber": 70,
+    "channelId": "4a3cab967a74a5020258195fc9004145"
+  },
+  {
+    "id": "lotionyum",
+    "displayName": "로션욤",
+    "aliases": [],
+    "tiers": {
+      "season3": "2"
+    },
+    "racingNumber": 71,
+    "channelId": "e234729686832d379d7da804517ac9d9"
+  },
+  {
+    "id": "nodolly",
+    "displayName": "노돌리",
+    "aliases": ["노돌노돌리"],
+    "tiers": {
+      "season2": "3",
+      "season3": "4"
+    },
+    "racingNumber": 72,
+    "channelId": "ec857bee6cded06df19dae85cf37f878"
+  },
+  {
+    "id": "yang-mei",
+    "displayName": "양메이",
+    "aliases": [],
+    "tiers": {
+      "season1": "2",
+      "season2": "1",
+      "season3": "3"
+    },
+    "racingNumber": 77,
+    "channelId": "f1869f490ddd660c420b2f57c649e6bb"
+  },
+  {
+    "id": "eaglekop",
+    "displayName": "이글콥",
+    "aliases": [],
+    "tiers": {
+      "season2": "1",
+      "season3": "2"
+    },
+    "racingNumber": 89,
+    "channelId": "eaf7b569c9992d0e57db0059eb5c0eeb"
+  },
+  {
+    "id": "bbogumi",
+    "displayName": "뽀구미",
+    "aliases": ["뽀구미짱짱"],
+    "tiers": {
+      "season2": "3",
+      "season3": "4"
+    },
+    "racingNumber": 92,
+    "channelId": "da31fe9ebc06add9bd66ac1bcc1c2f23"
+  },
+  {
+    "id": "100hp-tv",
+    "displayName": "백마력티비",
+    "aliases": ["백마력"],
+    "tiers": {
+      "season3": "4+"
+    },
+    "racingNumber": 95,
+    "channelId": "a3028b1a9bb675ec442b3a052a15e7e4"
+  },
+  {
+    "id": "haematl",
+    "displayName": "해마티엘",
+    "aliases": [],
+    "tiers": {
+      "season3": "4"
+    },
+    "racingNumber": 96,
+    "channelId": "769efbb252d48296224621451c6a1d9a"
+  },
+  {
+    "id": "moon-hojun",
+    "displayName": "문호준",
+    "aliases": ["카트문호준"],
+    "tiers": {
+      "season2": "3",
+      "season3": "4"
+    },
+    "racingNumber": 97,
+    "channelId": "3095308f0014e0b48de7787498a52c1f"
+  },
+  {
+    "id": "saessakgamja",
+    "displayName": "새싹감자",
+    "aliases": ["새싹 감자"],
+    "tiers": {
+      "season3": "3"
+    },
+    "racingNumber": 98,
+    "channelId": "4fa802e51ccdbfd071d3df494e329ee1"
+  },
+  {
+    "id": "a2-duck",
+    "displayName": "서애덕",
+    "aliases": [],
+    "tiers": {
+      "season1": "1",
+      "season2": "2",
+      "season3": "3"
+    },
+    "racingNumber": 99,
+    "channelId": "643d491a022eaf3991f0576c7a2a97d4"
+  }
+]
