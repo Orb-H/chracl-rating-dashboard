@@ -39,5 +39,9 @@ export function loadParticipantsById(): Record<string, Participant> {
 }
 
 export function loadParticipantById(id: string): Participant {
-  return loadParticipantsById()[id];
+  const participant = loadParticipantsById()[id];
+  if (!participant) {
+    throw new Error(`Participant with id "${id}" not found`);
+  }
+  return participant;
 }
