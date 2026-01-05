@@ -4,6 +4,8 @@ import {
   BookTextIcon,
   BrainIcon,
   ChartLineIcon,
+  ChevronRightIcon,
+  ClapperboardIcon,
   GithubIcon,
   GlobeIcon,
   HistoryIcon,
@@ -12,9 +14,16 @@ import {
   ScrollTextIcon,
   TrophyIcon,
   UsersIcon,
+  VideoIcon,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import {
   Sidebar,
   SidebarContent,
@@ -123,11 +132,44 @@ export function MySidebar() {
       </SidebarContent>
       <SidebarFooter>
         <SidebarGroup>
-          {/* TODO(#9): Add links to the replays of past competitions, as a collapsible item */}
-          {/* TODO(#9): Add a link to live Chzzk channel for live competition */}
           <SidebarGroupLabel>외부 링크</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="https://chzzk.naver.com/live/2cc562e9370970d567c1a25c5c7d0e77">
+                    <VideoIcon className="inline" /> <span>치레동 생중계</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <DropdownMenu modal={false}>
+                  <DropdownMenuTrigger asChild>
+                    <SidebarMenuButton className="w-full">
+                      <ClapperboardIcon className="inline" />{" "}
+                      <span>치레동 다시보기</span>
+                      <ChevronRightIcon className="inline ml-auto" />
+                    </SidebarMenuButton>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent side="right" className="rounded-lg">
+                    <DropdownMenuItem>
+                      <Link href="https://chzzk.naver.com/video/6994458">
+                        제 1회: 고속도로 배틀
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="https://chzzk.naver.com/video/8108679">
+                        제 2회: 포뮬러 그랑프리
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="https://chzzk.naver.com/video/10393351">
+                        제 3회: 레인 헬
+                      </Link>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <Link href="https://github.com/Orb-H/chracl-rating-dashboard">
