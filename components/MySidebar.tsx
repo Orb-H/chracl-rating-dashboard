@@ -35,6 +35,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  useSidebar,
 } from "@/components/ui/sidebar";
 
 export function MySidebar() {
@@ -44,6 +45,8 @@ export function MySidebar() {
     if (!href || !pathname) return false;
     return pathname === href;
   };
+
+  const sidebar = useSidebar();
 
   return (
     <Sidebar>
@@ -151,7 +154,11 @@ export function MySidebar() {
                       <ChevronRightIcon className="inline ml-auto" />
                     </SidebarMenuButton>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent side="right" className="rounded-lg">
+                  <DropdownMenuContent
+                    side={sidebar.isMobile ? "bottom" : "right"}
+                    align={sidebar.isMobile ? "end" : "center"}
+                    className="rounded-lg"
+                  >
                     <DropdownMenuItem>
                       <Link href="https://chzzk.naver.com/video/6994458">
                         제 1회: 고속도로 배틀
