@@ -21,6 +21,7 @@ import { usePathname } from "next/navigation";
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
@@ -141,8 +142,8 @@ export function MySidebar() {
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
-              <DropdownMenu>
-                <SidebarMenuItem>
+              <SidebarMenuItem>
+                <DropdownMenu modal={false}>
                   <DropdownMenuTrigger asChild>
                     <SidebarMenuButton className="w-full">
                       <ClapperboardIcon className="inline" />{" "}
@@ -151,36 +152,24 @@ export function MySidebar() {
                     </SidebarMenuButton>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent side="right" className="rounded-lg">
-                    <SidebarMenu>
-                      <SidebarMenuItem>
-                        <SidebarMenuButton asChild>
-                          <Link href="https://chzzk.naver.com/video/6994458">
-                            제 1회: 고속도로 배틀
-                          </Link>
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    </SidebarMenu>
-                    <SidebarMenu>
-                      <SidebarMenuItem>
-                        <SidebarMenuButton asChild>
-                          <Link href="https://chzzk.naver.com/video/8108679">
-                            제 2회: 포뮬러 그랑프리
-                          </Link>
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    </SidebarMenu>
-                    <SidebarMenu>
-                      <SidebarMenuItem>
-                        <SidebarMenuButton asChild>
-                          <Link href="https://chzzk.naver.com/video/10393351">
-                            제 3회: 레인 헬
-                          </Link>
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    </SidebarMenu>
+                    <DropdownMenuItem>
+                      <Link href="https://chzzk.naver.com/video/6994458">
+                        제 1회: 고속도로 배틀
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="https://chzzk.naver.com/video/8108679">
+                        제 2회: 포뮬러 그랑프리
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="https://chzzk.naver.com/video/10393351">
+                        제 3회: 레인 헬
+                      </Link>
+                    </DropdownMenuItem>
                   </DropdownMenuContent>
-                </SidebarMenuItem>
-              </DropdownMenu>
+                </DropdownMenu>
+              </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <Link href="https://github.com/Orb-H/chracl-rating-dashboard">
