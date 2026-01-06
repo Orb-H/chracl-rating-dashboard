@@ -23,7 +23,7 @@ export default function Leaderboard() {
     .map(([key, participant]) => {
       return {
         ...participant,
-        ...(currentRating[key] ?? {}),
+        ...(currentRating[key] ?? { value: Number.MIN_SAFE_INTEGER }),
       };
     })
     .slice()
@@ -53,7 +53,7 @@ export default function Leaderboard() {
           {participantsWithCurrentRating.map((participant, i) => (
             <TableRow key={participant.id}>
               <TableCell className="font-mono">
-                {participant.value ? i + 1 : "-"}
+                {participant.mu ? i + 1 : "-"}
               </TableCell>
               <TableCell>
                 <Avatar className="inline-block align-middle">
@@ -74,9 +74,7 @@ export default function Leaderboard() {
                 {participant.tiers ? participant.tiers[currentSeason] : "-"}
               </TableCell>
               <TableCell className="font-mono">
-                {participant.value
-                  ? roundToTwoDecimals(participant.value)
-                  : "-"}
+                {participant.mu ? roundToTwoDecimals(participant.value) : "-"}
               </TableCell>
               <TableCell className="font-mono">
                 {participant.mu ? roundToTwoDecimals(participant.mu) : "-"}
