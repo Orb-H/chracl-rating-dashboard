@@ -11,7 +11,7 @@ import {
 import { loadCurrentRating } from "@/lib/loadCurrentRating";
 import { loadParticipantsById } from "@/lib/loadParticipants";
 
-const columns = ["순위", "이름", "티어", "레이팅", "μ값"];
+const columns = ["순위", "참가자", "티어", "레이팅", "μ값"];
 // TODO: Set current season as a global constant.
 const currentSeason = "season3";
 
