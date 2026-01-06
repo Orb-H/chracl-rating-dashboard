@@ -37,6 +37,7 @@ export default function Leaderboard() {
         </p>
       </header>
       {/* TODO(#40): Add a point graph to map participant by rating value */}
+      {/* TODO(#40): Add a popup component to describe about what "티어" and "평균" is */}
       <Table>
         <TableHeader>
           <TableRow>
