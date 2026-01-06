@@ -14,6 +14,9 @@ export type Participant = {
   // Optional racing number for the participant. E.g., 42
   racingNumber?: number;
 
+  // Optional avatar image URL for the participant. E.g., "/participants/hyungdok.png"
+  avatarUrl?: string;
+
   // The channel ID of Chzzk associated with the participant. A format of [a-f0-9]{32}. E.g., "aeb5b654cad7a2c0a0e6633a6d6de4aa"
   channelId: string;
 };
