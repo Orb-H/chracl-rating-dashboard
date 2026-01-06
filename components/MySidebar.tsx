@@ -71,6 +71,7 @@ export function MySidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={isActive("/leaderboard")}>
+                  {/* TODO(#40): Enable link to the real page when ready */}
                   <Link href="#">
                     <TrophyIcon className="inline" />{" "}
                     <span>레이팅 리더보드 (준비중)</span>
