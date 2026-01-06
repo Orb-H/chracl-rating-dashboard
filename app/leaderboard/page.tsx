@@ -10,7 +10,7 @@ import {
 export default function Leaderboard() {
   return (
     <main className="min-h-screen w-full max-w-3xl items-center py-32 px-16 bg-white dark:bg-black sm:items-start">
-      {/* TODO(#10): Fill with concrete content */}
+      {/* TODO(#40): Fill with concrete content */}
       <Empty>
         <EmptyHeader>
           <EmptyMedia>
