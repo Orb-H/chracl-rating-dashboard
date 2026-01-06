@@ -1,4 +1,4 @@
-export type Participant = {
+export type Player = {
   // Unique identifier for the participant. A format of [a-zA-Z0-9-]+. E.g., "hyungdok"
   id: string;
 

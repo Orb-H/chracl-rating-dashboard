@@ -7,12 +7,12 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@/components/ui/empty";
-import { loadParticipantById, loadParticipants } from "@/lib/loadParticipants";
+import { loadPlayerById, loadPlayers } from "@/lib/loadPlayers";
 
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const participants = loadParticipants();
+  const participants = loadPlayers();
 
   return participants.map((participant) => ({
     id: participant.id,
@@ -25,7 +25,7 @@ export default async function Participant({
   params: Promise<{ id: string }>;
 }) {
   const id = (await params).id;
-  const participant = loadParticipantById(id);
+  const participant = loadPlayerById(id);
 
   if (!participant) {
     return notFound();
@@ -42,7 +42,7 @@ export default async function Participant({
           <EmptyTitle>준비중입니다.</EmptyTitle>
           <EmptyDescription>
             현재 레이아웃 작업 및 데이터 확보 작업을 진행중입니다. 곧{" "}
-            <b>{participant.displayName}</b>님의 데이터를 준비할게요!
+            <b>{participant.displayName}</b> 선수의 데이터를 준비할게요!
           </EmptyDescription>
         </EmptyHeader>
       </Empty>
