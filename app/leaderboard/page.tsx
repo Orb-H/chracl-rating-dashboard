@@ -9,7 +9,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { loadCurrentRating } from "@/lib/loadCurrentRating";
-import { loadParticipantsById } from "@/lib/loadParticipants";
+import { loadPlayersById } from "@/lib/loadPlayers";
 
 const columns = ["순위", "선수", "티어", "레이팅", "μ값"];
 // TODO: Set current season as a global constant.
@@ -17,12 +17,12 @@ const currentSeason = "season3";
 
 export default function Leaderboard() {
   const currentRating = loadCurrentRating();
-  const participants = loadParticipantsById();
+  const players = loadPlayersById();
 
-  const participantsWithCurrentRating = Object.entries(participants)
-    .map(([key, participant]) => {
+  const playersWithCurrentRating = Object.entries(players)
+    .map(([key, player]) => {
       return {
-        ...participant,
+        ...player,
         ...(currentRating[key] ?? { value: Number.MIN_SAFE_INTEGER }),
       };
     })
@@ -37,7 +37,7 @@ export default function Leaderboard() {
           치레동 선수들의 현재 레이팅 순위를 확인하세요.
         </p>
       </header>
-      {/* TODO(#40): Add a point graph to map participant by rating value */}
+      {/* TODO(#40): Add a point graph to map player by rating value */}
       {/* TODO(#40): Add a popup component to describe about what "티어", "레이팅", and "μ값" is */}
       <Table>
         <TableHeader>
@@ -48,36 +48,36 @@ export default function Leaderboard() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {/* TODO(#40): Make each row to direct to participant detail page */}
+          {/* TODO(#40): Make each row to direct to player detail page */}
           {/* TODO(#40): Change color palette of the row by tier value */}
-          {participantsWithCurrentRating.map((participant, i) => (
-            <TableRow key={participant.id}>
+          {playersWithCurrentRating.map((player, i) => (
+            <TableRow key={player.id}>
               <TableCell className="font-mono">
-                {participant.mu ? i + 1 : "-"}
+                {player.mu ? i + 1 : "-"}
               </TableCell>
               <TableCell>
                 <Avatar className="inline-block align-middle">
                   <AvatarImage
-                    src={participant.avatarUrl}
-                    alt={participant.displayName}
+                    src={player.avatarUrl}
+                    alt={player.displayName}
                     className="object-cover"
                   />
                   <AvatarFallback>
-                    {participant.displayName?.[0] || ""}
+                    {player.displayName?.[0] || ""}
                   </AvatarFallback>
                 </Avatar>
                 <span className="ml-2 inline-block align-middle">
-                  {participant.displayName}
+                  {player.displayName}
                 </span>
               </TableCell>
               <TableCell>
-                {participant.tiers ? participant.tiers[currentSeason] : "-"}
+                {player.tiers ? player.tiers[currentSeason] : "-"}
               </TableCell>
               <TableCell className="font-mono">
-                {participant.mu ? roundToTwoDecimals(participant.value) : "-"}
+                {player.mu ? roundToTwoDecimals(player.value) : "-"}
               </TableCell>
               <TableCell className="font-mono">
-                {participant.mu ? roundToTwoDecimals(participant.mu) : "-"}
+                {player.mu ? roundToTwoDecimals(player.mu) : "-"}
               </TableCell>
             </TableRow>
           ))}

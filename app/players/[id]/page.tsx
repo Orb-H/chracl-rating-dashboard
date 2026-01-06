@@ -7,12 +7,12 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@/components/ui/empty";
-import { loadParticipantById, loadParticipants } from "@/lib/loadParticipants";
+import { loadPlayerById, loadPlayers } from "@/lib/loadPlayers";
 
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const participants = loadParticipants();
+  const participants = loadPlayers();
 
   return participants.map((participant) => ({
     id: participant.id,
@@ -25,7 +25,7 @@ export default async function Participant({
   params: Promise<{ id: string }>;
 }) {
   const id = (await params).id;
-  const participant = loadParticipantById(id);
+  const participant = loadPlayerById(id);
 
   if (!participant) {
     return notFound();

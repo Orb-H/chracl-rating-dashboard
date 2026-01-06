@@ -80,7 +80,7 @@ export function MySidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 {/* TODO(#9): Add collapsible to show players */}
-                <SidebarMenuButton asChild isActive={isActive("/participants")}>
+                <SidebarMenuButton asChild isActive={isActive("/players")}>
                   {/* TODO(#10): Enable link to the real page when ready */}
                   <Link href="#">
                     <UsersIcon className="inline" />{" "}
