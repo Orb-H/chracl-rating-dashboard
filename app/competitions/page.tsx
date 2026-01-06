@@ -9,7 +9,7 @@ import {
 
 export default function Competitions() {
   return (
-    <main className="min-h-screen w-full max-w-3xl items-center py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <main className="min-h-screen w-full max-w-3xl items-center py-16 px-8 md:py-32 md:px-16 bg-white dark:bg-black sm:items-start">
       <Empty>
         <EmptyHeader>
           <EmptyMedia>
