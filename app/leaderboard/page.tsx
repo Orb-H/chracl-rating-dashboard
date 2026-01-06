@@ -11,7 +11,7 @@ import {
 import { loadCurrentRating } from "@/lib/loadCurrentRating";
 import { loadParticipantsById } from "@/lib/loadParticipants";
 
-const columns = ["순위", "참가자", "티어", "레이팅", "μ값"];
+const columns = ["순위", "선수", "티어", "레이팅", "μ값"];
 // TODO: Set current season as a global constant.
 const currentSeason = "season3";
 
@@ -34,7 +34,7 @@ export default function Leaderboard() {
       <header className="mb-8 w-full">
         <h1 className="text-4xl font-bold">레이팅 리더보드</h1>
         <p className="mt-2 text-lg text-muted-foreground">
-          치레동 참가자들의 현재 레이팅 순위를 확인하세요.
+          치레동 선수들의 현재 레이팅 순위를 확인하세요.
         </p>
       </header>
       {/* TODO(#40): Add a point graph to map participant by rating value */}

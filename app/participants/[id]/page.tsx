@@ -42,7 +42,7 @@ export default async function Participant({
           <EmptyTitle>준비중입니다.</EmptyTitle>
           <EmptyDescription>
             현재 레이아웃 작업 및 데이터 확보 작업을 진행중입니다. 곧{" "}
-            <b>{participant.displayName}</b>님의 데이터를 준비할게요!
+            <b>{participant.displayName}</b> 선수의 데이터를 준비할게요!
           </EmptyDescription>
         </EmptyHeader>
       </Empty>

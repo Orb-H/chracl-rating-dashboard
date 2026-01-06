@@ -84,7 +84,7 @@ export function MySidebar() {
                   {/* TODO(#10): Enable link to the real page when ready */}
                   <Link href="#">
                     <UsersIcon className="inline" />{" "}
-                    <span>참가자 목록 (준비중)</span>
+                    <span>선수 목록 (준비중)</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
