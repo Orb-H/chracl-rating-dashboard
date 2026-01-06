@@ -44,7 +44,11 @@ export default function Leaderboard() {
             <TableRow key={participant.id}>
               <TableCell>
                 <Avatar>
-                  <AvatarImage></AvatarImage>
+                  <AvatarImage
+                    src={participant.avatarUrl}
+                    alt={participant.displayName}
+                    className="object-cover"
+                  />
                   <AvatarFallback>{participant.displayName[0]}</AvatarFallback>
                 </Avatar>
               </TableCell>
