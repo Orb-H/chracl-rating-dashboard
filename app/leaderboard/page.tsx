@@ -30,7 +30,7 @@ export default function Leaderboard() {
     .sort((a, b) => b.value - a.value);
 
   return (
-    <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-white dark:bg-black sm:items-start">
+    <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-white dark:bg-black md:items_start">
       <header className="mb-8 w-full">
         <h1 className="text-4xl font-bold">레이팅 리더보드</h1>
         <p className="mt-2 text-lg text-muted-foreground">
