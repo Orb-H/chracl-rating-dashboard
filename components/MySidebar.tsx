@@ -70,7 +70,7 @@ export function MySidebar() {
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild isActive={isActive("/leaderboard")}>
                   <Link href="#">
                     <TrophyIcon className="inline" />{" "}
                     <span>레이팅 리더보드 (준비중)</span>
