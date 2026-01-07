@@ -1,0 +1,29 @@
+{
+  "id": "season1",
+  "name": "제 1회 치지직 레이싱 동아리: 고속도로 배틀",
+  "teams": [
+    {
+      "id": "season1-team-a",
+      "name": "A팀",
+      "members": ["namgung-hyuk", "odanming", "chochou"]
+    },
+    {
+      "id": "season1-team-b",
+      "name": "B팀",
+      "members": ["hyungdok", "hamkubby", "reo"]
+    },
+    {
+      "id": "season1-team-c",
+      "name": "C팀",
+      "members": ["cheongalice", "oversleepzzz", "hera"]
+    },
+    {
+      "id": "season1-team-d",
+      "name": "D팀",
+      "members": ["yona", "a2-duck", "yang-mei"]
+    }
+  ],
+  "pointsSchemes": {
+    "default": [20, 17, 15, 13, 11, 9, 7, 5, 3, 2, 1, 0]
+  }
+}
