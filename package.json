@@ -8,7 +8,6 @@
     "build": "next build",
     "build:wp": "next build --webpack",
     "start": "next start",
-    "start:wp": "next start --webpack",
     "lint": "npx biome lint",
     "format": "npx biome format",
     "check": "npx biome check",
