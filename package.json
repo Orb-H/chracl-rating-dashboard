@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:wp": "next dev --webpack",
     "build": "next build",
+    "build:wp": "next build --webpack",
     "start": "next start",
     "lint": "npx biome lint",
     "format": "npx biome format",
