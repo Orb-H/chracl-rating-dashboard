@@ -51,10 +51,16 @@ export function loadCompetitions(): Competition[] {
 }
 
 export function loadCompetitionsById(): Record<string, Competition> {
-  if (competitionsById === undefined)
+  if (competitionsById === undefined) {
+    const ids = loadCompetitions().map((competition) => competition.id);
+    if (ids.length !== new Set(ids).size) {
+      throw new Error(`Duplicate competition IDs found in competitions data.`);
+    }
+
     competitionsById = Object.fromEntries(
       loadCompetitions().map((competition) => [competition.id, competition]),
     );
+  }
   return competitionsById;
 }
 
