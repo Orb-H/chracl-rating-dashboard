@@ -1,0 +1,64 @@
+{
+  "id": "season3",
+  "name": "제 3회 치지직 레이싱 동아리: 레인 헬",
+  "teams": [
+    {
+      "id": "season3-team-namgung-hyuk",
+      "name": "혁이네어뢰시장",
+      "members": [
+        "namgung-hyuk",
+        "hera",
+        "kim-toki",
+        "kevinstudio",
+        "eaglekop",
+        "u-lili"
+      ]
+    },
+    {
+      "id": "season3-team-hyungdok",
+      "name": "래피드",
+      "members": [
+        "hyungdok",
+        "yu-yeonghyeok",
+        "odanming",
+        "haematl",
+        "reana",
+        "oversleepzzz"
+      ]
+    },
+    {
+      "id": "season3-team-zen1th-hwang",
+      "name": "식스센스",
+      "members": [
+        "zen1th-hwang",
+        "100hp-tv",
+        "yang-mei",
+        "a2-duck",
+        "ichika-hibi",
+        "mytyl-maerchen"
+      ]
+    },
+    {
+      "id": "season3-team-yona",
+      "name": "강지형연습왜안옴ㅡㅡ",
+      "members": [
+        "yona",
+        "cheongalice",
+        "saessakgamja",
+        "chochou",
+        "half",
+        "lotionyum"
+      ]
+    },
+    {
+      "id": "season3-team-reo",
+      "name": "좡",
+      "members": ["reo", "samozang", "bbogumi", "psy-haruto", "sdsd97", "auro"]
+    }
+  ],
+  "pointsSchemes": {
+    "stint1": [10, 8, 6, 5, 4, 3, 2, 1, 0, 0],
+    "stint2": [15, 12, 10, 8, 6, 5, 4, 3, 2, 1],
+    "stint3": [25, 18, 15, 12, 10, 8, 6, 4, 2, 1]
+  }
+}
