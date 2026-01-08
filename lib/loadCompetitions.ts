@@ -14,23 +14,35 @@ function loadData(): Competition[] {
     );
   }
 
+  let fileNames: string[];
   try {
-    const fileNames = fs
+    fileNames = fs
       .readdirSync(dataDir)
       .filter((file) => file.endsWith(".json"));
-    const competitionsData: Competition[] = fileNames.map((fileName) => {
-      const filePath = path.join(dataDir, fileName);
-      const jsonData = fs.readFileSync(filePath, "utf-8");
-      return JSON.parse(jsonData) as Competition;
-    });
-    return competitionsData;
   } catch (err) {
     const message =
       err instanceof Error
-        ? `Failed to load competitions data from ${dataDir}: ${err.message}`
-        : `Failed to load competitions data from ${dataDir}.`;
+        ? `Failed to read competitions data directory at ${dataDir}: ${err.message}`
+        : `Failed to read competitions data directory at ${dataDir}.`;
     throw new Error(message);
   }
+
+  const competitionsData: Competition[] = [];
+  for (const fileName of fileNames) {
+    const filePath = path.join(dataDir, fileName);
+    try {
+      const jsonData = fs.readFileSync(filePath, "utf-8");
+      competitionsData.push(JSON.parse(jsonData) as Competition);
+    } catch (err) {
+      const message =
+        err instanceof Error
+          ? `Failed to load competitions data from file ${filePath}: ${err.message}`
+          : `Failed to load competitions data from file ${filePath}.`;
+      throw new Error(message);
+    }
+  }
+
+  return competitionsData;
 }
 
 export function loadCompetitions(): Competition[] {
