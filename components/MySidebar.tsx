@@ -3,7 +3,6 @@
 import {
   BookTextIcon,
   BrainIcon,
-  ChartLineIcon,
   ChevronRightIcon,
   ClapperboardIcon,
   GithubIcon,
@@ -16,6 +15,7 @@ import {
   UsersIcon,
   VideoIcon,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -52,8 +52,14 @@ export function MySidebar() {
     <Sidebar>
       <SidebarHeader>
         <SidebarMenuItem className="px-4 py-3 text-lg font-semibold">
-          {/* TODO(#9): Add custom icon if possible. */}
-          <ChartLineIcon className="inline" />{" "}
+          <Image
+            src="/favicon.svg"
+            alt="Favicon"
+            width={24}
+            height={24}
+            style={{ display: "inline" }}
+            className="scheme-only-light"
+          />{" "}
           <span>치레동 레이팅 대시보드</span>
         </SidebarMenuItem>
       </SidebarHeader>
