@@ -54,11 +54,10 @@ export function MySidebar() {
         <SidebarMenuItem className="px-4 py-3 text-lg font-semibold">
           <Image
             src="/favicon.svg"
-            alt="Favicon"
+            alt=""
             width={24}
             height={24}
-            style={{ display: "inline" }}
-            className="scheme-only-light"
+            className="scheme-only-light inline align-center"
           />{" "}
           <span>치레동 레이팅 대시보드</span>
         </SidebarMenuItem>
