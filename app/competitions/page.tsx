@@ -15,7 +15,7 @@ export default function Competitions() {
         </p>
       </header>
       {/* TODO(#14): Add a newest/oldest option on listing competitions */}
-      <div className="grid w-full gap-8 md:grid-cols-2">
+      <div className="grid w-full gap-8 grid-cols-1 md:grid-cols-2">
         {/* TODO(#14): Add a link to each competition*/}
         {competitions.map((competition) => (
           <CompetitionCard

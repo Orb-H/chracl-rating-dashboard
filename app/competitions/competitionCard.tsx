@@ -14,7 +14,7 @@ type CompetitionCardProps = {
 
 export function CompetitionCard({ id, name }: CompetitionCardProps) {
   return (
-    <Card className="p-0 grid-cols-1 md:grid-cols-2 overflow-hidden">
+    <Card className="overflow-hidden pt-0">
       <CardHeader className="px-0">
         <Image
           src={`/competitions/${id}.png`}
@@ -25,9 +25,8 @@ export function CompetitionCard({ id, name }: CompetitionCardProps) {
         />
       </CardHeader>
       <CardContent>
-        <CardTitle>{name}</CardTitle>
+        <div className="font-semibold">{name}</div>
       </CardContent>
-      <CardFooter></CardFooter>
     </Card>
   );
 }
