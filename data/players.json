@@ -270,7 +270,7 @@
         "detail": "제 2회 치지직 레이싱 동아리: 포뮬러 그랑프리 예선 MVP"
       },
       {
-        "type": "major",
+        "type": "minor",
         "detail": "제 3회 치지직 레이싱 동아리: 레인 헬 5위"
       }
     ]
@@ -287,7 +287,7 @@
     "channelId": "4f891095bc91025428ba2e8c375ef86c",
     "career": [
       {
-        "type": "major",
+        "type": "minor",
         "detail": "제 3회 치지직 레이싱 동아리: 레인 헬 3위"
       }
     ]
@@ -310,11 +310,11 @@
         "detail": "제 1회 치지직 레이싱 동아리: 고속도로 배틀 우승"
       },
       {
-        "type": "major",
+        "type": "minor",
         "detail": "제 2회 치지직 레이싱 동아리: 포뮬러 그랑프리 4위"
       },
       {
-        "type": "major",
+        "type": "minor",
         "detail": "제 3회 치지직 레이싱 동아리: 레인 헬 3위"
       }
     ]
@@ -419,7 +419,7 @@
     "channelId": "a72c9f9c3d835078b97a520dded8e6d2",
     "career": [
       {
-        "type": "major",
+        "type": "minor",
         "detail": "제 3회 치지직 레이싱 동아리: 레인 헬 4위"
       }
     ]
@@ -692,7 +692,7 @@
     "channelId": "a3028b1a9bb675ec442b3a052a15e7e4",
     "career": [
       {
-        "type": "major",
+        "type": "minor",
         "detail": "제 3회 치지직 레이싱 동아리: 레인 헬 5위"
       }
     ]
