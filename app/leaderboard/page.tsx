@@ -88,8 +88,8 @@ export default function Leaderboard() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {/* TODO(#40): Make each row to direct to player detail page */}
-          {/* TODO(#40): Change color palette of the row by tier value */}
+          {/* TODO(#11): Make each row to direct to player detail page */}
+          {/* TODO(#3): Change color palette of the row by tier value */}
           {playersWithCurrentRating.map((player, i) => (
             <TableRow
               key={player.id}
