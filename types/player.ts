@@ -19,6 +19,9 @@ export type Player = {
 
   // The channel ID of Chzzk associated with the participant. A format of [a-f0-9]{32}. E.g., "aeb5b654cad7a2c0a0e6633a6d6de4aa"
   channelId: string;
+
+  // Optional career highlights for the participant. E.g., [{ type: "major", detail: "Won Season 1 Championship" }]
+  career?: Career[];
 };
 
 // Season 1 and 2: 4 tiers
@@ -36,3 +39,11 @@ export enum Tier {
   TIER5 = "5",
   TIER6 = "6",
 }
+
+export type Career = {
+  // Whether the career highlight is indicated as a major or minor item.
+  type: "major" | "minor";
+
+  // Detailed description of the career highlight. E.g., "Won Season 1 Championship"
+  detail: string;
+};
