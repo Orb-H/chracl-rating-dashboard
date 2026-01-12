@@ -11,7 +11,6 @@ import {
 import { loadCurrentRating } from "@/lib/loadCurrentRating";
 import { loadPlayersById } from "@/lib/loadPlayers";
 
-const columns = ["순위", "선수", "티어", "레이팅", "μ값"];
 // TODO: Set current season as a global constant.
 const currentSeason = "season3";
 
@@ -42,9 +41,11 @@ export default function Leaderboard() {
       <Table>
         <TableHeader>
           <TableRow>
-            {columns.map((column) => (
-              <TableHead key={column}>{column}</TableHead>
-            ))}
+            <TableHead className="text-center">순위</TableHead>
+            <TableHead className="pl-12">선수</TableHead>
+            <TableHead className="text-center">티어</TableHead>
+            <TableHead>레이팅</TableHead>
+            <TableHead>μ값</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -55,7 +56,7 @@ export default function Leaderboard() {
               key={player.id}
               className={player.mu ? styleByRank(i + 1) : ""}
             >
-              <TableCell className="font-mono">
+              <TableCell className="font-mono text-center">
                 {player.mu ? i + 1 : "-"}
               </TableCell>
               <TableCell>
@@ -73,7 +74,7 @@ export default function Leaderboard() {
                   {player.displayName}
                 </span>
               </TableCell>
-              <TableCell>
+              <TableCell className="text-center">
                 {player.tiers ? player.tiers[currentSeason] : "-"}
               </TableCell>
               <TableCell className="font-mono">
