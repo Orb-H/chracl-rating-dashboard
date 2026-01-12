@@ -51,7 +51,7 @@ export default function Leaderboard() {
           {/* TODO(#40): Make each row to direct to player detail page */}
           {/* TODO(#40): Change color palette of the row by tier value */}
           {playersWithCurrentRating.map((player, i) => (
-            <TableRow key={player.id}>
+            <TableRow key={player.id} className={styleByRank(i + 1)}>
               <TableCell className="font-mono">
                 {player.mu ? i + 1 : "-"}
               </TableCell>
@@ -90,4 +90,17 @@ export default function Leaderboard() {
 
 function roundToTwoDecimals(num: number): string {
   return (Math.round(num * 100) / 100).toFixed(2);
+}
+
+function styleByRank(rank: number): string {
+  switch (rank) {
+    case 1:
+      return "font-semibold bg-yellow-500/20 dark:bg-yellow-500/30";
+    case 2:
+      return "font-semibold bg-gray-500/20 dark:bg-gray-500/30";
+    case 3:
+      return "font-semibold bg-amber-700/20 dark:bg-amber-700/30";
+    default:
+      return "";
+  }
 }
