@@ -1,5 +1,10 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import {
   Table,
   TableBody,
   TableCaption,
@@ -37,20 +42,54 @@ export default function Leaderboard() {
         </p>
       </header>
       {/* TODO(#40): Add a point graph to map player by rating value */}
-      {/* TODO(#40): Add a popup component to describe about what "티어", "레이팅", and "μ값" is */}
       <Table>
         <TableHeader>
           <TableRow>
             <TableHead className="text-center">순위</TableHead>
             <TableHead className="pl-12">선수</TableHead>
-            <TableHead className="text-center">티어</TableHead>
-            <TableHead>레이팅</TableHead>
-            <TableHead>μ값</TableHead>
+            <TableHead className="text-center">
+              <Popover>
+                <PopoverTrigger className="underline cursor-help">
+                  티어
+                </PopoverTrigger>
+                <PopoverContent side="top">
+                  대회 종료 후 관계자 회의를 통해서 결정되는 값입니다. 3회 대회
+                  종료 기준으로 총 6티어 체계입니다. 높을수록 상위 등급에
+                  해당합니다.
+                </PopoverContent>
+              </Popover>
+            </TableHead>
+            <TableHead>
+              <Popover>
+                <PopoverTrigger className="underline cursor-help">
+                  레이팅
+                </PopoverTrigger>
+                {/* TODO(#13): Add link to rating introduction page when ready */}
+                <PopoverContent side="top">
+                  대회에서의 경기 결과를 바탕으로 산출되는 값으로, 시스템이
+                  판단하는 선수 경기력의 저점입니다. 자세한 내용은 레이팅 소개
+                  페이지를 확인해주세요.
+                </PopoverContent>
+              </Popover>
+            </TableHead>
+            <TableHead>
+              <Popover>
+                <PopoverTrigger className="underline cursor-help">
+                  μ값
+                </PopoverTrigger>
+                {/* TODO(#13): Add link to rating introduction page when ready */}
+                <PopoverContent side="top">
+                  대회에서의 경기 결과를 바탕으로 산출되는 값으로, 레이팅
+                  시스템이 판단하는 선수 실력의 평균입니다. 자세한 내용은 레이팅
+                  소개 페이지를 확인해주세요.
+                </PopoverContent>
+              </Popover>
+            </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          {/* TODO(#40): Make each row to direct to player detail page */}
-          {/* TODO(#40): Change color palette of the row by tier value */}
+          {/* TODO(#11): Make each row to direct to player detail page */}
+          {/* TODO(#3): Change color palette of the row by tier value */}
           {playersWithCurrentRating.map((player, i) => (
             <TableRow
               key={player.id}
