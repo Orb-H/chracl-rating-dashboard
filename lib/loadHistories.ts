@@ -37,7 +37,7 @@ export function loadHistories(): Record<string, RatingHistory[]> {
   return histories;
 }
 
-export function loadHistoryById(id: string): RatingHistory[] {
+export function loadHistoriesById(id: string): RatingHistory[] {
   const history = loadHistories()[id];
   if (!history) {
     throw new Error(`History for player id "${id}" not found`);
