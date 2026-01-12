@@ -51,7 +51,10 @@ export default function Leaderboard() {
           {/* TODO(#40): Make each row to direct to player detail page */}
           {/* TODO(#40): Change color palette of the row by tier value */}
           {playersWithCurrentRating.map((player, i) => (
-            <TableRow key={player.id} className={styleByRank(i + 1)}>
+            <TableRow
+              key={player.id}
+              className={player.mu ? styleByRank(i + 1) : ""}
+            >
               <TableCell className="font-mono">
                 {player.mu ? i + 1 : "-"}
               </TableCell>
