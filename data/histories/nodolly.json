@@ -1,0 +1,58 @@
+[
+  {
+    "entryId": "NONE",
+    "rating": {
+      "mu": 50,
+      "sigma": 16.666666666666668,
+      "value": 0
+    }
+  },
+  {
+    "entryId": "season2-pre-qual",
+    "rating": {
+      "mu": 52.61311705505371,
+      "sigma": 11.24327539529389,
+      "value": 18.883290869172043
+    }
+  },
+  {
+    "entryId": "season2-pre-b-main",
+    "rating": {
+      "mu": 57.26644004026509,
+      "sigma": 8.606465057755472,
+      "value": 31.447044866998674
+    }
+  },
+  {
+    "entryId": "season2-semifinal-a-qual",
+    "rating": {
+      "mu": 62.73907126120649,
+      "sigma": 7.84053590526487,
+      "value": 39.21746354541188
+    }
+  },
+  {
+    "entryId": "season2-semifinal-a-main",
+    "rating": {
+      "mu": 61.780117371518806,
+      "sigma": 6.588251345048102,
+      "value": 42.0153633363745
+    }
+  },
+  {
+    "entryId": "season2-final-qual",
+    "rating": {
+      "mu": 61.25314267376084,
+      "sigma": 6.1300550488458745,
+      "value": 42.86297752722322
+    }
+  },
+  {
+    "entryId": "season2-final-main",
+    "rating": {
+      "mu": 57.05356147260208,
+      "sigma": 5.435230882354597,
+      "value": 40.74786882553828
+    }
+  }
+]

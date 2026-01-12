@@ -1,0 +1,34 @@
+[
+  {
+    "entryId": "NONE",
+    "rating": {
+      "mu": 50,
+      "sigma": 16.666666666666668,
+      "value": 0
+    }
+  },
+  {
+    "entryId": "season3-pre-qual",
+    "rating": {
+      "mu": 36.73721018061328,
+      "sigma": 10.80447558374023,
+      "value": 4.323783429392591
+    }
+  },
+  {
+    "entryId": "season3-stint1-qual",
+    "rating": {
+      "mu": 30.9871091434495,
+      "sigma": 9.127453664809293,
+      "value": 3.604748149021624
+    }
+  },
+  {
+    "entryId": "season3-stint1-main",
+    "rating": {
+      "mu": 30.644455900900844,
+      "sigma": 7.0998479363225355,
+      "value": 9.344912091933239
+    }
+  }
+]
