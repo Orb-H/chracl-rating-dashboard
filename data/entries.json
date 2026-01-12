@@ -1,5 +1,5 @@
 [
-  { "id": "", "sortKey": 0, "note": "" },
+  { "id": "initial", "sortKey": 0, "note": "" },
   { "id": "season1-round1-qual", "sortKey": 1010100, "note": "" },
   { "id": "season1-round1-main", "sortKey": 1010101, "note": "" },
   { "id": "season1-round2-qual", "sortKey": 1010200, "note": "" },

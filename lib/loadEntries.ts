@@ -9,7 +9,7 @@ function loadData(): Entry[] {
   const dataPath = path.join(process.cwd(), "data", "entries.json");
 
   if (!fs.existsSync(dataPath)) {
-    throw new Error(`Entries data directory not found at path: ${dataPath}`);
+    throw new Error(`Entries data file not found at path: ${dataPath}`);
   }
 
   try {
@@ -19,8 +19,8 @@ function loadData(): Entry[] {
   } catch (err) {
     const message =
       err instanceof Error
-        ? `Failed to read entries data directory at ${dataPath}: ${err.message}`
-        : `Failed to read entries data directory at ${dataPath}.`;
+        ? `Failed to read entries data from ${dataPath}: ${err.message}`
+        : `Failed to read entries data from ${dataPath}.`;
     throw new Error(message);
   }
 }
@@ -32,13 +32,12 @@ export function loadEntries(): Entry[] {
 
 export function loadEntriesById(): Record<string, Entry> {
   if (entriesById === undefined) {
-    const ids = loadEntries().map((entry) => entry.id);
+    const entries = loadEntries();
+    const ids = entries.map((entry) => entry.id);
     if (ids.length !== new Set(ids).size) {
       throw new Error(`Duplicate entry IDs found in entries data.`);
     }
-    entriesById = Object.fromEntries(
-      loadEntries().map((entry) => [entry.id, entry]),
-    );
+    entriesById = Object.fromEntries(entries.map((entry) => [entry.id, entry]));
   }
   return entriesById;
 }
