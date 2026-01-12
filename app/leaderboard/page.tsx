@@ -49,8 +49,8 @@ export default function Leaderboard() {
             <TableHead className="pl-12">선수</TableHead>
             <TableHead className="text-center">
               <Popover>
-                <PopoverTrigger asChild>
-                  <a className="underline cursor-help">티어</a>
+                <PopoverTrigger className="underline cursor-help">
+                  티어
                 </PopoverTrigger>
                 <PopoverContent side="top">
                   대회 종료 후 관계자 회의를 통해서 결정되는 값입니다. 3회 대회
@@ -61,8 +61,8 @@ export default function Leaderboard() {
             </TableHead>
             <TableHead>
               <Popover>
-                <PopoverTrigger asChild>
-                  <a className="underline cursor-help">레이팅</a>
+                <PopoverTrigger className="underline cursor-help">
+                  레이팅
                 </PopoverTrigger>
                 {/* TODO(#13): Add link to rating introduction page when ready */}
                 <PopoverContent side="top">
@@ -74,8 +74,8 @@ export default function Leaderboard() {
             </TableHead>
             <TableHead>
               <Popover>
-                <PopoverTrigger asChild>
-                  <a className="underline cursor-help">μ값</a>
+                <PopoverTrigger className="underline cursor-help">
+                  μ값
                 </PopoverTrigger>
                 {/* TODO(#13): Add link to rating introduction page when ready */}
                 <PopoverContent side="top">
