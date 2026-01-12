@@ -1,0 +1,82 @@
+[
+  {
+    "entryId": "NONE",
+    "rating": {
+      "mu": 50,
+      "sigma": 16.666666666666668,
+      "value": 0
+    }
+  },
+  {
+    "entryId": "season2-pre-qual",
+    "rating": {
+      "mu": 31.560544857080416,
+      "sigma": 12.916819181150366,
+      "value": -7.189912686370683
+    }
+  },
+  {
+    "entryId": "season2-pre-b-main",
+    "rating": {
+      "mu": 20.130426584637114,
+      "sigma": 9.752721735167949,
+      "value": -9.127738620866733
+    }
+  },
+  {
+    "entryId": "season2-semifinal-a-qual",
+    "rating": {
+      "mu": 21.524442108989902,
+      "sigma": 8.739637451413454,
+      "value": -4.694470245250461
+    }
+  },
+  {
+    "entryId": "season2-semifinal-a-main",
+    "rating": {
+      "mu": 18.913559671303794,
+      "sigma": 7.993554304431705,
+      "value": -5.0671032419913224
+    }
+  },
+  {
+    "entryId": "season2-final-qual",
+    "rating": {
+      "mu": 20.781615779873466,
+      "sigma": 7.235449998537522,
+      "value": -0.9247342157391003
+    }
+  },
+  {
+    "entryId": "season2-final-main",
+    "rating": {
+      "mu": 22.872132025982207,
+      "sigma": 6.263874779057792,
+      "value": 4.080507688808833
+    }
+  },
+  {
+    "entryId": "season3-pre-qual",
+    "rating": {
+      "mu": 22.70670178096822,
+      "sigma": 5.798518953223424,
+      "value": 5.311144921297949
+    }
+  },
+  {
+    "entryId": "season3-stint1-qual",
+    "rating": {
+      "mu": 27.043560169044447,
+      "sigma": 5.470215839285923,
+      "value": 10.632912651186679
+    }
+  },
+  {
+    "entryId": "season3-stint1-main",
+    "rating": {
+      "mu": 31.689050282756412,
+      "sigma": 4.950360786669702,
+      "value": 16.837967922747307
+    }
+  }
+]
