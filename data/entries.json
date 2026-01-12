@@ -1,0 +1,23 @@
+[
+  { "id": "initial", "sortKey": 0, "note": "" },
+  { "id": "season1-round1-qual", "sortKey": 1010100, "note": "" },
+  { "id": "season1-round1-main", "sortKey": 1010101, "note": "" },
+  { "id": "season1-round2-qual", "sortKey": 1010200, "note": "" },
+  { "id": "season1-round2-main", "sortKey": 1010201, "note": "" },
+  { "id": "season2-pre-qual", "sortKey": 2000100, "note": "" },
+  { "id": "season2-pre-a-main", "sortKey": 2000200, "note": "" },
+  { "id": "season2-pre-b-main", "sortKey": 2000300, "note": "" },
+  { "id": "season2-semifinal-a-qual", "sortKey": 2010100, "note": "" },
+  { "id": "season2-semifinal-a-main", "sortKey": 2010101, "note": "" },
+  { "id": "season2-semifinal-b-qual", "sortKey": 2010200, "note": "" },
+  { "id": "season2-semifinal-b-main", "sortKey": 2010201, "note": "" },
+  { "id": "season2-third-qual", "sortKey": 2020100, "note": "" },
+  { "id": "season2-third-main", "sortKey": 2020101, "note": "" },
+  { "id": "season2-final-qual", "sortKey": 2030101, "note": "" },
+  { "id": "season2-final-main", "sortKey": 2030102, "note": "" },
+  { "id": "season3-pre-qual", "sortKey": 3000100, "note": "" },
+  { "id": "season3-stint1-qual", "sortKey": 3010100, "note": "" },
+  { "id": "season3-stint1-main", "sortKey": 3010101, "note": "" },
+  { "id": "season3-stint2-main", "sortKey": 3010102, "note": "" },
+  { "id": "season3-stint3-main", "sortKey": 3010103, "note": "" }
+]
