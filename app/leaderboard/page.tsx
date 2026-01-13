@@ -1,6 +1,7 @@
-import { ChartContainer } from "@/components/ui/chart";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { loadCurrentRating } from "@/lib/loadCurrentRating";
 import { loadPlayersById } from "@/lib/loadPlayers";
+import { LeaderboardChart } from "./leaderboardChart";
 import { LeaderboardTable } from "./leaderboardTable";
 
 export default function Leaderboard() {
@@ -25,8 +26,18 @@ export default function Leaderboard() {
           치레동 선수들의 현재 레이팅 순위를 확인하세요.
         </p>
       </header>
-      {/* TODO(#40): Add a point graph to map player by rating value */}
-      <LeaderboardTable ratingData={playersWithCurrentRating} />
+      <Tabs defaultValue="table" className="w-full mb-8">
+        <TabsList className="ml-auto">
+          <TabsTrigger value="table">표로 보기</TabsTrigger>
+          <TabsTrigger value="chart">그래프로 보기</TabsTrigger>
+        </TabsList>
+        <TabsContent value="table">
+          <LeaderboardTable ratingData={playersWithCurrentRating} />
+        </TabsContent>
+        <TabsContent value="chart">
+          <LeaderboardChart ratingData={playersWithCurrentRating} />
+        </TabsContent>
+      </Tabs>
     </main>
   );
 }
