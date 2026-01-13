@@ -18,13 +18,14 @@ import {
 } from "@/components/ui/table";
 import { loadCurrentRating } from "@/lib/loadCurrentRating";
 import { loadPlayerById } from "@/lib/loadPlayers";
+import { roundToTwoDecimals } from "@/lib/utils";
 
 export function LeaderboardCard() {
   const currentRating = loadCurrentRating();
   const top3 = Object.entries(currentRating)
     .sort((a, b) => b[1].value - a[1].value)
     .slice(0, 3)
-    .map((playerIdToRating) => playerIdToRating[0]);
+    .map(([playerId]) => playerId);
 
   return (
     <Card>
@@ -70,12 +71,11 @@ export function LeaderboardCard() {
                   </TableCell>
                   <TableCell>{player.displayName}</TableCell>
                   <TableCell className="text-center">
-                    {(Math.round(rating * 100) / 100).toFixed(2)}
+                    {roundToTwoDecimals(rating)}
                   </TableCell>
                 </TableRow>
               );
             })}
-            <TableRow />
           </TableBody>
         </Table>
       </CardContent>
