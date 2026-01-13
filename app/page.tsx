@@ -1,16 +1,11 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { LeaderboardCard } from "./leaderboardCard";
 
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center justify-between py-16 px-8 md:py-32 md:px-16 bg-background md:items_start">
       <div className="grid w-full gap-8 grid-cols-1 md:grid-cols-2">
-        <Card>
-          <CardHeader className="text-2xl font-bold">
-            현재 레이팅 순위
-          </CardHeader>
-          {/* TODO(#70): Add relevant information when leaderboard page is ready */}
-          <CardContent>준비중입니다.</CardContent>
-        </Card>
+        <LeaderboardCard />
         <Card>
           <CardHeader className="text-2xl font-bold">최근 대회 목록</CardHeader>
           {/* TODO(#70): Add relevant information when competitions page is ready */}
