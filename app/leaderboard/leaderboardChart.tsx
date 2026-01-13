@@ -9,6 +9,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { roundToTwoDecimals } from "@/lib/utils";
 import { Player } from "@/types/player";
 import { Rating } from "@/types/rating";
 
@@ -28,11 +29,13 @@ const chartConfig: ChartConfig = {
 };
 
 export function LeaderboardChart({ ratingData }: LeaderboardChartProps) {
-  const chartData = ratingData.map((player) => ({
-    name: player.displayName,
-    value: roundToTwoDecimals(player.value),
-    mu: roundToTwoDecimals(player.mu),
-  }));
+  const chartData = ratingData
+    .filter((player) => player.value !== undefined && player.mu !== undefined)
+    .map((player) => ({
+      name: player.displayName,
+      value: roundToTwoDecimals(player.value),
+      mu: roundToTwoDecimals(player.mu),
+    }));
   return (
     <ChartContainer
       className="w-full min-h-50 aspect-9/16 md:aspect-square"
@@ -56,7 +59,6 @@ export function LeaderboardChart({ ratingData }: LeaderboardChartProps) {
           tickFormatter={(value, _) => {
             return value.toLocaleString().replace(/ /g, "\u00A0");
           }}
-          widths={"auto"}
         />
         <Line
           type="linear"
@@ -70,8 +72,4 @@ export function LeaderboardChart({ ratingData }: LeaderboardChartProps) {
       </LineChart>
     </ChartContainer>
   );
-}
-
-function roundToTwoDecimals(num: number): number {
-  return Math.round(num * 100) / 100;
 }

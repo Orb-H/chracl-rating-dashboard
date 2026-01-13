@@ -13,6 +13,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { roundToTwoDecimals } from "@/lib/utils";
 import { Player } from "@/types/player";
 import { Rating } from "@/types/rating";
 
@@ -109,10 +110,6 @@ export function LeaderboardTable({ ratingData }: LeaderboardTableProps) {
       <TableCaption>현재 기준 레이팅 순위</TableCaption>
     </Table>
   );
-}
-
-function roundToTwoDecimals(num: number): string {
-  return (Math.round(num * 100) / 100).toFixed(2);
 }
 
 function styleByRank(rank: number): string {
