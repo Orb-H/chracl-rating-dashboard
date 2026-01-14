@@ -9,14 +9,32 @@ export const metadata: Metadata = {
   description: "치레동 참가자들의 실력을 숫자로 확인하세요!",
 };
 
+const ThemeInitializerScript = `
+(() => {
+  if (
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+})();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    // The theme initializer mutates document.documentElement.classList
+    // before React hydration, which can cause an intentional mismatch on <html>.
+    // Keep suppressHydrationWarning on <html> to ignore this specific mismatch.
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={`antialiased`}>
+        <script dangerouslySetInnerHTML={{ __html: ThemeInitializerScript }} />
         <SidebarProvider>
           <MySidebar />
           <SidebarInset>
