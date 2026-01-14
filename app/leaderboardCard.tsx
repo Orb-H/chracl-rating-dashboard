@@ -29,7 +29,7 @@ export function LeaderboardCard() {
 
   return (
     <Card>
-      <CardHeader className="text-2xl font-bold">현재 레이팅 순위</CardHeader>
+      <CardHeader className="text-2xl font-bold">레이팅 TOP3</CardHeader>
       <CardContent>
         <Table>
           <TableHeader>
@@ -82,7 +82,7 @@ export function LeaderboardCard() {
       <CardFooter>
         <Button asChild className="ml-auto">
           <Link href="/leaderboard">
-            리더보드 보러가기 <MoveRightIcon className="inline" />
+            전체 순위 보러가기 <MoveRightIcon className="inline" />
           </Link>
         </Button>
       </CardFooter>
