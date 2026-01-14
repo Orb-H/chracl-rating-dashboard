@@ -43,7 +43,7 @@ export function LeaderboardTable({ ratingData }: LeaderboardTableProps) {
               </PopoverContent>
             </Popover>
           </TableHead>
-          <TableHead>
+          <TableHead className="text-center">
             <Popover>
               <PopoverTrigger className="underline cursor-help">
                 레이팅
@@ -56,7 +56,7 @@ export function LeaderboardTable({ ratingData }: LeaderboardTableProps) {
               </PopoverContent>
             </Popover>
           </TableHead>
-          <TableHead>
+          <TableHead className="text-center">
             <Popover>
               <PopoverTrigger className="underline cursor-help">
                 μ값
@@ -79,7 +79,7 @@ export function LeaderboardTable({ ratingData }: LeaderboardTableProps) {
             key={player.id}
             className={player.mu ? styleByRank(i + 1) : ""}
           >
-            <TableCell className="font-mono text-center">
+            <TableCell className="text-center">
               {player.mu ? i + 1 : "-"}
             </TableCell>
             <TableCell>
@@ -98,10 +98,10 @@ export function LeaderboardTable({ ratingData }: LeaderboardTableProps) {
             <TableCell className="text-center">
               {player.tiers ? player.tiers[currentSeason] : "-"}
             </TableCell>
-            <TableCell className="font-mono">
+            <TableCell className="text-center">
               {player.mu ? roundToTwoDecimals(player.value) : "-"}
             </TableCell>
-            <TableCell className="font-mono">
+            <TableCell className="text-center">
               {player.mu ? roundToTwoDecimals(player.mu) : "-"}
             </TableCell>
           </TableRow>
