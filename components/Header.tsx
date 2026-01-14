@@ -5,7 +5,7 @@ import { SidebarTrigger } from "@/components/ui/sidebar";
 
 export function Header() {
   return (
-    <header className="flex h-12 p-2 shrink-0 items-center gap-4 border-b">
+    <header className="flex h-12 p-2 shrink-0 items-center gap-4 border-b sticky top-0 bg-background z-10">
       <SidebarTrigger className="ml-2" />
       <Separator orientation="vertical" />
       {/* TODO(#9): Add breadcrumb indicating where the user is in the app */}
