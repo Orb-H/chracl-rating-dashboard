@@ -36,6 +36,32 @@ export function LeaderboardChart({ ratingData }: LeaderboardChartProps) {
       value: roundToTwoDecimals(player.value),
       mu: roundToTwoDecimals(player.mu),
     }));
+  const min =
+    Math.min(
+      ...ratingData.map((player) =>
+        player.value && player.mu
+          ? Math.min(player.value, player.mu)
+          : Number.MAX_VALUE,
+      ),
+    ) - 5;
+  const max =
+    Math.max(
+      ...ratingData.map((player) =>
+        player.value && player.mu
+          ? Math.max(player.value, player.mu)
+          : Number.MIN_VALUE,
+      ),
+    ) + 5;
+
+  const ticks = [];
+  const step = 25;
+  for (
+    let i = Math.ceil(min / step) * step;
+    i <= Math.floor(max / step) * step;
+    i += step
+  ) {
+    ticks.push(i);
+  }
   return (
     <ChartContainer
       className="w-full min-h-50 aspect-9/16 md:aspect-square"
@@ -47,11 +73,7 @@ export function LeaderboardChart({ ratingData }: LeaderboardChartProps) {
         margin={{ top: 20, bottom: 10 }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis
-          type="number"
-          domain={[-10, 110]}
-          ticks={[0, 20, 40, 60, 80, 100]}
-        />
+        <XAxis type="number" domain={[min, max]} ticks={ticks} />
         <YAxis
           type="category"
           dataKey="name"
