@@ -33,10 +33,8 @@ export default function RootLayout({
     // before React hydration, which can cause an intentional mismatch on <html>.
     // Keep suppressHydrationWarning on <html> to ignore this specific mismatch.
     <html lang="en" suppressHydrationWarning={true}>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: ThemeInitializerScript }} />
-      </head>
       <body className={`antialiased`}>
+        <script dangerouslySetInnerHTML={{ __html: ThemeInitializerScript }} />
         <SidebarProvider>
           <MySidebar />
           <SidebarInset>
