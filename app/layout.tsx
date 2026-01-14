@@ -29,6 +29,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    // The theme initializer mutates document.documentElement.classList
+    // before React hydration, which can cause an intentional mismatch on <html>.
+    // Keep suppressHydrationWarning on <html> to ignore this specific mismatch.
     <html lang="en" suppressHydrationWarning={true}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: ThemeInitializerScript }} />
