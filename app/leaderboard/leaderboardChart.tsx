@@ -38,18 +38,17 @@ export function LeaderboardChart({ ratingData }: LeaderboardChartProps) {
     }));
   const min =
     Math.min(
-      ...ratingData.map((player) =>
-        player.value && player.mu
-          ? Math.min(player.value, player.mu)
-          : Number.MAX_VALUE,
+      0,
+      ...chartData.map((player) =>
+        Math.min(Number(player.value), Number(player.mu)),
       ),
     ) - 5;
+
   const max =
     Math.max(
-      ...ratingData.map((player) =>
-        player.value && player.mu
-          ? Math.max(player.value, player.mu)
-          : Number.MIN_VALUE,
+      100,
+      ...chartData.map((player) =>
+        Math.max(Number(player.value), Number(player.mu)),
       ),
     ) + 5;
 
