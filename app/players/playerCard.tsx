@@ -49,21 +49,21 @@ export function PlayerCard({ player }: { player: Player & Rating }) {
                 <TableCell className="font-semibold p-1">수상 내역</TableCell>
                 <TableCell className="p-1">
                   {player.career &&
-                    player.career.map((career, index) =>
+                    player.career.map((career) =>
                       career.detail.includes("우승") ? (
                         <TrophyIcon
-                          key={player.id + index}
+                          key={`${player.id}-${JSON.stringify(career)}-trophy`}
                           className="inline w-4 h-4"
                         />
                       ) : null,
                     )}
                   {player.career &&
-                    player.career.map((career, index) =>
+                    player.career.map((career) =>
                       career.detail.includes("MVP") ||
                       career.detail.includes("챔피언") ||
                       career.detail.includes("1위") ? (
                         <StarIcon
-                          key={player.id + index}
+                          key={`${player.id}-${JSON.stringify(career)}-star`}
                           className="inline w-4 h-4"
                         />
                       ) : null,
