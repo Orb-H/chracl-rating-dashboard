@@ -32,7 +32,7 @@ export default async function Participant({
   }
 
   return (
-    <main className="min-h-screen w-full max-w-3xl items-center py-16 px-8 md:py-32 md:px-16 bg-white dark:bg-black md:items_start">
+    <main className="min-h-screen w-full max-w-3xl items-center py-16 px-8 md:py-32 md:px-16 bg-white dark:bg-black md:items-start">
       {/* TODO(#11): Fill with concrete content */}
       <Empty>
         <EmptyHeader>

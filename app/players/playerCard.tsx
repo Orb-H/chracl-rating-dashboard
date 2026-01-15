@@ -9,6 +9,24 @@ import { Rating } from "@/types/rating";
 const currentSeason = "season3";
 
 export function PlayerCard({ player }: { player: Player & Rating }) {
+  let teamWinCount = 0;
+  let individualWinCount = 0;
+
+  if (player.career) {
+    for (const career of player.career) {
+      if (career.detail.includes("우승")) {
+        teamWinCount += 1;
+      }
+      if (
+        career.detail.includes("MVP") ||
+        career.detail.includes("챔피언") ||
+        career.detail.includes("1위")
+      ) {
+        individualWinCount += 1;
+      }
+    }
+  }
+
   return (
     <Card className={`${gradientByTier(player.tiers?.[currentSeason] ?? "")}`}>
       <CardContent className="flex flex-row gap-4">
@@ -48,26 +66,22 @@ export function PlayerCard({ player }: { player: Player & Rating }) {
               <TableRow>
                 <TableCell className="font-semibold p-1">수상 내역</TableCell>
                 <TableCell className="p-1">
-                  {player.career &&
-                    player.career.map((career) =>
-                      career.detail.includes("우승") ? (
-                        <TrophyIcon
-                          key={`${player.id}-${JSON.stringify(career)}-trophy`}
-                          className="inline w-4 h-4"
-                        />
-                      ) : null,
-                    )}
-                  {player.career &&
-                    player.career.map((career) =>
-                      career.detail.includes("MVP") ||
-                      career.detail.includes("챔피언") ||
-                      career.detail.includes("1위") ? (
-                        <StarIcon
-                          key={`${player.id}-${JSON.stringify(career)}-star`}
-                          className="inline w-4 h-4"
-                        />
-                      ) : null,
-                    )}
+                  {teamWinCount > 0 &&
+                    Array.from({ length: teamWinCount }).map((_, i) => (
+                      <TrophyIcon
+                        key={`team-win-${i}`}
+                        className="inline w-4 h-4"
+                        aria-label="팀 우승"
+                      />
+                    ))}
+                  {individualWinCount > 0 &&
+                    Array.from({ length: individualWinCount }).map((_, i) => (
+                      <StarIcon
+                        key={`individual-win-${i}`}
+                        className="inline w-4 h-4"
+                        aria-label="개인 우승"
+                      />
+                    ))}
                 </TableCell>
               </TableRow>
             </TableBody>

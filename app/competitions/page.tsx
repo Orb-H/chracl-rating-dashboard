@@ -7,7 +7,7 @@ export default function Competitions() {
   const competitions = competitionIds.map(loadCompetitionById);
 
   return (
-    <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items_start">
+    <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
       <header className="mb-8 w-full">
         <h1 className="text-4xl font-bold">대회 목록</h1>
         <p className="mt-2 text-lg text-muted-foreground">
