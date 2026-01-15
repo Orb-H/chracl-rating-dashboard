@@ -3,7 +3,7 @@ import { LeaderboardCard } from "./leaderboardCard";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center justify-between py-16 px-8 md:py-32 md:px-16 bg-background md:items_start">
+    <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center justify-between py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
       <div className="grid w-full gap-8 grid-cols-1 md:grid-cols-2">
         <LeaderboardCard />
         <Card>
