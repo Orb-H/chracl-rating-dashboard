@@ -76,7 +76,7 @@
   --sidebar: #171717;
   --sidebar-foreground: #e5e5e5;
   --sidebar-primary: oklch(0.85 0.2 155);
-  --sidebar-primary-foreground: #ffffff;
+  --sidebar-primary-foreground: #000000;
   --sidebar-accent: oklch(0.35 0.1 155);
   --sidebar-accent-foreground: oklch(0.95 0.05 155);
   --sidebar-border: #404040;
