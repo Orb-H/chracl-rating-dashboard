@@ -19,7 +19,7 @@ export default function Participants() {
       return (
         (b.tiers?.[currentSeason] ?? "").localeCompare(
           a.tiers?.[currentSeason] ?? "",
-        ) || b.value! - a.value!
+        ) || (b.value ?? 0) - (a.value ?? 0)
       );
     });
 
