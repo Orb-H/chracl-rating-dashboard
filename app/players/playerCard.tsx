@@ -104,8 +104,9 @@ function gradientByTier(tier: string) {
       return "bg-linear-60 from-emerald-500/50 to-(--card)/50";
     case "6+":
       return "bg-linear-60 from-emerald-500/50 via-80% via-(--card)/50 to-emerald-500/50";
+    default:
+      return "";
   }
-  return "";
 }
 
 function twoDigits(num: number) {
