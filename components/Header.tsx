@@ -30,7 +30,7 @@ export function Header() {
       </h1>
       <Separator orientation="vertical" />
       <Popover>
-        <PopoverTrigger className="mr-2">
+        <PopoverTrigger className="mr-2" aria-label="테마 변경">
           <SunMoonIcon className="w-5 h-5" />
         </PopoverTrigger>
         <PopoverContent align="end" className="w-auto p-0">
@@ -44,6 +44,7 @@ export function Header() {
                   localStorage.setItem("theme", "light");
                   document.documentElement.classList.remove("dark");
                 }}
+                aria-label="라이트 모드"
               >
                 <SunIcon className="w-4 h-4" />
               </TabsTrigger>
@@ -61,6 +62,7 @@ export function Header() {
                     document.documentElement.classList.remove("dark");
                   }
                 }}
+                aria-label="시스템 설정"
               >
                 <SunMoonIcon className="w-4 h-4" />
               </TabsTrigger>
@@ -72,6 +74,7 @@ export function Header() {
                   localStorage.setItem("theme", "dark");
                   document.documentElement.classList.add("dark");
                 }}
+                aria-label="다크 모드"
               >
                 <MoonIcon className="w-4 h-4" />
               </TabsTrigger>
