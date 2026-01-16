@@ -85,10 +85,8 @@ export function MySidebar() {
               <SidebarMenuItem>
                 {/* TODO(#9): Add collapsible to show players */}
                 <SidebarMenuButton asChild isActive={isActive("/players")}>
-                  {/* TODO(#10): Enable link to the real page when ready */}
-                  <Link href="#">
-                    <UsersIcon className="inline" />{" "}
-                    <span>선수 목록 (준비중)</span>
+                  <Link href="/players">
+                    <UsersIcon className="inline" /> <span>선수 목록</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
