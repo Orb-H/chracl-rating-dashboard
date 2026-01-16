@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
 import { Header } from "@/components/Header";
 import { MySidebar } from "@/components/MySidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
@@ -35,13 +36,15 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true}>
       <body className={`antialiased`}>
         <script dangerouslySetInnerHTML={{ __html: ThemeInitializerScript }} />
-        <SidebarProvider>
-          <MySidebar />
-          <SidebarInset>
-            <Header />
-            {children}
-          </SidebarInset>
-        </SidebarProvider>
+        <ThemeProvider defaultTheme="system" enableSystem>
+          <SidebarProvider>
+            <MySidebar />
+            <SidebarInset>
+              <Header />
+              {children}
+            </SidebarInset>
+          </SidebarProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
