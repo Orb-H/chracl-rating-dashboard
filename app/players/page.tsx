@@ -64,7 +64,7 @@ export default function Participants() {
 
 function sortByTier(players: (Player & Rating)[]) {
   // TODO: Introduce proper tier ordering instead of lexicographical ordering.
-  return players.sort((a, b) => {
+  return [...players].sort((a, b) => {
     return (b.tiers?.[currentSeason] ?? "").localeCompare(
       a.tiers?.[currentSeason] ?? "",
     );
@@ -72,13 +72,13 @@ function sortByTier(players: (Player & Rating)[]) {
 }
 
 function sortByRating(players: (Player & Rating)[]) {
-  return players.sort((a, b) => {
+  return [...players].sort((a, b) => {
     return (b.value ?? 0) - (a.value ?? 0);
   });
 }
 
 function sortByRacingNumber(players: (Player & Rating)[]) {
-  return players.sort((a, b) => {
+  return [...players].sort((a, b) => {
     return (a.racingNumber ?? Infinity) - (b.racingNumber ?? Infinity);
   });
 }
