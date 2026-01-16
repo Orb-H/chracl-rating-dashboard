@@ -40,7 +40,7 @@ export function PlayerCard({ player }: { player: Player & Rating }) {
             />
             <AvatarFallback>{player.displayName?.[0] || ""}</AvatarFallback>
           </Avatar>
-          <div className="text-center opacity-75 text-4xl -skew-x-10">
+          <div className="text-center font-extrabold text-4xl -skew-x-15">
             {player.racingNumber !== undefined
               ? twoDigits(player.racingNumber)
               : "-"}
@@ -48,7 +48,7 @@ export function PlayerCard({ player }: { player: Player & Rating }) {
         </div>
         <div className="w-full gap-2 flex flex-col">
           <div className="font-semibold text-2xl">{player.displayName}</div>
-          <hr />
+          <hr className="border-foreground" />
           <Table className="table-fixed">
             <TableBody>
               <TableRow className="border-b-0">
@@ -66,22 +66,24 @@ export function PlayerCard({ player }: { player: Player & Rating }) {
               <TableRow>
                 <TableCell className="font-semibold p-1">수상 내역</TableCell>
                 <TableCell className="p-1">
-                  {teamWinCount > 0 &&
-                    Array.from({ length: teamWinCount }).map((_, i) => (
-                      <TrophyIcon
-                        key={`team-win-${i}`}
-                        className="inline w-4 h-4"
-                        aria-label="팀 우승"
-                      />
-                    ))}
-                  {individualWinCount > 0 &&
-                    Array.from({ length: individualWinCount }).map((_, i) => (
-                      <StarIcon
-                        key={`individual-win-${i}`}
-                        className="inline w-4 h-4"
-                        aria-label="개인 우승"
-                      />
-                    ))}
+                  <div className="flex flex-row">
+                    {teamWinCount > 0 &&
+                      Array.from({ length: teamWinCount }).map((_, i) => (
+                        <TrophyIcon
+                          key={`team-win-${i}`}
+                          className="w-4 h-4"
+                          aria-label="팀 우승"
+                        />
+                      ))}
+                    {individualWinCount > 0 &&
+                      Array.from({ length: individualWinCount }).map((_, i) => (
+                        <StarIcon
+                          key={`individual-win-${i}`}
+                          className="w-4 h-4"
+                          aria-label="개인 우승"
+                        />
+                      ))}
+                  </div>
                 </TableCell>
               </TableRow>
             </TableBody>
