@@ -1,24 +1,14 @@
 "use client";
 
 import { MoonIcon, SunIcon, SunMoonIcon } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
 export function Header() {
-  const [currentTheme, setCurrentTheme] = useState<"light" | "dark" | "system">(
-    "system",
-  );
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setCurrentTheme(
-      (localStorage.getItem("theme") as "light" | "dark" | "system") ||
-        "system",
-    );
-  }, []);
+  const { theme, setTheme } = useTheme();
 
   return (
     <header className="flex h-12 p-2 shrink-0 items-center gap-4 border-b sticky top-0 bg-background z-10">
@@ -34,16 +24,12 @@ export function Header() {
           <SunMoonIcon className="w-5 h-5" />
         </PopoverTrigger>
         <PopoverContent align="end" className="w-auto p-0">
-          <Tabs defaultValue={currentTheme} className="w-full">
+          <Tabs value={theme} className="w-full">
             <TabsList className="bg-transparent border-0 p-1">
               <TabsTrigger
                 value="light"
                 className="not-data-[state=active]:bg-muted not-data-[state=active]:text-muted-foreground"
-                onClick={() => {
-                  setCurrentTheme("light");
-                  localStorage.setItem("theme", "light");
-                  document.documentElement.classList.remove("dark");
-                }}
+                onClick={() => setTheme("light")}
                 aria-label="라이트 모드"
               >
                 <SunIcon className="w-4 h-4" />
@@ -51,17 +37,7 @@ export function Header() {
               <TabsTrigger
                 value="system"
                 className="not-data-[state=active]:bg-muted not-data-[state=active]:text-muted-foreground"
-                onClick={() => {
-                  setCurrentTheme("system");
-                  localStorage.removeItem("theme");
-                  if (
-                    window.matchMedia("(prefers-color-scheme: dark)").matches
-                  ) {
-                    document.documentElement.classList.add("dark");
-                  } else {
-                    document.documentElement.classList.remove("dark");
-                  }
-                }}
+                onClick={() => setTheme("system")}
                 aria-label="시스템 설정"
               >
                 <SunMoonIcon className="w-4 h-4" />
@@ -69,11 +45,7 @@ export function Header() {
               <TabsTrigger
                 value="dark"
                 className="not-data-[state=active]:bg-muted not-data-[state=active]:text-muted-foreground"
-                onClick={() => {
-                  setCurrentTheme("dark");
-                  localStorage.setItem("theme", "dark");
-                  document.documentElement.classList.add("dark");
-                }}
+                onClick={() => setTheme("dark")}
                 aria-label="다크 모드"
               >
                 <MoonIcon className="w-4 h-4" />
