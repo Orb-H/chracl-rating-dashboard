@@ -29,6 +29,7 @@ export function PlayerCard({ player }: { player: Player & Rating }) {
 
   return (
     <Card className={`${gradientByTier(player.tiers?.[currentSeason] ?? "")}`}>
+      {/* TODO(#14): Add a link to each player*/}
       <CardContent className="flex flex-row gap-4">
         <div className="flex flex-col items-center gap-4 w-auto">
           <Avatar className="inline-block h-16 w-16 border-2">
