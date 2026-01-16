@@ -40,7 +40,7 @@ export function PlayerCard({ player }: { player: Player & Rating }) {
             />
             <AvatarFallback>{player.displayName?.[0] || ""}</AvatarFallback>
           </Avatar>
-          <div className="text-center opacity-75 text-4xl -skew-x-10">
+          <div className="text-center font-extrabold text-4xl -skew-x-15">
             {player.racingNumber !== undefined
               ? twoDigits(player.racingNumber)
               : "-"}
