@@ -71,7 +71,7 @@ export function PlayerCard({ player }: { player: Player & Rating }) {
                       Array.from({ length: teamWinCount }).map((_, i) => (
                         <TrophyIcon
                           key={`team-win-${i}`}
-                          className="inline-block w-4 h-4 align-middle"
+                          className="w-4 h-4"
                           aria-label="팀 우승"
                         />
                       ))}
@@ -79,7 +79,7 @@ export function PlayerCard({ player }: { player: Player & Rating }) {
                       Array.from({ length: individualWinCount }).map((_, i) => (
                         <StarIcon
                           key={`individual-win-${i}`}
-                          className="inline-block w-4 h-4 align-middle"
+                          className="w-4 h-4"
                           aria-label="개인 우승"
                         />
                       ))}
