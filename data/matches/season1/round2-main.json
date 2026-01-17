@@ -1,0 +1,83 @@
+{
+  "id": "round2-main",
+  "competitionId": "season1",
+  "entryId": "season1-round2-main",
+  "name": "라운드 2 본선",
+  "date": "2025-04-27",
+  "type": "MAIN",
+  "pointsSchemeId": "standard",
+  "participants": [
+    {
+      "id": "hyungdok",
+      "teamId": "season1-team-hyungdok",
+      "place": 1,
+      "record": { "status": "FINISHED", "finishTime": "27:15.081" }
+    },
+    {
+      "id": "namgung-hyuk",
+      "teamId": "season1-team-namgung-hyuk",
+      "place": 2,
+      "record": { "status": "FINISHED", "finishTime": "27:22.479" }
+    },
+    {
+      "id": "cheongalice",
+      "teamId": "season1-team-cheongalice",
+      "place": 3,
+      "record": { "status": "FINISHED", "finishTime": "27:40.926" }
+    },
+    {
+      "id": "yona",
+      "teamId": "season1-team-yona",
+      "place": 4,
+      "record": { "status": "FINISHED", "finishTime": "27:43.810" }
+    },
+    {
+      "id": "reo",
+      "teamId": "season1-team-hyungdok",
+      "place": 5,
+      "record": { "status": "FINISHED", "finishTime": "27:58.103" }
+    },
+    {
+      "id": "oversleepzzz",
+      "teamId": "season1-team-cheongalice",
+      "place": 6,
+      "record": { "status": "DNF" }
+    },
+    {
+      "id": "chochou",
+      "teamId": "season1-team-namgung-hyuk",
+      "place": 7,
+      "record": { "status": "DNF" }
+    },
+    {
+      "id": "hera",
+      "teamId": "season1-team-cheongalice",
+      "place": 8,
+      "record": { "status": "DNF" }
+    },
+    {
+      "id": "yang-mei",
+      "teamId": "season1-team-yona",
+      "place": 9,
+      "record": { "status": "DNF" }
+    },
+    {
+      "id": "a2-duck",
+      "teamId": "season1-team-yona",
+      "place": 10,
+      "record": { "status": "DNF" }
+    },
+    {
+      "id": "hamkubby",
+      "teamId": "season1-team-hyungdok",
+      "place": 11,
+      "record": { "status": "DNF" }
+    },
+    {
+      "id": "odanming",
+      "teamId": "season1-team-namgung-hyuk",
+      "place": 12,
+      "record": { "status": "DNF" }
+    }
+  ]
+}
