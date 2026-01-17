@@ -19,17 +19,19 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Participant({
+export default async function CompetitionDetail({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
   const id = (await params).id;
-  const competition = loadCompetitionById(id);
-
-  if (!competition) {
-    return notFound();
-  }
+  const competition = (() => {
+    try {
+      return loadCompetitionById(id);
+    } catch (_) {
+      return notFound();
+    }
+  })();
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
@@ -42,7 +44,7 @@ export default async function Participant({
           <EmptyTitle>준비중입니다.</EmptyTitle>
           <EmptyDescription>
             현재 레이아웃 작업 및 데이터 확보 작업을 진행중입니다. 곧{" "}
-            <b>{competition.name}</b> 경기의 데이터를 준비할게요!
+            <b>{competition.name}</b> 대회의 데이터를 준비할게요!
           </EmptyDescription>
         </EmptyHeader>
       </Empty>
