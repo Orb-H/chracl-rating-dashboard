@@ -1,0 +1,83 @@
+{
+  "id": "round1-main",
+  "competitionId": "season1",
+  "entryId": "season1-round1-main",
+  "name": "라운드 1 본선",
+  "date": "2025-04-27",
+  "type": "MAIN",
+  "pointsSchemeId": "standard",
+  "participants": [
+    {
+      "id": "namgung-hyuk",
+      "teamId": "season1-team-namgung-hyuk",
+      "place": 1,
+      "record": { "status": "FINISHED", "finishTime": "25:01.027" }
+    },
+    {
+      "id": "hyungdok",
+      "teamId": "season1-team-hyungdok",
+      "place": 2,
+      "record": { "status": "FINISHED", "finishTime": "25:07.572" }
+    },
+    {
+      "id": "yona",
+      "teamId": "season1-team-yona",
+      "place": 3,
+      "record": { "status": "FINISHED", "finishTime": "25:23.335" }
+    },
+    {
+      "id": "cheongalice",
+      "teamId": "season1-team-cheongalice",
+      "place": 4,
+      "record": { "status": "FINISHED", "finishTime": "25:26.453" }
+    },
+    {
+      "id": "reo",
+      "teamId": "season1-team-hyungdok",
+      "place": 5,
+      "record": { "status": "DNF" }
+    },
+    {
+      "id": "chochou",
+      "teamId": "season1-team-namgung-hyuk",
+      "place": 6,
+      "record": { "status": "DNF" }
+    },
+    {
+      "id": "yang-mei",
+      "teamId": "season1-team-yona",
+      "place": 7,
+      "record": { "status": "DNF" }
+    },
+    {
+      "id": "oversleepzzz",
+      "teamId": "season1-team-cheongalice",
+      "place": 8,
+      "record": { "status": "DNF" }
+    },
+    {
+      "id": "hera",
+      "teamId": "season1-team-cheongalice",
+      "place": 9,
+      "record": { "status": "DNF" }
+    },
+    {
+      "id": "odanming",
+      "teamId": "season1-team-namgung-hyuk",
+      "place": 10,
+      "record": { "status": "DNF" }
+    },
+    {
+      "id": "hamkubby",
+      "teamId": "season1-team-hyungdok",
+      "place": 11,
+      "record": { "status": "DNF" }
+    },
+    {
+      "id": "a2-duck",
+      "teamId": "season1-team-yona",
+      "place": 12,
+      "record": { "status": "DNF" }
+    }
+  ]
+}

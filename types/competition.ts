@@ -16,7 +16,7 @@ export type Competition = {
 };
 
 export type Team = {
-  // The unique identifier for the team. E.g., "team-a"
+  // The unique identifier for the team. E.g., "season1-team-a"
   id: string;
 
   // The display name of the team. E.g., "Team A"

@@ -1,0 +1,82 @@
+{
+  "id": "round2-qual",
+  "competitionId": "season1",
+  "entryId": "season1-round2-qual",
+  "name": "라운드 2 퀄리파잉",
+  "date": "2025-04-27",
+  "type": "QUALIFYING",
+  "participants": [
+    {
+      "id": "hyungdok",
+      "teamId": "season1-team-hyungdok",
+      "place": 1,
+      "record": { "status": "FINISHED", "lapTime": "2:04.988" }
+    },
+    {
+      "id": "namgung-hyuk",
+      "teamId": "season1-team-namgung-hyuk",
+      "place": 2,
+      "record": { "status": "FINISHED", "lapTime": "2:05.166" }
+    },
+    {
+      "id": "yona",
+      "teamId": "season1-team-yona",
+      "place": 3,
+      "record": { "status": "FINISHED", "lapTime": "2:05.535" }
+    },
+    {
+      "id": "reo",
+      "teamId": "season1-team-hyungdok",
+      "place": 4,
+      "record": { "status": "FINISHED", "lapTime": "2:07.124" }
+    },
+    {
+      "id": "cheongalice",
+      "teamId": "season1-team-cheongalice",
+      "place": 5,
+      "record": { "status": "FINISHED", "lapTime": "2:07.247" }
+    },
+    {
+      "id": "oversleepzzz",
+      "teamId": "season1-team-cheongalice",
+      "place": 6,
+      "record": { "status": "FINISHED", "lapTime": "2:08.057" }
+    },
+    {
+      "id": "a2-duck",
+      "teamId": "season1-team-yona",
+      "place": 7,
+      "record": { "status": "FINISHED", "lapTime": "2:08.183" }
+    },
+    {
+      "id": "yang-mei",
+      "teamId": "season1-team-yona",
+      "place": 8,
+      "record": { "status": "FINISHED", "lapTime": "2:08.299" }
+    },
+    {
+      "id": "hera",
+      "teamId": "season1-team-cheongalice",
+      "place": 9,
+      "record": { "status": "FINISHED", "lapTime": "2:09.085" }
+    },
+    {
+      "id": "chochou",
+      "teamId": "season1-team-namgung-hyuk",
+      "place": 10,
+      "record": { "status": "FINISHED", "lapTime": "2:09.612" }
+    },
+    {
+      "id": "hamkubby",
+      "teamId": "season1-team-hyungdok",
+      "place": 11,
+      "record": { "status": "FINISHED", "lapTime": "2:10.963" }
+    },
+    {
+      "id": "odanming",
+      "teamId": "season1-team-namgung-hyuk",
+      "place": 12,
+      "record": { "status": "FINISHED", "lapTime": "2:12.514" }
+    }
+  ]
+}
