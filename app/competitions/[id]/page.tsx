@@ -7,35 +7,35 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@/components/ui/empty";
-import { loadPlayerById, loadPlayers } from "@/lib/loadPlayers";
+import { loadCompetitionById, loadCompetitions } from "@/lib/loadCompetitions";
 
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const participants = loadPlayers();
+  const competitions = loadCompetitions();
 
-  return participants.map((participant) => ({
-    id: participant.id,
+  return competitions.map((competition) => ({
+    id: competition.id,
   }));
 }
 
-export default async function Participant({
+export default async function CompetitionDetail({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
   const id = (await params).id;
-  const participant = (() => {
+  const competition = (() => {
     try {
-      return loadPlayerById(id);
+      return loadCompetitionById(id);
     } catch (_) {
       return notFound();
     }
   })();
 
   return (
-    <main className="min-h-screen w-full max-w-3xl items-center py-16 px-8 md:py-32 md:px-16 bg-white dark:bg-black md:items-start">
-      {/* TODO(#11): Fill with concrete content */}
+    <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
+      {/* TODO(#15): Fill with concrete content */}
       <Empty>
         <EmptyHeader>
           <EmptyMedia>
@@ -44,7 +44,7 @@ export default async function Participant({
           <EmptyTitle>준비중입니다.</EmptyTitle>
           <EmptyDescription>
             현재 레이아웃 작업 및 데이터 확보 작업을 진행중입니다. 곧{" "}
-            <b>{participant.displayName}</b> 선수의 데이터를 준비할게요!
+            <b>{competition.name}</b> 대회의 데이터를 준비할게요!
           </EmptyDescription>
         </EmptyHeader>
       </Empty>
