@@ -79,7 +79,7 @@ export function loadMatchById(id: string): Match {
   return match;
 }
 
-export function loadMatchByCompetitionId(competitionId: string): Match[] {
+export function loadMatchesByCompetitionId(competitionId: string): Match[] {
   if (matches === undefined) matches = loadData();
   return matches.filter((match) => match.competitionId === competitionId);
 }
