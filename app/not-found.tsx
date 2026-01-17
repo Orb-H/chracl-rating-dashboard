@@ -2,9 +2,12 @@
 
 import { HomeIcon, MailIcon, Undo2Icon } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
-export default function Home() {
+export default function NotFound() {
+  const router = useRouter();
+
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center justify-start py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
       <header className="mb-8 w-full">
@@ -16,7 +19,7 @@ export default function Home() {
         않는다면, 현재 주소와 함께 제작자에게 메일을 보내주세요.
       </p>
       <div className="flex flex-row my-10">
-        <Button className="mx-2" onClick={() => history.back()}>
+        <Button className="mx-2" onClick={() => router.back()}>
           <Undo2Icon /> 이전 페이지로 돌아가기
         </Button>
         <Button variant="secondary" className="mx-2" asChild>
