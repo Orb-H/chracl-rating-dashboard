@@ -3,9 +3,7 @@ import { loadCompetitions } from "@/lib/loadCompetitions";
 import { CompetitionCard } from "./competitionCard";
 
 export default function Competitions() {
-  const competitions = loadCompetitions().sort(
-    (a, b) => a.sortOrder - b.sortOrder,
-  );
+  const competitions = loadCompetitions();
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
