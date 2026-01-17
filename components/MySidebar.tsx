@@ -168,13 +168,23 @@ export function MySidebar() {
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem>
+                      <Link href="https://chzzk.naver.com/video/7992247">
+                        제 2회: 포뮬러 그랑프리 (예선)
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
                       <Link href="https://chzzk.naver.com/video/8108679">
-                        제 2회: 포뮬러 그랑프리
+                        제 2회: 포뮬러 그랑프리 (본선)
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="https://chzzk.naver.com/video/10292130">
+                        제 3회: 레인 헬 (예선)
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem>
                       <Link href="https://chzzk.naver.com/video/10393351">
-                        제 3회: 레인 헬
+                        제 3회: 레인 헬 (본선)
                       </Link>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
