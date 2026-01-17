@@ -1,4 +1,5 @@
 import { loadCompetitions } from "@/lib/loadCompetitions";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CompetitionCard } from "./competitionCard";
 
 export default function Competitions() {
@@ -14,17 +15,39 @@ export default function Competitions() {
           현재까지 진행된 치지직 레이싱 동아리 대회들을 확인하세요.
         </p>
       </header>
-      {/* TODO(#14): Add a newest/oldest option on listing competitions */}
-      <div className="grid w-full gap-8 grid-cols-1 md:grid-cols-2">
-        {/* TODO(#14): Add a link to each competition*/}
-        {competitions.map((competition) => (
-          <CompetitionCard
-            key={competition.id}
-            id={competition.id}
-            name={competition.name}
-          />
-        ))}
-      </div>
+      <Tabs defaultValue="oldest">
+        <TabsList className="ml-auto mb-4">
+          <TabsTrigger value="oldest">오래된 순</TabsTrigger>
+          <TabsTrigger value="newest">최신 순</TabsTrigger>
+        </TabsList>
+        <TabsContent value="oldest">
+          <div className="grid w-full gap-8 grid-cols-1 md:grid-cols-2">
+            {/* TODO(#14): Add a link to each competition*/}
+            {competitions.map((competition) => (
+              <CompetitionCard
+                key={competition.id}
+                id={competition.id}
+                name={competition.name}
+              />
+            ))}
+          </div>
+        </TabsContent>
+        <TabsContent value="newest">
+          <div className="grid w-full gap-8 grid-cols-1 md:grid-cols-2">
+            {/* TODO(#14): Add a link to each competition*/}
+            {competitions
+              .slice()
+              .reverse()
+              .map((competition) => (
+                <CompetitionCard
+                  key={competition.id}
+                  id={competition.id}
+                  name={competition.name}
+                />
+              ))}
+          </div>
+        </TabsContent>
+      </Tabs>
     </main>
   );
 }
