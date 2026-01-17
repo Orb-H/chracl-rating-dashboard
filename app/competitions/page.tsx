@@ -1,5 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { loadCompetitions } from "@/lib/loadCompetitions";
+import { Competition } from "@/types/competition";
 import { CompetitionCard } from "./competitionCard";
 
 export default function Competitions() {
@@ -19,33 +20,27 @@ export default function Competitions() {
           <TabsTrigger value="newest">최신 순</TabsTrigger>
         </TabsList>
         <TabsContent value="oldest">
-          <div className="grid w-full gap-8 grid-cols-1 md:grid-cols-2">
-            {/* TODO(#14): Add a link to each competition*/}
-            {competitions.map((competition) => (
-              <CompetitionCard
-                key={competition.id}
-                id={competition.id}
-                name={competition.name}
-              />
-            ))}
-          </div>
+          {competitionCardList(competitions)}
         </TabsContent>
         <TabsContent value="newest">
-          <div className="grid w-full gap-8 grid-cols-1 md:grid-cols-2">
-            {/* TODO(#14): Add a link to each competition*/}
-            {competitions
-              .slice()
-              .reverse()
-              .map((competition) => (
-                <CompetitionCard
-                  key={competition.id}
-                  id={competition.id}
-                  name={competition.name}
-                />
-              ))}
-          </div>
+          {competitionCardList([...competitions].reverse())}
         </TabsContent>
       </Tabs>
     </main>
+  );
+}
+
+function competitionCardList(competitions: Competition[]) {
+  return (
+    <div className="grid w-full gap-8 grid-cols-1 md:grid-cols-2">
+      {/* TODO(#14): Add a link to each competition*/}
+      {competitions.map((competition) => (
+        <CompetitionCard
+          key={competition.id}
+          id={competition.id}
+          name={competition.name}
+        />
+      ))}
+    </div>
   );
 }
