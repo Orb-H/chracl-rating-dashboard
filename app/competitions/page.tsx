@@ -1,10 +1,10 @@
-import { loadCompetitionById } from "@/lib/loadCompetitions";
+import { loadCompetitions } from "@/lib/loadCompetitions";
 import { CompetitionCard } from "./competitionCard";
 
-const competitionIds = ["season1", "season2", "season3"];
-
 export default function Competitions() {
-  const competitions = competitionIds.map(loadCompetitionById);
+  const competitions = loadCompetitions().sort(
+    (a, b) => a.sortOrder - b.sortOrder,
+  );
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
