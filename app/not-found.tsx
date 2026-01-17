@@ -13,10 +13,7 @@ export default function Home() {
       <p className="mt-2 text-lg text-muted-foreground">
         요청하신 페이지가 존재하지 않거나, 삭제되었거나, 이동되었을 수 있습니다.
         URL을 다시 한 번 확인해 주세요. 혹시라도 있어야 하는 페이지인데 존재하지
-        않는다면, 아래 주소와 함께 제작자에게 메일을 보내주세요.
-      </p>
-      <p className="mt-2 text-lg">
-        현재 주소: <code>{window.location.href}</code>
+        않는다면, 현재 주소와 함께 제작자에게 메일을 보내주세요.
       </p>
       <div className="flex flex-row my-10">
         <Button className="mx-2" onClick={() => history.back()}>
