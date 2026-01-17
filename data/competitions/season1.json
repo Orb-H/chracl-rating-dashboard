@@ -1,6 +1,7 @@
 {
   "id": "season1",
   "name": "제 1회 치지직 레이싱 동아리: 고속도로 배틀",
+  "sortOrder": 1,
   "teams": [
     {
       "id": "season1-team-namgung-hyuk",
