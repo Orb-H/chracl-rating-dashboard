@@ -32,7 +32,7 @@ export function Header() {
             className="w-full"
             onValueChange={(value) => setTheme(value)}
           >
-            <TabsList className="bg-transparent border-0 p-1">
+            <TabsList>
               <TabsTrigger
                 value="light"
                 className="not-data-[state=active]:bg-muted not-data-[state=active]:text-muted-foreground"
