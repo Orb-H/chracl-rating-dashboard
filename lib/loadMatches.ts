@@ -20,7 +20,10 @@ function loadData(): Match[] {
     dirNames.forEach((dirName) => {
       const dirPath = path.join(dataDir, dirName);
       fileNames.push(
-        ...fs.readdirSync(dirPath).filter((file) => file.endsWith(".json")),
+        ...fs
+          .readdirSync(dirPath)
+          .filter((file) => file.endsWith(".json"))
+          .map((file) => path.join(dirName, file)),
       );
     });
   } catch (err) {
