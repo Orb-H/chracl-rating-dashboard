@@ -5,6 +5,9 @@ export type Competition = {
   // The display name of the competition. E.g., "제 1회 치지직 레이싱 동아리: 고속도로 배틀"
   name: string;
 
+  // The sort order of the competition. Lower numbers mean older competitions. E.g., 1
+  sortOrder: number;
+
   // The list of teams participating in the competition.
   teams: Team[];
 

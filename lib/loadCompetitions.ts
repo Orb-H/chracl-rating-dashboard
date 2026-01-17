@@ -45,8 +45,12 @@ function loadData(): Competition[] {
   return competitionsData;
 }
 
+/**
+ * @returns sorted Competition objects, based on `sortOrder` field, in ascending order.
+ */
 export function loadCompetitions(): Competition[] {
-  if (competitions === undefined) competitions = loadData();
+  if (competitions === undefined)
+    competitions = loadData().sort((a, b) => a.sortOrder - b.sortOrder);
   return competitions;
 }
 

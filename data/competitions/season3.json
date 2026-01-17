@@ -1,6 +1,7 @@
 {
   "id": "season3",
   "name": "제 3회 치지직 레이싱 동아리: 레인 헬",
+  "sortOrder": 3,
   "teams": [
     {
       "id": "season3-team-namgung-hyuk",
