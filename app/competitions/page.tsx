@@ -1,5 +1,5 @@
-import { loadCompetitions } from "@/lib/loadCompetitions";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { loadCompetitions } from "@/lib/loadCompetitions";
 import { CompetitionCard } from "./competitionCard";
 
 export default function Competitions() {
