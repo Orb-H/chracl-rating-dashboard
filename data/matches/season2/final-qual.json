@@ -1,0 +1,70 @@
+{
+  "id": "final-qual",
+  "competitionId": "season2",
+  "entryId": "season2-final-qual",
+  "name": "결승전 퀄리파잉",
+  "date": "2025-07-06",
+  "stage": "QUALIFYING",
+  "participants": [
+    {
+      "id": "namgung-hyuk",
+      "teamId": "season2-team-namgung-hyuk",
+      "place": 1,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:22.629" }
+    },
+    {
+      "id": "zen1th-hwang",
+      "teamId": "season2-team-cheongalice",
+      "place": 2,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:22.961" }
+    },
+    {
+      "id": "cheongalice",
+      "teamId": "season2-team-cheongalice",
+      "place": 3,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:23.193" }
+    },
+    {
+      "id": "nodolly",
+      "teamId": "season2-team-cheongalice",
+      "place": 4,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:23.600" }
+    },
+    {
+      "id": "bbogumi",
+      "teamId": "season2-team-namgung-hyuk",
+      "place": 5,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:23.631" }
+    },
+    {
+      "id": "kim-toki",
+      "teamId": "season2-team-namgung-hyuk",
+      "place": 6,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:24.548" }
+    },
+    {
+      "id": "odanming",
+      "teamId": "season2-team-namgung-hyuk",
+      "place": 7,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:24.922" }
+    },
+    {
+      "id": "chochou",
+      "teamId": "season2-team-cheongalice",
+      "place": 8,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:25.408" }
+    },
+    {
+      "id": "eaglekop",
+      "teamId": "season2-team-cheongalice",
+      "place": 9,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:25.901" }
+    },
+    {
+      "id": "hamkubby",
+      "teamId": "season2-team-namgung-hyuk",
+      "place": 10,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:25.996" }
+    }
+  ]
+}

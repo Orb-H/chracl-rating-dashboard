@@ -1,0 +1,74 @@
+{
+  "id": "semifinal-b-main",
+  "entryId": "season2-semifinal-b-main",
+  "name": "4강 B조 본선",
+  "date": "2025-07-06",
+  "stage": "MAIN",
+  "pointsSchemeId": "standard",
+  "participants": [
+    {
+      "id": "namgung-hyuk",
+      "teamId": "season2-team-namgung-hyuk",
+      "place": 1,
+      "raceRecord": { "status": "FINISHED", "finishTime": "25:09.809" }
+    },
+    {
+      "id": "hyungdok",
+      "teamId": "season2-team-hyungdok",
+      "place": 2,
+      "raceRecord": { "status": "FINISHED", "finishTime": "25:11.026" }
+    },
+    {
+      "id": "park-insoo",
+      "teamId": "season2-team-hyungdok",
+      "place": 3,
+      "raceRecord": { "status": "FINISHED", "finishTime": "25:20.175" }
+    },
+    {
+      "id": "bbogumi",
+      "teamId": "season2-team-namgung-hyuk",
+      "place": 4,
+      "raceRecord": {
+        "status": "FINISHED",
+        "finishTime": "25:24.571",
+        "penaltyTime": "00:02.000"
+      }
+    },
+    {
+      "id": "parkgee",
+      "teamId": "season2-team-hyungdok",
+      "place": 5,
+      "raceRecord": { "status": "FINISHED", "finishTime": "25:38.133" }
+    },
+    {
+      "id": "hamkubby",
+      "teamId": "season2-team-namgung-hyuk",
+      "place": 6,
+      "raceRecord": { "status": "FINISHED", "finishTime": "25:46.984" }
+    },
+    {
+      "id": "kim-toki",
+      "teamId": "season2-team-namgung-hyuk",
+      "place": 7,
+      "raceRecord": { "status": "FINISHED", "finishTime": "25:48.600" }
+    },
+    {
+      "id": "odanming",
+      "teamId": "season2-team-namgung-hyuk",
+      "place": 8,
+      "raceRecord": { "status": "FINISHED", "finishTime": "25:51.056" }
+    },
+    {
+      "id": "yang-mei",
+      "teamId": "season2-team-hyungdok",
+      "place": 9,
+      "raceRecord": { "status": "FINISHED", "finishTime": "26:00.618" }
+    },
+    {
+      "id": "a2-duck",
+      "teamId": "season2-team-hyungdok",
+      "place": 10,
+      "raceRecord": { "status": "FINISHED", "finishTime": "26:17.523" }
+    }
+  ]
+}

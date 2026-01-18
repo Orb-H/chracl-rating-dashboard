@@ -1,0 +1,70 @@
+{
+  "id": "semifinal-a-qual",
+  "competitionId": "season2",
+  "entryId": "season2-semifinal-a-qual",
+  "name": "4강 A조 퀄리파잉",
+  "date": "2025-07-06",
+  "stage": "QUALIFYING",
+  "participants": [
+    {
+      "id": "nodolly",
+      "teamId": "season2-team-cheongalice",
+      "place": 1,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:12.652" }
+    },
+    {
+      "id": "zen1th-hwang",
+      "teamId": "season2-team-cheongalice",
+      "place": 2,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:12.654" }
+    },
+    {
+      "id": "yona",
+      "teamId": "season2-team-yona",
+      "place": 3,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:13.025" }
+    },
+    {
+      "id": "reo",
+      "teamId": "season2-team-yona",
+      "place": 4,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:13.201" }
+    },
+    {
+      "id": "moon-hojun",
+      "teamId": "season2-team-yona",
+      "place": 5,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:13.204" }
+    },
+    {
+      "id": "cheongalice",
+      "teamId": "season2-team-cheongalice",
+      "place": 6,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:13.365" }
+    },
+    {
+      "id": "hera",
+      "teamId": "season2-team-yona",
+      "place": 7,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:13.674" }
+    },
+    {
+      "id": "chochou",
+      "teamId": "season2-team-cheongalice",
+      "place": 8,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:14.077" }
+    },
+    {
+      "id": "eaglekop",
+      "teamId": "season2-team-cheongalice",
+      "place": 9,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:14.789" }
+    },
+    {
+      "id": "kanetv8",
+      "teamId": "season2-team-yona",
+      "place": 10,
+      "raceRecord": { "status": "FINISHED", "lapTime": "1:15.125" }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "third-main",
+  "competitionId": "season2",
+  "entryId": "season2-third-main",
+  "name": "3·4위 결정전 본선",
+  "date": "2025-07-06",
+  "stage": "MAIN",
+  "pointsSchemeId": "standard",
+  "participants": [
+    {
+      "id": "park-insoo",
+      "teamId": "season2-team-hyungdok",
+      "place": 1,
+      "raceRecord": { "status": "FINISHED", "finishTime": "28:16.934" }
+    },
+    {
+      "id": "moon-hojun",
+      "teamId": "season2-team-yona",
+      "place": 2,
+      "raceRecord": {
+        "status": "FINISHED",
+        "finishTime": "28:28.969",
+        "penaltyTime": "00:02.000"
+      }
+    },
+    {
+      "id": "yona",
+      "teamId": "season2-team-yona",
+      "place": 3,
+      "raceRecord": { "status": "FINISHED", "finishTime": "28:32.026" }
+    },
+    {
+      "id": "hyungdok",
+      "teamId": "season2-team-hyungdok",
+      "place": 4,
+      "raceRecord": { "status": "FINISHED", "finishTime": "28:42.972" }
+    },
+    {
+      "id": "reo",
+      "teamId": "season2-team-yona",
+      "place": 5,
+      "raceRecord": { "status": "FINISHED", "finishTime": "28:57.505" }
+    },
+    {
+      "id": "a2-duck",
+      "teamId": "season2-team-hyungdok",
+      "place": 6,
+      "raceRecord": { "status": "FINISHED", "finishTime": "29:08.792" }
+    },
+    {
+      "id": "parkgee",
+      "teamId": "season2-team-hyungdok",
+      "place": 7,
+      "raceRecord": { "status": "FINISHED", "finishTime": "29:13.928" }
+    },
+    {
+      "id": "kanetv8",
+      "teamId": "season2-team-yona",
+      "place": 8,
+      "raceRecord": { "status": "FINISHED", "finishTime": "29:25.975" }
+    },
+    {
+      "id": "hera",
+      "teamId": "season2-team-yona",
+      "place": 9,
+      "raceRecord": {
+        "status": "FINISHED",
+        "finishTime": "29:17.156",
+        "penaltyTime": "00:10.000"
+      }
+    },
+    {
+      "id": "yang-mei",
+      "teamId": "season2-team-hyungdok",
+      "place": 10,
+      "raceRecord": { "status": "FINISHED", "finishTime": "29:39.211" }
+    }
+  ]
+}
