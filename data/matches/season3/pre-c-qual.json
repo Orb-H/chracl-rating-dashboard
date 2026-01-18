@@ -1,0 +1,60 @@
+{
+  "id": "pre-c-qual",
+  "competitionId": "season3",
+  "entryId": "season3-pre-qual",
+  "name": "예선 C조 퀄리파잉",
+  "date": "2025-11-17",
+  "type": "QUALIFYING",
+  "participants": [
+    {
+      "id": "namgung-hyuk",
+      "place": 1,
+      "record": { "status": "FINISHED", "lapTime": "3:27.287" }
+    },
+    {
+      "id": "reo",
+      "place": 2,
+      "record": { "status": "FINISHED", "lapTime": "3:31.037" }
+    },
+    {
+      "id": "samozang",
+      "place": 3,
+      "record": { "status": "FINISHED", "lapTime": "3:31.048" }
+    },
+    {
+      "id": "kim-toki",
+      "place": 4,
+      "record": { "status": "FINISHED", "lapTime": "3:35.152" }
+    },
+    {
+      "id": "chochou",
+      "place": 5,
+      "record": { "status": "FINISHED", "lapTime": "3:37.839" }
+    },
+    {
+      "id": "a2-duck",
+      "place": 6,
+      "record": { "status": "FINISHED", "lapTime": "3:38.081" }
+    },
+    {
+      "id": "sdsd97",
+      "place": 7,
+      "record": { "status": "FINISHED", "lapTime": "3:39.939" }
+    },
+    {
+      "id": "lotionyum",
+      "place": 8,
+      "record": { "status": "FINISHED", "lapTime": "3:40.292" }
+    },
+    {
+      "id": "u-lili",
+      "place": 9,
+      "record": { "status": "FINISHED", "lapTime": "3:44.733" }
+    },
+    {
+      "id": "half",
+      "place": 10,
+      "record": { "status": "FINISHED", "lapTime": "3:46.191" }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "pre-a-qual",
+  "competitionId": "season3",
+  "entryId": "season3-pre-qual",
+  "name": "예선 A조 퀄리파잉",
+  "date": "2025-11-17",
+  "type": "QUALIFYING",
+  "participants": [
+    {
+      "id": "hyungdok",
+      "place": 1,
+      "record": { "status": "FINISHED", "lapTime": "3:27.581" }
+    },
+    {
+      "id": "yona",
+      "place": 2,
+      "record": { "status": "FINISHED", "lapTime": "3:30.383" }
+    },
+    {
+      "id": "yu-yeonghyeok",
+      "place": 3,
+      "record": { "status": "FINISHED", "lapTime": "3:34.240" }
+    },
+    {
+      "id": "hera",
+      "place": 4,
+      "record": { "status": "FINISHED", "lapTime": "3:34.715" }
+    },
+    {
+      "id": "odanming",
+      "place": 5,
+      "record": { "status": "FINISHED", "lapTime": "3:35.715" }
+    },
+    {
+      "id": "yang-mei",
+      "place": 6,
+      "record": { "status": "FINISHED", "lapTime": "3:36.800" }
+    },
+    {
+      "id": "haematl",
+      "place": 7,
+      "record": { "status": "FINISHED", "lapTime": "3:38.602" }
+    },
+    {
+      "id": "kevinstudio",
+      "place": 8,
+      "record": { "status": "FINISHED", "lapTime": "3:39.743" }
+    },
+    {
+      "id": "auro",
+      "place": 9,
+      "record": { "status": "FINISHED", "lapTime": "3:51.822" }
+    },
+    {
+      "id": "reana",
+      "place": 10,
+      "record": { "status": "FINISHED", "lapTime": "3:53.346" }
+    }
+  ]
+}

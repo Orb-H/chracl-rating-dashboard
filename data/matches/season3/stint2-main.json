@@ -1,0 +1,99 @@
+{
+  "id": "stint2-main",
+  "competitionId": "season3",
+  "entryId": "season3-stint2-main",
+  "name": "STINT 2 본선",
+  "date": "2025-11-23",
+  "type": "MAIN",
+  "pointsSchemeId": "stint2",
+  "participants": [
+    {
+      "id": "odanming",
+      "teamId": "season3-team-hyungdok",
+      "place": 1,
+      "record": { "status": "FINISHED", "finishTime": "46:13.105" }
+    },
+    {
+      "id": "haematl",
+      "teamId": "season3-team-hyungdok",
+      "place": 2,
+      "record": { "status": "FINISHED", "finishTime": "46:15.078" }
+    },
+    {
+      "id": "kim-toki",
+      "teamId": "season3-team-namgung-hyuk",
+      "place": 3,
+      "record": { "status": "FINISHED", "finishTime": "46:19.166" }
+    },
+    {
+      "id": "psy-haruto",
+      "teamId": "season3-team-reo",
+      "place": 4,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "46:42.146",
+        "penaltyTime": "00:05.000"
+      }
+    },
+    {
+      "id": "kevinstudio",
+      "teamId": "season3-team-namgung-hyuk",
+      "place": 5,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "46:37.573",
+        "penaltyTime": "00:20.000"
+      }
+    },
+    {
+      "id": "yang-mei",
+      "teamId": "season3-team-zen1th-hwang",
+      "place": 6,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "46:38.975",
+        "penaltyTime": "00:20.000"
+      }
+    },
+    {
+      "id": "saessakgamja",
+      "teamId": "season3-team-yona",
+      "place": 7,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "46:36.520",
+        "penaltyTime": "00:35.000"
+      }
+    },
+    {
+      "id": "a2-duck",
+      "teamId": "season3-team-zen1th-hwang",
+      "place": 8,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "46:46.457",
+        "penaltyTime": "00:30.000"
+      }
+    },
+    {
+      "id": "bbogumi",
+      "teamId": "season3-team-reo",
+      "place": 9,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "46:51.267",
+        "penaltyTime": "00:30.000"
+      }
+    },
+    {
+      "id": "chochou",
+      "teamId": "season3-team-yona",
+      "place": 10,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "46:39.879",
+        "penaltyTime": "00:50.000"
+      }
+    }
+  ]
+}
