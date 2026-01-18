@@ -1,0 +1,54 @@
+{
+  "id": "pre-b-main",
+  "competitionId": "season2",
+  "entryId": "season2-pre-b-main",
+  "name": "예선 B조 본선",
+  "date": "2025-06-29",
+  "type": "MAIN",
+  "participants": [
+    {
+      "id": "zen1th-hwang",
+      "place": 1,
+      "record": { "status": "FINISHED", "finishTime": "18:28.444" }
+    },
+    {
+      "id": "nodolly",
+      "place": 2,
+      "record": { "status": "FINISHED", "finishTime": "18:48.559" }
+    },
+    {
+      "id": "kim-toki",
+      "place": 3,
+      "record": { "status": "FINISHED", "finishTime": "19:12.016" }
+    },
+    {
+      "id": "odanming",
+      "place": 4,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "19:08.773",
+        "penaltyTime": "00:06.000"
+      }
+    },
+    {
+      "id": "bbogumi",
+      "place": 5,
+      "record": { "status": "FINISHED", "finishTime": "19:29.307" }
+    },
+    {
+      "id": "hera",
+      "place": 6,
+      "record": { "status": "FINISHED", "finishTime": "19:41.655" }
+    },
+    {
+      "id": "hamkubby",
+      "place": 7,
+      "record": { "status": "DNF", "penaltyTime": "00:06.000" }
+    },
+    {
+      "id": "eaglekop",
+      "place": 8,
+      "record": { "status": "DNF", "penaltyTime": "00:05.000" }
+    }
+  ]
+}

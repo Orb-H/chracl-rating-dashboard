@@ -58,7 +58,7 @@ export type Participant = {
    * The team identifier the participant belongs to.
    * E.g., `season1-team-namgung-hyuk`
    */
-  teamId: string;
+  teamId?: string;
 
   /**
    * The place the participant achieved in the match.

@@ -1,0 +1,87 @@
+{
+  "id": "semifinal-a-main",
+  "competitionId": "season2",
+  "entryId": "season2-semifinal-a-main",
+  "name": "4강 A조 본선",
+  "date": "2025-07-06",
+  "type": "MAIN",
+  "pointsSchemeId": "standard",
+  "participants": [
+    {
+      "id": "zen1th-hwang",
+      "teamId": "season2-team-cheongalice",
+      "place": 1,
+      "record": { "status": "FINISHED", "finishTime": "25:18.580" }
+    },
+    {
+      "id": "cheongalice",
+      "teamId": "season2-team-cheongalice",
+      "place": 2,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "25:16.484",
+        "penaltyTime": "00:05.000"
+      }
+    },
+    {
+      "id": "yona",
+      "teamId": "season2-team-yona",
+      "place": 3,
+      "record": { "status": "FINISHED", "finishTime": "25:23.410" }
+    },
+    {
+      "id": "nodolly",
+      "teamId": "season2-team-cheongalice",
+      "place": 4,
+      "record": { "status": "FINISHED", "finishTime": "25:59.074" }
+    },
+    {
+      "id": "moon-hojun",
+      "teamId": "season2-team-yona",
+      "place": 5,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "25:59.696",
+        "penaltyTime": "00:05.000"
+      }
+    },
+    {
+      "id": "hera",
+      "teamId": "season2-team-yona",
+      "place": 6,
+      "record": { "status": "FINISHED", "finishTime": "26:08.676" }
+    },
+    {
+      "id": "chochou",
+      "teamId": "season2-team-cheongalice",
+      "place": 7,
+      "record": { "status": "FINISHED", "finishTime": "26:19.274" }
+    },
+    {
+      "id": "reo",
+      "teamId": "season2-team-yona",
+      "place": 8,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "26:06.116",
+        "penaltyTime": "00:15.000"
+      }
+    },
+    {
+      "id": "kanetv8",
+      "teamId": "season2-team-yona",
+      "place": 9,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "26:24.391",
+        "penaltyTime": "00:02.000"
+      }
+    },
+    {
+      "id": "eaglekop",
+      "teamId": "season2-team-cheongalice",
+      "place": 10,
+      "record": { "status": "FINISHED", "finishTime": "26:26.484" }
+    }
+  ]
+}

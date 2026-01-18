@@ -1,0 +1,58 @@
+{
+  "id": "pre-b-qual",
+  "competitionId": "season2",
+  "entryId": "season2-pre-qual",
+  "name": "예선 B조 퀄리파잉",
+  "date": "2025-06-29",
+  "type": "QUALIFYING",
+  "participants": [
+    {
+      "id": "zen1th-hwang",
+      "place": 1,
+      "ratedPlace": 1,
+      "record": { "status": "FINISHED", "lapTime": "1:12.500" }
+    },
+    {
+      "id": "nodolly",
+      "place": 2,
+      "ratedPlace": 5,
+      "record": { "status": "FINISHED", "lapTime": "1:14.237" }
+    },
+    {
+      "id": "kim-toki",
+      "place": 3,
+      "ratedPlace": 7,
+      "record": { "status": "FINISHED", "lapTime": "1:14.449" }
+    },
+    {
+      "id": "odanming",
+      "place": 4,
+      "ratedPlace": 9,
+      "record": { "status": "FINISHED", "lapTime": "1:15.220" }
+    },
+    {
+      "id": "bbogumi",
+      "place": 5,
+      "ratedPlace": 11,
+      "record": { "status": "FINISHED", "lapTime": "1:15.616" }
+    },
+    {
+      "id": "hera",
+      "place": 6,
+      "ratedPlace": 12,
+      "record": { "status": "FINISHED", "lapTime": "1:15.670" }
+    },
+    {
+      "id": "hamkubby",
+      "place": 7,
+      "ratedPlace": 13,
+      "record": { "status": "FINISHED", "lapTime": "1:15.941" }
+    },
+    {
+      "id": "eaglekop",
+      "place": 8,
+      "ratedPlace": 16,
+      "record": { "status": "FINISHED", "lapTime": "1:19.065" }
+    }
+  ]
+}
