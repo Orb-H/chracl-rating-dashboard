@@ -1,0 +1,60 @@
+{
+  "id": "pre-b-qual",
+  "competitionId": "season3",
+  "entryId": "season3-pre-qual",
+  "name": "예선 B조 퀄리파잉",
+  "date": "2025-11-17",
+  "type": "QUALIFYING",
+  "participants": [
+    {
+      "id": "zen1th-hwang",
+      "place": 1,
+      "record": { "status": "FINISHED", "lapTime": "3:28.664" }
+    },
+    {
+      "id": "cheongalice",
+      "place": 2,
+      "record": { "status": "FINISHED", "lapTime": "3:33.470" }
+    },
+    {
+      "id": "100hp-tv",
+      "place": 3,
+      "record": { "status": "FINISHED", "lapTime": "3:33.856" }
+    },
+    {
+      "id": "saessakgamja",
+      "place": 4,
+      "record": { "status": "FINISHED", "lapTime": "3:37.062" }
+    },
+    {
+      "id": "bbogumi",
+      "place": 5,
+      "record": { "status": "FINISHED", "lapTime": "3:37.533" }
+    },
+    {
+      "id": "psy-haruto",
+      "place": 6,
+      "record": { "status": "FINISHED", "lapTime": "3:37.709" }
+    },
+    {
+      "id": "mytyl-maerchen",
+      "place": 7,
+      "record": { "status": "FINISHED", "lapTime": "3:43.339" }
+    },
+    {
+      "id": "ichika-hibi",
+      "place": 8,
+      "record": { "status": "FINISHED", "lapTime": "3:46.814" }
+    },
+    {
+      "id": "oversleepzzz",
+      "place": 9,
+      "record": { "status": "FINISHED", "lapTime": "3:46.891" }
+    },
+    {
+      "id": "eaglekop",
+      "place": 10,
+      "record": { "status": "FINISHED", "lapTime": "3:46.906" }
+    }
+  ]
+}

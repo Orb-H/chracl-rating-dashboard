@@ -1,0 +1,87 @@
+{
+  "id": "stint1-main",
+  "competitionId": "season3",
+  "entryId": "season3-stint1-main",
+  "name": "STINT 1 본선",
+  "date": "2025-11-23",
+  "type": "MAIN",
+  "pointsSchemeId": "stint1",
+  "participants": [
+    {
+      "id": "oversleepzzz",
+      "teamId": "season3-team-hyungdok",
+      "place": 1,
+      "record": { "status": "FINISHED", "finishTime": "28:37.372" }
+    },
+    {
+      "id": "eaglekop",
+      "teamId": "season3-team-namgung-hyuk",
+      "place": 2,
+      "record": { "status": "FINISHED", "finishTime": "28:54.318" }
+    },
+    {
+      "id": "lotionyum",
+      "teamId": "season3-team-yona",
+      "place": 3,
+      "record": { "status": "FINISHED", "finishTime": "29:01.372" }
+    },
+    {
+      "id": "sdsd97",
+      "teamId": "season3-team-reo",
+      "place": 4,
+      "record": { "status": "FINISHED", "finishTime": "29:21.490" }
+    },
+    {
+      "id": "u-lili",
+      "teamId": "season3-team-namgung-hyuk",
+      "place": 5,
+      "record": { "status": "FINISHED", "finishTime": "29:39.959" }
+    },
+    {
+      "id": "ichika-hibi",
+      "teamId": "season3-team-zen1th-hwang",
+      "place": 6,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "29:38.215",
+        "penaltyTime": "00:05.000"
+      }
+    },
+    {
+      "id": "mytyl-maerchen",
+      "teamId": "season3-team-zen1th-hwang",
+      "place": 7,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "29:35.754",
+        "penaltyTime": "00:10.000"
+      }
+    },
+    {
+      "id": "auro",
+      "teamId": "season3-team-reo",
+      "place": 8,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "29:37.602",
+        "penaltyTime": "00:15.000"
+      }
+    },
+    {
+      "id": "reana",
+      "teamId": "season3-team-hyungdok",
+      "place": 9,
+      "record": { "status": "FINISHED", "finishTime": "29:52.979" }
+    },
+    {
+      "id": "half",
+      "teamId": "season3-team-yona",
+      "place": 10,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "29:38.485",
+        "penaltyTime": "00:15.000"
+      }
+    }
+  ]
+}

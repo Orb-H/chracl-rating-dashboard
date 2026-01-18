@@ -1,0 +1,95 @@
+{
+  "id": "stint3-main",
+  "competitionId": "season3",
+  "entryId": "season3-stint3-main",
+  "name": "STINT 3 본선",
+  "date": "2025-11-23",
+  "type": "MAIN",
+  "pointsSchemeId": "stint3",
+  "participants": [
+    {
+      "id": "hyungdok",
+      "teamId": "season3-team-hyungdok",
+      "place": 1,
+      "record": { "status": "FINISHED", "finishTime": "1:15:45.462" }
+    },
+    {
+      "id": "yu-yeonghyeok",
+      "teamId": "season3-team-hyungdok",
+      "place": 2,
+      "record": { "status": "FINISHED", "finishTime": "1:16:50.741" }
+    },
+    {
+      "id": "yona",
+      "teamId": "season3-team-yona",
+      "place": 3,
+      "record": { "status": "FINISHED", "finishTime": "1:16:54.675" }
+    },
+    {
+      "id": "cheongalice",
+      "teamId": "season3-team-yona",
+      "place": 4,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "1:16:52.858",
+        "penaltyTime": "00:05.000"
+      }
+    },
+    {
+      "id": "samozang",
+      "teamId": "season3-team-reo",
+      "place": 5,
+      "record": { "status": "FINISHED", "finishTime": "1:16:57.899" }
+    },
+    {
+      "id": "zen1th-hwang",
+      "teamId": "season3-team-zen1th-hwang",
+      "place": 6,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "1:16:51.025",
+        "penaltyTime": "00:15.000"
+      }
+    },
+    {
+      "id": "reo",
+      "teamId": "season3-team-reo",
+      "place": 7,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "1:16:44.788",
+        "penaltyTime": "00:35.000"
+      }
+    },
+    {
+      "id": "100hp-tv",
+      "teamId": "season3-team-zen1th-hwang",
+      "place": 8,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "1:16:51.661",
+        "penaltyTime": "00:35.000"
+      }
+    },
+    {
+      "id": "hera",
+      "teamId": "season3-team-namgung-hyuk",
+      "place": 9,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "1:16:51.917",
+        "penaltyTime": "00:45.000"
+      }
+    },
+    {
+      "id": "namgung-hyuk",
+      "teamId": "season3-team-namgung-hyuk",
+      "place": 10,
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "1:17:46.728",
+        "penaltyTime": "00:15.000"
+      }
+    }
+  ]
+}

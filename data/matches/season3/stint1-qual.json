@@ -1,0 +1,70 @@
+{
+  "id": "stint1-qual",
+  "competitionId": "season3",
+  "entryId": "season3-stint1-qual",
+  "name": "STINT 1 퀄리파잉",
+  "date": "2025-11-23",
+  "type": "QUALIFYING",
+  "participants": [
+    {
+      "id": "eaglekop",
+      "teamId": "season3-team-namgung-hyuk",
+      "place": 1,
+      "record": { "status": "FINISHED", "lapTime": "3:36.110" }
+    },
+    {
+      "id": "lotionyum",
+      "teamId": "season3-team-yona",
+      "place": 2,
+      "record": { "status": "FINISHED", "lapTime": "3:36.194" }
+    },
+    {
+      "id": "oversleepzzz",
+      "teamId": "season3-team-hyungdok",
+      "place": 3,
+      "record": { "status": "FINISHED", "lapTime": "3:36.500" }
+    },
+    {
+      "id": "u-lili",
+      "teamId": "season3-team-namgung-hyuk",
+      "place": 4,
+      "record": { "status": "FINISHED", "lapTime": "3:38.305" }
+    },
+    {
+      "id": "auro",
+      "teamId": "season3-team-reo",
+      "place": 5,
+      "record": { "status": "FINISHED", "lapTime": "3:38.371" }
+    },
+    {
+      "id": "half",
+      "teamId": "season3-team-yona",
+      "place": 6,
+      "record": { "status": "FINISHED", "lapTime": "3:38.538" }
+    },
+    {
+      "id": "sdsd97",
+      "teamId": "season3-team-reo",
+      "place": 7,
+      "record": { "status": "FINISHED", "lapTime": "3:39.514" }
+    },
+    {
+      "id": "mytyl-maerchen",
+      "teamId": "season3-team-zen1th-hwang",
+      "place": 8,
+      "record": { "status": "FINISHED", "lapTime": "3:41.003" }
+    },
+    {
+      "id": "ichika-hibi",
+      "teamId": "season3-team-zen1th-hwang",
+      "place": 9,
+      "record": { "status": "FINISHED", "lapTime": "3:41.969" }
+    },
+    {
+      "id": "reana",
+      "teamId": "season3-team-hyungdok",
+      "place": 10,
+      "record": { "status": "FINISHED", "lapTime": "3:42.803" }
+    }
+  ]
+}
