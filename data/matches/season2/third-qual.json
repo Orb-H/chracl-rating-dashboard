@@ -4,67 +4,67 @@
   "entryId": "season2-third-qual",
   "name": "3·4위 결정전 퀄리파잉",
   "date": "2025-07-06",
-  "stage": "QUALIFYING",
+  "type": "QUALIFYING",
   "participants": [
     {
       "id": "park-insoo",
       "teamId": "season2-team-hyungdok",
       "place": 1,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:22.186" }
+      "record": { "status": "FINISHED", "lapTime": "1:22.186" }
     },
     {
       "id": "moon-hojun",
       "teamId": "season2-team-yona",
       "place": 2,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:22.959" }
+      "record": { "status": "FINISHED", "lapTime": "1:22.959" }
     },
     {
       "id": "hyungdok",
       "teamId": "season2-team-hyungdok",
       "place": 3,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:23.060" }
+      "record": { "status": "FINISHED", "lapTime": "1:23.060" }
     },
     {
       "id": "reo",
       "teamId": "season2-team-yona",
       "place": 4,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:23.146" }
+      "record": { "status": "FINISHED", "lapTime": "1:23.146" }
     },
     {
       "id": "parkgee",
       "teamId": "season2-team-hyungdok",
       "place": 5,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:23.613" }
+      "record": { "status": "FINISHED", "lapTime": "1:23.613" }
     },
     {
       "id": "yona",
       "teamId": "season2-team-yona",
       "place": 6,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:23.664" }
+      "record": { "status": "FINISHED", "lapTime": "1:23.664" }
     },
     {
       "id": "a2-duck",
       "teamId": "season2-team-hyungdok",
       "place": 7,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:24.163" }
+      "record": { "status": "FINISHED", "lapTime": "1:24.163" }
     },
     {
       "id": "hera",
       "teamId": "season2-team-yona",
       "place": 8,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:24.266" }
+      "record": { "status": "FINISHED", "lapTime": "1:24.266" }
     },
     {
       "id": "yang-mei",
       "teamId": "season2-team-hyungdok",
       "place": 9,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:25.200" }
+      "record": { "status": "FINISHED", "lapTime": "1:25.200" }
     },
     {
       "id": "kanetv8",
       "teamId": "season2-team-yona",
       "place": 10,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:25.784" }
+      "record": { "status": "FINISHED", "lapTime": "1:25.784" }
     }
   ]
 }

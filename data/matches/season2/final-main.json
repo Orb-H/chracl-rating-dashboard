@@ -4,14 +4,14 @@
   "entryId": "season2-final-main",
   "name": "결승전 본선",
   "date": "2025-07-06",
-  "stage": "MAIN",
+  "type": "MAIN",
   "pointsSchemeId": "standard",
   "participants": [
     {
       "id": "namgung-hyuk",
       "teamId": "season2-team-namgung-hyuk",
       "place": 1,
-      "raceRecord": {
+      "record": {
         "status": "FINISHED",
         "finishTime": "28:34.804",
         "penaltyTime": "00:17.000"
@@ -21,37 +21,37 @@
       "id": "cheongalice",
       "teamId": "season2-team-cheongalice",
       "place": 2,
-      "raceRecord": { "status": "FINISHED", "finishTime": "28:54.099" }
+      "record": { "status": "FINISHED", "finishTime": "28:54.099" }
     },
     {
       "id": "zen1th-hwang",
       "teamId": "season2-team-cheongalice",
       "place": 3,
-      "raceRecord": { "status": "FINISHED", "finishTime": "29:07.619" }
+      "record": { "status": "FINISHED", "finishTime": "29:07.619" }
     },
     {
       "id": "odanming",
       "teamId": "season2-team-namgung-hyuk",
       "place": 4,
-      "raceRecord": { "status": "FINISHED", "finishTime": "29:13.638" }
+      "record": { "status": "FINISHED", "finishTime": "29:13.638" }
     },
     {
       "id": "kim-toki",
       "teamId": "season2-team-namgung-hyuk",
       "place": 5,
-      "raceRecord": { "status": "FINISHED", "finishTime": "29:13.904" }
+      "record": { "status": "FINISHED", "finishTime": "29:13.904" }
     },
     {
       "id": "nodolly",
       "teamId": "season2-team-cheongalice",
       "place": 6,
-      "raceRecord": { "status": "FINISHED", "finishTime": "29:23.024" }
+      "record": { "status": "FINISHED", "finishTime": "29:23.024" }
     },
     {
       "id": "bbogumi",
       "teamId": "season2-team-namgung-hyuk",
       "place": 7,
-      "raceRecord": {
+      "record": {
         "status": "FINISHED",
         "finishTime": "29:18.335",
         "penaltyTime": "00:05.000"
@@ -61,7 +61,7 @@
       "id": "hamkubby",
       "teamId": "season2-team-namgung-hyuk",
       "place": 8,
-      "raceRecord": {
+      "record": {
         "status": "FINISHED",
         "finishTime": "29:19.248",
         "penaltyTime": "00:05.000"
@@ -71,13 +71,13 @@
       "id": "eaglekop",
       "teamId": "season2-team-cheongalice",
       "place": 9,
-      "raceRecord": { "status": "FINISHED", "finishTime": "29:33.317" }
+      "record": { "status": "FINISHED", "finishTime": "29:33.317" }
     },
     {
       "id": "chochou",
       "teamId": "season2-team-cheongalice",
       "place": 10,
-      "raceRecord": { "status": "FINISHED", "finishTime": "29:34.804" }
+      "record": { "status": "FINISHED", "finishTime": "29:34.804" }
     }
   ]
 }

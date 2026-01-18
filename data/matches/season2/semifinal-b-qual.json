@@ -4,67 +4,67 @@
   "entryId": "season2-semifinal-b-qual",
   "name": "4강 B조 퀄리파잉",
   "date": "2025-07-06",
-  "stage": "QUALIFYING",
+  "type": "QUALIFYING",
   "participants": [
     {
       "id": "park-insoo",
       "teamId": "season2-team-hyungdok",
       "place": 1,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:11.941" }
+      "record": { "status": "FINISHED", "lapTime": "1:11.941" }
     },
     {
       "id": "hyungdok",
       "teamId": "season2-team-hyungdok",
       "place": 2,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:11.992" }
+      "record": { "status": "FINISHED", "lapTime": "1:11.992" }
     },
     {
       "id": "namgung-hyuk",
       "teamId": "season2-team-namgung-hyuk",
       "place": 3,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:12.102" }
+      "record": { "status": "FINISHED", "lapTime": "1:12.102" }
     },
     {
       "id": "bbogumi",
       "teamId": "season2-team-namgung-hyuk",
       "place": 4,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:12.217" }
+      "record": { "status": "FINISHED", "lapTime": "1:12.217" }
     },
     {
       "id": "a2-duck",
       "teamId": "season2-team-hyungdok",
       "place": 5,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:13.357" }
+      "record": { "status": "FINISHED", "lapTime": "1:13.357" }
     },
     {
       "id": "parkgee",
       "teamId": "season2-team-hyungdok",
       "place": 6,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:13.686" }
+      "record": { "status": "FINISHED", "lapTime": "1:13.686" }
     },
     {
       "id": "odanming",
       "teamId": "season2-team-namgung-hyuk",
       "place": 7,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:13.703" }
+      "record": { "status": "FINISHED", "lapTime": "1:13.703" }
     },
     {
       "id": "kim-toki",
       "teamId": "season2-team-namgung-hyuk",
       "place": 8,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:14.156" }
+      "record": { "status": "FINISHED", "lapTime": "1:14.156" }
     },
     {
       "id": "hamkubby",
       "teamId": "season2-team-namgung-hyuk",
       "place": 9,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:14.780" }
+      "record": { "status": "FINISHED", "lapTime": "1:14.780" }
     },
     {
       "id": "yang-mei",
       "teamId": "season2-team-hyungdok",
       "place": 10,
-      "raceRecord": { "status": "FINISHED", "lapTime": "1:15.121" }
+      "record": { "status": "FINISHED", "lapTime": "1:15.121" }
     }
   ]
 }
