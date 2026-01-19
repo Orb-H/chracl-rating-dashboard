@@ -80,7 +80,10 @@ export default async function Player({
         추가 예정입니다.
       </CollapsibleItem>
       <CollapsibleItem title="레이팅 그래프">
-        <RatingChart ratingHistoryByMatch={ratingHistoryByMatch} />
+        <RatingChart
+          ratingHistoryByCompetition={[]}
+          ratingHistoryByMatch={ratingHistoryByMatch}
+        />
       </CollapsibleItem>
     </main>
   );

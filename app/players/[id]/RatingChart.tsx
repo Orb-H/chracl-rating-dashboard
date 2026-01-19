@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
 import {
   ChartConfig,
@@ -9,10 +10,12 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { roundToTwoDecimals } from "@/lib/utils";
 import { RatingHistory } from "@/types/rating";
 
 type RatingChartProps = {
+  ratingHistoryByCompetition: (RatingHistory & { name: string })[];
   ratingHistoryByMatch: (RatingHistory & { name: string })[];
 };
 
@@ -27,8 +30,37 @@ const chartConfig: ChartConfig = {
   },
 };
 
-export function RatingChart({ ratingHistoryByMatch }: RatingChartProps) {
-  return <RatingChartContainer ratingData={ratingHistoryByMatch} />;
+export function RatingChart({
+  ratingHistoryByCompetition,
+  ratingHistoryByMatch,
+}: RatingChartProps) {
+  const [selectedView, setSelectedView] = useState<"competition" | "match">(
+    "match",
+  );
+
+  const selectedData =
+    selectedView === "competition"
+      ? ratingHistoryByCompetition
+      : ratingHistoryByMatch;
+
+  return (
+    <>
+      <ToggleGroup
+        type="single"
+        className="ml-auto"
+        value={selectedView}
+        onValueChange={(value) => {
+          if (value === "competition" || value === "match") {
+            setSelectedView(value);
+          }
+        }}
+      >
+        <ToggleGroupItem value="competition">대회별</ToggleGroupItem>
+        <ToggleGroupItem value="match">경기별</ToggleGroupItem>
+      </ToggleGroup>
+      <RatingChartContainer ratingData={selectedData} />
+    </>
+  );
 }
 
 function RatingChartContainer({
