@@ -1,13 +1,6 @@
-import { ConstructionIcon } from "lucide-react";
 import { notFound } from "next/navigation";
-import {
-  Empty,
-  EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle,
-} from "@/components/ui/empty";
 import { loadPlayerById, loadPlayers } from "@/lib/loadPlayers";
+import { RatingChart } from "./RatingChart";
 
 export const dynamicParams = false;
 
@@ -34,20 +27,9 @@ export default async function Participant({
   })();
 
   return (
-    <main className="min-h-screen w-full max-w-3xl items-center py-16 px-8 md:py-32 md:px-16 bg-white dark:bg-black md:items-start">
-      {/* TODO(#11): Fill with concrete content */}
-      <Empty>
-        <EmptyHeader>
-          <EmptyMedia>
-            <ConstructionIcon />
-          </EmptyMedia>
-          <EmptyTitle>준비중입니다.</EmptyTitle>
-          <EmptyDescription>
-            현재 레이아웃 작업 및 데이터 확보 작업을 진행중입니다. 곧{" "}
-            <b>{participant.displayName}</b> 선수의 데이터를 준비할게요!
-          </EmptyDescription>
-        </EmptyHeader>
-      </Empty>
+    <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
+      <h1 className="mb-8 text-4xl font-bold">{participant.displayName}</h1>
+      <RatingChart />
     </main>
   );
 }
