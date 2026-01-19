@@ -62,18 +62,13 @@ export default async function Player({
   })();
 
   const ratingHistoryByMatch = histories.map((history) => {
-    try {
-      const match = participatedMatches.find(
-        (match) => match.entryId === history.entryId,
-      );
-      return {
-        ...history,
-        ...match,
-        name: match ? match.competitionId + " " + match.name : "",
-      };
-    } catch {
-      throw new Error("Failed to load match for history");
-    }
+    const match = participatedMatches.find(
+      (match) => match.entryId === history.entryId,
+    );
+    return {
+      ...history,
+      name: match ? match.competitionId + " " + match.name : "",
+    };
   });
 
   return (

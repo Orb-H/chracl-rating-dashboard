@@ -13,7 +13,7 @@ import { roundToTwoDecimals } from "@/lib/utils";
 import { RatingHistory } from "@/types/rating";
 
 type RatingChartProps = {
-  ratingHistoryByMatch: (RatingHistory & { name?: string })[];
+  ratingHistoryByMatch: (RatingHistory & { name: string })[];
 };
 
 const chartConfig: ChartConfig = {
@@ -34,7 +34,7 @@ export function RatingChart({ ratingHistoryByMatch }: RatingChartProps) {
         history.rating.value !== undefined && history.rating.mu !== undefined,
     )
     .map((history) => ({
-      name: history.name ?? "",
+      name: history.name,
       value: roundToTwoDecimals(history.rating.value),
       mu: roundToTwoDecimals(history.rating.mu),
     }));
@@ -54,14 +54,14 @@ export function RatingChart({ ratingHistoryByMatch }: RatingChartProps) {
       ),
     ) + 5;
 
-  const ticks = [];
+  const xAxisTicks = [];
   const step = 25;
   for (
     let i = Math.ceil(min / step) * step;
     i <= Math.floor(max / step) * step;
     i += step
   ) {
-    ticks.push(i);
+    xAxisTicks.push(i);
   }
   return (
     <ChartContainer
@@ -74,14 +74,11 @@ export function RatingChart({ ratingHistoryByMatch }: RatingChartProps) {
         margin={{ top: 20, bottom: 10 }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis type="number" domain={[min, max]} ticks={ticks} />
+        <XAxis type="number" domain={[min, max]} ticks={xAxisTicks} />
         <YAxis
           type="category"
           dataKey="name"
           interval={0}
-          tickFormatter={(value, _) => {
-            return value.toLocaleString().replace(/ /g, "\u00A0");
-          }}
           tick={false}
           tickLine={true}
         />
