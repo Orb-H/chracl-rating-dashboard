@@ -76,7 +76,7 @@ export default async function Player({
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
       <h1 className="mb-8 text-4xl font-bold">{player.displayName}</h1>
       <CollapsibleItem title="선수 프로필" defaultOpen>
-        {/* TOOD(#11): Add a short content about brief profile */}
+        {/* TODO(#11): Add a short content about brief profile */}
         추가 예정입니다.
       </CollapsibleItem>
       <CollapsibleItem title="레이팅 그래프">
