@@ -72,7 +72,7 @@ export default async function Player({
       name: match ? match.competitionId + " " + match.name : "",
     };
   });
-  const ratingHistoryByCompetition = histories
+  const ratingHistoryByCompetition = [...histories]
     .reverse()
     .reduce(
       (acc, history) => {
