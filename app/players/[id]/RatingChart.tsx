@@ -28,7 +28,15 @@ const chartConfig: ChartConfig = {
 };
 
 export function RatingChart({ ratingHistoryByMatch }: RatingChartProps) {
-  const chartData = ratingHistoryByMatch
+  return <RatingChartContainer ratingData={ratingHistoryByMatch} />;
+}
+
+function RatingChartContainer({
+  ratingData,
+}: {
+  ratingData: (RatingHistory & { name: string })[];
+}) {
+  const chartData = ratingData
     .filter(
       (history) =>
         history.rating.value !== undefined && history.rating.mu !== undefined,
