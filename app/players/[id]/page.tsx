@@ -3,6 +3,7 @@ import { loadEntriesById } from "@/lib/loadEntries";
 import { loadHistoriesById } from "@/lib/loadHistories";
 import { loadMatches } from "@/lib/loadMatches";
 import { loadPlayerById, loadPlayers } from "@/lib/loadPlayers";
+import { RatingHistory } from "@/types/rating";
 import { CollapsibleItem } from "./CollapsibleItem";
 import { RatingChart } from "./RatingChart";
 
@@ -71,6 +72,28 @@ export default async function Player({
       name: match ? match.competitionId + " " + match.name : "",
     };
   });
+  const ratingHistoryByCompetition = histories
+    .reverse()
+    .reduce(
+      (acc, history) => {
+        if (acc.length === 0) {
+          return [
+            { ...history, name: entries[history.entryId].competitionId ?? "" },
+          ];
+        }
+
+        const last = acc.at(-1)!;
+        if (last.name !== (entries[history.entryId].competitionId ?? "")) {
+          acc.push({
+            ...history,
+            name: entries[history.entryId].competitionId ?? "",
+          });
+        }
+        return acc;
+      },
+      [] as (RatingHistory & { name: string })[],
+    )
+    .reverse();
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
@@ -81,7 +104,7 @@ export default async function Player({
       </CollapsibleItem>
       <CollapsibleItem title="레이팅 그래프">
         <RatingChart
-          ratingHistoryByCompetition={[]}
+          ratingHistoryByCompetition={ratingHistoryByCompetition}
           ratingHistoryByMatch={ratingHistoryByMatch}
         />
       </CollapsibleItem>
