@@ -1,15 +1,9 @@
-import { ChevronDownIcon } from "lucide-react";
 import { notFound } from "next/navigation";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import { Separator } from "@/components/ui/separator";
 import { loadEntriesById } from "@/lib/loadEntries";
 import { loadHistoriesById } from "@/lib/loadHistories";
 import { loadMatches } from "@/lib/loadMatches";
 import { loadPlayerById, loadPlayers } from "@/lib/loadPlayers";
+import { CollapsibleItem } from "./CollapsibleItem";
 import { RatingChart } from "./RatingChart";
 
 export const dynamicParams = false;
@@ -81,27 +75,13 @@ export default async function Player({
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
       <h1 className="mb-8 text-4xl font-bold">{player.displayName}</h1>
-      <Collapsible className="w-full group/collapsible" defaultOpen>
-        <CollapsibleTrigger className="w-full mb-4 flex flex-row justify-between items-center">
-          <span className="text-2xl font-semibold">선수 프로필</span>
-          <ChevronDownIcon className="transition-transform group-data-[state=open]/collapsible:rotate-180" />
-        </CollapsibleTrigger>
-        <CollapsibleContent>
-          {/* TOOD(#11): Add a short content about brief profile */}
-          추가 예정입니다.
-        </CollapsibleContent>
-      </Collapsible>
-      <Separator className="my-4 w-full" />
-      <Collapsible className="w-full group/collapsible">
-        <CollapsibleTrigger className="w-full mb-4 flex flex-row justify-between items-center">
-          <span className="text-2xl font-semibold">레이팅 그래프</span>
-          <ChevronDownIcon className="transition-transform group-data-[state=open]/collapsible:rotate-180" />
-        </CollapsibleTrigger>
-        <CollapsibleContent>
-          <RatingChart ratingHistoryByMatch={ratingHistoryByMatch} />
-        </CollapsibleContent>
-      </Collapsible>
-      <Separator className="my-4 w-full" />
+      <CollapsibleItem title="선수 프로필" defaultOpen>
+        {/* TOOD(#11): Add a short content about brief profile */}
+        추가 예정입니다.
+      </CollapsibleItem>
+      <CollapsibleItem title="레이팅 그래프">
+        <RatingChart ratingHistoryByMatch={ratingHistoryByMatch} />
+      </CollapsibleItem>
     </main>
   );
 }
