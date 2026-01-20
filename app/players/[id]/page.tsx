@@ -109,7 +109,7 @@ export default async function Player({
       <h1 className="mb-8 text-4xl font-bold">{player.displayName}</h1>
       <Accordion
         type="multiple"
-        className="w-full mb-8 rounded-xl border"
+        className="w-full mb-8"
         defaultValue={["profile"]}
       >
         <AccordionItem
