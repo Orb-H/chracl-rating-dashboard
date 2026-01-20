@@ -179,12 +179,13 @@ function RecordItem({ id, matches }: { id: string; matches: Match[] }) {
           if (!record) return null;
 
           let time: string | undefined;
+          let penaltyTime: string | undefined;
           if (match.type === "QUALIFYING") {
             time = record.record.lapTime;
           } else if (match.type === "MAIN") {
             time = record.record.finishTime ?? "-";
             if (record.record.penaltyTime) {
-              time += ` (+${record.record.penaltyTime})`;
+              penaltyTime = `(+${record.record.penaltyTime})`;
             }
           }
 
@@ -201,6 +202,9 @@ function RecordItem({ id, matches }: { id: string; matches: Match[] }) {
               </TableCell>
               <TableCell className="leading-8 text-end">
                 <span>{time ?? "-"}</span>
+                {penaltyTime && (
+                  <span className="text-destructive"> {penaltyTime}</span>
+                )}
                 <br />
                 <span className="text-sm text-muted-foreground">
                   {record.place} / {match.participants.length}
