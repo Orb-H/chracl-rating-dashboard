@@ -16,6 +16,7 @@ import { Career } from "@/types/player";
 import { RatingHistory } from "@/types/rating";
 import { CollapsibleItem } from "./CollapsibleItem";
 import { RatingChart } from "./RatingChart";
+import { RecordList } from "./RecordList";
 
 export const dynamicParams = false;
 
@@ -130,7 +131,7 @@ export default async function Player({
         />
       </CollapsibleItem>
       <CollapsibleItem title="주행 기록">
-        <RecordItem id={id} matches={participatedMatches} />
+        <RecordList id={id} matches={participatedMatches} />
       </CollapsibleItem>
     </main>
   );
@@ -153,47 +154,5 @@ function CareerList({ career }: { career: Career[] }) {
         </li>
       ))}
     </ul>
-  );
-}
-
-function RecordItem({ id, matches }: { id: string; matches: Match[] }) {
-  return (
-    <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead>경기</TableHead>
-          <TableHead>기록</TableHead>
-          <TableHead>순위</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {matches.map((match) => {
-          const record = match.participants.find((p) => p.id === id);
-          if (!record) return null;
-
-          let time: string | undefined;
-          if (match.type === "QUALIFYING") {
-            time = record.record.lapTime;
-          } else if (match.type === "MAIN") {
-            time = record.record.finishTime ?? "-";
-            if (record.record.penaltyTime) {
-              time += ` (+${record.record.penaltyTime})`;
-            }
-          }
-
-          return (
-            <TableRow key={match.id}>
-              <TableCell>
-                {match.competitionId} {match.name}
-              </TableCell>
-              <TableCell>{time ?? "-"}</TableCell>
-              <TableCell>
-                {record.place} / {match.participants.length}
-              </TableCell>
-            </TableRow>
-          );
-        })}
-      </TableBody>
-    </Table>
   );
 }
