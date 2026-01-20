@@ -125,13 +125,13 @@ export default async function Player({
 function CareerList({ career }: { career: Career[] }) {
   return (
     <ul className="list-disc list-inside">
-      {career.map((item) => (
-        <li key={item.detail} className="mb-2">
+      {career.map((item, index) => (
+        <li key={`${item.detail}-${index}`} className="mb-2">
           <span
             className={
               item.type === "major"
-                ? "font-semibold bg-accent text-accent-foreground"
-                : ""
+                ? "font-semibold bg-accent text-accent-foreground px-2 py-1 rounded-md"
+                : "px-2 py-1 rounded-md"
             }
           >
             {item.detail}
