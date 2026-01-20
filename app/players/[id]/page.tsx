@@ -171,17 +171,22 @@ function RecordItem({ id, matches }: { id: string; matches: Match[] }) {
           const record = match.participants.find((p) => p.id === id);
           if (!record) return null;
 
-          const time =
-            record.record.lapTime ??
-            `${record.record.finishTime} (+${record.record.penaltyTime ?? "00:00.000"})`;
-          if (!time) return null;
+          let time: string | undefined;
+          if (match.type === "QUALIFYING") {
+            time = record.record.lapTime;
+          } else if (match.type === "MAIN") {
+            time = record.record.finishTime ?? "-";
+            if (record.record.penaltyTime) {
+              time += ` (+${record.record.penaltyTime})`;
+            }
+          }
 
           return (
             <TableRow key={match.id}>
               <TableCell>
                 {match.competitionId} {match.name}
               </TableCell>
-              <TableCell>{time}</TableCell>
+              <TableCell>{time ?? "-"}</TableCell>
               <TableCell>
                 {record.place} / {match.participants.length}
               </TableCell>
