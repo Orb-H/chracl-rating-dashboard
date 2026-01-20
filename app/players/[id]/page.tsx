@@ -112,21 +112,18 @@ export default async function Player({
         className="w-full mb-8"
         defaultValue={["profile"]}
       >
-        <AccordionItem
-          value="profile"
-          className="border-b px-4 last:border-b-0"
-        >
+        <AccordionItem value="profile" className="px-4">
           <AccordionTrigger>
-            <header className="font-semibold text-2xl">선수 프로필</header>
+            <h2 className="font-semibold text-2xl">선수 프로필</h2>
           </AccordionTrigger>
           <AccordionContent>
             {/* TODO(#11): Add a short content about brief profile */}
             추가 예정입니다.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="career" className="border-b px-4 last:border-b-0">
+        <AccordionItem value="career" className="px-4">
           <AccordionTrigger>
-            <header className="font-semibold text-2xl">주요 경력</header>
+            <h2 className="font-semibold text-2xl">주요 경력</h2>
           </AccordionTrigger>
           <AccordionContent>
             {player.career ? (
@@ -138,9 +135,9 @@ export default async function Player({
             )}
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="graph" className="border-b px-4 last:border-b-0">
+        <AccordionItem value="graph" className="px-4">
           <AccordionTrigger>
-            <header className="font-semibold text-2xl">레이팅 그래프</header>
+            <h2 className="font-semibold text-2xl">레이팅 그래프</h2>
           </AccordionTrigger>
           <AccordionContent>
             <RatingChart
@@ -149,9 +146,9 @@ export default async function Player({
             />
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="record" className="border-b px-4 last:border-b-0">
+        <AccordionItem value="record" className="px-4">
           <AccordionTrigger>
-            <header className="font-semibold text-2xl">주행 기록</header>
+            <h2 className="font-semibold text-2xl">주행 기록</h2>
           </AccordionTrigger>
           <AccordionContent>
             <RecordList id={id} matches={participatedMatches} />
