@@ -36,6 +36,12 @@ export type Match = {
   type: "QUALIFYING" | "MAIN";
 
   /**
+   * The track name where the match was held.
+   * E.g., `그랜드 밸리 하이웨이`
+   */
+  trackName: string;
+
+  /**
    * The identifier of the points scheme used for this match.
    * E.g., `standard`
    */
