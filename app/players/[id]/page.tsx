@@ -1,8 +1,17 @@
 import { notFound } from "next/navigation";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import { loadEntriesById } from "@/lib/loadEntries";
 import { loadHistoriesById } from "@/lib/loadHistories";
 import { loadMatches } from "@/lib/loadMatches";
 import { loadPlayerById, loadPlayers } from "@/lib/loadPlayers";
+import { Match } from "@/types/match";
 import { Career } from "@/types/player";
 import { RatingHistory } from "@/types/rating";
 import { CollapsibleItem } from "./CollapsibleItem";
@@ -54,9 +63,11 @@ export default async function Player({
   })();
   const participatedMatches = (() => {
     try {
-      return loadMatches().filter((match) =>
-        match.participants.some((p) => p.id === id),
-      );
+      return loadMatches()
+        .filter((match) => match.participants.some((p) => p.id === id))
+        .sort((a, b) => {
+          return entries[a.entryId].sortKey - entries[b.entryId].sortKey;
+        });
     } catch (e) {
       throw new Error(
         "Failed to load matches" + (e instanceof Error ? ": " + e.message : ""),
@@ -118,6 +129,9 @@ export default async function Player({
           ratingHistoryByMatch={ratingHistoryByMatch}
         />
       </CollapsibleItem>
+      <CollapsibleItem title="주행 기록">
+        <RecordItem id={id} matches={participatedMatches} />
+      </CollapsibleItem>
     </main>
   );
 }
@@ -139,5 +153,42 @@ function CareerList({ career }: { career: Career[] }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+function RecordItem({ id, matches }: { id: string; matches: Match[] }) {
+  return (
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead>경기</TableHead>
+          <TableHead>기록</TableHead>
+          <TableHead>순위</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {matches.map((match) => {
+          const record = match.participants.find((p) => p.id === id);
+          if (!record) return null;
+
+          const time =
+            record.record.lapTime ??
+            `${record.record.finishTime} (+${record.record.penaltyTime ?? "00:00.000"})`;
+          if (!time) return null;
+
+          return (
+            <TableRow key={match.id}>
+              <TableCell>
+                {match.competitionId} {match.name}
+              </TableCell>
+              <TableCell>{time}</TableCell>
+              <TableCell>
+                {record.place} / {match.participants.length}
+              </TableCell>
+            </TableRow>
+          );
+        })}
+      </TableBody>
+    </Table>
   );
 }
