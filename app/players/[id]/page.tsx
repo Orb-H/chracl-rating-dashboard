@@ -1,20 +1,16 @@
 import { notFound } from "next/navigation";
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { loadEntriesById } from "@/lib/loadEntries";
 import { loadHistoriesById } from "@/lib/loadHistories";
 import { loadMatches } from "@/lib/loadMatches";
 import { loadPlayerById, loadPlayers } from "@/lib/loadPlayers";
-import { Match } from "@/types/match";
 import { Career } from "@/types/player";
 import { RatingHistory } from "@/types/rating";
-import { CollapsibleItem } from "./CollapsibleItem";
 import { RatingChart } from "./RatingChart";
 import { RecordList } from "./RecordList";
 
@@ -111,28 +107,57 @@ export default async function Player({
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
       <h1 className="mb-8 text-4xl font-bold">{player.displayName}</h1>
-      <CollapsibleItem title="선수 프로필" defaultOpen>
-        {/* TODO(#11): Add a short content about brief profile */}
-        추가 예정입니다.
-      </CollapsibleItem>
-      <CollapsibleItem title="주요 경력">
-        {player.career ? (
-          <CareerList career={player.career} />
-        ) : (
-          <span className="text-muted-foreground">
-            아직 대회에 참여한 이력이 없습니다.
-          </span>
-        )}
-      </CollapsibleItem>
-      <CollapsibleItem title="레이팅 그래프">
-        <RatingChart
-          ratingHistoryByCompetition={ratingHistoryByCompetition}
-          ratingHistoryByMatch={ratingHistoryByMatch}
-        />
-      </CollapsibleItem>
-      <CollapsibleItem title="주행 기록">
-        <RecordList id={id} matches={participatedMatches} />
-      </CollapsibleItem>
+      <Accordion
+        type="multiple"
+        className="w-full mb-8 rounded-xl border"
+        defaultValue={["profile"]}
+      >
+        <AccordionItem
+          value="profile"
+          className="border-b px-4 last:border-b-0"
+        >
+          <AccordionTrigger>
+            <header className="font-semibold text-2xl">선수 프로필</header>
+          </AccordionTrigger>
+          <AccordionContent>
+            {/* TODO(#11): Add a short content about brief profile */}
+            추가 예정입니다.
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="career" className="border-b px-4 last:border-b-0">
+          <AccordionTrigger>
+            <header className="font-semibold text-2xl">주요 경력</header>
+          </AccordionTrigger>
+          <AccordionContent>
+            {player.career ? (
+              <CareerList career={player.career} />
+            ) : (
+              <span className="text-muted-foreground">
+                아직 대회에 참여한 이력이 없습니다.
+              </span>
+            )}
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="graph" className="border-b px-4 last:border-b-0">
+          <AccordionTrigger>
+            <header className="font-semibold text-2xl">레이팅 그래프</header>
+          </AccordionTrigger>
+          <AccordionContent>
+            <RatingChart
+              ratingHistoryByCompetition={ratingHistoryByCompetition}
+              ratingHistoryByMatch={ratingHistoryByMatch}
+            />
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="record" className="border-b px-4 last:border-b-0">
+          <AccordionTrigger>
+            <header className="font-semibold text-2xl">주행 기록</header>
+          </AccordionTrigger>
+          <AccordionContent>
+            <RecordList id={id} matches={participatedMatches} />
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
     </main>
   );
 }
