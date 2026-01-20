@@ -3,6 +3,7 @@ import { loadEntriesById } from "@/lib/loadEntries";
 import { loadHistoriesById } from "@/lib/loadHistories";
 import { loadMatches } from "@/lib/loadMatches";
 import { loadPlayerById, loadPlayers } from "@/lib/loadPlayers";
+import { Career } from "@/types/player";
 import { RatingHistory } from "@/types/rating";
 import { CollapsibleItem } from "./CollapsibleItem";
 import { RatingChart } from "./RatingChart";
@@ -102,6 +103,15 @@ export default async function Player({
         {/* TODO(#11): Add a short content about brief profile */}
         추가 예정입니다.
       </CollapsibleItem>
+      <CollapsibleItem title="주요 경력">
+        {player.career ? (
+          <CareerList career={player.career} />
+        ) : (
+          <span className="text-muted-foreground">
+            아직 대회에 참여한 이력이 없습니다.
+          </span>
+        )}
+      </CollapsibleItem>
       <CollapsibleItem title="레이팅 그래프">
         <RatingChart
           ratingHistoryByCompetition={ratingHistoryByCompetition}
@@ -109,5 +119,25 @@ export default async function Player({
         />
       </CollapsibleItem>
     </main>
+  );
+}
+
+function CareerList({ career }: { career: Career[] }) {
+  return (
+    <ul className="list-disc list-inside">
+      {career.map((item) => (
+        <li key={item.detail} className="mb-2">
+          <span
+            className={
+              item.type === "major"
+                ? "font-semibold bg-accent text-accent-foreground"
+                : ""
+            }
+          >
+            {item.detail}
+          </span>
+        </li>
+      ))}
+    </ul>
   );
 }
