@@ -159,11 +159,18 @@ function CareerList({ career }: { career: Career[] }) {
 function RecordItem({ id, matches }: { id: string; matches: Match[] }) {
   return (
     <Table>
-      <TableHeader>
+      <TableHeader className="bg-muted">
         <TableRow>
-          <TableHead>경기</TableHead>
-          <TableHead>기록</TableHead>
-          <TableHead>순위</TableHead>
+          <TableHead className="p-2 leading-8">
+            <span>경기</span>
+            <br />
+            <span>트랙</span>
+          </TableHead>
+          <TableHead className="p-2 leading-8 text-end">
+            <span>기록</span>
+            <br />
+            <span>순위</span>
+          </TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -183,12 +190,21 @@ function RecordItem({ id, matches }: { id: string; matches: Match[] }) {
 
           return (
             <TableRow key={match.id}>
-              <TableCell>
-                {match.competitionId} {match.name}
+              <TableCell className="leading-8">
+                <span>
+                  {match.competitionId} {match.name}
+                </span>
+                <br />
+                <span className="text-sm text-muted-foreground">
+                  {match.trackName}
+                </span>
               </TableCell>
-              <TableCell>{time ?? "-"}</TableCell>
-              <TableCell>
-                {record.place} / {match.participants.length}
+              <TableCell className="leading-8 text-end">
+                <span>{time ?? "-"}</span>
+                <br />
+                <span className="text-sm text-muted-foreground">
+                  {record.place} / {match.participants.length}
+                </span>
               </TableCell>
             </TableRow>
           );
