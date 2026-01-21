@@ -1,6 +1,7 @@
 {
   "id": "season2",
   "name": "제 2회 치지직 레이싱 동아리: 포뮬러 그랑프리",
+  "shortName": "제 2회: 포뮬러 그랑프리",
   "sortOrder": 2,
   "teams": [
     {
