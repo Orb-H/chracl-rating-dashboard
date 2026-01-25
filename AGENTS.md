@@ -17,6 +17,6 @@
 
 - There are no strict rules for commits, since it is squashed when merging PRs. However, try to keep your commits meaningful and step-by-step, to make the PR easier to review.
 - Refer to .github/pull_request_template.md for the PR template.
-- There is a pre-commit hook that runs linting and tests. Fix any issues before committing.
-  - However, some environments don't support biome, which is a part of pre-commit hooks, such as termux running on Android NDK. In this case, please make sure to run `npm run check` locally before committing, and commit with `--no-verify` flag.
+- There is a pre-commit hook that runs Biome-based formatting and linting via `npm run check -- --write`. It will help you fixing issues before committing.
+  - However, some environments don't support Biome (which is part of the pre-commit hooks), such as Termux running on Android NDK. In this case, please make sure to run `npm run check` locally before committing, then commit with the `--no-verify` flag.
 - After creating a PR, make sure to request review to @Orb-H. He will leave reviews if needed, and you would need his approval to merge the PR.
