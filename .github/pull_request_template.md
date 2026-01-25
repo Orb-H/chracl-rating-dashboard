@@ -29,5 +29,5 @@ Also, if there are any comments or context which are not captured by the issue r
 <!--
 Mention the author of this pull request, if the PR is created by agents. For example:
 
-Github Copilot (GPT-5 mini)
+GitHub Copilot (GPT-5 mini)
 -->
