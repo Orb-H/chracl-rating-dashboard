@@ -23,3 +23,11 @@ Also, if there are any comments or context which are not captured by the issue r
 
 <!-- List the changes made in this pull request. Please write them in bullet points. Provide enough detail for reviewers to understand the modifications. Don't write the result of changes, but the changes themselves. For example, instead of writing "Fixed bug in user login", write "Fixed null pointer exception in UserLogin.java when user credentials are missing".
 -->
+
+## Author
+
+<!--
+Mention the author of this pull request, if the PR is created by agents. For example:
+
+Github Copilot (GPT-5 mini)
+-->
