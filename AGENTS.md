@@ -11,7 +11,7 @@
 
 - Currently there are no explicit tests as of now.
 - You can just commit to run pre-commit hooks and CI checks, or run `npm run check` locally.
-- You can run `npm run check --write` to auto-fix some issues.
+- You can run `npm run check -- --write` to auto-fix some issues.
 
 ## Commit / PR instructions
 
