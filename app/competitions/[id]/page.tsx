@@ -28,7 +28,7 @@ export default async function CompetitionDetail({
   const competition = (() => {
     try {
       return loadCompetitionById(id);
-    } catch (_) {
+    } catch {
       return notFound();
     }
   })();
