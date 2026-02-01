@@ -37,40 +37,15 @@ export default async function Player({
       return notFound();
     }
   })();
-  const entries = (() => {
-    try {
-      return loadEntriesById();
-    } catch (e) {
-      throw new Error(
-        "Failed to load entries" + (e instanceof Error ? ": " + e.message : ""),
-      );
-    }
-  })();
-  const histories = (() => {
-    try {
-      return loadHistoriesById(id).sort((a, b) => {
-        return entries[a.entryId].sortKey - entries[b.entryId].sortKey;
-      });
-    } catch (e) {
-      throw new Error(
-        "Failed to load histories" +
-          (e instanceof Error ? ": " + e.message : ""),
-      );
-    }
-  })();
-  const participatedMatches = (() => {
-    try {
-      return loadMatches()
-        .filter((match) => match.participants.some((p) => p.id === id))
-        .sort((a, b) => {
-          return entries[a.entryId].sortKey - entries[b.entryId].sortKey;
-        });
-    } catch (e) {
-      throw new Error(
-        "Failed to load matches" + (e instanceof Error ? ": " + e.message : ""),
-      );
-    }
-  })();
+  const entries = loadEntriesById();
+  const histories = loadHistoriesById(id).sort((a, b) => {
+    return entries[a.entryId].sortKey - entries[b.entryId].sortKey;
+  });
+  const participatedMatches = loadMatches()
+    .filter((match) => match.participants.some((p) => p.id === id))
+    .sort((a, b) => {
+      return entries[a.entryId].sortKey - entries[b.entryId].sortKey;
+    });
 
   const ratingHistoryByMatch = histories.map((history) => {
     const match = participatedMatches.find(
