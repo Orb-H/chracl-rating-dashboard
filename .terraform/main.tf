@@ -21,3 +21,11 @@ module "cloudbuild_trigger" {
   artifact_registry  = var.artifact_registry
   cloudbuild_trigger = var.cloudbuild_trigger
 }
+
+module "cloudrun" {
+  source = "./modules/cloudrun"
+
+  project_id        = var.project_id
+  artifact_registry = var.artifact_registry
+  cloudrun          = var.cloudrun
+}
