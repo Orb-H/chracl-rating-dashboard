@@ -32,13 +32,4 @@ variable "cloudbuild_trigger" {
     location        = string
     service_account = string
   })
-
-  validation {
-    condition = (
-      length(trim(var.cloudbuild_trigger.service_account)) > 0 &&
-      can(regex("^.+@.+\\.gserviceaccount\\.com$", var.cloudbuild_trigger.service_account))
-    )
-
-    error_message = "cloudbuild_trigger.service_account must be a non-empty Google service account email, e.g. my-sa@my-project.iam.gserviceaccount.com."
-  }
 }
