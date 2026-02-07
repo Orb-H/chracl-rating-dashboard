@@ -1,24 +1,9 @@
-terraform {
-  required_version = ">= 1.0"
-  required_providers {
-    google = {
-      source  = "hashicorp/google"
-      version = "~> 4.0"
-    }
-  }
-}
-
-provider "google" {
-  project = var.project_id
-}
-
 resource "google_cloudbuild_trigger" "chracl_rating_dashboard_trigger" {
   name            = var.cloudbuild_trigger.name
   location        = var.cloudbuild_trigger.location
   service_account = var.cloudbuild_trigger.service_account
 
   include_build_logs = "INCLUDE_BUILD_LOGS_WITH_STATUS"
-  timeouts {}
 
   repository_event_config {
     repository = var.gh_repository.connection_id

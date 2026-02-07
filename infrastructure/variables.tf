@@ -3,6 +3,11 @@ variable "project_id" {
   type        = string
 }
 
+variable "tf_backend_bucket" {
+  description = "Terraform backend configuration"
+  type        = string
+}
+
 variable "gh_repository" {
   description = "GitHub repository connection data"
   type = object({

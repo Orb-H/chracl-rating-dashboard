@@ -6,6 +6,11 @@ terraform {
       version = "~> 4.0"
     }
   }
+
+  backend "gcs" {
+    # Add your backend bucket name by CLI.
+    prefix = "terraform/state"
+  }
 }
 
 provider "google" {

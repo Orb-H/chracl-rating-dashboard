@@ -1,21 +1,8 @@
-terraform {
-  required_version = ">= 1.0"
-  required_providers {
-    google = {
-      source  = "hashicorp/google"
-      version = "~> 4.0"
-    }
-  }
-}
-
-provider "google" {
-  project = var.project_id
-}
-
+# TODO: Add IAM settings
 resource "google_cloud_run_v2_service" "chracl_rating_dashboard_service" {
-  project  = var.project_id
   name     = var.cloudrun.service_name
   location = var.cloudrun.region
+  ingress  = "INGRESS_TRAFFIC_ALL"
 
   template {
     service_account = var.cloudrun.service_account
@@ -32,9 +19,15 @@ resource "google_cloud_run_v2_service" "chracl_rating_dashboard_service" {
           cpu    = "1"
           memory = "512Mi"
         }
+
         cpu_idle          = true
         startup_cpu_boost = true
       }
+    }
+
+    scaling {
+      min_instance_count = 0
+      max_instance_count = 10
     }
   }
 }
