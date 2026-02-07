@@ -14,6 +14,11 @@ variable "gh_repository" {
     connection_id = string
     target_branch = optional(string, "^main$")
   })
+
+  validation {
+    condition     = can(regex("^projects/.+/locations/.+/connections/.+/repositories/.+$", var.gh_repository.connection_id))
+    error_message = "Connection ID must follow the format: projects/PROJECT_ID/locations/LOCATION/connections/CONNECTION_NAME/repositories/REPOSITORY_ID"
+  }
 }
 
 variable "artifact_registry" {
