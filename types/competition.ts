@@ -29,6 +29,12 @@ export type Competition = {
   teams: Team[];
 
   /**
+   * The list of match identifiers in the competition. Should be in order of occurrence.
+   * E.g., ["race1", "race2", "race3"]
+   */
+  matches: string[];
+
+  /**
    * The scoring scheme for the competition. E.g., { "race1": [10, 8, 6, 5, 4, 3, 2, 1], "race2": [15, 12, 10, 8, 6, 4, 2, 1] }
    */
   pointsSchemes: Record<string, number[]>;
