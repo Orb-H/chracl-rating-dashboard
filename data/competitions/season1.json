@@ -37,7 +37,7 @@
       }
     }
   ],
-  "matches": [],
+  "matches": ["round1-qual", "round1-main", "round2-qual", "round2-main"],
   "pointsSchemes": {
     "default": [20, 17, 15, 13, 11, 9, 7, 5, 3, 2, 1, 0]
   }

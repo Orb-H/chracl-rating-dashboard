@@ -49,7 +49,20 @@
       }
     }
   ],
-  "matches": [],
+  "matches": [
+    "pre-a-qual",
+    "pre-a-main",
+    "pre-b-qual",
+    "pre-b-main",
+    "semifinal-a-qual",
+    "semifinal-a-main",
+    "semifinal-b-qual",
+    "semifinal-b-main",
+    "third-qual",
+    "third-main",
+    "final-qual",
+    "final-main"
+  ],
   "pointsSchemes": {
     "default": [20, 17, 15, 13, 11, 9, 7, 4, 2, 0]
   }
