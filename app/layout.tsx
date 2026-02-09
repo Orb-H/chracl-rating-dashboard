@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { ThemeProvider } from "next-themes";
 import { Header } from "@/components/Header";
 import { MySidebar } from "@/components/MySidebar";
@@ -31,6 +32,7 @@ export default function RootLayout({
           </SidebarProvider>
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-WT50T6N5LV" />
     </html>
   );
 }
