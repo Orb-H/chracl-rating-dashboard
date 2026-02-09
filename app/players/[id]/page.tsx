@@ -77,6 +77,7 @@ export default async function Player({
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
+      {/* TODO(#11): Add profile image with title */}
       <h1 className="mb-8 text-4xl font-bold">{player.displayName}</h1>
       <Tabs defaultValue="profile" className="w-full mb-8">
         <TabsList variant="line">
