@@ -21,6 +21,7 @@ export function RecordList({ id, matches }: { id: string; matches: Match[] }) {
           <TableHead className="p-2 leading-8 text-end">
             <span>기록</span>
             <br />
+            {/* TODO(#11): Add rated place together */}
             <span>순위</span>
           </TableHead>
         </TableRow>
