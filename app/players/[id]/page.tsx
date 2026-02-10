@@ -79,8 +79,12 @@ export default async function Player({
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
       <h1 className="mb-8 text-4xl font-bold w-full flex justify-center items-center gap-4">
-        <Avatar className="w-25 h-25">
-          <AvatarImage src={player.avatarUrl} alt={player.displayName} />
+        <Avatar className="w-24 h-24">
+          <AvatarImage
+            src={player.avatarUrl}
+            alt={player.displayName}
+            className="object-cover"
+          />
           <AvatarFallback>{player.displayName.charAt(0)}</AvatarFallback>
         </Avatar>
         <span className="inline">{player.displayName}</span>
