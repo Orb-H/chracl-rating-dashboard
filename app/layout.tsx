@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { ThemeProvider } from "next-themes";
 import { Header } from "@/components/Header";
 import { MySidebar } from "@/components/MySidebar";
@@ -30,6 +31,10 @@ export default function RootLayout({
             </SidebarInset>
           </SidebarProvider>
         </ThemeProvider>
+        {process.env.NODE_ENV === "production" &&
+          process.env.NEXT_PUBLIC_GA_ID && (
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
+          )}
       </body>
     </html>
   );
