@@ -31,8 +31,11 @@ export default function RootLayout({
             </SidebarInset>
           </SidebarProvider>
         </ThemeProvider>
+        {process.env.NODE_ENV === "production" &&
+          process.env.NEXT_PUBLIC_GA_ID && (
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
+          )}
       </body>
-      <GoogleAnalytics gaId="G-WT50T6N5LV" />
     </html>
   );
 }
