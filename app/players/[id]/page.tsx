@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { loadEntriesById } from "@/lib/loadEntries";
@@ -77,8 +78,13 @@ export default async function Player({
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
-      {/* TODO(#11): Add profile image with title */}
-      <h1 className="mb-8 text-4xl font-bold">{player.displayName}</h1>
+      <h1 className="mb-8 text-4xl font-bold w-full flex justify-center items-center gap-4">
+        <Avatar className="w-25 h-25">
+          <AvatarImage src={player.avatarUrl} alt={player.displayName} />
+          <AvatarFallback>{player.displayName.charAt(0)}</AvatarFallback>
+        </Avatar>
+        <span className="inline">{player.displayName}</span>
+      </h1>
       <Tabs defaultValue="profile" className="w-full mb-8">
         <TabsList variant="line">
           <TabsTrigger value="profile">선수 프로필</TabsTrigger>
