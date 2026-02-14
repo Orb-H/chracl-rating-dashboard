@@ -4,120 +4,120 @@
     "id": "season1-round1-qual",
     "competitionId": "season1",
     "sortKey": 1010100,
-    "note": ""
+    "note": "제1회 라운드 1 퀄리파잉"
   },
   {
     "id": "season1-round1-main",
     "competitionId": "season1",
     "sortKey": 1010101,
-    "note": ""
+    "note": "제1회 라운드 1 레이스"
   },
   {
     "id": "season1-round2-qual",
     "competitionId": "season1",
     "sortKey": 1010200,
-    "note": ""
+    "note": "제1회 라운드 2 퀄리파잉"
   },
   {
     "id": "season1-round2-main",
     "competitionId": "season1",
     "sortKey": 1010201,
-    "note": ""
+    "note": "제1회 라운드 2 레이스"
   },
   {
     "id": "season2-pre-qual",
     "competitionId": "season2",
     "sortKey": 2000100,
-    "note": ""
+    "note": "제2회 예선 퀄리파잉"
   },
   {
     "id": "season2-pre-a-main",
     "competitionId": "season2",
     "sortKey": 2000200,
-    "note": ""
+    "note": "제2회 예선 A조 레이스"
   },
   {
     "id": "season2-pre-b-main",
     "competitionId": "season2",
     "sortKey": 2000300,
-    "note": ""
+    "note": "제2회 예선 B조 레이스"
   },
   {
     "id": "season2-semifinal-a-qual",
     "competitionId": "season2",
     "sortKey": 2010100,
-    "note": ""
+    "note": "제2회 4강 A조 퀄리파잉"
   },
   {
     "id": "season2-semifinal-a-main",
     "competitionId": "season2",
     "sortKey": 2010101,
-    "note": ""
+    "note": "제2회 4강 A조 레이스"
   },
   {
     "id": "season2-semifinal-b-qual",
     "competitionId": "season2",
     "sortKey": 2010200,
-    "note": ""
+    "note": "제2회 4강 B조 퀄리파잉"
   },
   {
     "id": "season2-semifinal-b-main",
     "competitionId": "season2",
     "sortKey": 2010201,
-    "note": ""
+    "note": "제2회 4강 B조 레이스"
   },
   {
     "id": "season2-third-qual",
     "competitionId": "season2",
     "sortKey": 2020100,
-    "note": ""
+    "note": "제2회 3·4위 결정전 퀄리파잉"
   },
   {
     "id": "season2-third-main",
     "competitionId": "season2",
     "sortKey": 2020101,
-    "note": ""
+    "note": "제2회 3·4위 결정전 레이스"
   },
   {
     "id": "season2-final-qual",
     "competitionId": "season2",
     "sortKey": 2030101,
-    "note": ""
+    "note": "제2회 결승 퀄리파잉"
   },
   {
     "id": "season2-final-main",
     "competitionId": "season2",
     "sortKey": 2030102,
-    "note": ""
+    "note": "제2회 결승 레이스"
   },
   {
     "id": "season3-pre-qual",
     "competitionId": "season3",
     "sortKey": 3000100,
-    "note": ""
+    "note": "제3회 예선 퀄리파잉"
   },
   {
     "id": "season3-stint1-qual",
     "competitionId": "season3",
     "sortKey": 3010100,
-    "note": ""
+    "note": "제3회 STINT 1 퀄리파잉"
   },
   {
     "id": "season3-stint1-main",
     "competitionId": "season3",
     "sortKey": 3010101,
-    "note": ""
+    "note": "제3회 STINT 1 레이스"
   },
   {
     "id": "season3-stint2-main",
     "competitionId": "season3",
     "sortKey": 3010102,
-    "note": ""
+    "note": "제3회 STINT 2 레이스"
   },
   {
     "id": "season3-stint3-main",
     "competitionId": "season3",
     "sortKey": 3010103,
-    "note": ""
+    "note": "제3회 STINT 3 레이스"
   }
 ]
