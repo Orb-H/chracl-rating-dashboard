@@ -16,13 +16,13 @@ export function RecordList({ id, matches }: { id: string; matches: Match[] }) {
           <TableHead className="p-2 leading-8">
             <span>경기</span>
             <br />
-            <span>트랙</span>
+            <span className="text-muted-foreground">트랙</span>
           </TableHead>
           <TableHead className="p-2 leading-8 text-end">
             <span>기록</span>
             <br />
             {/* TODO(#11): Add rated place together */}
-            <span>순위</span>
+            <span className="text-muted-foreground">순위 (전체 순위)</span>
           </TableHead>
         </TableRow>
       </TableHeader>
@@ -43,7 +43,7 @@ export function RecordList({ id, matches }: { id: string; matches: Match[] }) {
           }
 
           return (
-            <TableRow key={match.id}>
+            <TableRow key={match.competitionId + "-" + match.id}>
               <TableCell className="leading-8">
                 <span>
                   {match.competitionId} {match.name}
@@ -61,6 +61,7 @@ export function RecordList({ id, matches }: { id: string; matches: Match[] }) {
                 <br />
                 <span className="text-sm text-muted-foreground">
                   {record.place} / {match.participants.length}
+                  {record.ratedPlace && ` (${record.ratedPlace})`}
                 </span>
               </TableCell>
             </TableRow>
