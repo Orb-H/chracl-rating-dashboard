@@ -61,7 +61,9 @@ export function RecordList({ id, matches }: { id: string; matches: Match[] }) {
                 <br />
                 <span className="text-sm text-muted-foreground">
                   {record.place} / {match.participants.length}
-                  {record.ratedPlace && ` (${record.ratedPlace})`}
+                  {record.ratedPlace &&
+                    match.entryParticipants &&
+                    ` (${record.ratedPlace} / ${match.entryParticipants})`}
                 </span>
               </TableCell>
             </TableRow>
