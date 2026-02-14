@@ -1,3 +1,4 @@
+import { Separator } from "@/components/ui/separator";
 import {
   Table,
   TableBody,
@@ -22,7 +23,9 @@ export function RecordList({ id, matches }: { id: string; matches: Match[] }) {
             <span>기록</span>
             <br />
             {/* TODO(#11): Add rated place together */}
-            <span className="text-muted-foreground">순위 (전체 순위)</span>
+            <span className="text-muted-foreground">
+              레이스 순위 ┃ 전체 순위
+            </span>
           </TableHead>
         </TableRow>
       </TableHeader>
@@ -60,10 +63,15 @@ export function RecordList({ id, matches }: { id: string; matches: Match[] }) {
                 )}
                 <br />
                 <span className="text-sm text-muted-foreground">
-                  {record.place} / {match.participants.length}
-                  {record.ratedPlace &&
-                    match.entryParticipants &&
-                    ` (${record.ratedPlace} / ${match.entryParticipants})`}
+                  <span className="font-bold">{record.place}</span>/
+                  {match.participants.length}
+                  {record.ratedPlace && match.entryParticipants && (
+                    <>
+                      {` ┃ `}
+                      <span className="font-bold">{record.ratedPlace}</span>/
+                      {match.entryParticipants}
+                    </>
+                  )}
                 </span>
               </TableCell>
             </TableRow>
