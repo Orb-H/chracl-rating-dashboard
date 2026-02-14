@@ -10,51 +10,61 @@
     {
       "id": "hyungdok",
       "place": 1,
+      "ratedPlace": 2,
       "record": { "status": "FINISHED", "lapTime": "3:27.581" }
     },
     {
       "id": "yona",
       "place": 2,
+      "ratedPlace": 4,
       "record": { "status": "FINISHED", "lapTime": "3:30.383" }
     },
     {
       "id": "yu-yeonghyeok",
       "place": 3,
+      "ratedPlace": 9,
       "record": { "status": "FINISHED", "lapTime": "3:34.240" }
     },
     {
       "id": "hera",
       "place": 4,
+      "ratedPlace": 10,
       "record": { "status": "FINISHED", "lapTime": "3:34.715" }
     },
     {
       "id": "odanming",
       "place": 5,
+      "ratedPlace": 12,
       "record": { "status": "FINISHED", "lapTime": "3:35.715" }
     },
     {
       "id": "yang-mei",
       "place": 6,
+      "ratedPlace": 13,
       "record": { "status": "FINISHED", "lapTime": "3:36.800" }
     },
     {
       "id": "haematl",
       "place": 7,
+      "ratedPlace": 19,
       "record": { "status": "FINISHED", "lapTime": "3:38.602" }
     },
     {
       "id": "kevinstudio",
       "place": 8,
+      "ratedPlace": 20,
       "record": { "status": "FINISHED", "lapTime": "3:39.743" }
     },
     {
       "id": "auro",
       "place": 9,
+      "ratedPlace": 29,
       "record": { "status": "FINISHED", "lapTime": "3:51.822" }
     },
     {
       "id": "reana",
       "place": 10,
+      "ratedPlace": 30,
       "record": { "status": "FINISHED", "lapTime": "3:53.346" }
     }
   ]

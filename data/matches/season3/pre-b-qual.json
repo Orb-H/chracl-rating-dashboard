@@ -10,51 +10,61 @@
     {
       "id": "zen1th-hwang",
       "place": 1,
+      "ratedPlace": 3,
       "record": { "status": "FINISHED", "lapTime": "3:28.664" }
     },
     {
       "id": "cheongalice",
       "place": 2,
+      "ratedPlace": 7,
       "record": { "status": "FINISHED", "lapTime": "3:33.470" }
     },
     {
       "id": "100hp-tv",
       "place": 3,
+      "ratedPlace": 8,
       "record": { "status": "FINISHED", "lapTime": "3:33.856" }
     },
     {
       "id": "saessakgamja",
       "place": 4,
+      "ratedPlace": 14,
       "record": { "status": "FINISHED", "lapTime": "3:37.062" }
     },
     {
       "id": "bbogumi",
       "place": 5,
+      "ratedPlace": 15,
       "record": { "status": "FINISHED", "lapTime": "3:37.533" }
     },
     {
       "id": "psy-haruto",
       "place": 6,
+      "ratedPlace": 16,
       "record": { "status": "FINISHED", "lapTime": "3:37.709" }
     },
     {
       "id": "mytyl-maerchen",
       "place": 7,
+      "ratedPlace": 23,
       "record": { "status": "FINISHED", "lapTime": "3:43.339" }
     },
     {
       "id": "ichika-hibi",
       "place": 8,
+      "ratedPlace": 26,
       "record": { "status": "FINISHED", "lapTime": "3:46.814" }
     },
     {
       "id": "oversleepzzz",
       "place": 9,
+      "ratedPlace": 27,
       "record": { "status": "FINISHED", "lapTime": "3:46.891" }
     },
     {
       "id": "eaglekop",
       "place": 10,
+      "ratedPlace": 28,
       "record": { "status": "FINISHED", "lapTime": "3:46.906" }
     }
   ]
