@@ -2,6 +2,7 @@
   "id": "pre-a-qual",
   "competitionId": "season3",
   "entryId": "season3-pre-qual",
+  "entryParticipants": 30,
   "name": "예선 A조 퀄리파잉",
   "date": "2025-11-17",
   "type": "QUALIFYING",

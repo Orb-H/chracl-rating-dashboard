@@ -19,6 +19,14 @@ export type Match = {
   entryId: string;
 
   /**
+   * The total number of participants in this entry.
+   * It is used for rating calculation when the match is a single entry with multiple matches.
+   * If undefined, it means the entry contains only this match, and thus it is okay to use `match.participants.length` instead.
+   * E.g., 50
+   */
+  entryParticipants?: number;
+
+  /**
    * The display name of the match.
    * E.g., `라운드 1 퀄리파잉`
    */
