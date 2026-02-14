@@ -10,51 +10,61 @@
     {
       "id": "namgung-hyuk",
       "place": 1,
+      "ratedPlace": 1,
       "record": { "status": "FINISHED", "lapTime": "3:27.287" }
     },
     {
       "id": "reo",
       "place": 2,
+      "ratedPlace": 5,
       "record": { "status": "FINISHED", "lapTime": "3:31.037" }
     },
     {
       "id": "samozang",
       "place": 3,
+      "ratedPlace": 6,
       "record": { "status": "FINISHED", "lapTime": "3:31.048" }
     },
     {
       "id": "kim-toki",
       "place": 4,
+      "ratedPlace": 11,
       "record": { "status": "FINISHED", "lapTime": "3:35.152" }
     },
     {
       "id": "chochou",
       "place": 5,
+      "ratedPlace": 17,
       "record": { "status": "FINISHED", "lapTime": "3:37.839" }
     },
     {
       "id": "a2-duck",
       "place": 6,
+      "ratedPlace": 18,
       "record": { "status": "FINISHED", "lapTime": "3:38.081" }
     },
     {
       "id": "sdsd97",
       "place": 7,
+      "ratedPlace": 21,
       "record": { "status": "FINISHED", "lapTime": "3:39.939" }
     },
     {
       "id": "lotionyum",
       "place": 8,
+      "ratedPlace": 22,
       "record": { "status": "FINISHED", "lapTime": "3:40.292" }
     },
     {
       "id": "u-lili",
       "place": 9,
+      "ratedPlace": 24,
       "record": { "status": "FINISHED", "lapTime": "3:44.733" }
     },
     {
       "id": "half",
       "place": 10,
+      "ratedPlace": 25,
       "record": { "status": "FINISHED", "lapTime": "3:46.191" }
     }
   ]
