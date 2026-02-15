@@ -11,7 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { loadCompetitionsById } from "@/lib/loadCompetitions";
+import { loadCompetitions } from "@/lib/loadCompetitions";
 import { loadEntriesById } from "@/lib/loadEntries";
 import { loadHistoriesById } from "@/lib/loadHistories";
 import { loadMatches } from "@/lib/loadMatches";
@@ -49,7 +49,7 @@ export default async function Player({
   const histories = loadHistoriesById(id).sort((a, b) => {
     return entries[a.entryId].sortKey - entries[b.entryId].sortKey;
   });
-  const competitions = loadCompetitionsById();
+  const competitions = loadCompetitions();
   const participatedMatches = loadMatches()
     .filter((match) => match.participants.some((p) => p.id === id))
     .sort((a, b) => {
@@ -133,14 +133,18 @@ export default async function Player({
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {Object.entries(player.tiers).map(([season, tier]) => (
-                    <TableRow key={season}>
-                      <TableCell>
-                        {competitions[season]?.shortName ?? season}
-                      </TableCell>
-                      <TableCell className="font-semibold">{tier}</TableCell>
-                    </TableRow>
-                  ))}
+                  {competitions.map((competition) => {
+                    return (
+                      player.tiers?.[competition.id] && (
+                        <TableRow key={competition.id}>
+                          <TableCell>{competition.shortName}</TableCell>
+                          <TableCell className="font-semibold">
+                            {player.tiers?.[competition.id]}
+                          </TableCell>
+                        </TableRow>
+                      )
+                    );
+                  })}
                 </TableBody>
               </Table>
             </>
