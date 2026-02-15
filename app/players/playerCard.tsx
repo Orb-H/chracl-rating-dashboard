@@ -1,4 +1,5 @@
 import { StarIcon, TrophyIcon } from "lucide-react";
+import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
@@ -21,7 +22,6 @@ export function PlayerCard({ player }: { player: Player & Rating }) {
 
   return (
     <Card className={`${gradientByTier(player.tiers?.[currentSeason] ?? "")}`}>
-      {/* TODO(#14): Add a link to each player*/}
       <CardContent className="flex flex-row gap-4">
         <div className="flex flex-col items-center gap-4 w-auto">
           <Avatar className="inline-block h-16 w-16 border-2">
@@ -40,7 +40,12 @@ export function PlayerCard({ player }: { player: Player & Rating }) {
           </div>
         </div>
         <div className="w-full gap-2 flex flex-col">
-          <div className="font-semibold text-2xl">{player.displayName}</div>
+          <Link
+            href={`/players/${player.id}`}
+            className="font-semibold text-2xl underline hover:no-underline"
+          >
+            {player.displayName}
+          </Link>
           <hr className="border-foreground" />
           <Table className="table-fixed">
             <TableBody>
