@@ -10,16 +10,15 @@ import { Rating } from "@/types/rating";
 const currentSeason = "season3";
 
 export function PlayerCard({ player }: { player: Player & Rating }) {
-  const teamWinCount =
+  const { teamWinCount, individualWinCount } =
     player.career?.reduce(
-      (count, career) => count + (isTeamWin(career.detail) ? 1 : 0),
-      0,
-    ) ?? 0;
-  const individualWinCount =
-    player.career?.reduce(
-      (count, career) => count + (isIndividualWin(career.detail) ? 1 : 0),
-      0,
-    ) ?? 0;
+      (acc, career) => ({
+        teamWinCount: acc.teamWinCount + (isTeamWin(career.detail) ? 1 : 0),
+        individualWinCount:
+          acc.individualWinCount + (isIndividualWin(career.detail) ? 1 : 0),
+      }),
+      { teamWinCount: 0, individualWinCount: 0 },
+    ) ?? { teamWinCount: 0, individualWinCount: 0 };
 
   return (
     <Card className={`${gradientByTier(player.tiers?.[currentSeason] ?? "")}`}>
