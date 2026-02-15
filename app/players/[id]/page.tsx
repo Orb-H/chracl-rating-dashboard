@@ -108,7 +108,16 @@ export default async function Player({
         </TabsList>
         <Separator className="mb-4 -mt-2" />
         <TabsContent value="profile">
-          <span className="font-semibold text-lg">티어 변동</span>
+          <header className="font-semibold text-lg mb-4">주요 경력</header>
+          {player.career ? (
+            <CareerList career={player.career} />
+          ) : (
+            <span className="text-muted-foreground">
+              아직 대회에 참여한 이력이 없습니다.
+            </span>
+          )}
+          <Separator className="my-4" />
+          <header className="font-semibold text-lg mb-4">티어 변동</header>
           {player.tiers ? (
             <Table className="w-full">
               <TableHeader>
@@ -121,22 +130,13 @@ export default async function Player({
                 {Object.entries(player.tiers).map(([season, tier]) => (
                   <TableRow key={season}>
                     <TableCell>
-                      {competitions[season]?.name ?? season}
+                      {competitions[season]?.shortName ?? season}
                     </TableCell>
                     <TableCell className="font-semibold">{tier}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>
             </Table>
-          ) : (
-            <span className="text-muted-foreground">
-              아직 대회에 참여한 이력이 없습니다.
-            </span>
-          )}
-          <Separator className="my-4" />
-          <span className="font-semibold text-lg">주요 경력</span>
-          {player.career ? (
-            <CareerList career={player.career} />
           ) : (
             <span className="text-muted-foreground">
               아직 대회에 참여한 이력이 없습니다.
