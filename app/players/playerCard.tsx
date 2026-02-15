@@ -2,6 +2,7 @@ import { StarIcon, TrophyIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import { isIndividualWin, isTeamWin } from "@/lib/utils";
 import { Player } from "@/types/player";
 import { Rating } from "@/types/rating";
 
@@ -9,23 +10,16 @@ import { Rating } from "@/types/rating";
 const currentSeason = "season3";
 
 export function PlayerCard({ player }: { player: Player & Rating }) {
-  let teamWinCount = 0;
-  let individualWinCount = 0;
-
-  if (player.career) {
-    for (const career of player.career) {
-      if (career.detail.includes("우승")) {
-        teamWinCount += 1;
-      }
-      if (
-        career.detail.includes("MVP") ||
-        career.detail.includes("챔피언") ||
-        career.detail.includes("1위")
-      ) {
-        individualWinCount += 1;
-      }
-    }
-  }
+  const teamWinCount =
+    player.career?.reduce(
+      (count, career) => count + (isTeamWin(career.detail) ? 1 : 0),
+      0,
+    ) ?? 0;
+  const individualWinCount =
+    player.career?.reduce(
+      (count, career) => count + (isIndividualWin(career.detail) ? 1 : 0),
+      0,
+    ) ?? 0;
 
   return (
     <Card className={`${gradientByTier(player.tiers?.[currentSeason] ?? "")}`}>
