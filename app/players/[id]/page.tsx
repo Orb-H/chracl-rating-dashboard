@@ -166,40 +166,36 @@ export default async function Player({
 
 function CareerList({ career }: { career: Career[] }) {
   return (
-    <Table className="w-full">
-      <TableBody>
-        {career.map((item, index) => (
-          <TableRow key={`${item.detail}-${index}`}>
-            <TableCell>
-              <span
-                className={
-                  item.type === "major"
-                    ? "font-semibold bg-accent text-accent-foreground px-2 py-1 rounded-md"
-                    : "px-2 py-1 rounded-md"
-                }
-              >
-                {isTeamWin(item.detail) && (
-                  <>
-                    <TrophyIcon
-                      className="inline w-4 h-4"
-                      aria-label="팀 우승"
-                    />{" "}
-                  </>
-                )}
-                {isIndividualWin(item.detail) && (
-                  <>
-                    <StarIcon
-                      className="inline w-4 h-4"
-                      aria-label="개인 우승"
-                    />{" "}
-                  </>
-                )}
-                {item.detail}
-              </span>
-            </TableCell>
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+    <ul className="w-full">
+      {career.map((item, index) => (
+        <li key={`${item.detail}-${index}`} className="py-1">
+          <span
+            className={
+              item.type === "major"
+                ? "font-semibold bg-accent text-accent-foreground px-2 py-1 rounded-md"
+                : "px-2 py-1 rounded-md"
+            }
+          >
+            {isTeamWin(item.detail) && (
+              <>
+                <TrophyIcon
+                  className="inline w-4 h-4"
+                  aria-label="팀 우승"
+                />{" "}
+              </>
+            )}
+            {isIndividualWin(item.detail) && (
+              <>
+                <StarIcon
+                  className="inline w-4 h-4"
+                  aria-label="개인 우승"
+                />{" "}
+              </>
+            )}
+            {item.detail}
+          </span>
+        </li>
+      ))}
+    </ul>
   );
 }
