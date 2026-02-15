@@ -1,7 +1,17 @@
 import { notFound } from "next/navigation";
+import { Header } from "@/components/Header";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { loadCompetitionsById } from "@/lib/loadCompetitions";
 import { loadEntriesById } from "@/lib/loadEntries";
 import { loadHistoriesById } from "@/lib/loadHistories";
 import { loadMatches } from "@/lib/loadMatches";
@@ -38,6 +48,7 @@ export default async function Player({
   const histories = loadHistoriesById(id).sort((a, b) => {
     return entries[a.entryId].sortKey - entries[b.entryId].sortKey;
   });
+  const competitions = loadCompetitionsById();
   const participatedMatches = loadMatches()
     .filter((match) => match.participants.some((p) => p.id === id))
     .sort((a, b) => {
@@ -92,16 +103,39 @@ export default async function Player({
       <Tabs defaultValue="profile" className="w-full mb-8">
         <TabsList variant="line">
           <TabsTrigger value="profile">선수 프로필</TabsTrigger>
-          <TabsTrigger value="career">주요 경력</TabsTrigger>
           <TabsTrigger value="graph">레이팅 그래프</TabsTrigger>
           <TabsTrigger value="record">주행 기록</TabsTrigger>
         </TabsList>
         <Separator className="mb-4 -mt-2" />
         <TabsContent value="profile">
-          {/* TODO(#11): Add a short content about brief profile */}
-          추가 예정입니다.
+          <span className="font-semibold text-lg">티어 변동</span>
+          {player.tiers ? (
+            <Table className="w-full">
+              <TableHeader>
+                <TableRow>
+                  <TableHead>시즌</TableHead>
+                  <TableHead>티어</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {Object.entries(player.tiers).map(([season, tier]) => (
+                  <TableRow key={season}>
+                    <TableCell>
+                      {competitions[season]?.name ?? season}
+                    </TableCell>
+                    <TableCell className="font-semibold">{tier}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          ) : (
+            <span className="text-muted-foreground">
+              아직 대회에 참여한 이력이 없습니다.
+            </span>
+          )}
         </TabsContent>
         <TabsContent value="career">
+          <span className="font-semibold text-lg">주요 경력</span>
           {player.career ? (
             <CareerList career={player.career} />
           ) : (
