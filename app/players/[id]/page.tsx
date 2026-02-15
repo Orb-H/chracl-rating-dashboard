@@ -1,5 +1,5 @@
+import { StarIcon, TrophyIcon } from "lucide-react";
 import { notFound } from "next/navigation";
-import { Header } from "@/components/Header";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -16,6 +16,7 @@ import { loadEntriesById } from "@/lib/loadEntries";
 import { loadHistoriesById } from "@/lib/loadHistories";
 import { loadMatches } from "@/lib/loadMatches";
 import { loadPlayerById, loadPlayers } from "@/lib/loadPlayers";
+import { isIndividualWin, isTeamWin } from "@/lib/utils";
 import { Career } from "@/types/player";
 import { RatingHistory } from "@/types/rating";
 import { RatingChart } from "./RatingChart";
@@ -118,25 +119,31 @@ export default async function Player({
           )}
           <Separator className="my-4" />
           <header className="font-semibold text-lg mb-4">티어 변동</header>
+
           {player.tiers ? (
-            <Table className="w-full">
-              <TableHeader>
-                <TableRow>
-                  <TableHead>시즌</TableHead>
-                  <TableHead>티어</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {Object.entries(player.tiers).map(([season, tier]) => (
-                  <TableRow key={season}>
-                    <TableCell>
-                      {competitions[season]?.shortName ?? season}
-                    </TableCell>
-                    <TableCell className="font-semibold">{tier}</TableCell>
+            <>
+              <span className="text-muted-foreground">
+                ※ 티어는 대회 이후에 결정되는 값입니다.
+              </span>
+              <Table className="w-full">
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>대회</TableHead>
+                    <TableHead>티어</TableHead>
                   </TableRow>
-                ))}
-              </TableBody>
-            </Table>
+                </TableHeader>
+                <TableBody>
+                  {Object.entries(player.tiers).map(([season, tier]) => (
+                    <TableRow key={season}>
+                      <TableCell>
+                        {competitions[season]?.shortName ?? season}
+                      </TableCell>
+                      <TableCell className="font-semibold">{tier}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </>
           ) : (
             <span className="text-muted-foreground">
               아직 대회에 참여한 이력이 없습니다.
@@ -159,20 +166,40 @@ export default async function Player({
 
 function CareerList({ career }: { career: Career[] }) {
   return (
-    <ul className="list-disc list-inside">
-      {career.map((item, index) => (
-        <li key={`${item.detail}-${index}`} className="mb-2">
-          <span
-            className={
-              item.type === "major"
-                ? "font-semibold bg-accent text-accent-foreground px-2 py-1 rounded-md"
-                : "px-2 py-1 rounded-md"
-            }
-          >
-            {item.detail}
-          </span>
-        </li>
-      ))}
-    </ul>
+    <Table className="w-full">
+      <TableBody>
+        {career.map((item, index) => (
+          <TableRow key={`${item.detail}-${index}`}>
+            <TableCell>
+              <span
+                className={
+                  item.type === "major"
+                    ? "font-semibold bg-accent text-accent-foreground px-2 py-1 rounded-md"
+                    : "px-2 py-1 rounded-md"
+                }
+              >
+                {isTeamWin(item.detail) && (
+                  <>
+                    <TrophyIcon
+                      className="inline w-4 h-4"
+                      aria-label="팀 우승"
+                    />{" "}
+                  </>
+                )}
+                {isIndividualWin(item.detail) && (
+                  <>
+                    <StarIcon
+                      className="inline w-4 h-4"
+                      aria-label="개인 우승"
+                    />{" "}
+                  </>
+                )}
+                {item.detail}
+              </span>
+            </TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
   );
 }
