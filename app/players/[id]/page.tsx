@@ -102,7 +102,7 @@ export default async function Player({
       </h1>
       <Tabs defaultValue="profile" className="w-full mb-8">
         <TabsList variant="line">
-          <TabsTrigger value="profile">선수 프로필</TabsTrigger>
+          <TabsTrigger value="profile">선수 소개</TabsTrigger>
           <TabsTrigger value="graph">레이팅 그래프</TabsTrigger>
           <TabsTrigger value="record">주행 기록</TabsTrigger>
         </TabsList>
@@ -133,8 +133,7 @@ export default async function Player({
               아직 대회에 참여한 이력이 없습니다.
             </span>
           )}
-        </TabsContent>
-        <TabsContent value="career">
+          <Separator className="my-4" />
           <span className="font-semibold text-lg">주요 경력</span>
           {player.career ? (
             <CareerList career={player.career} />
