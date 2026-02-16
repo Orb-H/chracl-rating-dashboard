@@ -47,6 +47,7 @@ export default async function Player({
     }
   })();
   const currentRatings = loadCurrentRating();
+  const currentRating = currentRatings[id];
   const validRatings = Object.entries(currentRatings).filter(
     ([_, r]) => r.value !== 0,
   );
@@ -120,10 +121,10 @@ export default async function Player({
         <Separator className="mb-4 -mt-2" />
         <TabsContent value="profile">
           <header className="font-semibold text-lg mb-4">현재 레이팅</header>
-          {currentRatings[id]?.value && currentRatings[id].value !== 0 ? (
+          {currentRating?.value && currentRating.value !== 0 ? (
             <div className="mb-4">
               <span className="font-semibold text-2xl">
-                {currentRatings[id].value.toFixed(2)}
+                {currentRating.value.toFixed(2)}
               </span>
               <span className="ml-2 text-muted-foreground">
                 {rank ?? "-"}위 / {validRatings.length}명
