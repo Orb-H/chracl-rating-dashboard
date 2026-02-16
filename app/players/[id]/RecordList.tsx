@@ -1,3 +1,4 @@
+import { Card } from "@/components/ui/card";
 import {
   Table,
   TableBody,
@@ -8,7 +9,7 @@ import {
 } from "@/components/ui/table";
 import { Competition } from "@/types/competition";
 import { Match } from "@/types/match";
-import { RatingHistory } from "@/types/rating";
+import { Rating, RatingHistory } from "@/types/rating";
 
 export function RecordList({
   id,
@@ -21,22 +22,25 @@ export function RecordList({
   competitions: Record<string, Competition>;
   histories: RatingHistory[];
 }) {
-  const changeHistories = Object.fromEntries(
-    histories.map((h, i) => {
-      if (i === 0) return [h.entryId, h];
-      return [
-        h.entryId,
-        {
-          ...h,
-          rating: {
-            value: h.rating.value,
-            change: h.rating.value - histories[i - 1].rating.value,
+  const changeHistories: Record<string, RatingHistory & { delta?: Rating }> =
+    Object.fromEntries(
+      histories.map((h, i) => {
+        if (i === 0) return [h.entryId, h];
+        return [
+          h.entryId,
+          {
+            ...h,
+            delta: {
+              value: h.rating.value - histories[i - 1].rating.value,
+              mu: h.rating.mu - histories[i - 1].rating.mu,
+              sigma: h.rating.sigma - histories[i - 1].rating.sigma,
+            },
           },
-        },
-      ];
-    }),
-  );
+        ];
+      }),
+    );
 
+  // TODO(#11): Enhance UX by showing records in a card or something, instead of a simple table
   return (
     <Table>
       <TableHeader className="bg-muted">
@@ -88,7 +92,7 @@ export function RecordList({
                 </span>
                 <br />
                 <span>
-                  {competitions[match.competitionId].teams.find(
+                  {competitions[match.competitionId]?.teams.find(
                     (team) => team.id === record.teamId,
                   )?.name ?? "-"}
                 </span>
@@ -112,21 +116,21 @@ export function RecordList({
                 </span>
                 <br />
                 <span>
-                  {changeHistory ? (
+                  {changeHistory && changeHistory.delta ? (
                     <>
                       {changeHistory.rating.value.toFixed(2)}
-                      {changeHistory.rating.change ? (
+                      {changeHistory.delta.value ? (
                         <>
                           {" "}
                           <span
                             className={
-                              changeHistory.rating.change > 0
+                              changeHistory.delta.value > 0
                                 ? "text-sky-500"
                                 : "text-red-500"
                             }
                           >
-                            ({changeHistory.rating.change > 0 ? "+" : ""}
-                            {changeHistory.rating.change.toFixed(2)})
+                            ({changeHistory.delta.value > 0 ? "+" : ""}
+                            {changeHistory.delta.value.toFixed(2)})
                           </span>
                         </>
                       ) : null}
