@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { loadCompetitions } from "@/lib/loadCompetitions";
+import { loadCurrentRating } from "@/lib/loadCurrentRating";
 import { loadEntriesById } from "@/lib/loadEntries";
 import { loadHistoriesById } from "@/lib/loadHistories";
 import { loadMatches } from "@/lib/loadMatches";
@@ -44,6 +45,16 @@ export default async function Player({
     } catch {
       return notFound();
     }
+  })();
+  const currentRatings = loadCurrentRating();
+  const currentRating = currentRatings[id];
+  const validRatings = Object.entries(currentRatings).filter(
+    ([_, r]) => r.value !== 0,
+  );
+  const rank = (() => {
+    const items = validRatings.slice().sort((a, b) => b[1].value - a[1].value);
+    const idx = items.findIndex(([pid]) => pid === id);
+    return idx === -1 ? null : idx + 1;
   })();
   const entries = loadEntriesById();
   const histories = loadHistoriesById(id).sort((a, b) => {
@@ -109,6 +120,20 @@ export default async function Player({
         </TabsList>
         <Separator className="mb-4 -mt-2" />
         <TabsContent value="profile">
+          <header className="font-semibold text-lg mb-4">현재 레이팅</header>
+          {currentRating?.value && currentRating.value !== 0 ? (
+            <div className="mb-4">
+              <span className="font-semibold text-2xl">
+                {currentRating.value.toFixed(2)}
+              </span>
+              <span className="ml-2 text-muted-foreground">
+                {rank ?? "-"}위 / {validRatings.length}명
+              </span>
+            </div>
+          ) : (
+            <span className="font-semibold text-2xl mb-2">정보 없음</span>
+          )}
+          <Separator className="mb-4" />
           <header className="font-semibold text-lg mb-4">주요 경력</header>
           {player.career ? (
             <CareerList career={player.career} />
