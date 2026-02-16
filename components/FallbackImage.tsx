@@ -1,20 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { ComponentProps, useState } from "react";
 
 export function FallbackImage({
   fallbackSrc,
   ...props
 }: {
   fallbackSrc: string;
-} & React.ComponentProps<typeof Image>) {
+} & ComponentProps<typeof Image>) {
   const [useFallback, setUseFallback] = useState(false);
-  const [oldSrc, setOldSrc] = useState(props.src);
-  if (oldSrc !== props.src) {
-    setUseFallback(false);
-    setOldSrc(props.src);
-  }
 
   return (
     <Image
@@ -22,7 +17,8 @@ export function FallbackImage({
       src={useFallback ? fallbackSrc : props.src}
       placeholder="blur"
       blurDataURL={fallbackSrc}
-      onError={() => {
+      onError={(event) => {
+        props.onError?.(event);
         setUseFallback(true);
       }}
     />
