@@ -11,7 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { loadCompetitions } from "@/lib/loadCompetitions";
+import { loadCompetitions, loadCompetitionsById } from "@/lib/loadCompetitions";
 import { loadCurrentRating } from "@/lib/loadCurrentRating";
 import { loadEntriesById } from "@/lib/loadEntries";
 import { loadHistoriesById } from "@/lib/loadHistories";
@@ -61,6 +61,7 @@ export default async function Player({
     return entries[a.entryId].sortKey - entries[b.entryId].sortKey;
   });
   const competitions = loadCompetitions();
+  const competitionsById = loadCompetitionsById();
   const participatedMatches = loadMatches()
     .filter((match) => match.participants.some((p) => p.id === id))
     .sort((a, b) => {
@@ -186,7 +187,12 @@ export default async function Player({
           />
         </TabsContent>
         <TabsContent value="record">
-          <RecordList id={id} matches={participatedMatches} />
+          <RecordList
+            id={id}
+            matches={participatedMatches}
+            competitions={competitionsById}
+            histories={histories}
+          />
         </TabsContent>
       </Tabs>
     </main>
