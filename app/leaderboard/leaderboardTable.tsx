@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Popover,
@@ -72,7 +73,6 @@ export function LeaderboardTable({ ratingData }: LeaderboardTableProps) {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {/* TODO(#11): Make each row to direct to player detail page */}
         {/* TODO(#3): Change color palette of the row by tier value */}
         {ratingData.map((player, i) => (
           <TableRow
@@ -83,17 +83,24 @@ export function LeaderboardTable({ ratingData }: LeaderboardTableProps) {
               {player.mu ? i + 1 : "-"}
             </TableCell>
             <TableCell>
-              <Avatar className="inline-block align-middle">
-                <AvatarImage
-                  src={player.avatarUrl}
-                  alt={player.displayName}
-                  className="object-cover"
-                />
-                <AvatarFallback>{player.displayName?.[0] || ""}</AvatarFallback>
-              </Avatar>
-              <span className="ml-2 inline-block align-middle">
-                {player.displayName}
-              </span>
+              <Link
+                href={`/players/${player.id}`}
+                className="flex underline hover:no-underline items-center"
+              >
+                <Avatar className="inline-block align-middle">
+                  <AvatarImage
+                    src={player.avatarUrl}
+                    alt={player.displayName}
+                    className="object-cover"
+                  />
+                  <AvatarFallback>
+                    {player.displayName?.[0] || ""}
+                  </AvatarFallback>
+                </Avatar>
+                <span className="ml-2 inline-block align-middle">
+                  {player.displayName}
+                </span>
+              </Link>
             </TableCell>
             <TableCell className="text-center">
               {player.tiers ? player.tiers[currentSeason] : "-"}
