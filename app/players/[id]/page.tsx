@@ -51,7 +51,7 @@ export default async function Player({
     ([_, r]) => r.value !== 0,
   );
   const rank = (() => {
-    const items = validRatings.sort((a, b) => b[1].value - a[1].value);
+    const items = validRatings.slice().sort((a, b) => b[1].value - a[1].value);
     const idx = items.findIndex(([pid]) => pid === id);
     return idx === -1 ? null : idx + 1;
   })();
