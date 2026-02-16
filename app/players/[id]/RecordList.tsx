@@ -6,9 +6,18 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Competition } from "@/types/competition";
 import { Match } from "@/types/match";
 
-export function RecordList({ id, matches }: { id: string; matches: Match[] }) {
+export function RecordList({
+  id,
+  matches,
+  competitions,
+}: {
+  id: string;
+  matches: Match[];
+  competitions: Record<string, Competition>;
+}) {
   return (
     <Table>
       <TableHeader className="bg-muted">
@@ -17,14 +26,17 @@ export function RecordList({ id, matches }: { id: string; matches: Match[] }) {
             <span>경기</span>
             <br />
             <span className="text-muted-foreground">트랙</span>
+            <br />
+            <span>소속 팀</span>
           </TableHead>
           <TableHead className="p-2 leading-8 text-end">
             <span>기록</span>
             <br />
-            {/* TODO(#11): Add rated place together */}
             <span className="text-muted-foreground">
               레이스 순위 ┃ 전체 순위
             </span>
+            <br />
+            <span>레이팅 변동</span>
           </TableHead>
         </TableRow>
       </TableHeader>
@@ -54,6 +66,12 @@ export function RecordList({ id, matches }: { id: string; matches: Match[] }) {
                 <span className="text-sm text-muted-foreground">
                   {match.trackName}
                 </span>
+                <br />
+                <span>
+                  {competitions[match.competitionId].teams.find(
+                    (team) => team.id === record.teamId,
+                  )?.name ?? "-"}
+                </span>
               </TableCell>
               <TableCell className="leading-8 text-end">
                 <span>{time ?? "-"}</span>
@@ -72,6 +90,8 @@ export function RecordList({ id, matches }: { id: string; matches: Match[] }) {
                     </>
                   )}
                 </span>
+                <br />
+                <span></span>
               </TableCell>
             </TableRow>
           );
