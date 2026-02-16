@@ -191,6 +191,7 @@ export default async function Player({
             id={id}
             matches={participatedMatches}
             competitions={competitionsById}
+            histories={histories}
           />
         </TabsContent>
       </Tabs>

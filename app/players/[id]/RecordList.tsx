@@ -8,16 +8,35 @@ import {
 } from "@/components/ui/table";
 import { Competition } from "@/types/competition";
 import { Match } from "@/types/match";
+import { RatingHistory } from "@/types/rating";
 
 export function RecordList({
   id,
   matches,
   competitions,
+  histories,
 }: {
   id: string;
   matches: Match[];
   competitions: Record<string, Competition>;
+  histories: RatingHistory[];
 }) {
+  const changeHistories = Object.fromEntries(
+    histories.map((h, i) => {
+      if (i === 0) return [h.entryId, h];
+      return [
+        h.entryId,
+        {
+          ...h,
+          rating: {
+            value: h.rating.value,
+            change: h.rating.value - histories[i - 1].rating.value,
+          },
+        },
+      ];
+    }),
+  );
+
   return (
     <Table>
       <TableHeader className="bg-muted">
@@ -55,6 +74,7 @@ export function RecordList({
               penaltyTime = `(+${record.record.penaltyTime})`;
             }
           }
+          const changeHistory = changeHistories[match.entryId];
 
           return (
             <TableRow key={match.competitionId + "-" + match.id}>
@@ -76,7 +96,7 @@ export function RecordList({
               <TableCell className="leading-8 text-end">
                 <span>{time ?? "-"}</span>
                 {penaltyTime && (
-                  <span className="text-destructive"> {penaltyTime}</span>
+                  <span className="text-muted-foreground"> {penaltyTime}</span>
                 )}
                 <br />
                 <span className="text-sm text-muted-foreground">
@@ -91,7 +111,30 @@ export function RecordList({
                   )}
                 </span>
                 <br />
-                <span></span>
+                <span>
+                  {changeHistory ? (
+                    <>
+                      {changeHistory.rating.value.toFixed(2)}
+                      {changeHistory.rating.change ? (
+                        <>
+                          {" "}
+                          <span
+                            className={
+                              changeHistory.rating.change > 0
+                                ? "text-sky-500"
+                                : "text-red-500"
+                            }
+                          >
+                            ({changeHistory.rating.change > 0 ? "+" : ""}
+                            {changeHistory.rating.change.toFixed(2)})
+                          </span>
+                        </>
+                      ) : null}
+                    </>
+                  ) : (
+                    "-"
+                  )}
+                </span>
               </TableCell>
             </TableRow>
           );
