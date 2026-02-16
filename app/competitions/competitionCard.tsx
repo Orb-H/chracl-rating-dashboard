@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { FallbackImage } from "@/components/FallbackImage";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 type CompetitionCardProps = {
@@ -10,12 +10,13 @@ export function CompetitionCard({ id, name }: CompetitionCardProps) {
   return (
     <Card className="overflow-hidden pt-0">
       <CardHeader className="px-0">
-        <Image
+        <FallbackImage
           src={`/competitions/${id}.png`}
           alt={name}
           width={640}
           height={360}
           className="w-full"
+          fallbackSrc="/competitions/empty.png"
         />
       </CardHeader>
       <CardContent>
