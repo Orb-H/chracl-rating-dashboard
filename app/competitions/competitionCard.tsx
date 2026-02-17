@@ -16,9 +16,6 @@ export function CompetitionCard({ id, name }: CompetitionCardProps) {
           width={640}
           height={360}
           className="w-full"
-          style={{
-            background: "url('/competitions/empty.png') center/cover", // Fallback image while loading or if the main image fails to load
-          }}
         />
       </CardHeader>
       <CardContent>
