@@ -89,9 +89,9 @@ export function RecordList({
                 {changeHistory && changeHistory.delta ? (
                   <>
                     <p>{changeHistory.rating.value.toFixed(2)}</p>
-                    {changeHistory.delta.value ? (
+                    {changeHistory.delta &&
+                    changeHistory.delta.value !== undefined ? (
                       <p className="text-sm">
-                        {" "}
                         <span
                           className={
                             changeHistory.delta.value > 0
