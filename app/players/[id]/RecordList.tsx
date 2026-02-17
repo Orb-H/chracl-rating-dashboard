@@ -1,12 +1,4 @@
 import { Card } from "@/components/ui/card";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import { Competition } from "@/types/competition";
 import { Match } from "@/types/match";
 import { Rating, RatingHistory } from "@/types/rating";
@@ -40,110 +32,94 @@ export function RecordList({
       }),
     );
 
-  // TODO(#11): Enhance UX by showing records in a card or something, instead of a simple table
   return (
-    <Table>
-      <TableHeader className="bg-muted">
-        <TableRow>
-          <TableHead className="p-2 leading-8">
-            <span>경기</span>
-            <br />
-            <span className="text-muted-foreground">트랙</span>
-            <br />
-            <span>소속 팀</span>
-          </TableHead>
-          <TableHead className="p-2 leading-8 text-end">
-            <span>기록</span>
-            <br />
-            <span className="text-muted-foreground">
-              레이스 순위 ┃ 전체 순위
-            </span>
-            <br />
-            <span>레이팅 변동</span>
-          </TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {matches.map((match) => {
-          const record = match.participants.find((p) => p.id === id);
-          if (!record) return null;
+    <>
+      {matches.map((match) => {
+        const record = match.participants.find((p) => p.id === id);
+        if (!record) return null;
 
-          let time: string | undefined;
-          let penaltyTime: string | undefined;
-          if (match.type === "QUALIFYING") {
-            time = record.record.lapTime;
-          } else if (match.type === "MAIN") {
-            time = record.record.finishTime ?? "-";
-            if (record.record.penaltyTime) {
-              penaltyTime = `(+${record.record.penaltyTime})`;
-            }
+        let time: string | undefined;
+        let penaltyTime: string | undefined;
+        if (match.type === "QUALIFYING") {
+          time = record.record.lapTime;
+        } else if (match.type === "MAIN") {
+          time = record.record.finishTime ?? "-";
+          if (record.record.penaltyTime) {
+            penaltyTime = `(+${record.record.penaltyTime})`;
           }
-          const changeHistory = changeHistories[match.entryId];
+        }
+        const changeHistory = changeHistories[match.entryId];
+        const teamName = competitions[match.competitionId]?.teams.find(
+          (team) => team.id === record.teamId,
+        )?.name;
 
-          return (
-            <TableRow key={match.competitionId + "-" + match.id}>
-              <TableCell className="leading-8">
-                <span>
-                  {match.competitionId} {match.name}
-                </span>
-                <br />
-                <span className="text-sm text-muted-foreground">
-                  {match.trackName}
-                </span>
-                <br />
-                <span>
-                  {competitions[match.competitionId]?.teams.find(
-                    (team) => team.id === record.teamId,
-                  )?.name ?? "-"}
-                </span>
-              </TableCell>
-              <TableCell className="leading-8 text-end">
-                <span>{time ?? "-"}</span>
-                {penaltyTime && (
-                  <span className="text-muted-foreground"> {penaltyTime}</span>
-                )}
-                <br />
-                <span className="text-sm text-muted-foreground">
-                  <span className="font-bold">{record.place}</span>/
+        return (
+          <Card
+            key={match.competitionId + "-" + match.id}
+            className="p-4 mb-4 flex flex-col md:flex-row items-center justify-between gap-4"
+          >
+            <div className="w-full md:w-[50%] text-center md:text-start">
+              <h3 className="text-lg font-semibold">
+                {match.competitionId} {match.name}
+              </h3>
+              {/* TODO(#11): Show team name as a colored label with symbol color */}
+              {teamName && <p>팀: {teamName}</p>}
+              <p className="text-sm text-muted-foreground">
+                트랙: {match.trackName}
+              </p>
+            </div>
+            <div className="w-full md:w-[50%] grid grid-cols-7 justify-between gap-4 mt-2 md:mt-0 text-center">
+              <div className="col-span-2">
+                <p className="text-base font-semibold text-muted-foreground">
+                  순위
+                </p>
+                <p>
+                  <span className="font-semibold">{record.place}</span> /{" "}
                   {match.participants.length}
-                  {record.ratedPlace && match.entryParticipants && (
-                    <>
-                      {` ┃ `}
-                      <span className="font-bold">{record.ratedPlace}</span>/
-                      {match.entryParticipants}
-                    </>
-                  )}
-                </span>
-                <br />
-                <span>
-                  {changeHistory && changeHistory.delta ? (
-                    <>
-                      {changeHistory.rating.value.toFixed(2)}
-                      {changeHistory.delta.value ? (
-                        <>
-                          {" "}
-                          <span
-                            className={
-                              changeHistory.delta.value > 0
-                                ? "text-sky-500"
-                                : "text-red-500"
-                            }
-                          >
-                            ({changeHistory.delta.value > 0 ? "+" : ""}
-                            {changeHistory.delta.value.toFixed(2)})
-                          </span>
-                        </>
-                      ) : null}
-                    </>
-                  ) : (
-                    "-"
-                  )}
-                </span>
-              </TableCell>
-            </TableRow>
-          );
-        })}
-      </TableBody>
-    </Table>
+                </p>
+                {record.ratedPlace && match.entryParticipants ? (
+                  <p className="text-sm text-muted-foreground">
+                    (<span className="font-semibold">{record.ratedPlace}</span>{" "}
+                    / {match.entryParticipants})
+                  </p>
+                ) : null}
+              </div>
+              <div className="col-span-2">
+                <p className="font-semibold text-muted-foreground">레이팅</p>
+                {changeHistory && changeHistory.delta ? (
+                  <>
+                    <p>{changeHistory.rating.value.toFixed(2)}</p>
+                    {changeHistory.delta.value ? (
+                      <p className="text-sm">
+                        {" "}
+                        <span
+                          className={
+                            changeHistory.delta.value > 0
+                              ? "text-blue-500"
+                              : "text-red-500"
+                          }
+                        >
+                          ({changeHistory.delta.value > 0 ? "+" : ""}
+                          {changeHistory.delta.value.toFixed(2)})
+                        </span>
+                      </p>
+                    ) : null}
+                  </>
+                ) : (
+                  "-"
+                )}
+              </div>
+              <div className="col-span-3">
+                <p className="font-semibold text-muted-foreground">기록</p>
+                <p>{time ?? "-"}</p>
+                {penaltyTime && (
+                  <p className="text-sm text-muted-foreground">{penaltyTime}</p>
+                )}
+              </div>
+            </div>
+          </Card>
+        );
+      })}
+    </>
   );
 }
