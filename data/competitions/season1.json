@@ -7,22 +7,34 @@
     {
       "id": "season1-team-namgung-hyuk",
       "name": "남궁혁",
-      "members": ["namgung-hyuk", "odanming", "chochou"]
+      "members": ["namgung-hyuk", "odanming", "chochou"],
+      "style": {
+        "badge": "bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300"
+      }
     },
     {
       "id": "season1-team-hyungdok",
       "name": "형독",
-      "members": ["hyungdok", "hamkubby", "reo"]
+      "members": ["hyungdok", "hamkubby", "reo"],
+      "style": {
+        "badge": "bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300"
+      }
     },
     {
       "id": "season1-team-cheongalice",
       "name": "강지형",
-      "members": ["cheongalice", "oversleepzzz", "hera"]
+      "members": ["cheongalice", "oversleepzzz", "hera"],
+      "style": {
+        "badge": "bg-fuchsia-50 text-fuchsia-700 dark:bg-fuchsia-950 dark:text-fuchsia-300"
+      }
     },
     {
       "id": "season1-team-yona",
       "name": "요나",
-      "members": ["yona", "a2-duck", "yang-mei"]
+      "members": ["yona", "a2-duck", "yang-mei"],
+      "style": {
+        "badge": "bg-cyan-50 text-cyan-700 dark:bg-cyan-950 dark:text-cyan-300"
+      }
     }
   ],
   "pointsSchemes": {

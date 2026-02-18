@@ -7,17 +7,32 @@
     {
       "id": "season2-team-namgung-hyuk",
       "name": "투자는남궁혁처럼",
-      "members": ["namgung-hyuk", "odanming", "kim-toki", "bbogumi", "hamkubby"]
+      "members": [
+        "namgung-hyuk",
+        "odanming",
+        "kim-toki",
+        "bbogumi",
+        "hamkubby"
+      ],
+      "style": {
+        "badge": "bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300"
+      }
     },
     {
       "id": "season2-team-hyungdok",
       "name": "오버테이크",
-      "members": ["hyungdok", "a2-duck", "yang-mei", "park-insoo", "parkgee"]
+      "members": ["hyungdok", "a2-duck", "yang-mei", "park-insoo", "parkgee"],
+      "style": {
+        "badge": "bg-violet-50 text-violet-700 dark:bg-violet-950 dark:text-violet-300"
+      }
     },
     {
       "id": "season2-team-yona",
       "name": "레요헤호케",
-      "members": ["yona", "hera", "reo", "moon-hojun", "kanetv8"]
+      "members": ["yona", "hera", "reo", "moon-hojun", "kanetv8"],
+      "style": {
+        "badge": "bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300"
+      }
     },
     {
       "id": "season2-team-cheongalice",
@@ -28,7 +43,10 @@
         "zen1th-hwang",
         "nodolly",
         "eaglekop"
-      ]
+      ],
+      "style": {
+        "badge": "bg-yellow-50 text-yellow-700 dark:bg-yellow-950 dark:text-yellow-300"
+      }
     }
   ],
   "pointsSchemes": {
