@@ -39,12 +39,15 @@ export default async function CompetitionDetail({
           <TabsTrigger value="results">대회 결과</TabsTrigger>
         </TabsList>
         <TabsContent value="overview" className="mt-8 w-full">
+          {/* TODO(#15): Add competition metadata and render it here. */}
           <p>대회 정보 페이지는 현재 준비 중입니다.</p>
         </TabsContent>
         <TabsContent value="matches" className="mt-8 w-full">
+          {/* TODO(#15): Add matches data of this competition. */}
           <p>경기 목록 페이지는 현재 준비 중입니다.</p>
         </TabsContent>
         <TabsContent value="results" className="mt-8 w-full">
+          {/* TODO(#15): Add results data of this competition and render it here. */}
           <p>대회 결과 페이지는 현재 준비 중입니다.</p>
         </TabsContent>
       </Tabs>
