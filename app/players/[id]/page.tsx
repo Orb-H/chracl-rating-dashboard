@@ -74,24 +74,35 @@ export default async function Player({
     );
     return {
       ...history,
-      name: match ? match.competitionId + " " + match.name : "",
+      name: match
+        ? `${competitionsById[match.competitionId]?.sortOrder ? `제 ${competitionsById[match.competitionId].sortOrder}회 - ` : ""}${match.name}`
+        : "",
     };
   });
   const ratingHistoryByCompetition = [...histories]
     .reverse()
     .reduce(
       (acc, history) => {
+        const competitionId = entries[history.entryId].competitionId;
+        const competition =
+          competitionId !== undefined
+            ? competitionsById[competitionId]
+            : undefined;
+
         if (acc.length === 0) {
           return [
-            { ...history, name: entries[history.entryId].competitionId ?? "" },
+            {
+              ...history,
+              name: competition?.shortName ?? "",
+            },
           ];
         }
 
         const last = acc.at(-1)!;
-        if (last.name !== (entries[history.entryId].competitionId ?? "")) {
+        if (last.name !== (competition?.shortName ?? "")) {
           acc.push({
             ...history,
-            name: entries[history.entryId].competitionId ?? "",
+            name: competition?.shortName ?? "",
           });
         }
         return acc;
