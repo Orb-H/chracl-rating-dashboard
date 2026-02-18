@@ -1,12 +1,6 @@
-import { ConstructionIcon } from "lucide-react";
+import { TabsContent } from "@radix-ui/react-tabs";
 import { notFound } from "next/navigation";
-import {
-  Empty,
-  EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle,
-} from "@/components/ui/empty";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { loadCompetitionById, loadCompetitions } from "@/lib/loadCompetitions";
 
 export const dynamicParams = false;
@@ -35,19 +29,25 @@ export default async function CompetitionDetail({
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
-      {/* TODO(#15): Fill with concrete content */}
-      <Empty>
-        <EmptyHeader>
-          <EmptyMedia>
-            <ConstructionIcon />
-          </EmptyMedia>
-          <EmptyTitle>준비중입니다.</EmptyTitle>
-          <EmptyDescription>
-            현재 레이아웃 작업 및 데이터 확보 작업을 진행중입니다. 곧{" "}
-            <b>{competition.name}</b> 대회의 데이터를 준비할게요!
-          </EmptyDescription>
-        </EmptyHeader>
-      </Empty>
+      <header className="mb-12 w-full">
+        <h1 className="text-4xl font-bold">{competition.name}</h1>
+      </header>
+      <Tabs defaultValue="overview" className="w-full">
+        <TabsList variant="line">
+          <TabsTrigger value="overview">대회 정보</TabsTrigger>
+          <TabsTrigger value="matches">경기 목록</TabsTrigger>
+          <TabsTrigger value="results">대회 결과</TabsTrigger>
+        </TabsList>
+        <TabsContent value="overview" className="mt-8 w-full">
+          <p>대회 정보 페이지는 현재 준비 중입니다.</p>
+        </TabsContent>
+        <TabsContent value="matches" className="mt-8 w-full">
+          <p>경기 목록 페이지는 현재 준비 중입니다.</p>
+        </TabsContent>
+        <TabsContent value="results" className="mt-8 w-full">
+          <p>대회 결과 페이지는 현재 준비 중입니다.</p>
+        </TabsContent>
+      </Tabs>
     </main>
   );
 }
