@@ -72,10 +72,13 @@ export default async function Player({
     const match = participatedMatches.find(
       (match) => match.entryId === history.entryId,
     );
+    const competition = match
+      ? competitionsById[match.competitionId]
+      : undefined;
     return {
       ...history,
       name: match
-        ? `${competitionsById[match.competitionId]?.sortOrder ? `제 ${competitionsById[match.competitionId].sortOrder}회 - ` : ""}${match.name}`
+        ? `${competition?.sortOrder ? `제 ${competition.sortOrder}회 - ` : ""}${match.name}`
         : "",
     };
   });
@@ -93,16 +96,16 @@ export default async function Player({
           return [
             {
               ...history,
-              name: competition?.shortName ?? "",
+              name: competition?.shortName ?? competition?.name ?? "",
             },
           ];
         }
 
         const last = acc.at(-1)!;
-        if (last.name !== (competition?.shortName ?? "")) {
+        if (last.name !== (competition?.shortName ?? competition?.name ?? "")) {
           acc.push({
             ...history,
-            name: competition?.shortName ?? "",
+            name: competition?.shortName ?? competition?.name ?? "",
           });
         }
         return acc;
