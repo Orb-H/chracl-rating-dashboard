@@ -14,7 +14,10 @@
         "kevinstudio",
         "eaglekop",
         "u-lili"
-      ]
+      ],
+      "style": {
+        "badge": "bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300"
+      }
     },
     {
       "id": "season3-team-hyungdok",
@@ -26,7 +29,10 @@
         "haematl",
         "reana",
         "oversleepzzz"
-      ]
+      ],
+      "style": {
+        "badge": "bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300"
+      }
     },
     {
       "id": "season3-team-zen1th-hwang",
@@ -38,7 +44,10 @@
         "a2-duck",
         "ichika-hibi",
         "mytyl-maerchen"
-      ]
+      ],
+      "style": {
+        "badge": "bg-teal-50 text-teal-700 dark:bg-teal-950 dark:text-teal-300"
+      }
     },
     {
       "id": "season3-team-yona",
@@ -50,12 +59,18 @@
         "chochou",
         "half",
         "lotionyum"
-      ]
+      ],
+      "style": {
+        "badge": "bg-yellow-50 text-yellow-700 dark:bg-yellow-950 dark:text-yellow-300"
+      }
     },
     {
       "id": "season3-team-reo",
       "name": "좡",
-      "members": ["reo", "samozang", "bbogumi", "psy-haruto", "sdsd97", "auro"]
+      "members": ["reo", "samozang", "bbogumi", "psy-haruto", "sdsd97", "auro"],
+      "style": {
+        "badge": "bg-orange-50 text-orange-700 dark:bg-orange-950 dark:text-orange-300"
+      }
     }
   ],
   "pointsSchemes": {

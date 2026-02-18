@@ -52,4 +52,17 @@ export type Team = {
    * E.g., ["Alice", "Bob", "Charlie"]
    */
   members: string[];
+
+  /**
+   * The color information of the team, which can be used for UI purposes.
+   */
+  style?: TeamStyle;
+};
+
+export type TeamStyle = {
+  /**
+   * The badge style for the team, which can be a Tailwind CSS class.
+   * E.g., "bg-blue-500"
+   */
+  badge: string;
 };
