@@ -50,6 +50,7 @@ export function RecordList({
           }
         }
         const changeHistory = changeHistories[match.entryId];
+        const competition = competitions[match.competitionId];
         const team = competitions[match.competitionId]?.teams.find(
           (team) => team.id === record.teamId,
         );
@@ -62,7 +63,9 @@ export function RecordList({
           >
             <div className="w-full md:w-[50%] text-center md:text-start">
               <h3 className="text-lg font-semibold">
-                {match.competitionId} {match.name}
+                {/* TODO: Introduce more robust field for competition abbreviation */}
+                {competition?.sortOrder && `제 ${competition.sortOrder}회 - `}
+                {match.name}
               </h3>
               <p className="text-sm text-muted-foreground">
                 트랙: {match.trackName}
