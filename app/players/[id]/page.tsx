@@ -72,26 +72,40 @@ export default async function Player({
     const match = participatedMatches.find(
       (match) => match.entryId === history.entryId,
     );
+    const competition = match
+      ? competitionsById[match.competitionId]
+      : undefined;
     return {
       ...history,
-      name: match ? match.competitionId + " " + match.name : "",
+      name: match
+        ? `${competition?.sortOrder ? `제 ${competition.sortOrder}회 - ` : ""}${match.name}`
+        : "",
     };
   });
   const ratingHistoryByCompetition = [...histories]
     .reverse()
     .reduce(
       (acc, history) => {
+        const competitionId = entries[history.entryId].competitionId;
+        const competition =
+          competitionId !== undefined
+            ? competitionsById[competitionId]
+            : undefined;
+
         if (acc.length === 0) {
           return [
-            { ...history, name: entries[history.entryId].competitionId ?? "" },
+            {
+              ...history,
+              name: competition?.shortName ?? competition?.name ?? "",
+            },
           ];
         }
 
         const last = acc.at(-1)!;
-        if (last.name !== (entries[history.entryId].competitionId ?? "")) {
+        if (last.name !== (competition?.shortName ?? competition?.name ?? "")) {
           acc.push({
             ...history,
-            name: entries[history.entryId].competitionId ?? "",
+            name: competition?.shortName ?? competition?.name ?? "",
           });
         }
         return acc;
