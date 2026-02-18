@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Competition } from "@/types/competition";
 import { Match } from "@/types/match";
@@ -49,9 +50,10 @@ export function RecordList({
           }
         }
         const changeHistory = changeHistories[match.entryId];
-        const teamName = competitions[match.competitionId]?.teams.find(
+        const team = competitions[match.competitionId]?.teams.find(
           (team) => team.id === record.teamId,
-        )?.name;
+        );
+        const badgeStyle = team?.style?.badge ?? "";
 
         return (
           <Card
@@ -62,10 +64,15 @@ export function RecordList({
               <h3 className="text-lg font-semibold">
                 {match.competitionId} {match.name}
               </h3>
-              {/* TODO(#11): Show team name as a colored label with symbol color */}
-              {teamName && <p>팀: {teamName}</p>}
               <p className="text-sm text-muted-foreground">
                 트랙: {match.trackName}
+              </p>
+              <p>
+                {team?.name ? (
+                  <Badge className={badgeStyle}>팀 {team.name}</Badge>
+                ) : (
+                  <Badge variant="outline">개인전</Badge>
+                )}
               </p>
             </div>
             <div className="w-full md:w-[50%] grid grid-cols-7 justify-between gap-4 mt-2 md:mt-0 text-center">
