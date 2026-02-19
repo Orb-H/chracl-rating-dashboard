@@ -1,6 +1,5 @@
-import { TabsContent } from "@radix-ui/react-tabs";
 import { notFound } from "next/navigation";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { loadCompetitionById, loadCompetitions } from "@/lib/loadCompetitions";
 
 export const dynamicParams = false;
