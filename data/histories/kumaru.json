@@ -1,0 +1,10 @@
+[
+  {
+    "entryId": "initial",
+    "rating": {
+      "mu": 50,
+      "sigma": 16.666666666666668,
+      "value": 0
+    }
+  }
+]

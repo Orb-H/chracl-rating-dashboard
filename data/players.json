@@ -455,7 +455,7 @@
       "season3": "1"
     },
     "racingNumber": 50,
-    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDAxMDRfMTMy/MDAxNzA0MzY1MjU0OTAx.k2-X3T7j2WKgLTLM6rFT0sTJMoVFIexn81D662GaiT8g.rPOMojzhkifJ0uEIbV_MD-XCJGwIl15MCFpllF26QDMg.PNG/%EC%9C%A0%ED%8A%9C%EB%B8%8C1000%EB%AA%85%EB%B0%B0%EA%B2%BD%ED%88%AC%EB%AA%85.png",
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNjAxMTFfMjU4/MDAxNzY4MTMyNjU2MTc0.N21NeaRTiEUyPKRr3G0ESrle1VXR2UG4sFgO_JTw6QEg.e57GZJMXqBOx5d5movvnqYos_vBLo9XK0jO7Ajt9OAIg.PNG/image.png",
     "channelId": "79bc9b927d5c187f9d8fa5a56b194c37",
     "career": [
       {
@@ -501,7 +501,7 @@
       "season3": "3+"
     },
     "racingNumber": 61,
-    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDA5MDVfMTg4/MDAxNzI1NTQ2MDc0ODgy.e_buSTdT5OKfdnDbPBrQzzcNE_V1U5jaHAJpd6wi5y8g.Vn-Wml6UksrPcju8VqY22JTz-qSteK9_3jqR6sAGxZYg.JPEG/%EC%B9%98%EC%B9%98%EC%A7%81%ED%94%84%EB%A1%9C%ED%95%84.jpg",
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNjAyMjNfMTM1/MDAxNzcxODEyNzM4NjQ5.sltDjUfyZbVG2VRRjkD8rzLErgMAXC3unZZ5hOD290Mg.zaphgyeMZQEYy7A2j_EGTrx8aX6P9uinJqSIa3pdhWog.JPEG/image.jpg",
     "channelId": "f3b204dd3fd6925835ca1848cd4b6d3c",
     "career": [
       {
@@ -530,7 +530,7 @@
       "season3": "1+"
     },
     "racingNumber": 67,
-    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA4MzBfMzYg/MDAxNzU2NDg2ODg2NDQw.8Nf33bxihXYDqHTIGN8vOkjW-sjkzDb0pXxoGamE4BEg.3pw0Ibi-3Fo_q5vwNL299okkBmChG2UaM09avUXLqjkg.PNG/boo_%281%29.png",
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNjAxMjRfNDMg/MDAxNzY5MTgzMjg4OTcx.EUCvJFD0BWZiqhTFeCbGVIsP35Lnmr-yEwlKZLNQJKEg.TazUa4PZPzU6Zc2YTCzvzCqzplZ-5lSXurxydJEHM18g.JPEG/image.jpg",
     "channelId": "206afc6829e734e662ed0bf24dcbac0e",
     "career": [
       {
@@ -645,7 +645,7 @@
       "season3": "2"
     },
     "racingNumber": 89,
-    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyMzEyMTlfMjAg/MDAxNzAyOTc2MDc4MjIw.QvMDCwv6PZHhFsTp7FRQbd6r2oQJAuXC0hGgaKVkfLgg.M-aTWoUNqz-19-Kc8eGfZqzIRz259CfJoQQxw33QVawg.PNG/1.png",
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNjAyMTNfMjky/MDAxNzcwOTc1MTg1NjYz.3l6m-Qxs4gM91cTEFahXVsswQKbogA2u2XVeT_RW-uIg.Ay7Eejmi-xmxttAu5QJcF02aGS68lylx95kzFziACSwg.JPEG/image.jpg",
     "channelId": "eaf7b569c9992d0e57db0059eb5c0eeb",
     "career": [
       {
@@ -775,5 +775,117 @@
         "detail": "제 3회: 레인 헬 5위"
       }
     ]
+  },
+  {
+    "id": "shaunjjang",
+    "displayName": "숀쟝",
+    "aliases": [],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA4MjJfMjI3/MDAxNzU1ODY1NDY0MjM0.8rV_n0wgfgCix6vL58DqF9QFZEahqClSDoc5FnWIAe0g.xLNHJ-1Puc8VsxML_bVEypaf4DU8chCBDDI97gTbwhMg.JPEG/Memory_snow_-_Rem_3.jpg",
+    "channelId": "981f18d74bceeb1972197209b7400fc4"
+  },
+  {
+    "id": "remilia",
+    "displayName": "레밀레기",
+    "aliases": ["레밀리아", "REMILIA"],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyMzEyMjlfMjYx/MDAxNzAzODM5MTA5MzYy.j_JOo_bIyRFvcyunR1M7syiTqvk12YVb13B-am5mGr8g.JNkyPb1HK7GOY5R7yyDaDFImclJK8glGcAlDh_FENmQg.PNG/3.png",
+    "channelId": "5ccef23c1d97d62b2b49457e9942e7e9"
+  },
+  {
+    "id": "luci",
+    "displayName": "루시",
+    "aliases": ["루시 Luci"],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTExMDRfMTcw/MDAxNzYyMjU2MDc0Nzcw.f-NzhB8YfacOH4flMIZtGKXl7BFZB2oI1Imx2JYh6Csg.dwGO-ssK0qYz9TcRTf45-sTPw8K8106BsUb9xhY-Cz0g.JPEG/image.jpg",
+    "channelId": "0b0dd269c4663fc36ee1eef8a8b1bea4"
+  },
+  {
+    "id": "nyaru",
+    "displayName": "냐루",
+    "aliases": ["냐루 NYARU"],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDA5MDVfNTEg/MDAxNzI1NTA1OTE5ODQw.JWNM7n9EI4dSSthODc4lAXepVXeQJqWv6Xso6LPQmA0g.bZW9eFMpU24mh728KQUdBIRF2vlrivq0y48iQ54upisg.PNG/0C6F9152-B410-4DC1-A83C-4B0A831DC292-1725505919.png",
+    "channelId": "a63d77c588c72b4d09f203e1bd06edaa"
+  },
+  {
+    "id": "songl",
+    "displayName": "송엘",
+    "aliases": [],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTEyMjZfMjUx/MDAxNzY2Njc2ODU3NDc0.Y5pJe04tG4AAkv5QdRcHGJFaszRFL2oEBtkiZsMlK2og.mEhlBcyZp3SMT_iAOPxvZAOtG1zPxTGfvxKz3gN4AEMg.PNG/image.png",
+    "channelId": "79bdf61586c4058789e4c3308b0d6a0c"
+  },
+  {
+    "id": "shune",
+    "displayName": "슈네",
+    "aliases": ["슈네1"],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA1MDhfMTY1/MDAxNzQ2NzA1NTIzODMx.sKEk5Mslql3sEMYGIornBO3TD-XRnIBxjpaQb2jJgLMg.EHkPxmKDOzd4SUTK6sD9ibvnfsjdG0K-MfKfauCqitcg.PNG/%EC%8A%88%EB%84%A4_%EC%B9%98%EC%A7%80%EC%A7%81_%ED%94%84%EC%82%AC.png",
+    "channelId": "d430ff9fe8811a67d0ef2889255ec6af"
+  },
+  {
+    "id": "nam-siwoo",
+    "displayName": "남시우",
+    "aliases": [],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA1MTRfMTcy/MDAxNzQ3MjI5ODM0MjU5.QvSlIUaohp2b5u31-P1B7M_TZKHCKX_4aj_jKev5qXYg.ze9E-z38Brxp2IsxfTKNPAhbG9hPwzwMIhW_qUnYGucg.PNG/%EB%82%A8%EC%8B%9C%EC%9A%B0_%ED%94%84%EC%82%AC.png",
+    "channelId": "bc741dc64aa44a5da5339bae12544782"
+  },
+  {
+    "id": "hong-seowol",
+    "displayName": "홍서월",
+    "aliases": [],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDA0MjhfMTIy/MDAxNzE0MjgyMTU5MDYz.Ag0z8UarJBBa9HnTuBbbo_3QEb-SpbKAQqQdwT4z5Ysg.wcfkrLOujGzPTXwVeDhZAlP5Upy338mKMq9Hkv-cyJwg.PNG/E128BF5D-F660-408F-8D32-3D39E2C7433C-1714282158.png",
+    "channelId": "227b431ef15d1085ba29f54b8a7048fd"
+  },
+  {
+    "id": "zadugnocci",
+    "displayName": "자두뇨끼",
+    "aliases": [],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTEwMTRfMjEy/MDAxNzYwNDMzNjMyODQ4.VKdyFMQPfHfcjI7lFClRIc_LhFbUexc7NExE_YqMUpIg.meNupgGZjGUxeQ_5sM7BIo9BOf9Wup17eZJ6usjm9fMg.PNG/image.png",
+    "channelId": "55cad23e436b9b31f5e0fffe3d588194"
+  },
+  {
+    "id": "kumaru",
+    "displayName": "쿠마루",
+    "aliases": [],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTAzMDlfMTk1/MDAxNzQxNTA5MTgxNzU1.8wFSnit9VUwK-rxY0qCjOPwpgpLOTC-c0n8tcX2jl3Ug.BWH8MxgzkWTZWJHaeRMqZWAhoZ5VGWqgYPKdwcn1MFog.PNG/%EC%A0%9C%EB%AA%A9_%EC%97%86%EC%9D%8C.png",
+    "channelId": "e6df84b539791aba763f533f87ce3342"
+  },
+  {
+    "id": "puru-huru",
+    "displayName": "푸후",
+    "aliases": ["Puru & Huru"],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA1MTZfMTc0/MDAxNzQ3MzczMDA0MjU0.1LOtnu65_pjmsziHF34rU0egu9O6WcVKevUYkMSfjHgg.0W1SZVbR2PwMyaJPJqdG3Nk7Koi1ycf1WtivA5AXQH8g.PNG/%ED%99%94%EB%A9%B4_%EC%BA%A1%EC%B2%98_2024-10-29_214413.png",
+    "channelId": "2cf1367e97d68909b024b368d2c4683c"
+  },
+  {
+    "id": "mopu",
+    "displayName": "모푸",
+    "aliases": [],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA3MjlfOCAg/MDAxNzUzNzE2OTYzNjA5.hbU_xex62FbZCEpK1GAByVcrX0n3NnHX_q4wBZZ3zQUg.BUXvuFGWuPvHWNjrruZyhM21CtY5KYvKjz2RHRZWejMg.PNG/%EC%84%B9%EC%BF%A0%EC%8B%9C%ED%95%9C_%EB%AA%A8%ED%91%B8.png",
+    "channelId": "1686a04d1a643498d39f2fb50459c0ac"
+  },
+  {
+    "id": "violin-bear",
+    "displayName": "연주하는곰탱",
+    "aliases": ["연 곰 연주하는곰탱"],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA0MTZfMTMw/MDAxNzQ0Nzg3MzA0MDI2.jjvweKx0tmEkRf8oCw95CGE4Axf2hLhgWmqnYEDXSI0g.tJtUO3EI7QjibVXF7NAAwcJ3flatZn8dMVAtTtbCpoMg.PNG/%ED%82%A4%EA%B3%B0%EB%8B%98.png",
+    "channelId": "cbd379d7c755587ea09f28e517b3b2d4"
+  },
+  {
+    "id": "norangbird",
+    "displayName": "노랑새",
+    "aliases": ["노랑새k"],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA5MDhfNTcg/MDAxNzU3MzA5ODQ5NTM1.Lv7l9DZJWnNwwUlEhU0tINK2xxecchjD64fsU4wUn5Mg.FnJx4eU4dvYBJU9s7VgKOPOaqu_bcx-8l00OIR_gv2gg.PNG/eec167cf-8bd0-47a5-b57e-bfe762820c51.png",
+    "channelId": "d9c8e5b1a0c3f2e7b4a9c8d6e5f1a2b3"
+  },
+  {
+    "id": "grubby-puppy",
+    "displayName": "김꼬멍",
+    "aliases": [],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTAzMTZfMjg4/MDAxNzQyMTMzNDUzMjc1.iwkhalOgIDZ-Vhha4CfJI3x1CCm-saClTMMjpuEQbnUg.Ub4P3dnuIm1cXrxZ3Id4IVpfeQ4GF71ISJ6Ul1m-MAMg.PNG/%ED%99%94%EB%A9%B4_%EC%BA%A1%EC%B2%98_2025-03-14_161107.png",
+    "channelId": "d61f69f7ff143364ed19314837262ea2"
+  },
+  {
+    "id": "haeoni",
+    "displayName": "해오니",
+    "aliases": [],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDEwMjFfMjMx/MDAxNzI5NDU2OTQxNzI2.xFNcREFC72ut1S0YovAXAC5-6hRkvIwefZPz1aYTTWkg.kMGs0TFc4B5PcMkSG9frdN4-a3ApfUoZ3l6yVYE-8w8g.PNG/3.png",
+    "channelId": "381b02173b3d6902e3e9799bb20c6885"
   }
 ]

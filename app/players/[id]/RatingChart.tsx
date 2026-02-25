@@ -30,6 +30,7 @@ const chartConfig: ChartConfig = {
   },
 };
 
+// TODO: Show something different when there is no rating history at all
 export function RatingChart({
   ratingHistoryByCompetition,
   ratingHistoryByMatch,

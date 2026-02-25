@@ -33,6 +33,7 @@ export function RecordList({
       }),
     );
 
+  // TODO: Show something when there is no record at all
   return (
     <>
       {matches.map((match) => {

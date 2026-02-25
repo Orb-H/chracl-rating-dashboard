@@ -146,7 +146,9 @@ export default async function Player({
               </span>
             </div>
           ) : (
-            <span className="font-semibold text-2xl mb-2">정보 없음</span>
+            <span className="font-semibold text-2xl mb-2">
+              {/* TODO: Fix design here */}정보 없음
+            </span>
           )}
           <Separator className="mb-4" />
           <header className="font-semibold text-lg mb-4">주요 경력</header>
