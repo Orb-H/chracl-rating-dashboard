@@ -146,11 +146,11 @@ export default async function Player({
               </span>
             </div>
           ) : (
-            <span className="font-semibold text-2xl mb-2">
-              {/* TODO: Fix design here */}정보 없음
+            <span className="text-muted-foreground">
+              아직 대회에 참여한 이력이 없습니다.
             </span>
           )}
-          <Separator className="mb-4" />
+          <Separator className="my-4" />
           <header className="font-semibold text-lg mb-4">주요 경력</header>
           {player.career ? (
             <CareerList career={player.career} />

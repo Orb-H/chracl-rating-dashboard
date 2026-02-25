@@ -30,7 +30,6 @@ const chartConfig: ChartConfig = {
   },
 };
 
-// TODO: Show something different when there is no rating history at all
 export function RatingChart({
   ratingHistoryByCompetition,
   ratingHistoryByMatch,
@@ -46,20 +45,28 @@ export function RatingChart({
 
   return (
     <>
-      <ToggleGroup
-        type="single"
-        className="ml-auto"
-        value={selectedView}
-        onValueChange={(value) => {
-          if (value === "competition" || value === "match") {
-            setSelectedView(value);
-          }
-        }}
-      >
-        <ToggleGroupItem value="competition">대회별</ToggleGroupItem>
-        <ToggleGroupItem value="match">경기별</ToggleGroupItem>
-      </ToggleGroup>
-      <RatingChartContainer ratingData={selectedData} />
+      {selectedData && selectedData.length > 1 ? (
+        <>
+          <ToggleGroup
+            type="single"
+            className="ml-auto"
+            value={selectedView}
+            onValueChange={(value) => {
+              if (value === "competition" || value === "match") {
+                setSelectedView(value);
+              }
+            }}
+          >
+            <ToggleGroupItem value="competition">대회별</ToggleGroupItem>
+            <ToggleGroupItem value="match">경기별</ToggleGroupItem>
+          </ToggleGroup>
+          <RatingChartContainer ratingData={selectedData} />
+        </>
+      ) : (
+        <span className="text-muted-foreground">
+          아직 대회에 참여한 이력이 없습니다.
+        </span>
+      )}
     </>
   );
 }
