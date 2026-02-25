@@ -45,11 +45,15 @@ export function RecordList({
           if (match.type === "QUALIFYING") {
             time = record.record.lapTime;
           } else if (match.type === "MAIN") {
-            time = record.record.finishTime ?? "-";
+            time = record.record.finishTime;
             if (record.record.penaltyTime) {
               penaltyTime = `(+${record.record.penaltyTime})`;
             }
           }
+          if (time === undefined) {
+            time = record.record.status;
+          }
+
           const changeHistory = changeHistories[match.entryId];
           const competition = competitions[match.competitionId];
           const team = competitions[match.competitionId]?.teams.find(
