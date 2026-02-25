@@ -33,104 +33,112 @@ export function RecordList({
       }),
     );
 
-  // TODO: Show something when there is no record at all
   return (
     <>
-      {matches.map((match) => {
-        const record = match.participants.find((p) => p.id === id);
-        if (!record) return null;
+      {matches && matches.length > 0 ? (
+        matches.map((match) => {
+          const record = match.participants.find((p) => p.id === id);
+          if (!record) return null;
 
-        let time: string | undefined;
-        let penaltyTime: string | undefined;
-        if (match.type === "QUALIFYING") {
-          time = record.record.lapTime;
-        } else if (match.type === "MAIN") {
-          time = record.record.finishTime ?? "-";
-          if (record.record.penaltyTime) {
-            penaltyTime = `(+${record.record.penaltyTime})`;
+          let time: string | undefined;
+          let penaltyTime: string | undefined;
+          if (match.type === "QUALIFYING") {
+            time = record.record.lapTime;
+          } else if (match.type === "MAIN") {
+            time = record.record.finishTime ?? "-";
+            if (record.record.penaltyTime) {
+              penaltyTime = `(+${record.record.penaltyTime})`;
+            }
           }
-        }
-        const changeHistory = changeHistories[match.entryId];
-        const competition = competitions[match.competitionId];
-        const team = competitions[match.competitionId]?.teams.find(
-          (team) => team.id === record.teamId,
-        );
-        const badgeStyle = team?.style?.badge ?? "";
+          const changeHistory = changeHistories[match.entryId];
+          const competition = competitions[match.competitionId];
+          const team = competitions[match.competitionId]?.teams.find(
+            (team) => team.id === record.teamId,
+          );
+          const badgeStyle = team?.style?.badge ?? "";
 
-        return (
-          <Card
-            key={match.competitionId + "-" + match.id}
-            className="p-4 mb-4 flex flex-col md:flex-row items-center justify-between gap-4"
-          >
-            <div className="w-full md:w-[50%] text-center md:text-start">
-              <h3 className="text-lg font-semibold">
-                {/* TODO: Introduce more robust field for competition abbreviation */}
-                {competition?.sortOrder && `제 ${competition.sortOrder}회 - `}
-                {match.name}
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                트랙: {match.trackName}
-              </p>
-              <p>
-                {team?.name ? (
-                  <Badge className={badgeStyle}>팀 {team.name}</Badge>
-                ) : (
-                  <Badge variant="outline">개인전</Badge>
-                )}
-              </p>
-            </div>
-            <div className="w-full md:w-[50%] grid grid-cols-7 justify-between gap-4 mt-2 md:mt-0 text-center">
-              <div className="col-span-2">
-                <p className="text-base font-semibold text-muted-foreground">
-                  순위
+          return (
+            <Card
+              key={match.competitionId + "-" + match.id}
+              className="p-4 mb-4 flex flex-col md:flex-row items-center justify-between gap-4"
+            >
+              <div className="w-full md:w-[50%] text-center md:text-start">
+                <h3 className="text-lg font-semibold">
+                  {/* TODO: Introduce more robust field for competition abbreviation */}
+                  {competition?.sortOrder && `제 ${competition.sortOrder}회 - `}
+                  {match.name}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  트랙: {match.trackName}
                 </p>
                 <p>
-                  <span className="font-semibold">{record.place}</span> /{" "}
-                  {match.participants.length}
+                  {team?.name ? (
+                    <Badge className={badgeStyle}>팀 {team.name}</Badge>
+                  ) : (
+                    <Badge variant="outline">개인전</Badge>
+                  )}
                 </p>
-                {record.ratedPlace && match.entryParticipants ? (
-                  <p className="text-sm text-muted-foreground">
-                    (<span className="font-semibold">{record.ratedPlace}</span>{" "}
-                    / {match.entryParticipants})
+              </div>
+              <div className="w-full md:w-[50%] grid grid-cols-7 justify-between gap-4 mt-2 md:mt-0 text-center">
+                <div className="col-span-2">
+                  <p className="text-base font-semibold text-muted-foreground">
+                    순위
                   </p>
-                ) : null}
+                  <p>
+                    <span className="font-semibold">{record.place}</span> /{" "}
+                    {match.participants.length}
+                  </p>
+                  {record.ratedPlace && match.entryParticipants ? (
+                    <p className="text-sm text-muted-foreground">
+                      (
+                      <span className="font-semibold">{record.ratedPlace}</span>{" "}
+                      / {match.entryParticipants})
+                    </p>
+                  ) : null}
+                </div>
+                <div className="col-span-2">
+                  <p className="font-semibold text-muted-foreground">레이팅</p>
+                  {changeHistory && changeHistory.delta ? (
+                    <>
+                      <p>{changeHistory.rating.value.toFixed(2)}</p>
+                      {changeHistory.delta &&
+                      changeHistory.delta.value !== undefined ? (
+                        <p className="text-sm">
+                          <span
+                            className={
+                              changeHistory.delta.value > 0
+                                ? "text-blue-500"
+                                : "text-red-500"
+                            }
+                          >
+                            ({changeHistory.delta.value > 0 ? "+" : ""}
+                            {changeHistory.delta.value.toFixed(2)})
+                          </span>
+                        </p>
+                      ) : null}
+                    </>
+                  ) : (
+                    "-"
+                  )}
+                </div>
+                <div className="col-span-3">
+                  <p className="font-semibold text-muted-foreground">기록</p>
+                  <p>{time ?? "-"}</p>
+                  {penaltyTime && (
+                    <p className="text-sm text-muted-foreground">
+                      {penaltyTime}
+                    </p>
+                  )}
+                </div>
               </div>
-              <div className="col-span-2">
-                <p className="font-semibold text-muted-foreground">레이팅</p>
-                {changeHistory && changeHistory.delta ? (
-                  <>
-                    <p>{changeHistory.rating.value.toFixed(2)}</p>
-                    {changeHistory.delta &&
-                    changeHistory.delta.value !== undefined ? (
-                      <p className="text-sm">
-                        <span
-                          className={
-                            changeHistory.delta.value > 0
-                              ? "text-blue-500"
-                              : "text-red-500"
-                          }
-                        >
-                          ({changeHistory.delta.value > 0 ? "+" : ""}
-                          {changeHistory.delta.value.toFixed(2)})
-                        </span>
-                      </p>
-                    ) : null}
-                  </>
-                ) : (
-                  "-"
-                )}
-              </div>
-              <div className="col-span-3">
-                <p className="font-semibold text-muted-foreground">기록</p>
-                <p>{time ?? "-"}</p>
-                {penaltyTime && (
-                  <p className="text-sm text-muted-foreground">{penaltyTime}</p>
-                )}
-              </div>
-            </div>
-          </Card>
-        );
-      })}
+            </Card>
+          );
+        })
+      ) : (
+        <span className="text-muted-foreground">
+          아직 대회에 참여한 이력이 없습니다.
+        </span>
+      )}
     </>
   );
 }
