@@ -9,10 +9,11 @@ export default function Leaderboard() {
   const players = loadPlayersById();
 
   const playersWithCurrentRating = Object.entries(players)
+    .filter(([key]) => currentRating[key] !== undefined)
     .map(([key, player]) => {
       return {
         ...player,
-        ...(currentRating[key] ?? { value: Number.MIN_SAFE_INTEGER }),
+        ...currentRating[key],
       };
     })
     .slice()
