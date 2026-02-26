@@ -73,12 +73,18 @@ function sortByTier(players: (Player & Rating)[]) {
 
 function sortByRating(players: (Player & Rating)[]) {
   return [...players].sort((a, b) => {
-    return (b.value ?? 0) - (a.value ?? 0);
+    return (
+      (b.value ?? Number.MIN_SAFE_INTEGER) -
+      (a.value ?? Number.MIN_SAFE_INTEGER)
+    );
   });
 }
 
 function sortByRacingNumber(players: (Player & Rating)[]) {
   return [...players].sort((a, b) => {
-    return (a.racingNumber ?? Infinity) - (b.racingNumber ?? Infinity);
+    return (
+      (a.racingNumber ?? Number.MAX_SAFE_INTEGER) -
+      (b.racingNumber ?? Number.MAX_SAFE_INTEGER)
+    );
   });
 }
