@@ -95,23 +95,17 @@ export function RecordList({
                     <>
                       <p>{history.rating.value.toFixed(2)}</p>
                       <p className="text-sm">
-                        <span
-                          className={
-                            ratingDelta > 0
-                              ? "text-blue-500"
-                              : ratingDelta < 0
-                                ? "text-red-500"
-                                : "text-muted-foreground"
-                          }
-                        >
-                          (
-                          {ratingDelta > 0
-                            ? `+${ratingDelta.toFixed(2)}`
-                            : ratingDelta < 0
-                              ? ratingDelta.toFixed(2)
-                              : "-"}
-                          )
-                        </span>
+                        {ratingDelta > 0 ? (
+                          <span className="text-blue-500">
+                            (+{ratingDelta.toFixed(2)})
+                          </span>
+                        ) : ratingDelta < 0 ? (
+                          <span className="text-red-500">
+                            ({ratingDelta.toFixed(2)})
+                          </span>
+                        ) : (
+                          <span className="text-muted-foreground">(-)</span>
+                        )}
                       </p>
                     </>
                   ) : (
