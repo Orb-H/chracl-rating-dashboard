@@ -5,6 +5,7 @@
   "name": "4강 A조 레이스",
   "date": "2025-07-06",
   "type": "MAIN",
+  "kind": "TEAM",
   "trackName": "레드불 링",
   "pointsSchemeId": "default",
   "participants": [

@@ -5,6 +5,7 @@
   "name": "라운드 2 레이스",
   "date": "2025-04-27",
   "type": "MAIN",
+  "kind": "TEAM",
   "trackName": "도쿄 익스프레스웨이 남쪽 내주 (밤)",
   "pointsSchemeId": "default",
   "participants": [

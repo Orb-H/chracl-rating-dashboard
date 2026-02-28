@@ -5,6 +5,7 @@
   "name": "2라운드 레이스 (임시)",
   "date": "2026-03-07",
   "type": "MAIN",
+  "kind": "TEAM",
   "trackName": "영국 실버스톤",
   "participants": []
 }
