@@ -20,7 +20,10 @@
     "rules": {
       "recommended": false,
       "complexity": { "noUselessTypeConstraint": "error" },
-      "correctness": { "noUnusedVariables": "error" },
+      "correctness": {
+        "noUnusedVariables": "error",
+        "noUnusedImports": "error"
+      },
       "performance": {
         "noImgElement": "warn",
         "noUnwantedPolyfillio": "warn",
