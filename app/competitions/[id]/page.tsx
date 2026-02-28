@@ -47,18 +47,22 @@ export default async function CompetitionDetail({
         </TabsContent>
         <TabsContent value="matches" className="mt-8 w-full">
           <Accordion type="multiple" className="w-full">
-            {competition.matches.map((match) => {
-              const targetMatch = matches.find((m) => m.id === match);
-              if (!targetMatch) {
-                return null;
-              }
+            {competition.matches.length === 0 ? (
+              <p>아직 진행된 경기가 없습니다.</p>
+            ) : (
+              competition.matches.map((match) => {
+                const targetMatch = matches.find((m) => m.id === match);
+                if (!targetMatch) {
+                  return null;
+                }
 
-              return (
-                <AccordionItem key={match} value={match}>
-                  <MatchesItem match={targetMatch} />
-                </AccordionItem>
-              );
-            })}
+                return (
+                  <AccordionItem key={match} value={match}>
+                    <MatchesItem match={targetMatch} />
+                  </AccordionItem>
+                );
+              })
+            )}
           </Accordion>
         </TabsContent>
         <TabsContent value="results" className="mt-8 w-full">
