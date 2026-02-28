@@ -74,13 +74,13 @@
     }
   ],
   "matches": [
-    "pre-a-qual",
-    "pre-b-qual",
-    "pre-c-qual",
-    "stint1-qual",
-    "stint1-main",
-    "stint2-main",
-    "stint3-main"
+    "season3-pre-a-qual",
+    "season3-pre-b-qual",
+    "season3-pre-c-qual",
+    "season3-stint1-qual",
+    "season3-stint1-main",
+    "season3-stint2-main",
+    "season3-stint3-main"
   ],
   "pointsSchemes": {
     "stint1": [10, 8, 6, 5, 4, 3, 2, 1, 0, 0],
