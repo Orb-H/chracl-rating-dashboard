@@ -12,6 +12,7 @@ import { loadCompetitionById } from "@/lib/loadCompetitions";
 import { loadHistoriesById } from "@/lib/loadHistories";
 import { loadPlayersById } from "@/lib/loadPlayers";
 import { Match } from "@/types/match";
+import { IndividualMatchItem } from "./individualMatchItem";
 
 export function MatchesItem({ match }: { match: Match }) {
   const players = loadPlayersById();
@@ -27,6 +28,26 @@ export function MatchesItem({ match }: { match: Match }) {
       ),
     ]),
   );
+
+  if (match.kind === "INDIVIDUAL") {
+    return (
+      <>
+        <AccordionTrigger className="text-lg font-semibold">
+          {match.name}
+        </AccordionTrigger>
+        <AccordionContent className="w-full">
+          트랙: {match.trackName}
+          {match.participants.length === 0 ? (
+            <p className="text-muted-foreground">
+              아직 경기가 진행되지 않았습니다.
+            </p>
+          ) : (
+            <IndividualMatchItem match={match} />
+          )}
+        </AccordionContent>
+      </>
+    );
+  }
 
   return (
     <>
