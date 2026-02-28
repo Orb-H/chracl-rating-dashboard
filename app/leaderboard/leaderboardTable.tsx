@@ -14,12 +14,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { currentSeason } from "@/lib/constants";
 import { roundToTwoDecimals } from "@/lib/utils";
 import { Player } from "@/types/player";
 import { Rating } from "@/types/rating";
-
-// TODO: Set current season as a global constant.
-const currentSeason = "season3";
 
 type LeaderboardTableProps = {
   ratingData: (Player & Rating)[];
