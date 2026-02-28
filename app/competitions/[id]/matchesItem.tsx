@@ -45,8 +45,7 @@ export function MatchesItem({ match }: { match: Match }) {
               <TableRow>
                 <TableHead className="text-center">순위</TableHead>
                 <TableHead className="text-center">선수</TableHead>
-                {/* TODO: Introduce another field in match to indicate if individual match or team match */}
-                {match.participants[0].teamId && (
+                {match.kind === "TEAM" && (
                   <TableHead className="text-center">팀</TableHead>
                 )}
                 <TableHead className="text-center">레이팅</TableHead>
@@ -74,7 +73,7 @@ export function MatchesItem({ match }: { match: Match }) {
                     <TableCell className="text-center">
                       {`${players[participant.id].displayName}`}
                     </TableCell>
-                    {participant.teamId && (
+                    {match.kind === "TEAM" && (
                       <TableCell className="text-center">
                         {team?.name && (
                           <Badge className={badgeStyle}>팀 {team.name}</Badge>
