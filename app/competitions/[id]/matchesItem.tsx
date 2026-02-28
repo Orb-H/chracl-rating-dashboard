@@ -91,19 +91,15 @@ export function MatchesItem({ match }: { match: Match }) {
                     )}
                   </TableCell>
                   <TableCell>
-                    {participant.record.lapTime ? (
-                      `${participant.record.lapTime}`
-                    ) : participant.record.finishTime ? (
-                      <>{`${participant.record.finishTime}`} </>
-                    ) : (
-                      "-"
-                    )}{" "}
+                    {participant.record.lapTime
+                      ? `${participant.record.lapTime}`
+                      : participant.record.finishTime
+                        ? `${participant.record.finishTime}`
+                        : participant.record.status}{" "}
                     <span className="text-muted-foreground">
-                      (
                       {participant.record.penaltyTime
-                        ? `+${participant.record.penaltyTime}`
-                        : "-"}
-                      )
+                        ? `(+${participant.record.penaltyTime})`
+                        : ""}
                     </span>
                   </TableCell>
                   {match.pointsSchemeId && (
