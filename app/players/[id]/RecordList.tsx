@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Competition } from "@/types/competition";
 import { Match } from "@/types/match";
-import { Rating, RatingHistory } from "@/types/rating";
+import { RatingHistory } from "@/types/rating";
 
 export function RecordList({
   id,
@@ -18,6 +18,7 @@ export function RecordList({
   const historyMap = Object.fromEntries(
     histories.map((history) => [history.entryId, history]),
   );
+
   return (
     <>
       {matches && matches.length > 0 ? (
