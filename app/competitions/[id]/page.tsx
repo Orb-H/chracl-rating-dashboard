@@ -1,6 +1,9 @@
 import { notFound } from "next/navigation";
+import { Accordion, AccordionItem } from "@/components/ui/accordion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { loadCompetitionById, loadCompetitions } from "@/lib/loadCompetitions";
+import { loadMatchesByCompetitionId } from "@/lib/loadMatches";
+import { MatchesItem } from "./matchesItem";
 
 export const dynamicParams = false;
 
@@ -25,6 +28,7 @@ export default async function CompetitionDetail({
       return notFound();
     }
   })();
+  const matches = loadMatchesByCompetitionId(id);
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
@@ -42,8 +46,20 @@ export default async function CompetitionDetail({
           <p>대회 정보 페이지는 현재 준비 중입니다.</p>
         </TabsContent>
         <TabsContent value="matches" className="mt-8 w-full">
-          {/* TODO(#15): Add matches data of this competition. */}
-          <p>경기 목록 페이지는 현재 준비 중입니다.</p>
+          <Accordion type="multiple" className="w-full">
+            {competition.matches.map((match) => {
+              const targetMatch = matches.find((m) => m.id === match);
+              if (!targetMatch) {
+                return null;
+              }
+
+              return (
+                <AccordionItem key={match} value={match}>
+                  <MatchesItem match={targetMatch} />
+                </AccordionItem>
+              );
+            })}
+          </Accordion>
         </TabsContent>
         <TabsContent value="results" className="mt-8 w-full">
           {/* TODO(#15): Add results data of this competition and render it here. */}
