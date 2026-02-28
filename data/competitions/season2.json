@@ -49,6 +49,20 @@
       }
     }
   ],
+  "matches": [
+    "season2-pre-a-qual",
+    "season2-pre-a-main",
+    "season2-pre-b-qual",
+    "season2-pre-b-main",
+    "season2-semifinal-a-qual",
+    "season2-semifinal-a-main",
+    "season2-semifinal-b-qual",
+    "season2-semifinal-b-main",
+    "season2-third-qual",
+    "season2-third-main",
+    "season2-final-qual",
+    "season2-final-main"
+  ],
   "pointsSchemes": {
     "default": [20, 17, 15, 13, 11, 9, 7, 4, 2, 0]
   }
