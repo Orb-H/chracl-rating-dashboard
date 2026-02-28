@@ -48,7 +48,9 @@ export default async function CompetitionDetail({
         <TabsContent value="matches" className="mt-8 w-full">
           <Accordion type="multiple" className="w-full">
             {competition.matches.length === 0 ? (
-              <p>아직 진행된 경기가 없습니다.</p>
+              <p className="text-muted-foreground">
+                아직 진행된 경기가 없습니다.
+              </p>
             ) : (
               competition.matches.map((match) => {
                 const targetMatch = matches.find((m) => m.id === match);

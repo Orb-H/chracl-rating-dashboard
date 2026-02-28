@@ -36,7 +36,9 @@ export function MatchesItem({ match }: { match: Match }) {
       <AccordionContent className="w-full">
         트랙: {match.trackName}
         {match.participants.length === 0 ? (
-          <p>아직 경기가 진행되지 않았습니다.</p>
+          <p className="text-muted-foreground">
+            아직 경기가 진행되지 않았습니다.
+          </p>
         ) : (
           <Table>
             <TableHeader>
