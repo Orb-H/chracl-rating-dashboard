@@ -114,9 +114,12 @@ export default async function Player({
       [] as (RatingHistory & { name: string })[],
     )
     .reverse();
-  const careerHighMatch = ratingHistoryByMatch.reduce((best, current) => {
+  const validMatches = ratingHistoryByMatch.filter(
+    (history) => history.entryId !== "initial",
+  );
+  const careerHighMatch = validMatches.reduce((best, current) => {
     return current.rating.value > best.rating.value ? current : best;
-  }, ratingHistoryByMatch[0]);
+  }, validMatches[0]);
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
