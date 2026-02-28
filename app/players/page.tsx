@@ -1,13 +1,11 @@
 import { StarIcon, TrophyIcon } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { currentSeason } from "@/lib/constants";
 import { loadCurrentRating } from "@/lib/loadCurrentRating";
 import { loadPlayers } from "@/lib/loadPlayers";
 import { Player } from "@/types/player";
 import { Rating } from "@/types/rating";
 import { PlayerCard } from "./playerCard";
-
-// TODO: Set current season as a global constant.
-const currentSeason = "season3";
 
 export default function Participants() {
   const players = loadPlayers();
