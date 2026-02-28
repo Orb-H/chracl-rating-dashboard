@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Competition } from "@/types/competition";
 import { Match } from "@/types/match";
-import { Rating, RatingHistory } from "@/types/rating";
+import { RatingHistory } from "@/types/rating";
 
 export function RecordList({
   id,
@@ -15,23 +15,9 @@ export function RecordList({
   competitions: Record<string, Competition>;
   histories: RatingHistory[];
 }) {
-  const changeHistories: Record<string, RatingHistory & { delta?: Rating }> =
-    Object.fromEntries(
-      histories.map((h, i) => {
-        if (i === 0) return [h.entryId, h];
-        return [
-          h.entryId,
-          {
-            ...h,
-            delta: {
-              value: h.rating.value - histories[i - 1].rating.value,
-              mu: h.rating.mu - histories[i - 1].rating.mu,
-              sigma: h.rating.sigma - histories[i - 1].rating.sigma,
-            },
-          },
-        ];
-      }),
-    );
+  const historyMap = Object.fromEntries(
+    histories.map((history) => [history.entryId, history]),
+  );
 
   return (
     <>
@@ -54,7 +40,11 @@ export function RecordList({
             time = record.record.status;
           }
 
-          const changeHistory = changeHistories[match.entryId];
+          const history = historyMap[match.entryId];
+          const ratingDelta =
+            history && history.previousRating
+              ? history.rating.value - history.previousRating.value
+              : 0;
           const competition = competitions[match.competitionId];
           const team = competitions[match.competitionId]?.teams.find(
             (team) => team.id === record.teamId,
@@ -102,24 +92,22 @@ export function RecordList({
                 </div>
                 <div className="col-span-2">
                   <p className="font-semibold text-muted-foreground">레이팅</p>
-                  {changeHistory && changeHistory.delta ? (
+                  {history && history.previousRating ? (
                     <>
-                      <p>{changeHistory.rating.value.toFixed(2)}</p>
-                      {changeHistory.delta &&
-                      changeHistory.delta.value !== undefined ? (
-                        <p className="text-sm">
-                          <span
-                            className={
-                              changeHistory.delta.value > 0
-                                ? "text-blue-500"
-                                : "text-red-500"
-                            }
-                          >
-                            ({changeHistory.delta.value > 0 ? "+" : ""}
-                            {changeHistory.delta.value.toFixed(2)})
+                      <p>{history.rating.value.toFixed(2)}</p>
+                      <p className="text-sm">
+                        {ratingDelta > 0 ? (
+                          <span className="text-blue-500">
+                            (+{ratingDelta.toFixed(2)})
                           </span>
-                        </p>
-                      ) : null}
+                        ) : ratingDelta < 0 ? (
+                          <span className="text-red-500">
+                            ({ratingDelta.toFixed(2)})
+                          </span>
+                        ) : (
+                          <span className="text-muted-foreground">(-)</span>
+                        )}
+                      </p>
                     </>
                   ) : (
                     "-"
