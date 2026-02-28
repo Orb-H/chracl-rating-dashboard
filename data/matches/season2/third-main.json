@@ -6,7 +6,7 @@
   "date": "2025-07-06",
   "type": "MAIN",
   "trackName": "몬차 서킷 (시케인 없음)",
-  "pointsSchemeId": "standard",
+  "pointsSchemeId": "default",
   "participants": [
     {
       "id": "park-insoo",
