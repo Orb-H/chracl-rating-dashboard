@@ -44,6 +44,11 @@ export type Match = {
   type: "QUALIFYING" | "MAIN";
 
   /**
+   * The kind of the match.
+   */
+  kind: "INDIVIDUAL" | "TEAM";
+
+  /**
    * The track name where the match was held.
    * E.g., `그랜드 밸리 하이웨이`
    */
