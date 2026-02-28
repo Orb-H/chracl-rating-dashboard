@@ -139,6 +139,15 @@ export default async function Player({
         </TabsList>
         <Separator className="mb-4 -mt-2" />
         <TabsContent value="profile">
+          <header className="font-semibold text-lg mb-4">주요 경력</header>
+          {player.career ? (
+            <CareerList career={player.career} />
+          ) : (
+            <span className="text-muted-foreground">
+              아직 대회에 참여한 이력이 없습니다.
+            </span>
+          )}
+          <Separator className="my-4" />
           <header className="font-semibold text-lg mb-4">레이팅</header>
           {currentRating?.value && currentRating.value !== 0 ? (
             <div className="grid w-full gap-8 grid-cols-1 md:grid-cols-2">
@@ -167,15 +176,6 @@ export default async function Player({
                 </CardContent>
               </Card>
             </div>
-          ) : (
-            <span className="text-muted-foreground">
-              아직 대회에 참여한 이력이 없습니다.
-            </span>
-          )}
-          <Separator className="my-4" />
-          <header className="font-semibold text-lg mb-4">주요 경력</header>
-          {player.career ? (
-            <CareerList career={player.career} />
           ) : (
             <span className="text-muted-foreground">
               아직 대회에 참여한 이력이 없습니다.
