@@ -1,6 +1,7 @@
 import { StarIcon, TrophyIcon } from "lucide-react";
 import { notFound } from "next/navigation";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
   Table,
@@ -113,6 +114,9 @@ export default async function Player({
       [] as (RatingHistory & { name: string })[],
     )
     .reverse();
+  const careerHighMatch = ratingHistoryByMatch.reduce((best, current) => {
+    return current.rating.value > best.rating.value ? current : best;
+  }, ratingHistoryByMatch[0]);
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
@@ -135,15 +139,33 @@ export default async function Player({
         </TabsList>
         <Separator className="mb-4 -mt-2" />
         <TabsContent value="profile">
-          <header className="font-semibold text-lg mb-4">현재 레이팅</header>
+          <header className="font-semibold text-lg mb-4">레이팅</header>
           {currentRating?.value && currentRating.value !== 0 ? (
-            <div className="mb-4">
-              <span className="font-semibold text-2xl">
-                {currentRating.value.toFixed(2)}
-              </span>
-              <span className="ml-2 text-muted-foreground">
-                {rank ?? "-"}위 / {validRatings.length}명
-              </span>
+            <div className="grid w-full gap-8 grid-cols-1 md:grid-cols-2">
+              <Card className="mb-4 gap-2">
+                <CardHeader>현재 레이팅</CardHeader>
+                <CardContent>
+                  <span className="font-semibold text-2xl">
+                    {currentRating.value.toFixed(2)}
+                  </span>
+                  <br />
+                  <span className="text-muted-foreground">
+                    {rank ?? "-"}위 / {validRatings.length}명
+                  </span>
+                </CardContent>
+              </Card>
+              <Card className="mb-4 gap-2">
+                <CardHeader>최고 레이팅</CardHeader>
+                <CardContent>
+                  <span className="font-semibold text-2xl">
+                    {careerHighMatch.rating.value.toFixed(2)}
+                  </span>
+                  <br />
+                  <span className="text-muted-foreground">
+                    {careerHighMatch.name}
+                  </span>
+                </CardContent>
+              </Card>
             </div>
           ) : (
             <span className="text-muted-foreground">
