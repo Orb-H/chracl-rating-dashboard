@@ -27,13 +27,13 @@ export function IndividualMatchItem({ match }: { match: Match }) {
   );
 
   return (
-    <Table>
+    <Table className="border rounded-lg">
       <TableHeader>
         <TableRow>
           <TableHead className="text-center">순위</TableHead>
           <TableHead className="text-center">선수</TableHead>
           <TableHead className="text-center">레이팅</TableHead>
-          <TableHead>기록</TableHead>
+          <TableHead className="text-center">기록</TableHead>
           {match.pointsSchemeId && (
             <TableHead className="text-center">포인트</TableHead>
           )}
@@ -54,7 +54,8 @@ export function IndividualMatchItem({ match }: { match: Match }) {
                 {`${players[participant.id].displayName}`}
               </TableCell>
               <TableCell className="text-center">
-                {`${history?.rating.value.toFixed(2) ?? "-"}`}{" "}
+                {`${history?.rating.value.toFixed(2) ?? "-"}`}
+                <br />
                 {ratingDelta > 0 ? (
                   <span className="text-blue-500">
                     (+{ratingDelta.toFixed(2)})
@@ -67,12 +68,13 @@ export function IndividualMatchItem({ match }: { match: Match }) {
                   <span className="text-muted-foreground">(-)</span>
                 )}
               </TableCell>
-              <TableCell>
+              <TableCell className="text-center">
                 {participant.record.lapTime
                   ? `${participant.record.lapTime}`
                   : participant.record.finishTime
                     ? `${participant.record.finishTime}`
-                    : participant.record.status}{" "}
+                    : participant.record.status}
+                <br />
                 <span className="text-muted-foreground">
                   {participant.record.penaltyTime
                     ? `(+${participant.record.penaltyTime})`

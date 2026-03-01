@@ -11,6 +11,7 @@ import {
 import { loadCompetitionById } from "@/lib/loadCompetitions";
 import { loadHistoriesById } from "@/lib/loadHistories";
 import { loadPlayersById } from "@/lib/loadPlayers";
+import { Competition } from "@/types/competition";
 import { Match } from "@/types/match";
 
 export function TeamMatchItem({ match }: { match: Match }) {
@@ -27,25 +28,9 @@ export function TeamMatchItem({ match }: { match: Match }) {
       ),
     ]),
   );
-  const TotalPointsByTeamId = Object.fromEntries(
-    competition.teams.map((team) => {
-      const teamParticipants = match.participants.filter(
-        (participant) => participant.teamId === team.id,
-      );
-      const teamPoints = teamParticipants.reduce((sum, participant) => {
-        const points =
-          competition.pointsSchemes[match.pointsSchemeId!][
-            participant.place - 1
-          ] ?? 0;
-        return sum + points;
-      }, 0);
-      return [team.id, teamPoints];
-    }),
-  );
-  const sortedTeams = [...competition.teams].sort((a, b) => {
-    const pointsA = TotalPointsByTeamId[a.id] ?? Number.MIN_SAFE_INTEGER;
-    const pointsB = TotalPointsByTeamId[b.id] ?? Number.MIN_SAFE_INTEGER;
-    return pointsB - pointsA;
+  const { sortedTeams, TotalPointsByTeamId } = sortedTeamWithPoints({
+    match,
+    competition,
   });
 
   return (
@@ -56,8 +41,16 @@ export function TeamMatchItem({ match }: { match: Match }) {
             <TableHead className="text-center">순위</TableHead>
             <TableHead className="text-center">선수</TableHead>
             <TableHead className="text-center">팀</TableHead>
-            <TableHead className="text-center">레이팅</TableHead>
-            <TableHead>기록</TableHead>
+            <TableHead className="text-center">
+              레이팅
+              <br />
+              (변동)
+            </TableHead>
+            <TableHead className="text-center">
+              기록
+              <br />
+              (페널티)
+            </TableHead>
             {match.pointsSchemeId && (
               <TableHead className="text-center">포인트</TableHead>
             )}
@@ -80,14 +73,15 @@ export function TeamMatchItem({ match }: { match: Match }) {
                 </TableCell>
                 <TableCell className="text-center">
                   {`${players[participant.id].displayName}`}
-                </TableCell>{" "}
+                </TableCell>
                 <TableCell className="text-center">
                   {team?.name && (
                     <Badge className={badgeStyle}>팀 {team.name}</Badge>
                   )}
                 </TableCell>
                 <TableCell className="text-center">
-                  {`${history?.rating.value.toFixed(2) ?? "-"}`}{" "}
+                  {`${history?.rating.value.toFixed(2) ?? "-"}`}
+                  <br />
                   {ratingDelta > 0 ? (
                     <span className="text-blue-500">
                       (+{ratingDelta.toFixed(2)})
@@ -100,12 +94,13 @@ export function TeamMatchItem({ match }: { match: Match }) {
                     <span className="text-muted-foreground">(-)</span>
                   )}
                 </TableCell>
-                <TableCell>
+                <TableCell className="text-center">
                   {participant.record.lapTime
                     ? `${participant.record.lapTime}`
                     : participant.record.finishTime
                       ? `${participant.record.finishTime}`
-                      : participant.record.status}{" "}
+                      : participant.record.status}
+                  <br />
                   <span className="text-muted-foreground">
                     {participant.record.penaltyTime
                       ? `(+${participant.record.penaltyTime})`
@@ -157,4 +152,62 @@ export function TeamMatchItem({ match }: { match: Match }) {
       )}
     </>
   );
+}
+
+function sortedTeamWithPoints({
+  match,
+  competition,
+}: {
+  match: Match;
+  competition: Competition;
+}) {
+  if (!match.pointsSchemeId) {
+    return {
+      sortedTeams: competition.teams,
+      TotalPointsByTeamId: Object.fromEntries(
+        competition.teams.map((team) => [team.id, 0]),
+      ),
+    };
+  }
+
+  const TotalPointsByTeamId = Object.fromEntries(
+    competition.teams.map((team) => {
+      const teamParticipants = match.participants.filter(
+        (participant) => participant.teamId === team.id,
+      );
+      const teamPoints = teamParticipants.reduce((sum, participant) => {
+        const points =
+          competition.pointsSchemes[match.pointsSchemeId!][
+            participant.place - 1
+          ] ?? 0;
+        return sum + points;
+      }, 0);
+      return [team.id, teamPoints];
+    }),
+  );
+  const sortedTeams = [...competition.teams]
+    .filter((team) =>
+      match.participants.some((participant) => participant.teamId === team.id),
+    )
+    .sort((a, b) => {
+      const pointsA = TotalPointsByTeamId[a.id] ?? Number.MIN_SAFE_INTEGER;
+      const pointsB = TotalPointsByTeamId[b.id] ?? Number.MIN_SAFE_INTEGER;
+
+      if (pointsA === pointsB) {
+        const bestPlaceA = Math.min(
+          ...match.participants
+            .filter((participant) => participant.teamId === a.id)
+            .map((participant) => participant.place ?? Number.MAX_SAFE_INTEGER),
+        );
+        const bestPlaceB = Math.min(
+          ...match.participants
+            .filter((participant) => participant.teamId === b.id)
+            .map((participant) => participant.place ?? Number.MAX_SAFE_INTEGER),
+        );
+        return bestPlaceA - bestPlaceB;
+      }
+      return pointsB - pointsA;
+    });
+
+  return { sortedTeams, TotalPointsByTeamId };
 }

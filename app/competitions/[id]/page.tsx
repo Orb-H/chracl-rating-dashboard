@@ -46,7 +46,7 @@ export default async function CompetitionDetail({
           <p>대회 정보 페이지는 현재 준비 중입니다.</p>
         </TabsContent>
         <TabsContent value="matches" className="mt-8 w-full">
-          <Accordion type="multiple" className="w-full">
+          <Accordion type="multiple" className="w-full border rounded-lg">
             {competition.matches.length === 0 ? (
               <p className="text-muted-foreground">
                 아직 진행된 경기가 없습니다.
@@ -59,7 +59,11 @@ export default async function CompetitionDetail({
                 }
 
                 return (
-                  <AccordionItem key={match} value={match}>
+                  <AccordionItem
+                    key={match}
+                    value={match}
+                    className="px-4 border-b last:border-b-0"
+                  >
                     <MatchesItem match={targetMatch} />
                   </AccordionItem>
                 );
