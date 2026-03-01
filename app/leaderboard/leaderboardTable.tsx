@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import {
   Popover,
   PopoverContent,
@@ -16,7 +17,7 @@ import {
 } from "@/components/ui/table";
 import { currentSeason } from "@/lib/constants";
 import { roundToTwoDecimals } from "@/lib/utils";
-import { Player } from "@/types/player";
+import { Player, Tier } from "@/types/player";
 import { Rating } from "@/types/rating";
 
 type LeaderboardTableProps = {
@@ -101,7 +102,13 @@ export function LeaderboardTable({ ratingData }: LeaderboardTableProps) {
               </Link>
             </TableCell>
             <TableCell className="text-center">
-              {player.tiers ? player.tiers[currentSeason] : "-"}
+              {player.tiers ? (
+                <Badge className={styleByTier(player.tiers[currentSeason])}>
+                  {player.tiers[currentSeason]}
+                </Badge>
+              ) : (
+                "-"
+              )}
             </TableCell>
             <TableCell className="text-center">
               {player.mu ? roundToTwoDecimals(player.value) : "-"}
@@ -127,5 +134,27 @@ function styleByRank(rank: number): string {
       return "font-semibold bg-amber-700/20 dark:bg-amber-700/30";
     default:
       return "";
+  }
+}
+
+function styleByTier(tier: Tier): string {
+  switch (tier) {
+    case Tier.TIER1:
+    case Tier.TIER1PLUS:
+      return "bg-orange-50 text-orange-700 dark:bg-orange-950 dark:text-orange-300";
+    case Tier.TIER2:
+      return "bg-slate-50 text-slate-700 dark:bg-slate-950 dark:text-slate-300";
+    case Tier.TIER3:
+    case Tier.TIER3PLUS:
+      return "bg-yellow-50 text-yellow-700 dark:bg-yellow-950 dark:text-yellow-300";
+    case Tier.TIER4:
+    case Tier.TIER4PLUS:
+      return "bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300";
+    case Tier.TIER5:
+      return "bg-rose-50 text-rose-700 dark:bg-rose-950 dark:text-rose-300";
+    case Tier.TIER6:
+      return "bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300";
+    default:
+      return "bg-muted text-white";
   }
 }
