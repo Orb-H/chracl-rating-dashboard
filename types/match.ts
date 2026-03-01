@@ -114,7 +114,8 @@ export type MatchRecord = {
 
   /**
    * The finish time of the participant recorded in main stage, in [HH:M]M:SS.mmm format.
-   * E.g., `00:15:30.123`
+   * For exceptional cases where the participant is lapped, it can also be in the format of `+n Lap(s)`, where n is the number of laps the participant is behind the leader.
+   * E.g., `00:15:30.123`, `+1 Lap`
    */
   finishTime?: string;
 

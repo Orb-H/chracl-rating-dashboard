@@ -45,12 +45,20 @@
     {
       "id": "hamkubby",
       "place": 7,
-      "record": { "status": "DNF", "penaltyTime": "00:06.000" }
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "+1 Lap",
+        "penaltyTime": "00:06.000"
+      }
     },
     {
       "id": "eaglekop",
       "place": 8,
-      "record": { "status": "DNF", "penaltyTime": "00:05.000" }
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "+1 Lap",
+        "penaltyTime": "00:05.000"
+      }
     }
   ]
 }
