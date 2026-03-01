@@ -101,8 +101,8 @@ export function LeaderboardTable({ ratingData }: LeaderboardTableProps) {
               </Link>
             </TableCell>
             <TableCell className="text-center">
-              {player.tiers ? (
-                <TierBadge tier={player.tiers[currentSeason]} />
+              {player.tiers?.[currentSeason] ? (
+                <TierBadge tier={player.tiers?.[currentSeason]} />
               ) : (
                 "-"
               )}

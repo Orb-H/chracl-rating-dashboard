@@ -207,13 +207,7 @@ export default async function Player({
                         <TableRow key={competition.id}>
                           <TableCell>{competition.shortName}</TableCell>
                           <TableCell className="font-semibold">
-                            {player.tiers?.[competition.id] ? (
-                              <TierBadge
-                                tier={player.tiers?.[competition.id]}
-                              />
-                            ) : (
-                              "-"
-                            )}
+                            <TierBadge tier={player.tiers?.[competition.id]} />
                           </TableCell>
                         </TableRow>
                       )

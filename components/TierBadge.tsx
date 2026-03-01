@@ -23,6 +23,6 @@ function styleByTier(tier: Tier): string {
     case Tier.TIER6:
       return "bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300";
     default:
-      return "bg-muted text-white";
+      return "bg-muted text-muted-foreground";
   }
 }
