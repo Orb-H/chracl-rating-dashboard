@@ -1,5 +1,6 @@
 import { StarIcon, TrophyIcon } from "lucide-react";
 import { notFound } from "next/navigation";
+import { TierBadge } from "@/components/TierBadge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -206,7 +207,7 @@ export default async function Player({
                         <TableRow key={competition.id}>
                           <TableCell>{competition.shortName}</TableCell>
                           <TableCell className="font-semibold">
-                            {player.tiers?.[competition.id]}
+                            <TierBadge tier={player.tiers?.[competition.id]} />
                           </TableCell>
                         </TableRow>
                       )

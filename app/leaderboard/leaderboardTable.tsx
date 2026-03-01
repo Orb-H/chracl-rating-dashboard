@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TierBadge } from "@/components/TierBadge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Popover,
@@ -71,7 +72,6 @@ export function LeaderboardTable({ ratingData }: LeaderboardTableProps) {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {/* TODO(#3): Change color palette of the row by tier value */}
         {ratingData.map((player, i) => (
           <TableRow
             key={player.id}
@@ -101,7 +101,11 @@ export function LeaderboardTable({ ratingData }: LeaderboardTableProps) {
               </Link>
             </TableCell>
             <TableCell className="text-center">
-              {player.tiers ? player.tiers[currentSeason] : "-"}
+              {player.tiers?.[currentSeason] ? (
+                <TierBadge tier={player.tiers?.[currentSeason]} />
+              ) : (
+                "-"
+              )}
             </TableCell>
             <TableCell className="text-center">
               {player.mu ? roundToTwoDecimals(player.value) : "-"}
