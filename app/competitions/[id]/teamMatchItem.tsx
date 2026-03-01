@@ -8,27 +8,23 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { loadCompetitionById } from "@/lib/loadCompetitions";
-import { loadHistoriesById } from "@/lib/loadHistories";
-import { loadPlayersById } from "@/lib/loadPlayers";
 import { Competition } from "@/types/competition";
 import { Match } from "@/types/match";
+import { Player } from "@/types/player";
+import { RatingHistory } from "@/types/rating";
 
-export function TeamMatchItem({ match }: { match: Match }) {
-  const players = loadPlayersById();
-  const competition = loadCompetitionById(match.competitionId);
-  const histories = Object.fromEntries(
-    match.participants.map((participant) => [
-      participant.id,
-      Object.fromEntries(
-        loadHistoriesById(participant.id).map((history) => [
-          history.entryId,
-          history,
-        ]),
-      ),
-    ]),
-  );
-  const { sortedTeams, TotalPointsByTeamId } = sortedTeamWithPoints({
+export function TeamMatchItem({
+  match,
+  players,
+  competition,
+  histories,
+}: {
+  match: Match;
+  players: Record<string, Player>;
+  competition: Competition;
+  histories: Record<string, Record<string, RatingHistory>>;
+}) {
+  const { sortedTeams, totalPointsByTeamId } = sortedTeamWithPoints({
     match,
     competition,
   });
@@ -63,8 +59,9 @@ export function TeamMatchItem({ match }: { match: Match }) {
             );
             const badgeStyle = team?.style?.badge ?? "";
             const history = histories[participant.id]?.[match.entryId];
-            const ratingDelta =
-              history?.rating.value - (history?.previousRating?.value ?? 0);
+            const ratingDelta = history
+              ? history.rating.value - (history.previousRating?.value ?? 0)
+              : 0;
 
             return (
               <TableRow key={participant.id}>
@@ -121,7 +118,7 @@ export function TeamMatchItem({ match }: { match: Match }) {
       </Table>
       {match.pointsSchemeId && (
         <>
-          <Separator className="my-4"></Separator>
+          <Separator className="my-4" />
           <Table>
             <TableHeader>
               <TableRow>
@@ -141,7 +138,7 @@ export function TeamMatchItem({ match }: { match: Match }) {
                       )}
                     </TableCell>
                     <TableCell className="text-center">
-                      {TotalPointsByTeamId[team.id] ?? "-"}
+                      {totalPointsByTeamId[team.id] ?? "-"}
                     </TableCell>
                   </TableRow>
                 );
@@ -164,20 +161,20 @@ function sortedTeamWithPoints({
   if (!match.pointsSchemeId) {
     return {
       sortedTeams: competition.teams,
-      TotalPointsByTeamId: Object.fromEntries(
+      totalPointsByTeamId: Object.fromEntries(
         competition.teams.map((team) => [team.id, 0]),
       ),
     };
   }
 
-  const TotalPointsByTeamId = Object.fromEntries(
+  const totalPointsByTeamId = Object.fromEntries(
     competition.teams.map((team) => {
       const teamParticipants = match.participants.filter(
         (participant) => participant.teamId === team.id,
       );
       const teamPoints = teamParticipants.reduce((sum, participant) => {
         const points =
-          competition.pointsSchemes[match.pointsSchemeId!][
+          competition.pointsSchemes[match.pointsSchemeId!]?.[
             participant.place - 1
           ] ?? 0;
         return sum + points;
@@ -190,8 +187,8 @@ function sortedTeamWithPoints({
       match.participants.some((participant) => participant.teamId === team.id),
     )
     .sort((a, b) => {
-      const pointsA = TotalPointsByTeamId[a.id] ?? Number.MIN_SAFE_INTEGER;
-      const pointsB = TotalPointsByTeamId[b.id] ?? Number.MIN_SAFE_INTEGER;
+      const pointsA = totalPointsByTeamId[a.id] ?? Number.MIN_SAFE_INTEGER;
+      const pointsB = totalPointsByTeamId[b.id] ?? Number.MIN_SAFE_INTEGER;
 
       if (pointsA === pointsB) {
         const bestPlaceA = Math.min(
@@ -209,5 +206,5 @@ function sortedTeamWithPoints({
       return pointsB - pointsA;
     });
 
-  return { sortedTeams, TotalPointsByTeamId };
+  return { sortedTeams, totalPointsByTeamId };
 }

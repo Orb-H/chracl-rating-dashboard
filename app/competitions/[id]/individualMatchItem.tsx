@@ -6,26 +6,22 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { loadCompetitionById } from "@/lib/loadCompetitions";
-import { loadHistoriesById } from "@/lib/loadHistories";
-import { loadPlayersById } from "@/lib/loadPlayers";
+import { Competition } from "@/types/competition";
 import { Match } from "@/types/match";
+import { Player } from "@/types/player";
+import { RatingHistory } from "@/types/rating";
 
-export function IndividualMatchItem({ match }: { match: Match }) {
-  const players = loadPlayersById();
-  const competition = loadCompetitionById(match.competitionId);
-  const histories = Object.fromEntries(
-    match.participants.map((participant) => [
-      participant.id,
-      Object.fromEntries(
-        loadHistoriesById(participant.id).map((history) => [
-          history.entryId,
-          history,
-        ]),
-      ),
-    ]),
-  );
-
+export function IndividualMatchItem({
+  match,
+  players,
+  competition,
+  histories,
+}: {
+  match: Match;
+  players: Record<string, Player>;
+  competition: Competition;
+  histories: Record<string, Record<string, RatingHistory>>;
+}) {
   return (
     <Table className="border rounded-lg">
       <TableHeader>
@@ -42,8 +38,9 @@ export function IndividualMatchItem({ match }: { match: Match }) {
       <TableBody>
         {match.participants.map((participant) => {
           const history = histories[participant.id]?.[match.entryId];
-          const ratingDelta =
-            history?.rating.value - (history?.previousRating?.value ?? 0);
+          const ratingDelta = history
+            ? history.rating.value - (history.previousRating?.value ?? 0)
+            : 0;
 
           return (
             <TableRow key={participant.id}>
