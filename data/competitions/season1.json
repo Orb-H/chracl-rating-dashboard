@@ -3,6 +3,20 @@
   "name": "제 1회 치지직 레이싱 동아리: 고속도로 배틀",
   "shortName": "제 1회: 고속도로 배틀",
   "sortOrder": 1,
+  "participants": [
+    "cheongalice",
+    "reo",
+    "namgung-hyuk",
+    "oversleepzzz",
+    "hyungdok",
+    "a2-duck",
+    "yang-mei",
+    "odanming",
+    "yona",
+    "chochou",
+    "hamkubby",
+    "hera"
+  ],
   "teams": [
     {
       "id": "season1-team-namgung-hyuk",

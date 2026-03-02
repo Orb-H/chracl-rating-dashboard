@@ -26,7 +26,7 @@ export type Competition = {
   /**
    * The IDs of the participants in the competition. E.g., ["hyungdok", "alice", "bob"]
    */
-  participants?: string[];
+  participants: string[];
 
   /**
    * The list of teams participating in the competition.
