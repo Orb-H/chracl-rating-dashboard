@@ -1,8 +1,13 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Accordion, AccordionItem } from "@/components/ui/accordion";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { loadCompetitionById, loadCompetitions } from "@/lib/loadCompetitions";
 import { loadMatchesByCompetitionId } from "@/lib/loadMatches";
+import { loadPlayersById } from "@/lib/loadPlayers";
 import { MatchesItem } from "./matchesItem";
 
 export const dynamicParams = false;
@@ -29,6 +34,7 @@ export default async function CompetitionDetail({
     }
   })();
   const matches = loadMatchesByCompetitionId(id);
+  const players = loadPlayersById();
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
@@ -41,9 +47,41 @@ export default async function CompetitionDetail({
           <TabsTrigger value="matches">경기 목록</TabsTrigger>
           <TabsTrigger value="results">대회 결과</TabsTrigger>
         </TabsList>
-        <TabsContent value="overview" className="mt-8 w-full">
-          {/* TODO(#15): Add competition metadata and render it here. */}
-          <p>대회 정보 페이지는 현재 준비 중입니다.</p>
+        <Separator className="mb-4 -mt-2" />
+        <TabsContent value="overview" className="w-full">
+          <header className="font-semibold text-lg mb-4">참가자 목록</header>
+          <div className="mb-4 grid grid-cols-2 md:grid-cols-4 gap-2">
+            {competition.participants.length !== 0 ? (
+              competition.participants.map((participant) => (
+                <Card key={participant} className="p-2">
+                  <CardContent key={participant} className="px-0">
+                    <Link
+                      href={`/players/${participant}`}
+                      className="flex items-center underline hover:no-underline"
+                    >
+                      <Avatar>
+                        <AvatarImage
+                          src={players[participant].avatarUrl}
+                          alt={players[participant].displayName}
+                          className="object-cover"
+                        />
+                        <AvatarFallback>
+                          {players[participant].displayName.charAt(0)}
+                        </AvatarFallback>
+                      </Avatar>
+                      <span className="ml-2 inline align-middle">
+                        {players[participant].displayName}
+                      </span>
+                    </Link>
+                  </CardContent>
+                </Card>
+              ))
+            ) : (
+              <p className="text-muted-foreground">
+                아직 참가자가 확정되지 않았습니다.
+              </p>
+            )}
+          </div>
         </TabsContent>
         <TabsContent value="matches" className="mt-8 w-full">
           <Accordion type="multiple" className="w-full border rounded-lg">
