@@ -3,6 +3,28 @@
   "name": "제 2회 치지직 레이싱 동아리: 포뮬러 그랑프리",
   "shortName": "제 2회: 포뮬러 그랑프리",
   "sortOrder": 2,
+  "participants": [
+    "namgung-hyuk",
+    "hyungdok",
+    "yona",
+    "cheongalice",
+    "nodolly",
+    "kanetv8",
+    "park-insoo",
+    "moon-hojun",
+    "reo",
+    "hamkubby",
+    "odanming",
+    "chochou",
+    "parkgee",
+    "zen1th-hwang",
+    "kim-toki",
+    "a2-duck",
+    "hera",
+    "yang-mei",
+    "bbogumi",
+    "eaglekop"
+  ],
   "teams": [
     {
       "id": "season2-team-namgung-hyuk",
