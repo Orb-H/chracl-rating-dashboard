@@ -54,7 +54,7 @@ export default async function CompetitionDetail({
             {competition.participants.length !== 0 ? (
               competition.participants.map((participant) => (
                 <Card key={participant} className="p-2">
-                  <CardContent key={participant} className="px-0">
+                  <CardContent className="px-0">
                     <Link
                       href={`/players/${participant}`}
                       className="flex items-center underline hover:no-underline"
