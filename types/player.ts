@@ -76,6 +76,11 @@ export type Career = {
   type: "major" | "minor";
 
   /**
+   * The competition which the career highlight is associated with. E.g., "season1"
+   */
+  competitionId: string;
+
+  /**
    * Detailed description of the career highlight. E.g., "Won Season 1 Championship"
    */
   detail: string;
