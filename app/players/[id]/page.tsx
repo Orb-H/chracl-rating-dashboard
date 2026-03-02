@@ -20,7 +20,9 @@ import { loadHistoriesById } from "@/lib/loadHistories";
 import { loadMatches } from "@/lib/loadMatches";
 import { loadPlayerById, loadPlayers } from "@/lib/loadPlayers";
 import { isIndividualWin, isTeamWin } from "@/lib/utils";
-import { Career } from "@/types/player";
+import { Competition } from "@/types/competition";
+import { Entry } from "@/types/entry";
+import { Career, Tier } from "@/types/player";
 import { RatingHistory } from "@/types/rating";
 import { RatingChart } from "./RatingChart";
 import { RecordList } from "./RecordList";
@@ -143,15 +145,6 @@ export default async function Player({
         </TabsList>
         <Separator className="mb-4 -mt-2" />
         <TabsContent value="profile">
-          <header className="font-semibold text-lg mb-4">주요 경력</header>
-          {player.career ? (
-            <CareerList career={player.career} />
-          ) : (
-            <span className="text-muted-foreground">
-              아직 대회에 참여한 이력이 없습니다.
-            </span>
-          )}
-          <Separator className="my-4" />
           <header className="font-semibold text-lg mb-4">레이팅</header>
           {currentRating?.value && currentRating.value !== 0 ? (
             <div className="grid w-full gap-8 grid-cols-1 md:grid-cols-2">
@@ -186,36 +179,15 @@ export default async function Player({
             </span>
           )}
           <Separator className="my-4" />
-          <header className="font-semibold text-lg mb-4">티어 변동</header>
-
-          {player.tiers ? (
-            <>
-              <span className="text-muted-foreground">
-                ※ 티어는 대회 이후에 결정되는 값입니다.
-              </span>
-              <Table className="w-full">
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>대회</TableHead>
-                    <TableHead>티어</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {competitions.map((competition) => {
-                    return (
-                      player.tiers?.[competition.id] && (
-                        <TableRow key={competition.id}>
-                          <TableCell>{competition.shortName}</TableCell>
-                          <TableCell className="font-semibold">
-                            <TierBadge tier={player.tiers?.[competition.id]} />
-                          </TableCell>
-                        </TableRow>
-                      )
-                    );
-                  })}
-                </TableBody>
-              </Table>
-            </>
+          <header className="font-semibold text-lg mb-4">주요 경력</header>
+          {player.career ? (
+            <CareerList
+              competitions={competitions}
+              entries={entries}
+              tiers={player.tiers}
+              histories={histories}
+              career={player.career}
+            />
           ) : (
             <span className="text-muted-foreground">
               아직 대회에 참여한 이력이 없습니다.
@@ -241,38 +213,150 @@ export default async function Player({
   );
 }
 
-function CareerList({ career }: { career: Career[] }) {
+function CareerList({
+  competitions,
+  entries,
+  tiers,
+  histories,
+  career,
+}: {
+  competitions: Competition[];
+  entries: Record<string, Entry>;
+  tiers?: Record<string, Tier>;
+  histories: RatingHistory[];
+  career: Career[];
+}) {
+  const historyByCompetitionId = [histories[0]];
+  let lastCompetitionId = entries[histories[0].entryId].competitionId;
+  for (const history of histories) {
+    const entry = entries[history.entryId];
+    const competitionId = entry.competitionId;
+    if (competitionId === lastCompetitionId) {
+      historyByCompetitionId[historyByCompetitionId.length - 1] = history;
+    } else {
+      historyByCompetitionId.push(history);
+      lastCompetitionId = competitionId;
+    }
+  }
+
   return (
-    <ul className="w-full">
-      {career.map((item, index) => (
-        <li key={`${item.detail}-${index}`} className="py-1">
-          <span
-            className={
-              item.type === "major"
-                ? "font-semibold bg-accent text-accent-foreground px-2 py-1 rounded-md"
-                : "px-2 py-1 rounded-md"
+    <>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>대회</TableHead>
+            <TableHead>성적</TableHead>
+            <TableHead>티어</TableHead>
+            <TableHead>레이팅(변동)</TableHead>
+            <TableHead>비고</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {competitions.map((competition) => {
+            const careerItems = career.filter(
+              (item) => item.competitionId === competition.id,
+            );
+            if (!careerItems || careerItems.length === 0) {
+              return null;
             }
-          >
-            {isTeamWin(item.detail) && (
-              <>
-                <TrophyIcon
-                  className="inline w-4 h-4"
-                  aria-label="팀 우승"
-                />{" "}
-              </>
-            )}
-            {isIndividualWin(item.detail) && (
-              <>
-                <StarIcon
-                  className="inline w-4 h-4"
-                  aria-label="개인 우승"
-                />{" "}
-              </>
-            )}
-            {item.detail}
-          </span>
-        </li>
-      ))}
-    </ul>
+            // TODO: Determine career type by introducing field in career, rather than relying on string matching.
+            const individualCareer = careerItems.find((item) =>
+              isIndividualWin(item.detail),
+            );
+            const teamCareer = careerItems.find(
+              (item) => !isIndividualWin(item.detail),
+            );
+
+            return (
+              <TableRow key={competition.id}>
+                <TableCell>
+                  {competition?.shortName ?? competition.name}
+                </TableCell>
+                <TableCell>
+                  {teamCareer && (
+                    <span
+                      className={
+                        teamCareer.type === "major"
+                          ? "font-semibold bg-accent text-accent-foreground px-2 py-1 rounded-md"
+                          : ""
+                      }
+                    >
+                      {isTeamWin(teamCareer.detail) && (
+                        <TrophyIcon
+                          className="inline w-4 h-4"
+                          aria-label="팀 수상"
+                        />
+                      )}{" "}
+                      {teamCareer.detail}
+                    </span>
+                  )}
+                </TableCell>
+                <TableCell>
+                  {tiers?.[competition.id] && (
+                    <TierBadge tier={tiers?.[competition.id]} />
+                  )}
+                </TableCell>
+                <TableCell>
+                  {(() => {
+                    let previousRating = 0;
+                    const history = historyByCompetitionId.find((h, i) => {
+                      if (entries[h.entryId].competitionId === competition.id) {
+                        previousRating =
+                          i > 0
+                            ? historyByCompetitionId[i - 1].rating.value
+                            : 0;
+                        return true;
+                      }
+                      return false;
+                    });
+
+                    if (!history) {
+                      return null;
+                    }
+
+                    const ratingDelta = history.rating.value - previousRating;
+                    return (
+                      <p key={history.entryId}>
+                        {history.rating.value.toFixed(2)}{" "}
+                        {ratingDelta > 0 ? (
+                          <span className="text-blue-500">
+                            (+{ratingDelta.toFixed(2)})
+                          </span>
+                        ) : ratingDelta < 0 ? (
+                          <span className="text-red-500">
+                            ({ratingDelta.toFixed(2)})
+                          </span>
+                        ) : (
+                          <span className="text-muted-foreground">(-)</span>
+                        )}
+                      </p>
+                    );
+                  })()}
+                </TableCell>
+                <TableCell>
+                  {individualCareer && (
+                    <span
+                      className={
+                        individualCareer.type === "major"
+                          ? "font-semibold bg-accent text-accent-foreground px-2 py-1 rounded-md"
+                          : ""
+                      }
+                    >
+                      {isIndividualWin(individualCareer.detail) && (
+                        <StarIcon
+                          className="inline w-4 h-4"
+                          aria-label="개인 수상"
+                        />
+                      )}{" "}
+                      {individualCareer.detail}
+                    </span>
+                  )}
+                </TableCell>
+              </TableRow>
+            );
+          })}
+        </TableBody>
+      </Table>
+    </>
   );
 }

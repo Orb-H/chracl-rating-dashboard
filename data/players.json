@@ -14,15 +14,18 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 1회: 고속도로 배틀 4위"
+        "competitionId": "season1",
+        "detail": "4위"
       },
       {
         "type": "minor",
-        "detail": "제 2회: 포뮬러 그랑프리 4위"
+        "competitionId": "season2",
+        "detail": "4위"
       },
       {
         "type": "major",
-        "detail": "제 3회: 레인 헬 2위"
+        "competitionId": "season3",
+        "detail": "2위"
       }
     ]
   },
@@ -41,15 +44,18 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 1회: 고속도로 배틀 2위"
+        "competitionId": "season1",
+        "detail": "2위"
       },
       {
         "type": "major",
-        "detail": "제 2회: 포뮬러 그랑프리 2위"
+        "competitionId": "season2",
+        "detail": "2위"
       },
       {
         "type": "major",
-        "detail": "제 3회: 레인 헬 2위"
+        "competitionId": "season3",
+        "detail": "2위"
       }
     ]
   },
@@ -66,7 +72,8 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 3회: 레인 헬 우승"
+        "competitionId": "season3",
+        "detail": "우승"
       }
     ]
   },
@@ -84,7 +91,8 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 2회: 포뮬러 그랑프리 3위"
+        "competitionId": "season2",
+        "detail": "3위"
       }
     ]
   },
@@ -103,23 +111,28 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 1회: 고속도로 배틀 우승"
+        "competitionId": "season1",
+        "detail": "우승"
       },
       {
         "type": "major",
-        "detail": "제 1회: 고속도로 배틀 공동 MVP"
+        "competitionId": "season1",
+        "detail": "공동 MVP"
       },
       {
         "type": "minor",
-        "detail": "제 2회: 포뮬러 그랑프리 3위"
+        "competitionId": "season2",
+        "detail": "3위"
       },
       {
         "type": "major",
-        "detail": "제 3회: 레인 헬 우승"
+        "competitionId": "season3",
+        "detail": "우승"
       },
       {
         "type": "major",
-        "detail": "제 3회: 레인 헬 드라이버 챔피언"
+        "competitionId": "season3",
+        "detail": "드라이버 챔피언"
       }
     ]
   },
@@ -137,11 +150,13 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 2회: 포뮬러 그랑프리 우승"
+        "competitionId": "season2",
+        "detail": "우승"
       },
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 4위"
+        "competitionId": "season3",
+        "detail": "4위"
       }
     ]
   },
@@ -158,7 +173,8 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 3위"
+        "competitionId": "season3",
+        "detail": "3위"
       }
     ]
   },
@@ -176,7 +192,8 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 2회: 포뮬러 그랑프리 4위"
+        "competitionId": "season2",
+        "detail": "4위"
       }
     ]
   },
@@ -195,23 +212,28 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 1회: 고속도로 배틀 2위"
+        "competitionId": "season1",
+        "detail": "2위"
       },
       {
         "type": "major",
-        "detail": "제 1회: 고속도로 배틀 공동 MVP"
+        "competitionId": "season1",
+        "detail": "공동 MVP"
       },
       {
         "type": "major",
-        "detail": "제 2회: 포뮬러 그랑프리 우승"
+        "competitionId": "season2",
+        "detail": "우승"
       },
       {
         "type": "major",
-        "detail": "제 2회: 포뮬러 그랑프리 최종 MVP"
+        "competitionId": "season2",
+        "detail": "최종 MVP"
       },
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 4위"
+        "competitionId": "season3",
+        "detail": "4위"
       }
     ]
   },
@@ -228,7 +250,8 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 3회: 레인 헬 우승"
+        "competitionId": "season3",
+        "detail": "우승"
       }
     ]
   },
@@ -245,7 +268,8 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 5위"
+        "competitionId": "season3",
+        "detail": "5위"
       }
     ]
   },
@@ -263,15 +287,18 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 2회: 포뮬러 그랑프리 2위"
+        "competitionId": "season2",
+        "detail": "2위"
       },
       {
         "type": "major",
-        "detail": "제 2회: 포뮬러 그랑프리 예선 MVP"
+        "competitionId": "season2",
+        "detail": "예선 MVP"
       },
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 5위"
+        "competitionId": "season3",
+        "detail": "5위"
       }
     ]
   },
@@ -288,7 +315,8 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 3위"
+        "competitionId": "season3",
+        "detail": "3위"
       }
     ]
   },
@@ -307,15 +335,18 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 1회: 고속도로 배틀 우승"
+        "competitionId": "season1",
+        "detail": "우승"
       },
       {
         "type": "minor",
-        "detail": "제 2회: 포뮬러 그랑프리 4위"
+        "competitionId": "season2",
+        "detail": "4위"
       },
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 3위"
+        "competitionId": "season3",
+        "detail": "3위"
       }
     ]
   },
@@ -334,15 +365,18 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 1회: 고속도로 배틀 3위"
+        "competitionId": "season1",
+        "detail": "3위"
       },
       {
         "type": "major",
-        "detail": "제 3회: 레인 헬 우승"
+        "competitionId": "season3",
+        "detail": "우승"
       },
       {
         "type": "major",
-        "detail": "제 3회: 레인 헬 STINT 1 1위"
+        "competitionId": "season3",
+        "detail": "STINT 1 1위"
       }
     ]
   },
@@ -359,7 +393,8 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 4위"
+        "competitionId": "season3",
+        "detail": "4위"
       }
     ]
   },
@@ -376,7 +411,8 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 3위"
+        "competitionId": "season3",
+        "detail": "3위"
       }
     ]
   },
@@ -395,15 +431,18 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 1회: 고속도로 배틀 3위"
+        "competitionId": "season1",
+        "detail": "3위"
       },
       {
         "type": "major",
-        "detail": "제 2회: 포뮬러 그랑프리 2위"
+        "competitionId": "season2",
+        "detail": "2위"
       },
       {
         "type": "major",
-        "detail": "제 3회: 레인 헬 2위"
+        "competitionId": "season3",
+        "detail": "2위"
       }
     ]
   },
@@ -420,7 +459,8 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 4위"
+        "competitionId": "season3",
+        "detail": "4위"
       }
     ]
   },
@@ -439,11 +479,13 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 1회: 고속도로 배틀 우승"
+        "competitionId": "season1",
+        "detail": "우승"
       },
       {
         "type": "major",
-        "detail": "제 2회: 포뮬러 그랑프리 우승"
+        "competitionId": "season2",
+        "detail": "우승"
       }
     ]
   },
@@ -460,7 +502,8 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 3회: 레인 헬 2위"
+        "competitionId": "season3",
+        "detail": "2위"
       }
     ]
   },
@@ -479,15 +522,18 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 1회: 고속도로 배틀 3위"
+        "competitionId": "season1",
+        "detail": "3위"
       },
       {
         "type": "minor",
-        "detail": "제 2회: 포뮬러 그랑프리 4위"
+        "competitionId": "season2",
+        "detail": "4위"
       },
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 4위"
+        "competitionId": "season3",
+        "detail": "4위"
       }
     ]
   },
@@ -506,19 +552,23 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 1회: 고속도로 배틀 2위"
+        "competitionId": "season1",
+        "detail": "2위"
       },
       {
         "type": "major",
-        "detail": "제 2회: 포뮬러 그랑프리 우승"
+        "competitionId": "season2",
+        "detail": "우승"
       },
       {
         "type": "major",
-        "detail": "제 3회: 레인 헬 우승"
+        "competitionId": "season3",
+        "detail": "우승"
       },
       {
         "type": "major",
-        "detail": "제 3회: 레인 헬 STINT 2 1위"
+        "competitionId": "season3",
+        "detail": "STINT 2 1위"
       }
     ]
   },
@@ -535,7 +585,8 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 5위"
+        "competitionId": "season3",
+        "detail": "5위"
       }
     ]
   },
@@ -553,7 +604,8 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 2회: 포뮬러 그랑프리 3위"
+        "competitionId": "season2",
+        "detail": "3위"
       }
     ]
   },
@@ -570,7 +622,8 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 3위"
+        "competitionId": "season3",
+        "detail": "3위"
       }
     ]
   },
@@ -587,7 +640,8 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 3회: 레인 헬 2위"
+        "competitionId": "season3",
+        "detail": "2위"
       }
     ]
   },
@@ -605,7 +659,8 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 2회: 포뮬러 그랑프리 2위"
+        "competitionId": "season2",
+        "detail": "2위"
       }
     ]
   },
@@ -624,15 +679,18 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 1회: 고속도로 배틀 4위"
+        "competitionId": "season1",
+        "detail": "4위"
       },
       {
         "type": "minor",
-        "detail": "제 2회: 포뮬러 그랑프리 3위"
+        "competitionId": "season2",
+        "detail": "3위"
       },
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 5위"
+        "competitionId": "season3",
+        "detail": "5위"
       }
     ]
   },
@@ -650,11 +708,13 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 2회: 포뮬러 그랑프리 2위"
+        "competitionId": "season2",
+        "detail": "2위"
       },
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 4위"
+        "competitionId": "season3",
+        "detail": "4위"
       }
     ]
   },
@@ -672,11 +732,13 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 2회: 포뮬러 그랑프리 우승"
+        "competitionId": "season2",
+        "detail": "우승"
       },
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 3위"
+        "competitionId": "season3",
+        "detail": "3위"
       }
     ]
   },
@@ -693,7 +755,8 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 5위"
+        "competitionId": "season3",
+        "detail": "5위"
       }
     ]
   },
@@ -710,7 +773,8 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 3회: 레인 헬 우승"
+        "competitionId": "season3",
+        "detail": "우승"
       }
     ]
   },
@@ -728,7 +792,8 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 2회: 포뮬러 그랑프리 4위"
+        "competitionId": "season2",
+        "detail": "4위"
       }
     ]
   },
@@ -745,7 +810,8 @@
     "career": [
       {
         "type": "major",
-        "detail": "제 3회: 레인 헬 2위"
+        "competitionId": "season3",
+        "detail": "2위"
       }
     ]
   },
@@ -764,15 +830,18 @@
     "career": [
       {
         "type": "minor",
-        "detail": "제 1회: 고속도로 배틀 4위"
+        "competitionId": "season1",
+        "detail": "4위"
       },
       {
         "type": "minor",
-        "detail": "제 2회: 포뮬러 그랑프리 3위"
+        "competitionId": "season2",
+        "detail": "3위"
       },
       {
         "type": "minor",
-        "detail": "제 3회: 레인 헬 5위"
+        "competitionId": "season3",
+        "detail": "5위"
       }
     ]
   },
