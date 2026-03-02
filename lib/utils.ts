@@ -9,6 +9,7 @@ export function roundToTwoDecimals(num: number): string {
   return (Math.round(num * 100) / 100).toFixed(2);
 }
 
+// TODO: Record this as a data in Career type
 export function isTeamWin(careerDetail: string) {
   return careerDetail.includes("우승");
 }
