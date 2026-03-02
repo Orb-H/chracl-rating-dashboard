@@ -35,7 +35,7 @@ export type Player = {
   channelId: string;
 
   /**
-   * Optional career highlights for the participant. E.g., [{ type: "major", detail: "Won Season 1 Championship" }]
+   * Optional career highlights for the participant.
    */
   career?: Career[];
 };

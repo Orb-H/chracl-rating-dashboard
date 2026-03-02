@@ -227,15 +227,16 @@ function CareerList({
   career: Career[];
 }) {
   const historyByCompetitionId = [histories[0]];
+  let lastCompetitionId = entries[histories[0].entryId].competitionId;
   for (const history of histories) {
     const entry = entries[history.entryId];
-    if (
-      entry.competitionId ===
-      entries[historyByCompetitionId.at(-1)!.entryId].competitionId
-    ) {
-      historyByCompetitionId.pop();
+    const competitionId = entry.competitionId;
+    if (competitionId === lastCompetitionId) {
+      historyByCompetitionId[historyByCompetitionId.length - 1] = history;
+    } else {
+      historyByCompetitionId.push(history);
+      lastCompetitionId = competitionId;
     }
-    historyByCompetitionId.push(history);
   }
 
   return (
@@ -258,6 +259,7 @@ function CareerList({
             if (!careerItems || careerItems.length === 0) {
               return null;
             }
+            // TODO: Determine career type by introducing field in career, rather than relying on string matching.
             const individualCareer = careerItems.find((item) =>
               isIndividualWin(item.detail),
             );
@@ -295,39 +297,41 @@ function CareerList({
                   )}
                 </TableCell>
                 <TableCell>
-                  {/** Get rating history of competition id and the previous rating */}
-                  {historyByCompetitionId.reduce(
-                    (acc, history, i) => {
-                      if (
-                        entries[history.entryId].competitionId ===
-                        competition.id
-                      ) {
-                        const prevRating =
+                  {(() => {
+                    let previousRating = 0;
+                    const history = historyByCompetitionId.find((h, i) => {
+                      if (entries[h.entryId].competitionId === competition.id) {
+                        previousRating =
                           i > 0
                             ? historyByCompetitionId[i - 1].rating.value
                             : 0;
-                        const ratingDelta = history.rating.value - prevRating;
-                        return (
-                          <p key={history.entryId}>
-                            {history.rating.value.toFixed(2)}{" "}
-                            {ratingDelta > 0 ? (
-                              <span className="text-blue-500">
-                                (+{ratingDelta.toFixed(2)})
-                              </span>
-                            ) : ratingDelta < 0 ? (
-                              <span className="text-red-500">
-                                ({ratingDelta.toFixed(2)})
-                              </span>
-                            ) : (
-                              <span className="text-muted-foreground">(-)</span>
-                            )}
-                          </p>
-                        );
+                        return true;
                       }
-                      return acc;
-                    },
-                    <></>,
-                  )}
+                      return false;
+                    });
+
+                    if (!history) {
+                      return null;
+                    }
+
+                    const ratingDelta = history.rating.value - previousRating;
+                    return (
+                      <p key={history.entryId}>
+                        {history.rating.value.toFixed(2)}{" "}
+                        {ratingDelta > 0 ? (
+                          <span className="text-blue-500">
+                            (+{ratingDelta.toFixed(2)})
+                          </span>
+                        ) : ratingDelta < 0 ? (
+                          <span className="text-red-500">
+                            ({ratingDelta.toFixed(2)})
+                          </span>
+                        ) : (
+                          <span className="text-muted-foreground">(-)</span>
+                        )}
+                      </p>
+                    );
+                  })()}
                 </TableCell>
                 <TableCell>
                   {individualCareer && (
