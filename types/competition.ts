@@ -24,6 +24,11 @@ export type Competition = {
   sortOrder: number;
 
   /**
+   * The IDs of the participants in the competition. E.g., ["hyungdok", "alice", "bob"]
+   */
+  participants?: string[];
+
+  /**
    * The list of teams participating in the competition.
    */
   teams: Team[];
