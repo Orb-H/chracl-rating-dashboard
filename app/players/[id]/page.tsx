@@ -340,8 +340,8 @@ function CareerList({
                         key={`${individualCareer.competitionId}-${individualCareer.detail}-${index}`}
                         className={
                           individualCareer.type === "major"
-                            ? "font-semibold bg-accent text-accent-foreground px-2 py-1 rounded-md"
-                            : ""
+                            ? "font-semibold bg-accent text-accent-foreground px-2 py-1 rounded-md mr-2"
+                            : "mr-2"
                         }
                       >
                         {isIndividualWin(individualCareer.detail) && (
