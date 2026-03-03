@@ -335,12 +335,9 @@ function CareerList({
                 <TableCell>
                   {individualCareers &&
                     individualCareers.length > 0 &&
-                    individualCareers.map((individualCareer) => (
+                    individualCareers.map((individualCareer, index) => (
                       <span
-                        key={
-                          individualCareer.competitionId +
-                          individualCareer.detail
-                        }
+                        key={`${individualCareer.competitionId}-${individualCareer.detail}-${index}`}
                         className={
                           individualCareer.type === "major"
                             ? "font-semibold bg-accent text-accent-foreground px-2 py-1 rounded-md"
