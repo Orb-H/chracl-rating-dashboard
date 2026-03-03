@@ -8,5 +8,123 @@
   "type": "QUALIFYING",
   "kind": "INDIVIDUAL",
   "trackName": "호주 앨버트 파크",
-  "participants": []
+  "participants": [
+    {
+      "id": "remilia",
+      "place": 1,
+      "ratedPlace": 1,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:17.592"
+      }
+    },
+    {
+      "id": "u-lili",
+      "place": 2,
+      "ratedPlace": 6,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:18.732"
+      }
+    },
+    {
+      "id": "puru-huru",
+      "place": 3,
+      "ratedPlace": 12,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:19.228"
+      }
+    },
+    {
+      "id": "nyaru",
+      "place": 4,
+      "ratedPlace": 14,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:19.621"
+      }
+    },
+    {
+      "id": "songl",
+      "place": 5,
+      "ratedPlace": 15,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:19.657"
+      }
+    },
+    {
+      "id": "kim-toki",
+      "place": 6,
+      "ratedPlace": 17,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:20.342"
+      }
+    },
+    {
+      "id": "lotionyum",
+      "place": 7,
+      "ratedPlace": 18,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:20.396"
+      }
+    },
+    {
+      "id": "luci",
+      "place": 8,
+      "ratedPlace": 19,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:20.765"
+      }
+    },
+    {
+      "id": "reana",
+      "place": 9,
+      "ratedPlace": 20,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:21.515"
+      }
+    },
+    {
+      "id": "auro",
+      "place": 10,
+      "ratedPlace": 22,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:24.341"
+      }
+    },
+    {
+      "id": "shune",
+      "place": 11,
+      "ratedPlace": 24,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:25.331"
+      }
+    },
+    {
+      "id": "norangbird",
+      "place": 12,
+      "ratedPlace": 25,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:26.969"
+      }
+    },
+    {
+      "id": "mopu",
+      "place": 13,
+      "ratedPlace": 26,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:30.631"
+      }
+    }
+  ]
 }

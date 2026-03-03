@@ -46,6 +46,10 @@
     "haeoni"
   ],
   "teams": [],
-  "matches": ["season4-pre-first-qual"],
+  "matches": [
+    "season4-pre-first-qual",
+    "season4-pre-second-a-qual",
+    "season4-pre-second-b-qual"
+  ],
   "pointsSchemes": {}
 }
