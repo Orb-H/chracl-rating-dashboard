@@ -3,11 +3,7 @@
     "id": "yona",
     "displayName": "요나",
     "aliases": [],
-    "tiers": {
-      "season1": "3",
-      "season2": "3",
-      "season3": "5"
-    },
+    "tiers": { "season1": "3", "season2": "3", "season3": "5" },
     "racingNumber": 2,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTAyMjVfNTEg/MDAxNzQwNDE1MjU3MzQ3.HVq80m_eWeBG8hGT8yJW5cBqeNGLaShjjWZLn_u5C6gg.LGHnl_504cH6SkvWkmb4DGx-cJRhg3cy3BBPuSYbc00g.PNG/Screenshot_2025-02-25_01-21-18_%EB%B3%B5%EC%82%AC.png",
     "channelId": "7c52f0becffdf297fcd74c037aeca750",
@@ -15,16 +11,19 @@
       {
         "type": "minor",
         "competitionId": "season1",
+        "category": "team",
         "detail": "4위"
       },
       {
         "type": "minor",
         "competitionId": "season2",
+        "category": "team",
         "detail": "4위"
       },
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "team",
         "detail": "2위"
       }
     ]
@@ -33,11 +32,7 @@
     "id": "chochou",
     "displayName": "쵸쵸우",
     "aliases": [],
-    "tiers": {
-      "season1": "2",
-      "season2": "1",
-      "season3": "2"
-    },
+    "tiers": { "season1": "2", "season2": "1", "season3": "2" },
     "racingNumber": 3,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTEwMThfMTUg/MDAxNzYwNzcxMTcxODg0.M6BYKFzB6YYo5PjzP001vrY3NmqKScG9_PLIbsi33bog.XG2mZOPfCvOqoEyJjuzT27PvbJndccEOf14am4fMnc4g.PNG/image.png",
     "channelId": "6ec2829475b485474e7bd1df449cb160",
@@ -45,16 +40,19 @@
       {
         "type": "major",
         "competitionId": "season1",
+        "category": "team",
         "detail": "2위"
       },
       {
         "type": "major",
         "competitionId": "season2",
+        "category": "team",
         "detail": "2위"
       },
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "team",
         "detail": "2위"
       }
     ]
@@ -63,9 +61,7 @@
     "id": "reana",
     "displayName": "레아나",
     "aliases": ["레아나 Reana"],
-    "tiers": {
-      "season3": "1"
-    },
+    "tiers": { "season3": "1" },
     "racingNumber": 4,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDEyMjdfMjUg/MDAxNzM1MjMwNzI4MTE4.JWJaRWMwTB9aFJEzcDCHWIk6H8DcEShdngkkxCHiNWgg.VJ-lixkTyICVOZl_xW1WalQTxAdMXXLlCDeMGZa1ylog.PNG/630F5D06-4AEE-4B79-B834-4C53E7046B3C-1735230726.png",
     "channelId": "dcf8337aa57ed257b1c76bafbdb5c054",
@@ -73,6 +69,7 @@
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "team",
         "detail": "우승"
       }
     ]
@@ -81,10 +78,7 @@
     "id": "park-insoo",
     "displayName": "박인수",
     "aliases": ["박인수님"],
-    "tiers": {
-      "season2": "4",
-      "season3": "6"
-    },
+    "tiers": { "season2": "4", "season3": "6" },
     "racingNumber": 6,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDEyMjdfNDcg/MDAxNzM1MjYyOTQxOTQ0.ezkY5_sTbSviL-dluZ8CUdUNpVEgXT5QgKqLIRoQ_R0g.8SsuZ7gSS0zV1fK06nkrdWBot2o00H-i9_sxF1HbEjAg.PNG/%EC%BA%A1%EC%B2%98.PNG",
     "channelId": "b606f3cf911e989caf67b9a1794891dd",
@@ -92,6 +86,7 @@
       {
         "type": "minor",
         "competitionId": "season2",
+        "category": "team",
         "detail": "3위"
       }
     ]
@@ -100,11 +95,7 @@
     "id": "hyungdok",
     "displayName": "형독",
     "aliases": ["형 독"],
-    "tiers": {
-      "season1": "4",
-      "season2": "4",
-      "season3": "6"
-    },
+    "tiers": { "season1": "4", "season2": "4", "season3": "6" },
     "racingNumber": 7,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyMzEyMTlfNTUg/MDAxNzAyOTYyODM3NjYy.Pij3PfS7CFpHOuFYJK08pKttkiyAmJje3bvrV9geCEcg.TR5kgkIN4zIHE75VhqFIIS9LHIvl9HbgHiygHY5ugMAg.PNG/%EC%BA%A1%EC%B2%98.PNG",
     "channelId": "aeb5b654cad7a2c0a0e6633a6d6de4aa",
@@ -112,26 +103,31 @@
       {
         "type": "major",
         "competitionId": "season1",
+        "category": "team",
         "detail": "우승"
       },
       {
         "type": "major",
         "competitionId": "season1",
+        "category": "individual",
         "detail": "공동 MVP"
       },
       {
         "type": "minor",
         "competitionId": "season2",
+        "category": "team",
         "detail": "3위"
       },
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "team",
         "detail": "우승"
       },
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "individual",
         "detail": "드라이버 챔피언"
       }
     ]
@@ -140,10 +136,7 @@
     "id": "kim-toki",
     "displayName": "김토키",
     "aliases": [],
-    "tiers": {
-      "season2": "2",
-      "season3": "4"
-    },
+    "tiers": { "season2": "2", "season3": "4" },
     "racingNumber": 8,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNjAxMDdfNTIg/MDAxNzY3Nzg1MTI2MjY0._2HP7d-AanF16RbeMi8lCIZGIyJicAireJlbV_b-HcIg.RZPpLEOleYkKrnqEifegaVqEYL6ZoJs138TTzgPmq9kg.PNG/image.png",
     "channelId": "fc1141b66bf941e151e467ceef713acc",
@@ -151,11 +144,13 @@
       {
         "type": "major",
         "competitionId": "season2",
+        "category": "team",
         "detail": "우승"
       },
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "4위"
       }
     ]
@@ -164,9 +159,7 @@
     "id": "sdsd97",
     "displayName": "새담",
     "aliases": ["새 담"],
-    "tiers": {
-      "season3": "1+"
-    },
+    "tiers": { "season3": "1+" },
     "racingNumber": 9,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA3MjFfMjEy/MDAxNzUzMDMzMDU2MDc0.gQzz7fef71sWINluosL4l5QByi-pSJc8FF4MgFk4wZog.5duokPlQwTzTjQx0s4eW4s7Ll7KFDdXPG3s5Nq7IV1Ag.PNG/12321%EB%B2%84%EC%B9%B4%ED%8E%98.png",
     "channelId": "ca76c17a026bb41e6ff9e3fc5641de63",
@@ -174,6 +167,7 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "3위"
       }
     ]
@@ -182,10 +176,7 @@
     "id": "kanetv8",
     "displayName": "케인",
     "aliases": [],
-    "tiers": {
-      "season2": "1",
-      "season3": "1"
-    },
+    "tiers": { "season2": "1", "season3": "1" },
     "racingNumber": 11,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyMzEyMzBfNzgg/MDAxNzAzOTQwNDMzODQ5.48RISrAeqRRbJRT70D2CF-Wp7fSQ8ndia4WDrFXQpfog.Xiq58lXhEQw4syKG1K7FxW8CQuWbpd2C5bGcGk67ltcg.JPEG/kanetvpro.jpg",
     "channelId": "7b1acb37b35928ff690d011296a9e5ab",
@@ -193,6 +184,7 @@
       {
         "type": "minor",
         "competitionId": "season2",
+        "category": "team",
         "detail": "4위"
       }
     ]
@@ -201,11 +193,7 @@
     "id": "namgung-hyuk",
     "displayName": "남궁혁",
     "aliases": [],
-    "tiers": {
-      "season1": "4",
-      "season2": "4",
-      "season3": "6"
-    },
+    "tiers": { "season1": "4", "season2": "4", "season3": "6" },
     "racingNumber": 14,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDAzMThfMjU1/MDAxNzEwNzY1MjU1NTI0.Ck6-tQ9RvJSNVABS7AgI79sjy_nRFIUxeylhP4YY_uwg.pwxCb-pIXDbz3zTAvUJVUt6F5vJFyfOpDAxBwA0DFGsg.JPEG/NNG-17107652551077865765651406729381.jpg",
     "channelId": "2cc562e9370970d567c1a25c5c7d0e77",
@@ -213,26 +201,31 @@
       {
         "type": "major",
         "competitionId": "season1",
+        "category": "team",
         "detail": "2위"
       },
       {
         "type": "major",
         "competitionId": "season1",
+        "category": "individual",
         "detail": "공동 MVP"
       },
       {
         "type": "major",
         "competitionId": "season2",
+        "category": "team",
         "detail": "우승"
       },
       {
         "type": "major",
         "competitionId": "season2",
+        "category": "individual",
         "detail": "최종 MVP"
       },
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "4위"
       }
     ]
@@ -241,9 +234,7 @@
     "id": "yu-yeonghyeok",
     "displayName": "유영혁",
     "aliases": ["유 영 혁"],
-    "tiers": {
-      "season3": "4+"
-    },
+    "tiers": { "season3": "4+" },
     "racingNumber": 17,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA3MzFfMTQ3/MDAxNzUzOTM3NzUwNjQz.kLQzrAshI-5WqWgP1veHqSr8hkcL4NVjFP0_Wp4bcJog.DETHvbvVg4js5XunzK2aih3xKZe81RJy9yDxyr1HmhUg.PNG/%EC%9C%A0%ED%8A%9C%EB%B8%8C_%ED%94%84%EC%82%AC_%EC%9B%90%EB%B3%B8_4.png",
     "channelId": "1e552e3c8ac6abefb4f22f314bbb6b30",
@@ -251,6 +242,7 @@
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "team",
         "detail": "우승"
       }
     ]
@@ -259,9 +251,7 @@
     "id": "mytyl-maerchen",
     "displayName": "미치르 메르헨",
     "aliases": ["미치르"],
-    "tiers": {
-      "season3": "1+"
-    },
+    "tiers": { "season3": "1+" },
     "racingNumber": 19,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTAxMTFfMjA1/MDAxNzM2NTYxNTY1MjM5.LHOwcdeEiBHlTlb7_lmc4ApKzUM_WsSgTNclvF-OZi4g.LwGHvmRoTzYW5sY07ld3GI0zgwKwxlS4fPmzq0DGse4g.PNG/%EB%8B%B9%EB%8B%B9_3248_%EB%B3%B5%EC%82%AC.png",
     "channelId": "390efc6c5186f85427b2d61297a9d4ed",
@@ -269,6 +259,7 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "5위"
       }
     ]
@@ -277,10 +268,7 @@
     "id": "zen1th-hwang",
     "displayName": "제황",
     "aliases": [],
-    "tiers": {
-      "season2": "4",
-      "season3": "5"
-    },
+    "tiers": { "season2": "4", "season3": "5" },
     "racingNumber": 21,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDAxMjZfMTky/MDAxNzA2MjI5MjQ0NDY0.4RjN3CYbXbGrMwXQG-92n8edbGwHuEnz5F0I_fHfLs8g.jYLmmkojrVUYqovZDtLCSV035zucpYI9nrL_0p7zDPog.PNG/%ED%94%84%EC%82%AC%EC%9A%A93.png",
     "channelId": "746c8b5620110859dd5bc37509f2048c",
@@ -288,16 +276,19 @@
       {
         "type": "major",
         "competitionId": "season2",
+        "category": "team",
         "detail": "2위"
       },
       {
         "type": "major",
         "competitionId": "season2",
+        "category": "individual",
         "detail": "예선 MVP"
       },
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "5위"
       }
     ]
@@ -306,9 +297,7 @@
     "id": "psy-haruto",
     "displayName": "하루토",
     "aliases": [],
-    "tiers": {
-      "season3": "3"
-    },
+    "tiers": { "season3": "3" },
     "racingNumber": 24,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDExMjNfMTM5/MDAxNzMyMjk3MDY3NzI0.zw8S28xayBNMAhTvC3f5933lwn-wvbjB859VTlDRhiMg.F5CeZuZFjKQczrdrcSwhFsUJVBPIF3P-7Kx_r5QFDGsg.JPEG/%ED%94%84%EC%82%AC.jpg",
     "channelId": "4f891095bc91025428ba2e8c375ef86c",
@@ -316,6 +305,7 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "3위"
       }
     ]
@@ -324,11 +314,7 @@
     "id": "reo",
     "displayName": "김레오",
     "aliases": ["김 레 오"],
-    "tiers": {
-      "season1": "3",
-      "season2": "3",
-      "season3": "5"
-    },
+    "tiers": { "season1": "3", "season2": "3", "season3": "5" },
     "racingNumber": 25,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMTY5/MDAxNzAzNzY3NzY4NDcx.JYDHqUJOKXCpCSJcx0GVgzPBVH-mhsK9IdGNvTjr57Ig.B8Sr74bY42q3POxc1Taw2DvxKVfz5LUGStqHDdsEgdUg.PNG/%EC%A7%80%EA%B0%81.png",
     "channelId": "39bfa909acb03a83977e39e7ca29d9ed",
@@ -336,16 +322,19 @@
       {
         "type": "major",
         "competitionId": "season1",
+        "category": "team",
         "detail": "우승"
       },
       {
         "type": "minor",
         "competitionId": "season2",
+        "category": "team",
         "detail": "4위"
       },
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "3위"
       }
     ]
@@ -354,11 +343,7 @@
     "id": "oversleepzzz",
     "displayName": "늦잠",
     "aliases": [],
-    "tiers": {
-      "season1": "2",
-      "season2": "2",
-      "season3": "3+"
-    },
+    "tiers": { "season1": "2", "season2": "2", "season3": "3+" },
     "racingNumber": 31,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTAyMjhfMTQx/MDAxNzQwNzQ5MTUwMzA1.QhLQCRd0xxs2SWBdV5JPOH_AqwFXha5nYNepKmcx5Hgg.PE650l5QXYDGMTfJVxQhLOIWetG72aBzP1r04X335lwg.PNG/%ED%94%84%EB%A1%9C%ED%95%84%EC%9A%A9.png",
     "channelId": "e9ff6a0d42f604ac57fcd53f1c3b9bc0",
@@ -366,16 +351,19 @@
       {
         "type": "minor",
         "competitionId": "season1",
+        "category": "team",
         "detail": "3위"
       },
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "team",
         "detail": "우승"
       },
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "team",
         "detail": "STINT 1 1위"
       }
     ]
@@ -384,9 +372,7 @@
     "id": "u-lili",
     "displayName": "유리리",
     "aliases": [],
-    "tiers": {
-      "season3": "1+"
-    },
+    "tiers": { "season3": "1+" },
     "racingNumber": 33,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA3MjJfMTI4/MDAxNzUzMTcwMjgwNzYx.2aFLhWsm7iBzTU04u_Dvr-G7Egt4Wizw33mRk0l72WAg.f0nBrZZptk3Rf3uUHAlVbwcqbux4oFNjXHv4CbhMiNUg.JPEG/%EB%B3%B4%EB%87%BD%EB%8B%98_%ED%8C%AC%EC%95%84%ED%8A%B8.jpg",
     "channelId": "29a1ed5c0829fa620fab900dba7e011b",
@@ -394,6 +380,7 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "4위"
       }
     ]
@@ -402,9 +389,7 @@
     "id": "samozang",
     "displayName": "사모장",
     "aliases": [],
-    "tiers": {
-      "season3": "4+"
-    },
+    "tiers": { "season3": "4+" },
     "racingNumber": 35,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDEyMjRfMTk5/MDAxNzM0OTg0MjY2ODI5.Js9OZxUWCrLD8DwRCK93OfhqWLxSZuvp-SgHC3sM5C0g.xxUwMRwLMbpm2aKEF4dnLSb_tkqkmNMuU_Kv8qHTcykg.PNG/12.png",
     "channelId": "23d5909c6b808d80ee28a9a2d509fecc",
@@ -412,6 +397,7 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "3위"
       }
     ]
@@ -420,11 +406,7 @@
     "id": "cheongalice",
     "displayName": "강지형",
     "aliases": [],
-    "tiers": {
-      "season1": "3",
-      "season2": "4",
-      "season3": "5"
-    },
+    "tiers": { "season1": "3", "season2": "4", "season3": "5" },
     "racingNumber": 38,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTExMDZfOTMg/MDAxNzYyNDIxMDEyNDM2.x_7pzGRNKu-o6lWFF5DAVezoeq6S0yOATO_TQkTdF5Ig.YSpsI4F5X-n4J6Aoao5g2UesmO7yrAhr-w0N1IXZZSAg.PNG/image.png",
     "channelId": "9eef2be9e25d137c0f55b13673e40749",
@@ -432,16 +414,19 @@
       {
         "type": "minor",
         "competitionId": "season1",
+        "category": "team",
         "detail": "3위"
       },
       {
         "type": "major",
         "competitionId": "season2",
+        "category": "team",
         "detail": "2위"
       },
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "team",
         "detail": "2위"
       }
     ]
@@ -450,9 +435,7 @@
     "id": "kevinstudio",
     "displayName": "최케빈",
     "aliases": ["최케빈님"],
-    "tiers": {
-      "season3": "2"
-    },
+    "tiers": { "season3": "2" },
     "racingNumber": 40,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDExMThfMTUz/MDAxNzMxOTMwMjc5MDk0.gYuSNC1L0Ujwj6MLGArCr33r-qwMzTZCUu6C-kUb6Uog.wyAwwVwMoeyuzH_COg9fDJMV53lHIkRCgkwakSjWho4g.PNG/%ED%99%94%EB%A9%B4_%EC%BA%A1%EC%B2%98_2024-11-18_204417.png",
     "channelId": "a72c9f9c3d835078b97a520dded8e6d2",
@@ -460,6 +443,7 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "4위"
       }
     ]
@@ -468,11 +452,7 @@
     "id": "hamkubby",
     "displayName": "햄쿠비",
     "aliases": [],
-    "tiers": {
-      "season1": "1",
-      "season2": "2",
-      "season3": "3"
-    },
+    "tiers": { "season1": "1", "season2": "2", "season3": "3" },
     "racingNumber": 44,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTEyMjJfMjE3/MDAxNzY2Mzg2OTg3ODk1.1acZIMhW2shvmGDkv6taba35Ojr75XDqxpCKaUIzSFwg.s4E5tYOZv7eJSZwFELZ_ybV8rztf-z5Nd3Tqd5ucPfgg.PNG/image.png",
     "channelId": "9351fb8417f73405c84e0846409e3263",
@@ -480,11 +460,13 @@
       {
         "type": "major",
         "competitionId": "season1",
+        "category": "team",
         "detail": "우승"
       },
       {
         "type": "major",
         "competitionId": "season2",
+        "category": "team",
         "detail": "우승"
       }
     ]
@@ -493,9 +475,7 @@
     "id": "half",
     "displayName": "하쁘",
     "aliases": ["하 쁘"],
-    "tiers": {
-      "season3": "1"
-    },
+    "tiers": { "season3": "1" },
     "racingNumber": 50,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNjAxMTFfMjU4/MDAxNzY4MTMyNjU2MTc0.N21NeaRTiEUyPKRr3G0ESrle1VXR2UG4sFgO_JTw6QEg.e57GZJMXqBOx5d5movvnqYos_vBLo9XK0jO7Ajt9OAIg.PNG/image.png",
     "channelId": "79bc9b927d5c187f9d8fa5a56b194c37",
@@ -503,6 +483,7 @@
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "team",
         "detail": "2위"
       }
     ]
@@ -511,11 +492,7 @@
     "id": "hera",
     "displayName": "헤라",
     "aliases": ["HERA 헤라"],
-    "tiers": {
-      "season1": "2",
-      "season2": "2",
-      "season3": "4"
-    },
+    "tiers": { "season1": "2", "season2": "2", "season3": "4" },
     "racingNumber": 55,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDExMjFfMTU1/MDAxNzMyMTc5OTkyMzg3.P3-hIM11TlNcO4VIYnSGGyvNSxcssNndNJTFetatLRUg.EmZiwaB_4og0y-dRp2nm2kOYJzJSIDbk8YHwlQh9PyYg.PNG/1.png",
     "channelId": "b14e49789bae3c00b6b4c98d60ff036d",
@@ -523,16 +500,19 @@
       {
         "type": "minor",
         "competitionId": "season1",
+        "category": "team",
         "detail": "3위"
       },
       {
         "type": "minor",
         "competitionId": "season2",
+        "category": "team",
         "detail": "4위"
       },
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "4위"
       }
     ]
@@ -541,11 +521,7 @@
     "id": "odanming",
     "displayName": "오단밍",
     "aliases": [],
-    "tiers": {
-      "season1": "1",
-      "season2": "2",
-      "season3": "3+"
-    },
+    "tiers": { "season1": "1", "season2": "2", "season3": "3+" },
     "racingNumber": 61,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNjAyMjNfMTM1/MDAxNzcxODEyNzM4NjQ5.sltDjUfyZbVG2VRRjkD8rzLErgMAXC3unZZ5hOD290Mg.zaphgyeMZQEYy7A2j_EGTrx8aX6P9uinJqSIa3pdhWog.JPEG/image.jpg",
     "channelId": "f3b204dd3fd6925835ca1848cd4b6d3c",
@@ -553,21 +529,25 @@
       {
         "type": "major",
         "competitionId": "season1",
+        "category": "team",
         "detail": "2위"
       },
       {
         "type": "major",
         "competitionId": "season2",
+        "category": "team",
         "detail": "우승"
       },
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "team",
         "detail": "우승"
       },
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "team",
         "detail": "STINT 2 1위"
       }
     ]
@@ -576,9 +556,7 @@
     "id": "ichika-hibi",
     "displayName": "이치카 히비",
     "aliases": ["히비"],
-    "tiers": {
-      "season3": "1+"
-    },
+    "tiers": { "season3": "1+" },
     "racingNumber": 67,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNjAxMjRfNDMg/MDAxNzY5MTgzMjg4OTcx.EUCvJFD0BWZiqhTFeCbGVIsP35Lnmr-yEwlKZLNQJKEg.TazUa4PZPzU6Zc2YTCzvzCqzplZ-5lSXurxydJEHM18g.JPEG/image.jpg",
     "channelId": "206afc6829e734e662ed0bf24dcbac0e",
@@ -586,6 +564,7 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "5위"
       }
     ]
@@ -594,10 +573,7 @@
     "id": "parkgee",
     "displayName": "박지",
     "aliases": ["박지 Parkgee"],
-    "tiers": {
-      "season2": "3",
-      "season3": "4"
-    },
+    "tiers": { "season2": "3", "season3": "4" },
     "racingNumber": 69,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDAyMDNfMTkz/MDAxNzA2OTU5ODAzOTc1.KbPi5W25c8Ri4o5GBChxBueXf8tQnNNdI7CT0-CwGw4g.z7f4T9WjXTXOmb1Mrlvr2l_QvxXZBwe02VJCKub3ktcg.PNG/KakaoTalk_20240203_202946186.png",
     "channelId": "bfb6ce1590bb82b28f0f69b7b4290b4c",
@@ -605,6 +581,7 @@
       {
         "type": "minor",
         "competitionId": "season2",
+        "category": "team",
         "detail": "3위"
       }
     ]
@@ -613,9 +590,7 @@
     "id": "auro",
     "displayName": "아로",
     "aliases": ["아로AURO"],
-    "tiers": {
-      "season3": "1"
-    },
+    "tiers": { "season3": "1" },
     "racingNumber": 70,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA5MTJfMTcy/MDAxNzU3Njc1NDUzMDIx.-ZWl7uODNdTtwOiJVFRiASK1Ow0bY_M_m2h_48sMpw8g.S-nEWBtBPShWJxxObcfpNy0i9MQ0l6w5h108BIXiQS0g.PNG/image.png",
     "channelId": "4a3cab967a74a5020258195fc9004145",
@@ -623,6 +598,7 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "3위"
       }
     ]
@@ -631,9 +607,7 @@
     "id": "lotionyum",
     "displayName": "로션욤",
     "aliases": [],
-    "tiers": {
-      "season3": "2"
-    },
+    "tiers": { "season3": "2" },
     "racingNumber": 71,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTEwMThfMyAg/MDAxNzYwNzY5MDYwMDk5.x-9zt0q9GTYN3Vvr7uC42ox9_sLE55jtP6ABlEvuW2sg.Ls3IUKyDkYQxv060n2TIV1HiJh2a8-FxD2Xl2hTch_gg.PNG/image.png",
     "channelId": "e234729686832d379d7da804517ac9d9",
@@ -641,6 +615,7 @@
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "team",
         "detail": "2위"
       }
     ]
@@ -649,10 +624,7 @@
     "id": "nodolly",
     "displayName": "노돌리",
     "aliases": ["노돌노돌리"],
-    "tiers": {
-      "season2": "3",
-      "season3": "4"
-    },
+    "tiers": { "season2": "3", "season3": "4" },
     "racingNumber": 72,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyMzEyMjJfMjEw/MDAxNzAzMjM4MDc2OTE1.r2HS8y8-xxy70IY7doH2r6eTTavFwPpddzZlqAxAl4kg.I29N0KpC4Mdh_dRkUvxiEenw2FrfzKAEXiHX2Y1OAcMg.JPEG/unnamed.jpg",
     "channelId": "ec857bee6cded06df19dae85cf37f878",
@@ -660,6 +632,7 @@
       {
         "type": "major",
         "competitionId": "season2",
+        "category": "team",
         "detail": "2위"
       }
     ]
@@ -668,11 +641,7 @@
     "id": "yang-mei",
     "displayName": "양메이",
     "aliases": [],
-    "tiers": {
-      "season1": "2",
-      "season2": "1",
-      "season3": "3"
-    },
+    "tiers": { "season1": "2", "season2": "1", "season3": "3" },
     "racingNumber": 77,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyMzEyMjBfMTk2/MDAxNzAzMDE4NTA1OTYy.Ts4pMcSXVFyCH-BmRfhkaV3UZ_aki2prFrsE_Kur8nwg.c16cvpS0Zz0ESd1AhbbYtjBLgAygVUgsiquab8UUa0kg.PNG/8_1.png",
     "channelId": "f1869f490ddd660c420b2f57c649e6bb",
@@ -680,16 +649,19 @@
       {
         "type": "minor",
         "competitionId": "season1",
+        "category": "team",
         "detail": "4위"
       },
       {
         "type": "minor",
         "competitionId": "season2",
+        "category": "team",
         "detail": "3위"
       },
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "5위"
       }
     ]
@@ -698,10 +670,7 @@
     "id": "eaglekop",
     "displayName": "이글콥",
     "aliases": [],
-    "tiers": {
-      "season2": "1",
-      "season3": "2"
-    },
+    "tiers": { "season2": "1", "season3": "2" },
     "racingNumber": 89,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNjAyMTNfMjky/MDAxNzcwOTc1MTg1NjYz.3l6m-Qxs4gM91cTEFahXVsswQKbogA2u2XVeT_RW-uIg.Ay7Eejmi-xmxttAu5QJcF02aGS68lylx95kzFziACSwg.JPEG/image.jpg",
     "channelId": "eaf7b569c9992d0e57db0059eb5c0eeb",
@@ -709,11 +678,13 @@
       {
         "type": "major",
         "competitionId": "season2",
+        "category": "team",
         "detail": "2위"
       },
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "4위"
       }
     ]
@@ -722,10 +693,7 @@
     "id": "bbogumi",
     "displayName": "뽀구미",
     "aliases": ["뽀구미짱짱"],
-    "tiers": {
-      "season2": "3",
-      "season3": "4"
-    },
+    "tiers": { "season2": "3", "season3": "4" },
     "racingNumber": 92,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDA2MDhfMTYg/MDAxNzE3ODQ2MjAzMzIx.TIMwHvEaXuP9OI7qA_AlooyCESih0yU0IvxPQFYQhssg.FkzdpyABfvMcmwCWQ2ltHE8xt9E348MGH3n76_2uJsMg.JPEG/%EC%9C%A0%ED%8A%9C%EB%B8%8C_%EB%BD%80%EB%A1%9D%EC%9D%B4_%ED%94%84%EB%A1%9C%ED%95%84_%EC%88%98%EC%A0%95.JPG",
     "channelId": "da31fe9ebc06add9bd66ac1bcc1c2f23",
@@ -733,11 +701,13 @@
       {
         "type": "major",
         "competitionId": "season2",
+        "category": "team",
         "detail": "우승"
       },
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "3위"
       }
     ]
@@ -746,9 +716,7 @@
     "id": "100hp-tv",
     "displayName": "백마력티비",
     "aliases": ["백마력"],
-    "tiers": {
-      "season3": "4+"
-    },
+    "tiers": { "season3": "4+" },
     "racingNumber": 95,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTExMTBfMjY3/MDAxNzYyNzI4NjI1ODEw.HIXidIP-EtXXEXE5aJdwr6IJr1RFa-kscYmEDM6oqLYg.xWAakcFqL1Wu0t7rzeVV2K0bFG-5PPiJxSPmLFI5Ip0g.JPEG/image.jpg",
     "channelId": "a3028b1a9bb675ec442b3a052a15e7e4",
@@ -756,6 +724,7 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "5위"
       }
     ]
@@ -764,9 +733,7 @@
     "id": "haematl",
     "displayName": "해마티엘",
     "aliases": [],
-    "tiers": {
-      "season3": "4"
-    },
+    "tiers": { "season3": "4" },
     "racingNumber": 96,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDAzMDNfMjEz/MDAxNzA5NDY3OTQ4Njc4.Ivgde1PgzYBB8WmbxHUbdfaKx2kr7qV0ONaCBV7PMOwg.gGgDz5skHCApvz4aefDv-MLLqXY1mj6WH8L1VmtUNjQg.PNG/%EC%A0%9C%EB%AA%A9_%EC%97%86%EC%9D%8C-1.png",
     "channelId": "769efbb252d48296224621451c6a1d9a",
@@ -774,6 +741,7 @@
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "team",
         "detail": "우승"
       }
     ]
@@ -782,10 +750,7 @@
     "id": "moon-hojun",
     "displayName": "문호준",
     "aliases": ["카트문호준"],
-    "tiers": {
-      "season2": "3",
-      "season3": "4"
-    },
+    "tiers": { "season2": "3", "season3": "4" },
     "racingNumber": 97,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDAzMTFfMTM2/MDAxNzEwMTQyNjU2ODkw.B5p2Y08Wqax9xz87FlTKo4CHRjGCrWW25CenzGdGYJYg.QgKaCA927h76jk6VN6JPMMI4os1H9we_Umk5R9euviUg.JPEG/KakaoTalk_20240311_163718976.jpg",
     "channelId": "3095308f0014e0b48de7787498a52c1f",
@@ -793,6 +758,7 @@
       {
         "type": "minor",
         "competitionId": "season2",
+        "category": "team",
         "detail": "4위"
       }
     ]
@@ -801,9 +767,7 @@
     "id": "saessakgamja",
     "displayName": "새싹감자",
     "aliases": ["새싹 감자"],
-    "tiers": {
-      "season3": "3"
-    },
+    "tiers": { "season3": "3" },
     "racingNumber": 98,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyMzEyMjBfMTIw/MDAxNzAzMDYzMjQzNDU5.giNRJYGIhtLIdyrSWXroXCa-9Ie0KWP_enx5V9sEzhMg.USdSrg7P7KgyjBUFetgDaKgErs0wz0mo9x3n361LLEwg.PNG/%ED%82%A4%EB%A7%81.png",
     "channelId": "4fa802e51ccdbfd071d3df494e329ee1",
@@ -811,6 +775,7 @@
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "team",
         "detail": "2위"
       }
     ]
@@ -819,11 +784,7 @@
     "id": "a2-duck",
     "displayName": "서애덕",
     "aliases": [],
-    "tiers": {
-      "season1": "1",
-      "season2": "2",
-      "season3": "3"
-    },
+    "tiers": { "season1": "1", "season2": "2", "season3": "3" },
     "racingNumber": 99,
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDAyMDVfMjUg/MDAxNzA3MTMwNzE4ODA4.Upnp6qjBk_QMXxLioq-qRezres5fFVRMkGsIMwZndkEg.DWsEpcnmCe0ES2hfMz6uCijPe8rIv9molWgN_8TrvkUg.PNG/5.png",
     "channelId": "643d491a022eaf3991f0576c7a2a97d4",
@@ -831,16 +792,19 @@
       {
         "type": "minor",
         "competitionId": "season1",
+        "category": "team",
         "detail": "4위"
       },
       {
         "type": "minor",
         "competitionId": "season2",
+        "category": "team",
         "detail": "3위"
       },
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
         "detail": "5위"
       }
     ]
