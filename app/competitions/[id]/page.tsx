@@ -100,7 +100,10 @@ export default async function CompetitionDetail({
                   <TableHead className="text-center">팀</TableHead>
                   <TableHead
                     className="text-center"
-                    colSpan={competition.teams[0].members.length}
+                    colSpan={competition.teams.reduce(
+                      (max, team) => Math.max(max, team.members.length),
+                      0,
+                    )}
                   >
                     팀원
                   </TableHead>
@@ -112,30 +115,32 @@ export default async function CompetitionDetail({
                     <TableCell className="text-center">
                       <Badge className={team.style?.badge}>{team.name}</Badge>
                     </TableCell>
-                    {team.members.map((memberId) => (
-                      <TableCell key={memberId} className="text-center">
-                        <div className="flex flex-row gap-4 items-center px-2">
-                          <Link
-                            href={`/players/${memberId}`}
-                            className="flex items-center underline hover:no-underline"
-                          >
-                            <Avatar>
-                              <AvatarImage
-                                src={players[memberId].avatarUrl}
-                                alt={players[memberId].displayName}
-                                className="object-cover"
-                              />
-                              <AvatarFallback>
-                                {players[memberId].displayName.charAt(0)}
-                              </AvatarFallback>
-                            </Avatar>
-                            <span className="ml-2">
-                              {players[memberId]?.displayName}
-                            </span>
-                          </Link>
-                        </div>
-                      </TableCell>
-                    ))}
+                    {team.members
+                      .filter((memberId) => players[memberId] !== undefined)
+                      .map((memberId) => (
+                        <TableCell key={memberId} className="text-center">
+                          <div className="flex flex-row gap-4 items-center px-2">
+                            <Link
+                              href={`/players/${memberId}`}
+                              className="flex items-center underline hover:no-underline"
+                            >
+                              <Avatar>
+                                <AvatarImage
+                                  src={players[memberId].avatarUrl}
+                                  alt={players[memberId].displayName}
+                                  className="object-cover"
+                                />
+                                <AvatarFallback>
+                                  {players[memberId].displayName.charAt(0)}
+                                </AvatarFallback>
+                              </Avatar>
+                              <span className="ml-2">
+                                {players[memberId]?.displayName}
+                              </span>
+                            </Link>
+                          </div>
+                        </TableCell>
+                      ))}
                   </TableRow>
                 ))}
               </TableBody>
