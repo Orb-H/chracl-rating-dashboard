@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { loadCompetitions } from "@/lib/loadCompetitions";
 import { Competition } from "@/types/competition";
@@ -33,13 +34,14 @@ export default function Competitions() {
 function competitionCardList(competitions: Competition[]) {
   return (
     <div className="grid w-full gap-8 grid-cols-1 md:grid-cols-2">
-      {/* TODO(#14): Add a link to each competition*/}
       {competitions.map((competition) => (
-        <CompetitionCard
+        <Link
           key={competition.id}
-          id={competition.id}
-          name={competition.name}
-        />
+          href={`/competitions/${competition.id}`}
+          className="underline hover:no-underline"
+        >
+          <CompetitionCard id={competition.id} name={competition.name} />
+        </Link>
       ))}
     </div>
   );
