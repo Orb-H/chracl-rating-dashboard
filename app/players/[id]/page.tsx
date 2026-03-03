@@ -259,12 +259,11 @@ function CareerList({
             if (!careerItems || careerItems.length === 0) {
               return null;
             }
-            // TODO: Determine career type by introducing field in career, rather than relying on string matching.
-            const individualCareer = careerItems.find((item) =>
-              isIndividualWin(item.detail),
+            const individualCareers = careerItems.filter(
+              (item) => item.category === "individual",
             );
             const teamCareer = careerItems.find(
-              (item) => !isIndividualWin(item.detail),
+              (item) => item.category === "team",
             );
 
             return (
@@ -334,23 +333,29 @@ function CareerList({
                   })()}
                 </TableCell>
                 <TableCell>
-                  {individualCareer && (
-                    <span
-                      className={
-                        individualCareer.type === "major"
-                          ? "font-semibold bg-accent text-accent-foreground px-2 py-1 rounded-md"
-                          : ""
-                      }
-                    >
-                      {isIndividualWin(individualCareer.detail) && (
-                        <StarIcon
-                          className="inline w-4 h-4"
-                          aria-label="개인 수상"
-                        />
-                      )}{" "}
-                      {individualCareer.detail}
-                    </span>
-                  )}
+                  {individualCareers &&
+                    individualCareers.length > 0 &&
+                    individualCareers.map((individualCareer) => (
+                      <span
+                        key={
+                          individualCareer.competitionId +
+                          individualCareer.detail
+                        }
+                        className={
+                          individualCareer.type === "major"
+                            ? "font-semibold bg-accent text-accent-foreground px-2 py-1 rounded-md"
+                            : ""
+                        }
+                      >
+                        {isIndividualWin(individualCareer.detail) && (
+                          <StarIcon
+                            className="inline w-4 h-4"
+                            aria-label="개인 수상"
+                          />
+                        )}{" "}
+                        {individualCareer.detail}
+                      </span>
+                    ))}
                 </TableCell>
               </TableRow>
             );
