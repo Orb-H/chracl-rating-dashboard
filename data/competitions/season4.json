@@ -45,7 +45,88 @@
     "grubby-puppy",
     "haeoni"
   ],
-  "teams": [],
+  "teams": [
+    {
+      "id": "season4-redbull",
+      "name": "Red Bull",
+      "members": ["hyungdok", "violin-bear"],
+      "style": {
+        "badge": "bg-indigo-50 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300"
+      }
+    },
+    {
+      "id": "season4-mclaren",
+      "name": "McLaren",
+      "members": ["zen1th-hwang", "haeoni"],
+      "style": {
+        "badge": "bg-orange-50 text-orange-700 dark:bg-orange-950 dark:text-orange-300"
+      }
+    },
+    {
+      "id": "season4-mercedes",
+      "name": "Mercedes",
+      "members": ["park-insoo", "saessakgamja"],
+      "style": {
+        "badge": "bg-teal-50 text-teal-700 dark:bg-teal-950 dark:text-teal-300"
+      }
+    },
+    {
+      "id": "season4-ferrari",
+      "name": "Ferrari",
+      "members": ["samozang", "mytyl-maerchen"],
+      "style": {
+        "badge": "bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300"
+      }
+    },
+    {
+      "id": "season4-racing-bulls",
+      "name": "Racing Bulls",
+      "members": ["yu-yeonghyeok", "u-lili"],
+      "style": {
+        "badge": "bg-sky-50 text-sky-700 dark:bg-sky-950 dark:text-sky-300"
+      }
+    },
+    {
+      "id": "season4-alpine",
+      "name": "Alpine",
+      "members": ["yona", "ichika-hibi"],
+      "style": {
+        "badge": "bg-cyan-50 text-cyan-700 dark:bg-cyan-950 dark:text-cyan-300"
+      }
+    },
+    {
+      "id": "season4-aston-martin",
+      "name": "Aston Martin",
+      "members": ["shaunjjang", "half"],
+      "style": {
+        "badge": "bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-300"
+      }
+    },
+    {
+      "id": "season4-williams",
+      "name": "Williams",
+      "members": ["namgung-hyuk", "odanming"],
+      "style": {
+        "badge": "bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300"
+      }
+    },
+    {
+      "id": "season4-sauber",
+      "name": "Sauber",
+      "members": ["yang-mei", "nam-siwoo"],
+      "style": {
+        "badge": "bg-lime-50 text-lime-700 dark:bg-lime-950 dark:text-lime-300"
+      }
+    },
+    {
+      "id": "season4-haas",
+      "name": "Haas",
+      "members": ["cheongalice", "remilia"],
+      "style": {
+        "badge": "bg-gray-50 text-gray-700 dark:bg-gray-950 dark:text-gray-300"
+      }
+    }
+  ],
   "matches": [
     "season4-pre-first-qual",
     "season4-pre-second-a-qual",
