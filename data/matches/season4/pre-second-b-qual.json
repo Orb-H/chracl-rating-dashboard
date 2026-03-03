@@ -8,5 +8,123 @@
   "type": "QUALIFYING",
   "kind": "INDIVIDUAL",
   "trackName": "호주 앨버트 파크",
-  "participants": []
+  "participants": [
+    {
+      "id": "nam-siwoo",
+      "place": 1,
+      "ratedPlace": 2,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:18.046"
+      }
+    },
+    {
+      "id": "half",
+      "place": 2,
+      "ratedPlace": 3,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:18.350"
+      }
+    },
+    {
+      "id": "violin-bear",
+      "place": 3,
+      "ratedPlace": 4,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:18.438"
+      }
+    },
+    {
+      "id": "grubby-puppy",
+      "place": 4,
+      "ratedPlace": 5,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:18.682"
+      }
+    },
+    {
+      "id": "haeoni",
+      "place": 5,
+      "ratedPlace": 7,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:18.748"
+      }
+    },
+    {
+      "id": "ichika-hibi",
+      "place": 6,
+      "ratedPlace": 8,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:18.753"
+      }
+    },
+    {
+      "id": "saessakgamja",
+      "place": 7,
+      "ratedPlace": 9,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:18.841"
+      }
+    },
+    {
+      "id": "odanming",
+      "place": 8,
+      "ratedPlace": 10,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:18.883"
+      }
+    },
+    {
+      "id": "chochou",
+      "place": 9,
+      "ratedPlace": 11,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:19.030"
+      }
+    },
+    {
+      "id": "zadugnocci",
+      "place": 10,
+      "ratedPlace": 13,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:19.534"
+      }
+    },
+    {
+      "id": "hamkubby",
+      "place": 11,
+      "ratedPlace": 16,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:19.849"
+      }
+    },
+    {
+      "id": "kumaru",
+      "place": 12,
+      "ratedPlace": 21,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:23.143"
+      }
+    },
+    {
+      "id": "hong-seowol",
+      "place": 13,
+      "ratedPlace": 23,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:25.320"
+      }
+    }
+  ]
 }

@@ -7,5 +7,86 @@
   "type": "QUALIFYING",
   "kind": "INDIVIDUAL",
   "trackName": "호주 앨버트 파크",
-  "participants": []
+  "participants": [
+    {
+      "id": "hyungdok",
+      "place": 1,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:17.029"
+      }
+    },
+    {
+      "id": "zen1th-hwang",
+      "place": 2,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:17.247"
+      }
+    },
+    {
+      "id": "park-insoo",
+      "place": 3,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:17.347"
+      }
+    },
+    {
+      "id": "samozang",
+      "place": 4,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:17.374"
+      }
+    },
+    {
+      "id": "yu-yeonghyeok",
+      "place": 5,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:17.629"
+      }
+    },
+    {
+      "id": "yona",
+      "place": 6,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:17.674"
+      }
+    },
+    {
+      "id": "shaunjjang",
+      "place": 7,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:18.208"
+      }
+    },
+    {
+      "id": "namgung-hyuk",
+      "place": 8,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:18.234"
+      }
+    },
+    {
+      "id": "yang-mei",
+      "place": 9,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:18.259"
+      }
+    },
+    {
+      "id": "cheongalice",
+      "place": 10,
+      "record": {
+        "status": "FINISHED",
+        "lapTime": "1:18.921"
+      }
+    }
+  ]
 }

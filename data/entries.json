@@ -119,5 +119,17 @@
     "competitionId": "season3",
     "sortKey": 3010103,
     "note": "제 3회 STINT 3 레이스"
+  },
+  {
+    "id": "season4-pre-first-qual",
+    "competitionId": "season4",
+    "sortKey": 4000100,
+    "note": "제 4회 퍼스트 드라이버 서바이벌 예선 (임시)"
+  },
+  {
+    "id": "season4-pre-second-qual",
+    "competitionId": "season4",
+    "sortKey": 4000200,
+    "note": "제 4회 세컨드 드라이버 서바이벌 예선 (임시)"
   }
 ]
