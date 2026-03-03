@@ -104,7 +104,7 @@ export type MatchRecord = {
    * The status of the participant in the match.
    * E.g., `FINISHED`
    */
-  status: "FINISHED" | "DNF";
+  status: "FINISHED" | "DNF" | "DSQ";
 
   /**
    * The lap time of the participant recorded in qualification stage, in [HH:M]M:SS.mmm format.
