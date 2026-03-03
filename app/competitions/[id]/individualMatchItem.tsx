@@ -46,6 +46,14 @@ export function IndividualMatchItem({
             <TableRow key={participant.id}>
               <TableCell className="text-center">
                 {participant.place ?? "-"}
+                {participant.ratedPlace && (
+                  <>
+                    <br />
+                    <span className="text-muted-foreground">
+                      ({participant.ratedPlace})
+                    </span>
+                  </>
+                )}
               </TableCell>
               <TableCell className="text-center">
                 {`${players[participant.id].displayName}`}
