@@ -81,6 +81,11 @@ export type Career = {
   competitionId: string;
 
   /**
+   * Whether the career highlight is associated with a team or an individual. E.g., "team"
+   */
+  category?: "team" | "individual";
+
+  /**
    * Detailed description of the career highlight. E.g., "Won Season 1 Championship"
    */
   detail: string;
