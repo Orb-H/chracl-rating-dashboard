@@ -11,9 +11,14 @@ import { Rating } from "@/types/rating";
 export function PlayerCard({ player }: { player: Player & Rating }) {
   const { teamWinCount, individualWinCount } = player.career?.reduce(
     (acc, career) => ({
-      teamWinCount: acc.teamWinCount + (isTeamWin(career.detail) ? 1 : 0),
+      teamWinCount:
+        acc.teamWinCount +
+        (career.category === "team" && isTeamWin(career.detail) ? 1 : 0),
       individualWinCount:
-        acc.individualWinCount + (isIndividualWin(career.detail) ? 1 : 0),
+        acc.individualWinCount +
+        (career.category === "individual" && isIndividualWin(career.detail)
+          ? 1
+          : 0),
     }),
     { teamWinCount: 0, individualWinCount: 0 },
   ) ?? { teamWinCount: 0, individualWinCount: 0 };
