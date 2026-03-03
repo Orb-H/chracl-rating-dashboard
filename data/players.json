@@ -363,7 +363,7 @@
       {
         "type": "major",
         "competitionId": "season3",
-        "category": "team",
+        "category": "individual",
         "detail": "STINT 1 1위"
       }
     ]
@@ -547,7 +547,7 @@
       {
         "type": "major",
         "competitionId": "season3",
-        "category": "team",
+        "category": "individual",
         "detail": "STINT 2 1위"
       }
     ]
