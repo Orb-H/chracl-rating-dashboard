@@ -2,8 +2,17 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Accordion, AccordionItem } from "@/components/ui/accordion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { loadCompetitionById, loadCompetitions } from "@/lib/loadCompetitions";
 import { loadMatchesByCompetitionId } from "@/lib/loadMatches";
@@ -82,6 +91,60 @@ export default async function CompetitionDetail({
               </p>
             )}
           </div>
+          <Separator className="my-4" />
+          <header className="font-semibold text-lg mb-4">팀 구성</header>
+          {competition.teams.length > 0 ? (
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="text-center">팀</TableHead>
+                  <TableHead
+                    className="text-center"
+                    colSpan={competition.teams[0].members.length}
+                  >
+                    팀원
+                  </TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {competition.teams.map((team) => (
+                  <TableRow key={team.id}>
+                    <TableCell className="text-center">
+                      <Badge className={team.style?.badge}>{team.name}</Badge>
+                    </TableCell>
+                    {team.members.map((memberId) => (
+                      <TableCell key={memberId} className="text-center">
+                        <div className="flex flex-row gap-4 items-center px-2">
+                          <Link
+                            href={`/players/${memberId}`}
+                            className="flex items-center underline hover:no-underline"
+                          >
+                            <Avatar>
+                              <AvatarImage
+                                src={players[memberId].avatarUrl}
+                                alt={players[memberId].displayName}
+                                className="object-cover"
+                              />
+                              <AvatarFallback>
+                                {players[memberId].displayName.charAt(0)}
+                              </AvatarFallback>
+                            </Avatar>
+                            <span className="ml-2">
+                              {players[memberId]?.displayName}
+                            </span>
+                          </Link>
+                        </div>
+                      </TableCell>
+                    ))}
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          ) : (
+            <p className="text-muted-foreground">
+              아직 팀이 구성되지 않았습니다.
+            </p>
+          )}
         </TabsContent>
         <TabsContent value="matches" className="mt-8 w-full">
           <Accordion type="multiple" className="w-full border rounded-lg">
