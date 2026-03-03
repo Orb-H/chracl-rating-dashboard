@@ -46,7 +46,7 @@ export function IndividualMatchItem({
             <TableRow key={participant.id}>
               <TableCell className="text-center">
                 {participant.place ?? "-"}
-                {participant.ratedPlace && (
+                {participant.ratedPlace !== undefined && (
                   <>
                     <br />
                     <span className="text-muted-foreground">
