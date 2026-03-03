@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Competition } from "@/types/competition";
@@ -57,11 +58,17 @@ export function RecordList({
               className="p-4 mb-4 flex flex-col md:flex-row items-center justify-between gap-4"
             >
               <div className="w-full md:w-[50%] text-center md:text-start">
-                <h3 className="text-lg font-semibold">
-                  {/* TODO: Introduce more robust field for competition abbreviation */}
-                  {competition?.sortOrder && `제 ${competition.sortOrder}회 - `}
-                  {match.name}
-                </h3>
+                <Link
+                  href={`/competitions/${match.competitionId}`}
+                  className="underline hover:no-underline"
+                >
+                  <h3 className="text-lg font-semibold">
+                    {/* TODO: Introduce more robust field for competition abbreviation */}
+                    {competition?.sortOrder &&
+                      `제 ${competition.sortOrder}회 - `}
+                    {match.name}
+                  </h3>
+                </Link>
                 <p className="text-sm text-muted-foreground">
                   트랙: {match.trackName}
                 </p>

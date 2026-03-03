@@ -1,4 +1,5 @@
 import { StarIcon, TrophyIcon } from "lucide-react";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { TierBadge } from "@/components/TierBadge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -269,7 +270,12 @@ function CareerList({
             return (
               <TableRow key={competition.id}>
                 <TableCell>
-                  {competition?.shortName ?? competition.name}
+                  <Link
+                    href={`/competitions/${competition.id}`}
+                    className="underline hover:no-underline"
+                  >
+                    {competition?.shortName ?? competition.name}
+                  </Link>
                 </TableCell>
                 <TableCell>
                   {teamCareer && (
