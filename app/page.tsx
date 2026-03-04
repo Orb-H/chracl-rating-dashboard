@@ -4,7 +4,7 @@ import { CompetitionCard } from "./competitionCard";
 import { LeaderboardCard } from "./leaderboardCard";
 
 export default function Home() {
-  const recentCompetitions = loadCompetitions()
+  const recentCompetitions = [...loadCompetitions()]
     .sort((a, b) => b.sortOrder - a.sortOrder)
     .slice(0, 3);
 
