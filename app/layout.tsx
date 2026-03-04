@@ -7,7 +7,7 @@ import { MySidebar } from "@/components/MySidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 
 export const metadata: Metadata = {
-  title: "치레동 레이팅 대시보드",
+  title: "치레동 레이팅 대시보드 β",
   description: "치레동 참가자들의 실력을 숫자로 확인하세요!",
 };
 

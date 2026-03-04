@@ -59,7 +59,7 @@ export function MySidebar() {
             height={24}
             className="scheme-only-light inline align-center"
           />{" "}
-          <span>치레동 레이팅 대시보드</span>
+          <span>치레동 레이팅 대시보드 β</span>
         </SidebarMenuItem>
       </SidebarHeader>
       <SidebarContent>
