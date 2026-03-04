@@ -1,7 +1,13 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { loadCompetitions } from "@/lib/loadCompetitions";
+import { CompetitionCard } from "./competitionCard";
 import { LeaderboardCard } from "./leaderboardCard";
 
 export default function Home() {
+  const recentCompetitions = loadCompetitions()
+    .sort((a, b) => b.sortOrder - a.sortOrder)
+    .slice(0, 3);
+
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center justify-between py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
       <header className="mb-8 w-full">
@@ -13,11 +19,7 @@ export default function Home() {
       </header>
       <div className="grid w-full gap-8 grid-cols-1 md:grid-cols-2">
         <LeaderboardCard />
-        <Card>
-          <CardHeader className="text-2xl font-bold">최근 대회 목록</CardHeader>
-          {/* TODO(#70): Add relevant information when competitions page is ready */}
-          <CardContent>준비중입니다.</CardContent>
-        </Card>
+        <CompetitionCard competitions={recentCompetitions} />
         <Card>
           <CardHeader className="text-2xl font-bold">
             어느 팀이 이길까
