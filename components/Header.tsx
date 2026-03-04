@@ -16,9 +16,9 @@ export function Header() {
       <SidebarTrigger className="ml-2" />
       <Separator orientation="vertical" />
       {/* TODO(#9): Add breadcrumb indicating where the user is in the app */}
-      <h1 className="text-lg font-semibold mx-2 mr-auto">
+      <div className="text-lg font-semibold mx-2 mr-auto">
         치레동 레이팅 대시보드 β
-      </h1>
+      </div>
       <Separator orientation="vertical" />
       <Popover>
         <PopoverTrigger className="mr-2" aria-label="테마 변경" asChild>
