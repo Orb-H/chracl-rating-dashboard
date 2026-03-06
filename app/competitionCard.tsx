@@ -4,6 +4,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { MoveRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -23,11 +24,13 @@ export function CompetitionCard({
 }: {
   competitions: Competition[];
 }) {
+  const autoPlay = useMemo(() => Autoplay({ delay: 2000 }), []);
+
   return (
     <Card>
       <CardHeader className="text-2xl font-bold">최근 대회</CardHeader>
       <CardContent>
-        <Carousel className="p-0 m-0" plugins={[Autoplay({ delay: 2000 })]}>
+        <Carousel className="p-0 m-0" plugins={[autoPlay]}>
           <CarouselContent>
             {competitions.map((competition) => (
               <CarouselItem key={competition.id}>
