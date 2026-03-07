@@ -131,5 +131,11 @@
     "competitionId": "season4",
     "sortKey": 4000200,
     "note": "제 4회 세컨드 드라이버 서바이벌 예선"
+  },
+  {
+    "id": "season4-round1-qual",
+    "competitionId": "season4",
+    "sortKey": 4010100,
+    "note": "제 4회 ROUND 1 퀄리파잉"
   }
 ]
