@@ -86,8 +86,8 @@ export function RecordList({
                     순위
                   </p>
                   <p>
-                    <span className="font-semibold">{record.place}</span> /{" "}
-                    {match.participants.length}
+                    <span className="font-semibold">{record.place ?? "-"}</span>{" "}
+                    / {match.participants.length}
                   </p>
                   {record.ratedPlace && match.entryParticipants ? (
                     <p className="text-sm text-muted-foreground">

@@ -81,9 +81,10 @@ export type Participant = {
 
   /**
    * The place the participant achieved in the match.
+   * `null` is allowed when the participant could not finish the match and can't designate the rank value.
    * E.g., 1
    */
-  place: number;
+  place: number | null;
 
   /**
    * The place value which is used for rating calculation.

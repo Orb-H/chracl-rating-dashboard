@@ -114,9 +114,12 @@ export function TeamMatchItem({
                 </TableCell>
                 {match.pointsSchemeId && (
                   <TableCell className="text-center">
-                    {competition.pointsSchemes[match.pointsSchemeId]?.[
-                      participant.place - 1
-                    ] ?? "-"}
+                    {competition.pointsSchemes[match.pointsSchemeId] &&
+                    participant.place !== null
+                      ? (competition.pointsSchemes[match.pointsSchemeId][
+                          participant.place - 1
+                        ] ?? "-")
+                      : "-"}
                     {participant.bonusPoints !== undefined && (
                       <>
                         <br />
@@ -189,11 +192,15 @@ function sortedTeamWithPoints({
         (participant) => participant.teamId === team.id,
       );
       const teamPoints = teamParticipants.reduce((sum, participant) => {
-        const points =
-          competition.pointsSchemes[match.pointsSchemeId!]?.[
-            participant.place - 1
-          ] ?? 0 + (participant.bonusPoints ?? 0);
-        return sum + points;
+        const rankPoint =
+          competition.pointsSchemes[match.pointsSchemeId!] &&
+          participant.place !== null
+            ? (competition.pointsSchemes[match.pointsSchemeId!][
+                participant.place - 1
+              ] ?? 0)
+            : 0;
+        const bonusPoint = participant.bonusPoints ?? 0;
+        return sum + rankPoint + bonusPoint;
       }, 0);
       return [team.id, teamPoints];
     }),
