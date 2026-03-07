@@ -117,6 +117,14 @@ export function TeamMatchItem({
                     {competition.pointsSchemes[match.pointsSchemeId]?.[
                       participant.place - 1
                     ] ?? "-"}
+                    {participant.bonusPoints && (
+                      <>
+                        <br />
+                        <span className="text-green-500">
+                          (+{participant.bonusPoints})
+                        </span>
+                      </>
+                    )}
                   </TableCell>
                 )}
               </TableRow>
