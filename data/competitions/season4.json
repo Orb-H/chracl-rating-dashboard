@@ -130,7 +130,13 @@
   "matches": [
     "season4-pre-first-qual",
     "season4-pre-second-a-qual",
-    "season4-pre-second-b-qual"
+    "season4-pre-second-b-qual",
+    "season4-round1-qual",
+    "season4-round1-main"
   ],
-  "pointsSchemes": {}
+  "pointsSchemes": {
+    "default": [
+      24, 22, 20, 18, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+    ]
+  }
 }
