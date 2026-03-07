@@ -91,13 +91,20 @@ export function IndividualMatchItem({
                   {competition.pointsSchemes[match.pointsSchemeId]?.[
                     participant.place - 1
                   ] ?? "-"}
+                  {participant.bonusPoints !== undefined && (
+                    <>
+                      <br />
+                      <span className="text-green-500">
+                        (+{participant.bonusPoints})
+                      </span>
+                    </>
+                  )}
                 </TableCell>
               )}
             </TableRow>
           );
         })}
       </TableBody>
-      {/* TODO: Attach point calculation and display here when team/individual separation is introduced */}
     </Table>
   );
 }

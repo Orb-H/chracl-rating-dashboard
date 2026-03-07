@@ -94,6 +94,12 @@ export type Participant = {
   ratedPlace?: number;
 
   /**
+   * The bonus points awarded to the participant, which is added to the points calculated from their place.
+   * E.g., 10
+   */
+  bonusPoints?: number;
+
+  /**
    * The record of the participant in the match.
    */
   record: MatchRecord;

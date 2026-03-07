@@ -117,6 +117,14 @@ export function TeamMatchItem({
                     {competition.pointsSchemes[match.pointsSchemeId]?.[
                       participant.place - 1
                     ] ?? "-"}
+                    {participant.bonusPoints !== undefined && (
+                      <>
+                        <br />
+                        <span className="text-green-500">
+                          (+{participant.bonusPoints})
+                        </span>
+                      </>
+                    )}
                   </TableCell>
                 )}
               </TableRow>
@@ -184,7 +192,7 @@ function sortedTeamWithPoints({
         const points =
           competition.pointsSchemes[match.pointsSchemeId!]?.[
             participant.place - 1
-          ] ?? 0;
+          ] ?? 0 + (participant.bonusPoints ?? 0);
         return sum + points;
       }, 0);
       return [team.id, teamPoints];
