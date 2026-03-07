@@ -6,5 +6,18 @@
       "sigma": 16.666666666666668,
       "value": 0
     }
+  },
+  {
+    "entryId": "season4-pre-second-qual",
+    "rating": {
+      "mu": 26.816678253948442,
+      "sigma": 12.586607553307767,
+      "value": -10.94314440597486
+    },
+    "previousRating": {
+      "mu": 50.0,
+      "sigma": 16.666666666666668,
+      "value": 0.0
+    }
   }
 ]
