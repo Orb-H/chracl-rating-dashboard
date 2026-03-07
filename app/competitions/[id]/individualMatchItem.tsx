@@ -88,9 +88,12 @@ export function IndividualMatchItem({
               </TableCell>
               {match.pointsSchemeId && (
                 <TableCell className="text-center">
-                  {competition.pointsSchemes[match.pointsSchemeId]?.[
-                    participant.place - 1
-                  ] ?? "-"}
+                  {competition.pointsSchemes[match.pointsSchemeId] &&
+                  participant.place !== null
+                    ? competition.pointsSchemes[match.pointsSchemeId][
+                        participant.place - 1
+                      ]
+                    : "-"}
                   {participant.bonusPoints !== undefined && (
                     <>
                       <br />
