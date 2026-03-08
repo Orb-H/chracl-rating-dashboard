@@ -42,7 +42,7 @@ export function LeaderboardTab({
           onValueChange={(value) => setSelectedEntry(value)}
         >
           <SelectTrigger>
-            <SelectValue placeholder="최신 / 시점 선택..." />
+            <SelectValue placeholder="시점 선택..." />
           </SelectTrigger>
           <SelectContent>
             {[...competitions]
