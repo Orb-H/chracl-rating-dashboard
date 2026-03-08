@@ -60,6 +60,12 @@
         "competitionId": "season3",
         "category": "team",
         "detail": "2위"
+      },
+      {
+        "type": "major",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "2위(op)"
       }
     ]
   },
@@ -355,6 +361,12 @@
         "competitionId": "season3",
         "category": "team",
         "detail": "3위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "7위(op)"
       }
     ]
   },
@@ -413,6 +425,12 @@
         "competitionId": "season3",
         "category": "individual",
         "detail": "STINT 1 1위"
+      },
+      {
+        "type": "major",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "3위(op)"
       }
     ]
   },
@@ -701,6 +719,12 @@
         "competitionId": "season3",
         "category": "team",
         "detail": "2위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "5위(op)"
       }
     ]
   },
@@ -938,7 +962,15 @@
     "displayName": "루시",
     "aliases": ["루시 Luci"],
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTExMDRfMTcw/MDAxNzYyMjU2MDc0Nzcw.f-NzhB8YfacOH4flMIZtGKXl7BFZB2oI1Imx2JYh6Csg.dwGO-ssK0qYz9TcRTf45-sTPw8K8106BsUb9xhY-Cz0g.JPEG/image.jpg",
-    "channelId": "0b0dd269c4663fc36ee1eef8a8b1bea4"
+    "channelId": "0b0dd269c4663fc36ee1eef8a8b1bea4",
+    "caeer": [
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "6위(op)"
+      }
+    ]
   },
   {
     "id": "nyaru",
@@ -988,7 +1020,15 @@
     "displayName": "자두뇨끼",
     "aliases": [],
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTEwMTRfMjEy/MDAxNzYwNDMzNjMyODQ4.VKdyFMQPfHfcjI7lFClRIc_LhFbUexc7NExE_YqMUpIg.meNupgGZjGUxeQ_5sM7BIo9BOf9Wup17eZJ6usjm9fMg.PNG/image.png",
-    "channelId": "55cad23e436b9b31f5e0fffe3d588194"
+    "channelId": "55cad23e436b9b31f5e0fffe3d588194",
+    "career": [
+      {
+        "type": "major",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "우승(op)"
+      }
+    ]
   },
   {
     "id": "kumaru",
@@ -1046,7 +1086,15 @@
     "displayName": "김꼬멍",
     "aliases": [],
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTAzMTZfMjg4/MDAxNzQyMTMzNDUzMjc1.iwkhalOgIDZ-Vhha4CfJI3x1CCm-saClTMMjpuEQbnUg.Ub4P3dnuIm1cXrxZ3Id4IVpfeQ4GF71ISJ6Ul1m-MAMg.PNG/%ED%99%94%EB%A9%B4_%EC%BA%A1%EC%B2%98_2025-03-14_161107.png",
-    "channelId": "d61f69f7ff143364ed19314837262ea2"
+    "channelId": "d61f69f7ff143364ed19314837262ea2",
+    "career": [
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "4위(op)"
+      }
+    ]
   },
   {
     "id": "haeoni",
