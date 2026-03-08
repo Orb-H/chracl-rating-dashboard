@@ -143,5 +143,11 @@
     "competitionId": "season4",
     "sortKey": 4010101,
     "note": "제 4회 ROUND 1 레이스"
+  },
+  {
+    "id": "season4-round2-main",
+    "competitionId": "season4",
+    "sortKey": 4010201,
+    "note": "제 4회 ROUND 2 레이스"
   }
 ]
