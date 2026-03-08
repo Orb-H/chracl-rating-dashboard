@@ -25,6 +25,12 @@
         "competitionId": "season3",
         "category": "team",
         "detail": "2위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "6위"
       }
     ]
   },
@@ -88,6 +94,12 @@
         "competitionId": "season2",
         "category": "team",
         "detail": "3위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "8위"
       }
     ]
   },
@@ -127,6 +139,18 @@
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "individual",
+        "detail": "드라이버 챔피언"
+      },
+      {
+        "type": "major",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "3위"
+      },
+      {
+        "type": "major",
+        "competitionId": "season4",
         "category": "individual",
         "detail": "드라이버 챔피언"
       }
@@ -227,6 +251,12 @@
         "competitionId": "season3",
         "category": "team",
         "detail": "4위"
+      },
+      {
+        "type": "major",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "우승"
       }
     ]
   },
@@ -244,6 +274,12 @@
         "competitionId": "season3",
         "category": "team",
         "detail": "우승"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "4위"
       }
     ]
   },
@@ -261,6 +297,12 @@
         "competitionId": "season3",
         "category": "team",
         "detail": "5위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "9위"
       }
     ]
   },
@@ -288,6 +330,12 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "category": "team",
+        "detail": "5위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
         "category": "team",
         "detail": "5위"
       }
@@ -382,6 +430,12 @@
         "competitionId": "season3",
         "category": "team",
         "detail": "4위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "4위"
       }
     ]
   },
@@ -399,6 +453,12 @@
         "competitionId": "season3",
         "category": "team",
         "detail": "3위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "9위"
       }
     ]
   },
@@ -426,6 +486,12 @@
       {
         "type": "major",
         "competitionId": "season3",
+        "category": "team",
+        "detail": "2위"
+      },
+      {
+        "type": "major",
+        "competitionId": "season4",
         "category": "team",
         "detail": "2위"
       }
@@ -485,6 +551,12 @@
         "competitionId": "season3",
         "category": "team",
         "detail": "2위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "10위"
       }
     ]
   },
@@ -549,6 +621,12 @@
         "competitionId": "season3",
         "category": "individual",
         "detail": "STINT 2 1위"
+      },
+      {
+        "type": "major",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "우승"
       }
     ]
   },
@@ -566,6 +644,12 @@
         "competitionId": "season3",
         "category": "team",
         "detail": "5위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "6위"
       }
     ]
   },
@@ -663,6 +747,12 @@
         "competitionId": "season3",
         "category": "team",
         "detail": "5위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "7위"
       }
     ]
   },
@@ -777,6 +867,12 @@
         "competitionId": "season3",
         "category": "team",
         "detail": "2위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "8위"
       }
     ]
   },
@@ -821,7 +917,21 @@
     "displayName": "레밀레기",
     "aliases": ["레밀리아", "REMILIA"],
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyMzEyMjlfMjYx/MDAxNzAzODM5MTA5MzYy.j_JOo_bIyRFvcyunR1M7syiTqvk12YVb13B-am5mGr8g.JNkyPb1HK7GOY5R7yyDaDFImclJK8glGcAlDh_FENmQg.PNG/3.png",
-    "channelId": "5ccef23c1d97d62b2b49457e9942e7e9"
+    "channelId": "5ccef23c1d97d62b2b49457e9942e7e9",
+    "career": [
+      {
+        "type": "major",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "2위"
+      },
+      {
+        "type": "major",
+        "competitionId": "season4",
+        "category": "individual",
+        "detail": "세컨드 챔피언"
+      }
+    ]
   },
   {
     "id": "luci",
@@ -856,7 +966,15 @@
     "displayName": "남시우",
     "aliases": [],
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA1MTRfMTcy/MDAxNzQ3MjI5ODM0MjU5.QvSlIUaohp2b5u31-P1B7M_TZKHCKX_4aj_jKev5qXYg.ze9E-z38Brxp2IsxfTKNPAhbG9hPwzwMIhW_qUnYGucg.PNG/%EB%82%A8%EC%8B%9C%EC%9A%B0_%ED%94%84%EC%82%AC.png",
-    "channelId": "bc741dc64aa44a5da5339bae12544782"
+    "channelId": "bc741dc64aa44a5da5339bae12544782",
+    "career": [
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "7위"
+      }
+    ]
   },
   {
     "id": "hong-seowol",
@@ -884,7 +1002,15 @@
     "displayName": "푸후",
     "aliases": ["Puru & Huru"],
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA1MTZfMTc0/MDAxNzQ3MzczMDA0MjU0.1LOtnu65_pjmsziHF34rU0egu9O6WcVKevUYkMSfjHgg.0W1SZVbR2PwMyaJPJqdG3Nk7Koi1ycf1WtivA5AXQH8g.PNG/%ED%99%94%EB%A9%B4_%EC%BA%A1%EC%B2%98_2024-10-29_214413.png",
-    "channelId": "2cf1367e97d68909b024b368d2c4683c"
+    "channelId": "2cf1367e97d68909b024b368d2c4683c",
+    "career": [
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "10위"
+      }
+    ]
   },
   {
     "id": "mopu",
@@ -898,7 +1024,15 @@
     "displayName": "연주하는곰탱",
     "aliases": ["연 곰 연주하는곰탱"],
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA0MTZfMTMw/MDAxNzQ0Nzg3MzA0MDI2.jjvweKx0tmEkRf8oCw95CGE4Axf2hLhgWmqnYEDXSI0g.tJtUO3EI7QjibVXF7NAAwcJ3flatZn8dMVAtTtbCpoMg.PNG/%ED%82%A4%EA%B3%B0%EB%8B%98.png",
-    "channelId": "cbd379d7c755587ea09f28e517b3b2d4"
+    "channelId": "cbd379d7c755587ea09f28e517b3b2d4",
+    "career": [
+      {
+        "type": "major",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "3위"
+      }
+    ]
   },
   {
     "id": "norangbird",
@@ -919,6 +1053,14 @@
     "displayName": "해오니",
     "aliases": [],
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDEwMjFfMjMx/MDAxNzI5NDU2OTQxNzI2.xFNcREFC72ut1S0YovAXAC5-6hRkvIwefZPz1aYTTWkg.kMGs0TFc4B5PcMkSG9frdN4-a3ApfUoZ3l6yVYE-8w8g.PNG/3.png",
-    "channelId": "381b02173b3d6902e3e9799bb20c6885"
+    "channelId": "381b02173b3d6902e3e9799bb20c6885",
+    "career": [
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "5위"
+      }
+    ]
   }
 ]
