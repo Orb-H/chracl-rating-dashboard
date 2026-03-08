@@ -149,5 +149,11 @@
     "competitionId": "season4",
     "sortKey": 4010201,
     "note": "제 4회 ROUND 2 레이스"
+  },
+  {
+    "id": "season4-final-qual",
+    "competitionId": "season4",
+    "sortKey": 4020100,
+    "note": "제 4회 FINAL 퀄리파잉"
   }
 ]
