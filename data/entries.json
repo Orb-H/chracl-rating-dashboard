@@ -153,7 +153,13 @@
   {
     "id": "season4-final-qual",
     "competitionId": "season4",
-    "sortKey": 4020100,
+    "sortKey": 4010300,
     "note": "제 4회 FINAL 퀄리파잉"
+  },
+  {
+    "id": "season4-final-main",
+    "competitionId": "season4",
+    "sortKey": 4010301,
+    "note": "제 4회 FINAL 레이스"
   }
 ]
