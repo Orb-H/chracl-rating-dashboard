@@ -187,12 +187,12 @@ export function MySidebar() {
                     </DropdownMenuItem>
                     <DropdownMenuItem>
                       <Link href="https://chzzk.naver.com/video/12049352">
-                        제 4회: 레인 헬 (예선)
+                        제 4회: 포뮬러 챔피언쉽 (예선)
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem>
                       <Link href="https://chzzk.naver.com/video/12110859">
-                        제 4회: 레인 헬 (본선 1일차)
+                        제 4회: 포뮬러 챔피언쉽 (본선 1일차)
                       </Link>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
