@@ -70,7 +70,7 @@ export function LeaderboardTab({
               ))}
           </SelectContent>
         </Select>
-        <TabsList className="inline">
+        <TabsList>
           <TabsTrigger value="table">표로 보기</TabsTrigger>
           <TabsTrigger value="chart">그래프로 보기</TabsTrigger>
         </TabsList>

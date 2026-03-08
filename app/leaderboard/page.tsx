@@ -40,6 +40,7 @@ export default function Leaderboard() {
           치레동 선수들의 레이팅 순위를 확인하세요.
         </p>
       </header>
+      {/* TODO: optimize client payload */}
       <LeaderboardTab
         competitions={competitions}
         entries={entries}
