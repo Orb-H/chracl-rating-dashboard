@@ -1,5 +1,5 @@
 import { Rating } from "@/types/rating";
-import { loadHistoriesById } from "./loadHistories";
+import { loadHistories } from "./loadHistories";
 import { loadPlayers } from "./loadPlayers";
 
 let currentRating: Record<string, Rating> | undefined = undefined;
@@ -8,12 +8,13 @@ function loadData(): Record<string, Rating> {
   try {
     const data: Record<string, Rating> = {};
     const players = loadPlayers();
+    const histories = loadHistories();
 
     players.forEach((player) => {
-      const histories = loadHistoriesById(player.id);
-      if (histories.length > 1) {
+      const playerHistory = histories[player.id];
+      if (playerHistory && playerHistory.length > 1) {
         // Ignores players with no history or only one history entry (i.e., no rating changes yet)
-        const latestHistory = histories[histories.length - 1];
+        const latestHistory = playerHistory[playerHistory.length - 1];
         data[player.id] = latestHistory.rating;
       }
     });
