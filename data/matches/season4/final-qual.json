@@ -2,10 +2,131 @@
   "id": "season4-final-qual",
   "competitionId": "season4",
   "entryId": "season4-final-qual",
-  "name": "파이널 퀄리파잉",
+  "name": "FINAL 퀄리파잉",
   "date": "2026-03-08",
   "type": "QUALIFYING",
   "kind": "TEAM",
   "trackName": "아부다비 야스 마리나",
-  "participants": []
+  "participants": [
+    {
+      "id": "yu-yeonghyeok",
+      "teamId": "season4-racing-bulls",
+      "place": 1,
+      "record": { "status": "FINISHED", "lapTime": "1:23.854" }
+    },
+    {
+      "id": "hyungdok",
+      "teamId": "season4-redbull",
+      "place": 2,
+      "record": { "status": "FINISHED", "lapTime": "1:24.088" }
+    },
+    {
+      "id": "remilia",
+      "teamId": "season4-haas",
+      "place": 3,
+      "record": { "status": "FINISHED", "lapTime": "1:24.515" }
+    },
+    {
+      "id": "odanming",
+      "teamId": "season4-williams",
+      "place": 4,
+      "record": { "status": "FINISHED", "lapTime": "1:24.540" }
+    },
+    {
+      "id": "park-insoo",
+      "teamId": "season4-mercedes",
+      "place": 5,
+      "record": { "status": "FINISHED", "lapTime": "1:24.550" }
+    },
+    {
+      "id": "zen1th-hwang",
+      "teamId": "season4-mclaren",
+      "place": 6,
+      "record": { "status": "FINISHED", "lapTime": "1:24.700" }
+    },
+    {
+      "id": "samozang",
+      "teamId": "season4-ferrari",
+      "place": 7,
+      "record": { "status": "FINISHED", "lapTime": "1:24.766" }
+    },
+    {
+      "id": "namgung-hyuk",
+      "teamId": "season4-williams",
+      "place": 8,
+      "record": { "status": "FINISHED", "lapTime": "1:24.852" }
+    },
+    {
+      "id": "saessakgamja",
+      "teamId": "season4-mercedes",
+      "place": 9,
+      "record": { "status": "FINISHED", "lapTime": "1:25.034" }
+    },
+    {
+      "id": "u-lili",
+      "teamId": "season4-racing-bulls",
+      "place": 10,
+      "record": { "status": "FINISHED", "lapTime": "1:25.294" }
+    },
+    {
+      "id": "yang-mei",
+      "teamId": "season4-sauber",
+      "place": 11,
+      "record": { "status": "FINISHED", "lapTime": "1:25.299" }
+    },
+    {
+      "id": "haeoni",
+      "teamId": "season4-mclaren",
+      "place": 12,
+      "record": { "status": "FINISHED", "lapTime": "1:25.367" }
+    },
+    {
+      "id": "yona",
+      "teamId": "season4-alpine",
+      "place": 13,
+      "record": { "status": "FINISHED", "lapTime": "1:25.418" }
+    },
+    {
+      "id": "mytyl-maerchen",
+      "teamId": "season4-ferrari",
+      "place": 14,
+      "record": { "status": "FINISHED", "lapTime": "1:25.876" }
+    },
+    {
+      "id": "cheongalice",
+      "teamId": "season4-haas",
+      "place": 15,
+      "record": { "status": "FINISHED", "lapTime": "1:25.895" }
+    },
+    {
+      "id": "puru-huru",
+      "teamId": "season4-aston-martin",
+      "place": 16,
+      "record": { "status": "FINISHED", "lapTime": "1:26.005" }
+    },
+    {
+      "id": "nam-siwoo",
+      "teamId": "season4-sauber",
+      "place": 17,
+      "record": { "status": "FINISHED", "lapTime": "1:26.171" }
+    },
+    {
+      "id": "ichika-hibi",
+      "teamId": "season4-alpine",
+      "place": 18,
+      "record": { "status": "FINISHED", "lapTime": "1:26.186" }
+    },
+    {
+      "id": "violin-bear",
+      "teamId": "season4-redbull",
+      "place": 19,
+      "record": { "status": "FINISHED", "lapTime": "1:26.587" }
+    },
+    {
+      "id": "half",
+      "teamId": "season4-aston-martin",
+      "place": 20,
+      "record": { "status": "FINISHED", "lapTime": "1:26.642" }
+    }
+  ]
 }
