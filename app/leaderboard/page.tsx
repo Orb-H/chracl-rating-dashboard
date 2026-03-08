@@ -1,5 +1,17 @@
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { loadCompetitions } from "@/lib/loadCompetitions";
 import { loadCurrentRating } from "@/lib/loadCurrentRating";
+import { loadEntries } from "@/lib/loadEntries";
 import { loadPlayersById } from "@/lib/loadPlayers";
 import { LeaderboardChart } from "./leaderboardChart";
 import { LeaderboardTable } from "./leaderboardTable";
@@ -7,6 +19,8 @@ import { LeaderboardTable } from "./leaderboardTable";
 export default function Leaderboard() {
   const currentRating = loadCurrentRating();
   const players = loadPlayersById();
+  const competitions = loadCompetitions();
+  const entries = loadEntries();
 
   const playersWithCurrentRating = Object.entries(players)
     .filter(([key]) => currentRating[key] !== undefined)
@@ -28,10 +42,44 @@ export default function Leaderboard() {
         </p>
       </header>
       <Tabs defaultValue="table" className="w-full mb-8">
-        <TabsList className="ml-auto">
-          <TabsTrigger value="table">표로 보기</TabsTrigger>
-          <TabsTrigger value="chart">그래프로 보기</TabsTrigger>
-        </TabsList>
+        <div className="w-full flex md:flex-row flex-col justify-end items-end gap-4">
+          <Select>
+            <SelectTrigger>
+              <SelectValue placeholder="최신 / 시점 선택..." />
+            </SelectTrigger>
+            <SelectContent>
+              {[...competitions]
+                .reverse()
+                .map((competition, competitionIndex) => (
+                  <div key={competition.id}>
+                    {competitionIndex !== 0 && <SelectSeparator />}
+                    <SelectGroup>
+                      <SelectLabel>
+                        {competition.shortName ?? competition.name}
+                      </SelectLabel>
+                      {entries
+                        .filter(
+                          (entry) => entry.competitionId === competition.id,
+                        )
+                        .reverse()
+                        .map((entry, entryIndex) => (
+                          <SelectItem key={entry.id} value={entry.id}>
+                            {entry.note || entry.id}
+                            {competitionIndex === 0 &&
+                              entryIndex === 0 &&
+                              " (최신)"}
+                          </SelectItem>
+                        ))}
+                    </SelectGroup>
+                  </div>
+                ))}
+            </SelectContent>
+          </Select>
+          <TabsList className="inline">
+            <TabsTrigger value="table">표로 보기</TabsTrigger>
+            <TabsTrigger value="chart">그래프로 보기</TabsTrigger>
+          </TabsList>
+        </div>
         <TabsContent value="table">
           <LeaderboardTable ratingData={playersWithCurrentRating} />
         </TabsContent>
