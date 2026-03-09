@@ -7,6 +7,8 @@ RUN npm ci
 # Stage 2: Build the app
 FROM node:22-alpine AS builder
 WORKDIR /app
+ARG NEXT_PUBLIC_GA_ID
+ENV NEXT_PUBLIC_GA_ID=$NEXT_PUBLIC_GA_ID
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED 1
