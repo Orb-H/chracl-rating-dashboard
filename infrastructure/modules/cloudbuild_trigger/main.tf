@@ -19,7 +19,7 @@ resource "google_cloudbuild_trigger" "chracl_rating_dashboard_trigger" {
       args = [
         "build",
         "--build-arg",
-        "NEXT_PUBLIC_GA_ID=${var.ga_id}"
+        "NEXT_PUBLIC_GA_ID=${var.ga_id}",
         "-t",
         "${var.artifact_registry.location}-docker.pkg.dev/${var.project_id}/${var.artifact_registry.repository}/${var.service_name}:$COMMIT_SHA",
         ".",
