@@ -1,7 +1,6 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { PlayerAvatar } from "@/components/PlayerAvatar";
 import { Accordion, AccordionItem } from "@/components/ui/accordion";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -64,24 +63,7 @@ export default async function CompetitionDetail({
               competition.participants.map((participant) => (
                 <Card key={participant} className="p-2">
                   <CardContent className="px-0">
-                    <Link
-                      href={`/players/${participant}`}
-                      className="flex items-center underline hover:no-underline"
-                    >
-                      <Avatar>
-                        <AvatarImage
-                          src={players[participant].avatarUrl}
-                          alt={players[participant].displayName}
-                          className="object-cover"
-                        />
-                        <AvatarFallback>
-                          {players[participant].displayName.charAt(0)}
-                        </AvatarFallback>
-                      </Avatar>
-                      <span className="ml-2 inline align-middle">
-                        {players[participant].displayName}
-                      </span>
-                    </Link>
+                    <PlayerAvatar player={players[participant]} />
                   </CardContent>
                 </Card>
               ))
@@ -119,26 +101,10 @@ export default async function CompetitionDetail({
                       .filter((memberId) => players[memberId] !== undefined)
                       .map((memberId) => (
                         <TableCell key={memberId} className="text-center">
-                          <div className="flex flex-row gap-4 items-center px-2">
-                            <Link
-                              href={`/players/${memberId}`}
-                              className="flex items-center underline hover:no-underline"
-                            >
-                              <Avatar>
-                                <AvatarImage
-                                  src={players[memberId].avatarUrl}
-                                  alt={players[memberId].displayName}
-                                  className="object-cover"
-                                />
-                                <AvatarFallback>
-                                  {players[memberId].displayName.charAt(0)}
-                                </AvatarFallback>
-                              </Avatar>
-                              <span className="ml-2">
-                                {players[memberId]?.displayName}
-                              </span>
-                            </Link>
-                          </div>
+                          <PlayerAvatar
+                            player={players[memberId]}
+                            className="px-2"
+                          />
                         </TableCell>
                       ))}
                   </TableRow>
