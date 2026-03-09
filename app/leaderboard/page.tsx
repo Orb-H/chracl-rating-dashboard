@@ -1,11 +1,11 @@
 import { loadCompetitions } from "@/lib/loadCompetitions";
 import { loadEntries, loadEntriesById } from "@/lib/loadEntries";
 import { loadHistories } from "@/lib/loadHistories";
-import { loadPlayersById } from "@/lib/loadPlayers";
+import { loadPlayers } from "@/lib/loadPlayers";
 import { LeaderboardTab } from "./leaderboardTab";
 
 export default function Leaderboard() {
-  const players = loadPlayersById();
+  const players = loadPlayers().filter((player) => !player.isNotPlayer);
   const competitions = loadCompetitions();
   const entries = loadEntries();
   const entriesById = loadEntriesById();
@@ -13,9 +13,9 @@ export default function Leaderboard() {
 
   const playerRatingsByEntry = Object.fromEntries(
     entries.map((entry) => {
-      const playerRatings = Object.entries(players)
-        .map(([id, player]) => {
-          const playerHistories = histories[id].filter(
+      const playerRatings = players
+        .map((player) => {
+          const playerHistories = histories[player.id].filter(
             (history) =>
               entriesById[history.entryId].sortKey <= entry.sortKey &&
               history.entryId !== "initial",

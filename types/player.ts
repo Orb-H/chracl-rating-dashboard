@@ -38,6 +38,11 @@ export type Player = {
    * Optional career highlights for the participant.
    */
   career?: Career[];
+
+  /**
+   * Whether the participant is not an actual player. This is used to filter out non-player entities from player lists. E.g., true for team, organization, or coach which represents a non-player entity rather than an individual player.
+   */
+  isNotPlayer?: boolean;
 };
 
 /**

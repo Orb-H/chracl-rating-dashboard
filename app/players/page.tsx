@@ -8,7 +8,7 @@ import { Rating } from "@/types/rating";
 import { PlayerCard } from "./playerCard";
 
 export default function Participants() {
-  const players = loadPlayers();
+  const players = loadPlayers().filter((player) => !player.isNotPlayer);
   const ratings = loadCurrentRating();
 
   const playersWithRating = players.map((player) => ({
