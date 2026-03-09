@@ -1110,5 +1110,19 @@
         "detail": "5위"
       }
     ]
+  },
+  {
+    "id": "national-lettuce-kimchi",
+    "displayName": "국산배추김치",
+    "aliases": [],
+    "channelId": "",
+    "career": [
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "team",
+        "detail": "6위(op)"
+      }
+    ]
   }
 ]
