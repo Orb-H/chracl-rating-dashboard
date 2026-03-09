@@ -32,12 +32,17 @@ export type Player = {
   /**
    * The channel ID of Chzzk associated with the participant. A format of [a-f0-9]{32}. E.g., "aeb5b654cad7a2c0a0e6633a6d6de4aa"
    */
-  channelId: string;
+  channelId?: string;
 
   /**
    * Optional career highlights for the participant.
    */
   career?: Career[];
+
+  /**
+   * Whether the participant is not an actual player. This is used to filter out non-player entities from player lists. E.g., true for team, organization, or coach which represents a non-player entity rather than an individual player.
+   */
+  isNotPlayer?: boolean;
 };
 
 /**
