@@ -137,7 +137,11 @@
       "teamId": "season4-mercedes",
       "place": 20,
       "bonusPoints": 1,
-      "record": { "status": "FINISHED", "finishTime": "+1 Lap" }
+      "record": {
+        "status": "FINISHED",
+        "finishTime": "+1 Lap",
+        "penaltyTime": "00:03.000"
+      }
     }
   ]
 }
