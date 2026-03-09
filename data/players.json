@@ -963,7 +963,7 @@
     "aliases": ["루시 Luci"],
     "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTExMDRfMTcw/MDAxNzYyMjU2MDc0Nzcw.f-NzhB8YfacOH4flMIZtGKXl7BFZB2oI1Imx2JYh6Csg.dwGO-ssK0qYz9TcRTf45-sTPw8K8106BsUb9xhY-Cz0g.JPEG/image.jpg",
     "channelId": "0b0dd269c4663fc36ee1eef8a8b1bea4",
-    "caeer": [
+    "career": [
       {
         "type": "minor",
         "competitionId": "season4",
@@ -1123,6 +1123,7 @@
         "category": "team",
         "detail": "6위(op)"
       }
-    ]
+    ],
+    "isNotPlayer": true
   }
 ]
