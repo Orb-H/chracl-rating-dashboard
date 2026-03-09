@@ -1,6 +1,5 @@
-import Link from "next/link";
+import { PlayerAvatar } from "@/components/PlayerAvatar";
 import { TierBadge } from "@/components/TierBadge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Popover,
   PopoverContent,
@@ -81,24 +80,7 @@ export function LeaderboardTable({ ratingData }: LeaderboardTableProps) {
               {player.mu ? i + 1 : "-"}
             </TableCell>
             <TableCell>
-              <Link
-                href={`/players/${player.id}`}
-                className="flex underline hover:no-underline items-center"
-              >
-                <Avatar className="inline-block align-middle">
-                  <AvatarImage
-                    src={player.avatarUrl}
-                    alt={player.displayName}
-                    className="object-cover"
-                  />
-                  <AvatarFallback>
-                    {player.displayName?.[0] || ""}
-                  </AvatarFallback>
-                </Avatar>
-                <span className="ml-2 inline-block align-middle">
-                  {player.displayName}
-                </span>
-              </Link>
+              <PlayerAvatar player={player} />
             </TableCell>
             <TableCell className="text-center">
               {player.tiers?.[currentSeason] ? (
