@@ -14,18 +14,20 @@ export default function Leaderboard() {
   const playerRatingsByEntry = Object.fromEntries(
     entries.map((entry) => {
       const playerRatings = players
-        .map((player) => {
+        .flatMap((player) => {
           const playerHistories = histories[player.id].filter(
             (history) =>
               entriesById[history.entryId].sortKey <= entry.sortKey &&
               history.entryId !== "initial",
           );
           return playerHistories.length > 0
-            ? {
-                ...player,
-                ...playerHistories[playerHistories.length - 1].rating,
-              }
-            : null;
+            ? [
+                {
+                  ...player,
+                  ...playerHistories[playerHistories.length - 1].rating,
+                },
+              ]
+            : [];
         })
         .filter((rating) => rating !== null);
       return [entry.id, playerRatings.sort((a, b) => b.value - a.value)];
