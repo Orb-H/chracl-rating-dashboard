@@ -1,4 +1,5 @@
 import { StarIcon, TrophyIcon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { TierBadge } from "@/components/TierBadge";
@@ -137,6 +138,11 @@ export default async function Player({
           <AvatarFallback>{player.displayName.charAt(0)}</AvatarFallback>
         </Avatar>
         <span className="inline">{player.displayName}</span>
+        {player.channelId && (
+          <Link href={`https://chzzk.naver.com/${player.channelId}`}>
+            <Image src="/chzzk.png" alt="Chzzk" width={40} height={40} />
+          </Link>
+        )}
       </h1>
       <Tabs defaultValue="profile" className="w-full mb-8">
         <TabsList variant="line">
