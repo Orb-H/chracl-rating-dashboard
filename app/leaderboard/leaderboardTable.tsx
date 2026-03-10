@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PlayerAvatar } from "@/components/PlayerAvatar";
 import { TierBadge } from "@/components/TierBadge";
 import {
@@ -47,11 +48,13 @@ export function LeaderboardTable({ ratingData }: LeaderboardTableProps) {
               <PopoverTrigger className="underline cursor-help">
                 레이팅
               </PopoverTrigger>
-              {/* TODO(#13): Add link to rating introduction page when ready */}
               <PopoverContent side="top">
                 대회에서의 경기 결과를 바탕으로 산출되는 값으로, 시스템이
-                판단하는 선수 경기력의 저점입니다. 자세한 내용은 레이팅 소개
-                페이지를 확인해주세요.
+                판단하는 선수 경기력의 저점입니다. 자세한 내용은{" "}
+                <Link href="/rating-intro" className="text-primary underline">
+                  레이팅 소개 페이지
+                </Link>
+                를 확인해주세요.
               </PopoverContent>
             </Popover>
           </TableHead>
@@ -60,11 +63,13 @@ export function LeaderboardTable({ ratingData }: LeaderboardTableProps) {
               <PopoverTrigger className="underline cursor-help">
                 μ값
               </PopoverTrigger>
-              {/* TODO(#13): Add link to rating introduction page when ready */}
               <PopoverContent side="top">
                 대회에서의 경기 결과를 바탕으로 산출되는 값으로, 레이팅 시스템이
-                판단하는 선수 실력의 평균입니다. 자세한 내용은 레이팅 소개
-                페이지를 확인해주세요.
+                판단하는 선수 실력의 평균입니다. 자세한 내용은{" "}
+                <Link href="/rating-intro" className="text-primary underline">
+                  레이팅 소개 페이지
+                </Link>
+                를 확인해주세요.
               </PopoverContent>
             </Popover>
           </TableHead>
