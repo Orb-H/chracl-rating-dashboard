@@ -20,7 +20,7 @@ export default function Home() {
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center justify-between py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
       <header className="mb-8 w-full">
         <h1 className="text-4xl font-bold">치레동 레이팅 대시보드 β</h1>
-        <blockquote className="p-4 my-4 border-s-4 border-default bg-neutral-secondary-soft font-semibold">
+        <blockquote className="p-4 my-4 border-s-4 bg-muted font-semibold">
           🚨 아직 개발중인 사이트이므로 많은 기능이 작동하지 않을 수 있습니다.
         </blockquote>
         <p className="mt-2 text-lg text-muted-foreground">
