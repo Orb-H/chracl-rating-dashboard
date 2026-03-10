@@ -107,10 +107,9 @@ export function MySidebar() {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={isActive("/rating-intro")}>
-                  {/* TODO(#13): Enable link to the real page when ready */}
-                  <Link href="#">
+                  <Link href="/rating-intro">
                     <BookTextIcon className="inline" />{" "}
-                    <span>레이팅 시스템 소개 (준비중)</span>
+                    <span>레이팅 시스템 소개</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
