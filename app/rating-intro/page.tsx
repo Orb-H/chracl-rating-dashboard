@@ -12,7 +12,7 @@ import {
 
 export default function RatingIntro() {
   return (
-    <main className="flex flex-col gap-6 min-h-screen w-full max-w-3xl mx-auto items-start py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
+    <main className="flex flex-col gap-6 min-h-screen w-full max-w-3xl mx-auto items-start py-16 px-8 md:py-32 md:px-16 bg-background">
       <h2 className="mb-6 text-4xl font-extrabold">🏁 치레동 레이팅 시스템</h2>
       <h3 className="text-2xl font-semibold">세 줄? 요약</h3>
       <ol className="ml-6 list-decimal [&>li]:mt-2">
@@ -31,7 +31,7 @@ export default function RatingIntro() {
           떨어집니다. 팀 단위로도 마찬가지로 적용됩니다.
         </li>
       </ol>
-      <h3 className=" text-2xl font-semibold">들어가기에 앞서</h3>
+      <h3 className="text-2xl font-semibold">들어가기에 앞서</h3>
       <ul className="ml-6 list-disc [&>li]:mt-2">
         <li>
           원본은 제 블로그 포스트입니다:{" "}
@@ -47,11 +47,9 @@ export default function RatingIntro() {
           LLM에게 맡겼습니다.
         </li>
       </ul>
-      <Separator className="" />
-      <h3 className=" text-2xl font-semibold">
-        🤔 기존 티어, 뭐가 부족했나요?
-      </h3>
-      <p className="">
+      <Separator />
+      <h3 className="text-2xl font-semibold">🤔 기존 티어, 뭐가 부족했나요?</h3>
+      <p>
         치레동에서는 원래 <strong>티어 지수</strong>와{" "}
         <strong>랭킹 지수</strong>
         라는 값으로 선수들의 실력을 나눴어요. 간단히 말하면 이런 식이에요:
@@ -74,7 +72,7 @@ export default function RatingIntro() {
           </TableRow>
         </TableBody>
       </Table>
-      <p className="">나쁘지 않은 방식이지만, 몇 가지 아쉬운 점이 있었어요:</p>
+      <p>나쁘지 않은 방식이지만, 몇 가지 아쉬운 점이 있었어요:</p>
       <ul className="ml-6 list-disc [&>li]:mt-2">
         <li>
           😤 팀전 결과가 반영되지 않음 — 팀 순위를 위한 행동이 점수에 안 잡힘
@@ -88,16 +86,12 @@ export default function RatingIntro() {
           선수의 점수가 같게 나올 수 있음
         </li>
       </ul>
-      <p className="">
-        이 세 가지 문제를 해결하기 위해 새로운 레이팅 시스템을 도입했어요.
-      </p>
-      <Separator className="" />
-      <h3 className=" text-2xl font-semibold">
+      <p>이 세 가지 문제를 해결하기 위해 새로운 레이팅 시스템을 도입했어요.</p>
+      <Separator />
+      <h3 className="text-2xl font-semibold">
         📊 레이팅, 어떻게 읽으면 될까요?
       </h3>
-      <p className="">
-        레이팅 리더보드 페이지를 보면 선수마다 두 개의 숫자가 보여요:
-      </p>
+      <p>레이팅 리더보드 페이지를 보면 선수마다 두 개의 숫자가 보여요:</p>
       <Table>
         <TableHeader>
           <TableRow>
@@ -114,7 +108,7 @@ export default function RatingIntro() {
           </TableRow>
         </TableBody>
       </Table>
-      <p className="">이 두 숫자를 이렇게 이해하면 돼요:</p>
+      <p>이 두 숫자를 이렇게 이해하면 돼요:</p>
       <Table>
         <TableHeader>
           <TableRow>
@@ -144,11 +138,11 @@ export default function RatingIntro() {
           </TableRow>
         </TableBody>
       </Table>
-      <p className="">
+      <p>
         💡 <strong>레이팅이 높을수록 강한 선수</strong>입니다. 평균보다 레이팅을
         더 신뢰하세요.
       </p>
-      <Separator className="" />
+      <Separator />
       <h3 className="text-2xl font-semibold">
         ⚙️ 레이팅이 오르내리는 3가지 원칙
       </h3>
@@ -159,14 +153,14 @@ export default function RatingIntro() {
         <li>레이팅이 높은 선수를 꺾으면 → 내 레이팅이 크게 오름</li>
         <li>레이팅이 낮은 선수에게 지면 → 내 레이팅이 크게 내려감</li>
       </ul>
-      <p className="">
+      <p>
         당연히 이겨야 할 상대를 이겨도 조금밖에 안 오르고, 의외의 역전을 해냈을
         때 크게 오르는 구조예요. 이변이 제대로 평가받는 시스템이죠.
       </p>
-      <h4 className=" text-xl font-semibold">
+      <h4 className="text-xl font-semibold">
         2. 꾸준히 참가할수록 신뢰도가 올라간다 📈
       </h4>
-      <p className="">
+      <p>
         레이팅은 단순한 숫자가 아니라 &quot;이 정도 실력일 것이다&quot;라는
         범위로 표현돼요.
       </p>
@@ -178,15 +172,15 @@ export default function RatingIntro() {
           대회 참가 횟수가 <strong>많을수록</strong> → 범위가 좁아짐 (신뢰도 ↑)
         </li>
       </ul>
-      <p className="">
+      <p>
         같은 레이팅이라도 대회를 꾸준히 참가한 선수 쪽이 실력에 대한 신뢰도가 더
         높아요. 한 번 잘해서 레이팅이 높은 선수보다, 매번 꾸준히 잘한 선수가 더
         높은 레이팅을 가져가는 구조입니다.
       </p>
-      <h4 className=" text-xl font-semibold">
+      <h4 className="text-xl font-semibold">
         3. 팀전 + 개인전, 둘 다 반영된다 🤝
       </h4>
-      <p className="">
+      <p>
         기존 시스템은 개인 순위만 봤지만, 이 레이팅은{" "}
         <strong>팀 순위도 같이 봐요</strong>.
       </p>
@@ -212,17 +206,17 @@ export default function RatingIntro() {
           </TableRow>
         </TableBody>
       </Table>
-      <p className="">
+      <p>
         팀을 위해 희생하는 플레이도, 팀을 들고 혼자 올라오는 플레이도 어느 정도
         반영됩니다.
       </p>
-      <Separator className="" />
-      <h3 className=" text-2xl font-semibold">📋 데이터 직접 보기</h3>
-      <p className="">
-        실제 선수별 레이팅 수치와 순위는 아래 페이지에서 확인하세요!
-      </p>
-      <Button>
-        <Link href="/leaderboard">치레동 레이팅 데이터 페이지 바로가기 →</Link>
+      <Separator />
+      <h3 className="text-2xl font-semibold">📋 데이터 직접 보기</h3>
+      <p>실제 선수별 레이팅 수치와 순위는 아래 페이지에서 확인하세요!</p>
+      <Button asChild>
+        <Link href="/leaderboard">
+          치레동 레이팅 리더보드 페이지 바로가기 →
+        </Link>
       </Button>
     </main>
   );
