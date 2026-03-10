@@ -33,3 +33,8 @@ variable "cloudbuild_trigger" {
     service_account = string
   })
 }
+
+variable "ga_id" {
+  description = "Google Analytics ID"
+  type        = string
+}
