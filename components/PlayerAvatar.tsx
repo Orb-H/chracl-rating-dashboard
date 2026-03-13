@@ -30,7 +30,7 @@ export function PlayerAvatar({
         {player.graduated && (
           <>
             {" "}
-            <GraduationCapIcon className="inline w-5 h-5" />
+            <GraduationCapIcon className="inline w-5 h-5" aria-label="졸업" />
           </>
         )}
       </span>
