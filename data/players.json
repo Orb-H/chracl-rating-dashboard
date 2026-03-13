@@ -994,6 +994,8 @@
     "id": "shaunjjang",
     "displayName": "숀쟝",
     "aliases": [],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA4MjJfMjI3/MDAxNzU1ODY1NDY0MjM0.8rV_n0wgfgCix6vL58DqF9QFZEahqClSDoc5FnWIAe0g.xLNHJ-1Puc8VsxML_bVEypaf4DU8chCBDDI97gTbwhMg.JPEG/Memory_snow_-_Rem_3.jpg",
+    "channelId": "981f18d74bceeb1972197209b7400fc4",
     "career": [
       {
         "type": "minor",
@@ -1001,9 +1003,7 @@
         "category": "team",
         "detail": "예선 참가"
       }
-    ],
-    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA4MjJfMjI3/MDAxNzU1ODY1NDY0MjM0.8rV_n0wgfgCix6vL58DqF9QFZEahqClSDoc5FnWIAe0g.xLNHJ-1Puc8VsxML_bVEypaf4DU8chCBDDI97gTbwhMg.JPEG/Memory_snow_-_Rem_3.jpg",
-    "channelId": "981f18d74bceeb1972197209b7400fc4"
+    ]
   },
   {
     "id": "remilia",
@@ -1051,6 +1051,8 @@
     "id": "nyaru",
     "displayName": "냐루",
     "aliases": ["냐루 NYARU"],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDA5MDVfNTEg/MDAxNzI1NTA1OTE5ODQw.JWNM7n9EI4dSSthODc4lAXepVXeQJqWv6Xso6LPQmA0g.bZW9eFMpU24mh728KQUdBIRF2vlrivq0y48iQ54upisg.PNG/0C6F9152-B410-4DC1-A83C-4B0A831DC292-1725505919.png",
+    "channelId": "a63d77c588c72b4d09f203e1bd06edaa",
     "career": [
       {
         "type": "minor",
@@ -1058,14 +1060,14 @@
         "category": "team",
         "detail": "예선 참가"
       }
-    ],
-    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDA5MDVfNTEg/MDAxNzI1NTA1OTE5ODQw.JWNM7n9EI4dSSthODc4lAXepVXeQJqWv6Xso6LPQmA0g.bZW9eFMpU24mh728KQUdBIRF2vlrivq0y48iQ54upisg.PNG/0C6F9152-B410-4DC1-A83C-4B0A831DC292-1725505919.png",
-    "channelId": "a63d77c588c72b4d09f203e1bd06edaa"
+    ]
   },
   {
     "id": "songl",
     "displayName": "송엘",
     "aliases": [],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTEyMjZfMjUx/MDAxNzY2Njc2ODU3NDc0.Y5pJe04tG4AAkv5QdRcHGJFaszRFL2oEBtkiZsMlK2og.mEhlBcyZp3SMT_iAOPxvZAOtG1zPxTGfvxKz3gN4AEMg.PNG/image.png",
+    "channelId": "79bdf61586c4058789e4c3308b0d6a0c",
     "career": [
       {
         "type": "minor",
@@ -1073,14 +1075,14 @@
         "category": "team",
         "detail": "예선 참가"
       }
-    ],
-    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTEyMjZfMjUx/MDAxNzY2Njc2ODU3NDc0.Y5pJe04tG4AAkv5QdRcHGJFaszRFL2oEBtkiZsMlK2og.mEhlBcyZp3SMT_iAOPxvZAOtG1zPxTGfvxKz3gN4AEMg.PNG/image.png",
-    "channelId": "79bdf61586c4058789e4c3308b0d6a0c"
+    ]
   },
   {
     "id": "shune",
     "displayName": "슈네",
     "aliases": ["슈네1"],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA1MDhfMTY1/MDAxNzQ2NzA1NTIzODMx.sKEk5Mslql3sEMYGIornBO3TD-XRnIBxjpaQb2jJgLMg.EHkPxmKDOzd4SUTK6sD9ibvnfsjdG0K-MfKfauCqitcg.PNG/%EC%8A%88%EB%84%A4_%EC%B9%98%EC%A7%80%EC%A7%81_%ED%94%84%EC%82%AC.png",
+    "channelId": "d430ff9fe8811a67d0ef2889255ec6af",
     "career": [
       {
         "type": "minor",
@@ -1088,9 +1090,7 @@
         "category": "team",
         "detail": "예선 참가"
       }
-    ],
-    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA1MDhfMTY1/MDAxNzQ2NzA1NTIzODMx.sKEk5Mslql3sEMYGIornBO3TD-XRnIBxjpaQb2jJgLMg.EHkPxmKDOzd4SUTK6sD9ibvnfsjdG0K-MfKfauCqitcg.PNG/%EC%8A%88%EB%84%A4_%EC%B9%98%EC%A7%80%EC%A7%81_%ED%94%84%EC%82%AC.png",
-    "channelId": "d430ff9fe8811a67d0ef2889255ec6af"
+    ]
   },
   {
     "id": "nam-siwoo",
@@ -1111,6 +1111,8 @@
     "id": "hong-seowol",
     "displayName": "홍서월",
     "aliases": [],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDA0MjhfMTIy/MDAxNzE0MjgyMTU5MDYz.Ag0z8UarJBBa9HnTuBbbo_3QEb-SpbKAQqQdwT4z5Ysg.wcfkrLOujGzPTXwVeDhZAlP5Upy338mKMq9Hkv-cyJwg.PNG/E128BF5D-F660-408F-8D32-3D39E2C7433C-1714282158.png",
+    "channelId": "227b431ef15d1085ba29f54b8a7048fd",
     "career": [
       {
         "type": "minor",
@@ -1118,9 +1120,7 @@
         "category": "team",
         "detail": "예선 참가"
       }
-    ],
-    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNDA0MjhfMTIy/MDAxNzE0MjgyMTU5MDYz.Ag0z8UarJBBa9HnTuBbbo_3QEb-SpbKAQqQdwT4z5Ysg.wcfkrLOujGzPTXwVeDhZAlP5Upy338mKMq9Hkv-cyJwg.PNG/E128BF5D-F660-408F-8D32-3D39E2C7433C-1714282158.png",
-    "channelId": "227b431ef15d1085ba29f54b8a7048fd"
+    ]
   },
   {
     "id": "zadugnocci",
@@ -1177,6 +1177,8 @@
     "id": "mopu",
     "displayName": "모푸",
     "aliases": [],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA3MjlfOCAg/MDAxNzUzNzE2OTYzNjA5.hbU_xex62FbZCEpK1GAByVcrX0n3NnHX_q4wBZZ3zQUg.BUXvuFGWuPvHWNjrruZyhM21CtY5KYvKjz2RHRZWejMg.PNG/%EC%84%B9%EC%BF%A0%EC%8B%9C%ED%95%9C_%EB%AA%A8%ED%91%B8.png",
+    "channelId": "1686a04d1a643498d39f2fb50459c0ac",
     "career": [
       {
         "type": "minor",
@@ -1184,9 +1186,7 @@
         "category": "team",
         "detail": "예선 참가"
       }
-    ],
-    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA3MjlfOCAg/MDAxNzUzNzE2OTYzNjA5.hbU_xex62FbZCEpK1GAByVcrX0n3NnHX_q4wBZZ3zQUg.BUXvuFGWuPvHWNjrruZyhM21CtY5KYvKjz2RHRZWejMg.PNG/%EC%84%B9%EC%BF%A0%EC%8B%9C%ED%95%9C_%EB%AA%A8%ED%91%B8.png",
-    "channelId": "1686a04d1a643498d39f2fb50459c0ac"
+    ]
   },
   {
     "id": "violin-bear",
@@ -1207,6 +1207,8 @@
     "id": "norangbird",
     "displayName": "노랑새",
     "aliases": ["노랑새k"],
+    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA5MDhfNTcg/MDAxNzU3MzA5ODQ5NTM1.Lv7l9DZJWnNwwUlEhU0tINK2xxecchjD64fsU4wUn5Mg.FnJx4eU4dvYBJU9s7VgKOPOaqu_bcx-8l00OIR_gv2gg.PNG/eec167cf-8bd0-47a5-b57e-bfe762820c51.png",
+    "channelId": "d9c8e5b1a0c3f2e7b4a9c8d6e5f1a2b3",
     "career": [
       {
         "type": "minor",
@@ -1214,9 +1216,7 @@
         "category": "team",
         "detail": "예선 참가"
       }
-    ],
-    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA5MDhfNTcg/MDAxNzU3MzA5ODQ5NTM1.Lv7l9DZJWnNwwUlEhU0tINK2xxecchjD64fsU4wUn5Mg.FnJx4eU4dvYBJU9s7VgKOPOaqu_bcx-8l00OIR_gv2gg.PNG/eec167cf-8bd0-47a5-b57e-bfe762820c51.png",
-    "channelId": "d9c8e5b1a0c3f2e7b4a9c8d6e5f1a2b3"
+    ]
   },
   {
     "id": "grubby-puppy",
