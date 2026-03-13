@@ -218,12 +218,6 @@
         "competitionId": "season3",
         "category": "team",
         "detail": "3위"
-      },
-      {
-        "type": "minor",
-        "competitionId": "season4",
-        "category": "team",
-        "detail": "예선 참가"
       }
     ]
   },
