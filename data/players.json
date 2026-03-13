@@ -11,24 +11,28 @@
       {
         "type": "minor",
         "competitionId": "season1",
+        "teamId": "season1-team-yona",
         "category": "team",
         "detail": "4위"
       },
       {
         "type": "minor",
         "competitionId": "season2",
+        "teamId": "season2-team-yona",
         "category": "team",
         "detail": "4위"
       },
       {
         "type": "major",
         "competitionId": "season3",
+        "teamId": "season3-team-yona",
         "category": "team",
         "detail": "2위"
       },
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-alpine",
         "category": "team",
         "detail": "6위"
       }
@@ -46,24 +50,28 @@
       {
         "type": "major",
         "competitionId": "season1",
+        "teamId": "season1-team-namgung-hyuk",
         "category": "team",
         "detail": "2위"
       },
       {
         "type": "major",
         "competitionId": "season2",
+        "teamId": "season2-team-cheongalice",
         "category": "team",
         "detail": "2위"
       },
       {
         "type": "major",
         "competitionId": "season3",
+        "teamId": "season3-team-yona",
         "category": "team",
         "detail": "2위"
       },
       {
         "type": "major",
         "competitionId": "season4",
+        "teamId": "season4-haas",
         "category": "team",
         "detail": "2위(op)"
       }
@@ -81,6 +89,7 @@
       {
         "type": "major",
         "competitionId": "season3",
+        "teamId": "season3-team-hyungdok",
         "category": "team",
         "detail": "우승"
       }
@@ -98,12 +107,14 @@
       {
         "type": "minor",
         "competitionId": "season2",
+        "teamId": "season2-team-hyungdok",
         "category": "team",
         "detail": "3위"
       },
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-mercedes",
         "category": "team",
         "detail": "8위"
       }
@@ -121,6 +132,7 @@
       {
         "type": "major",
         "competitionId": "season1",
+        "teamId": "season1-team-hyungdok",
         "category": "team",
         "detail": "우승"
       },
@@ -133,12 +145,14 @@
       {
         "type": "minor",
         "competitionId": "season2",
+        "teamId": "season2-team-hyungdok",
         "category": "team",
         "detail": "3위"
       },
       {
         "type": "major",
         "competitionId": "season3",
+        "teamId": "season3-team-hyungdok",
         "category": "team",
         "detail": "우승"
       },
@@ -151,6 +165,7 @@
       {
         "type": "major",
         "competitionId": "season4",
+        "teamId": "season4-redbull",
         "category": "team",
         "detail": "3위"
       },
@@ -175,12 +190,14 @@
       {
         "type": "major",
         "competitionId": "season2",
+        "teamId": "season2-team-namgung-hyuk",
         "category": "team",
         "detail": "우승"
       },
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-namgung-hyuk",
         "category": "team",
         "detail": "4위"
       }
@@ -198,6 +215,7 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-reo",
         "category": "team",
         "detail": "3위"
       }
@@ -215,6 +233,7 @@
       {
         "type": "minor",
         "competitionId": "season2",
+        "teamId": "season2-team-yona",
         "category": "team",
         "detail": "4위"
       }
@@ -232,6 +251,7 @@
       {
         "type": "major",
         "competitionId": "season1",
+        "teamId": "season1-team-namgung-hyuk",
         "category": "team",
         "detail": "2위"
       },
@@ -244,6 +264,7 @@
       {
         "type": "major",
         "competitionId": "season2",
+        "teamId": "season2-team-namgung-hyuk",
         "category": "team",
         "detail": "우승"
       },
@@ -256,12 +277,14 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-namgung-hyuk",
         "category": "team",
         "detail": "4위"
       },
       {
         "type": "major",
         "competitionId": "season4",
+        "teamId": "season4-williams",
         "category": "team",
         "detail": "우승"
       }
@@ -279,12 +302,14 @@
       {
         "type": "major",
         "competitionId": "season3",
+        "teamId": "season3-team-hyungdok",
         "category": "team",
         "detail": "우승"
       },
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-racing-bulls",
         "category": "team",
         "detail": "4위"
       }
@@ -302,12 +327,14 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-zen1th-hwang",
         "category": "team",
         "detail": "5위"
       },
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-ferrari",
         "category": "team",
         "detail": "9위"
       }
@@ -325,6 +352,7 @@
       {
         "type": "major",
         "competitionId": "season2",
+        "teamId": "season2-team-cheongalice",
         "category": "team",
         "detail": "2위"
       },
@@ -337,12 +365,14 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-zen1th-hwang",
         "category": "team",
         "detail": "5위"
       },
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-mclaren",
         "category": "team",
         "detail": "5위"
       }
@@ -360,12 +390,14 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-reo",
         "category": "team",
         "detail": "3위"
       },
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-sauber",
         "category": "team",
         "detail": "7위(op)"
       }
@@ -383,18 +415,21 @@
       {
         "type": "major",
         "competitionId": "season1",
+        "teamId": "season1-team-hyungdok",
         "category": "team",
         "detail": "우승"
       },
       {
         "type": "minor",
         "competitionId": "season2",
+        "teamId": "season2-team-yona",
         "category": "team",
         "detail": "4위"
       },
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-reo",
         "category": "team",
         "detail": "3위"
       }
@@ -412,12 +447,14 @@
       {
         "type": "minor",
         "competitionId": "season1",
+        "teamId": "season1-team-cheongalice",
         "category": "team",
         "detail": "3위"
       },
       {
         "type": "major",
         "competitionId": "season3",
+        "teamId": "season3-team-hyungdok",
         "category": "team",
         "detail": "우승"
       },
@@ -430,6 +467,7 @@
       {
         "type": "major",
         "competitionId": "season4",
+        "teamId": "season4-redbull",
         "category": "team",
         "detail": "3위(op)"
       }
@@ -447,12 +485,14 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-namgung-hyuk",
         "category": "team",
         "detail": "4위"
       },
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-racing-bulls",
         "category": "team",
         "detail": "4위"
       }
@@ -470,12 +510,14 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-reo",
         "category": "team",
         "detail": "3위"
       },
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-ferrari",
         "category": "team",
         "detail": "9위"
       }
@@ -493,24 +535,28 @@
       {
         "type": "minor",
         "competitionId": "season1",
+        "teamId": "season1-team-cheongalice",
         "category": "team",
         "detail": "3위"
       },
       {
         "type": "major",
         "competitionId": "season2",
+        "teamId": "season2-team-cheongalice",
         "category": "team",
         "detail": "2위"
       },
       {
         "type": "major",
         "competitionId": "season3",
+        "teamId": "season3-team-yona",
         "category": "team",
         "detail": "2위"
       },
       {
         "type": "major",
         "competitionId": "season4",
+        "teamId": "season4-haas",
         "category": "team",
         "detail": "2위"
       }
@@ -528,6 +574,7 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-namgung-hyuk",
         "category": "team",
         "detail": "4위"
       }
@@ -545,12 +592,14 @@
       {
         "type": "major",
         "competitionId": "season1",
+        "teamId": "season1-team-hyungdok",
         "category": "team",
         "detail": "우승"
       },
       {
         "type": "major",
         "competitionId": "season2",
+        "teamId": "season2-team-namgung-hyuk",
         "category": "team",
         "detail": "우승"
       }
@@ -568,12 +617,14 @@
       {
         "type": "major",
         "competitionId": "season3",
+        "teamId": "season3-team-yona",
         "category": "team",
         "detail": "2위"
       },
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-aston-martin",
         "category": "team",
         "detail": "10위"
       }
@@ -591,18 +642,21 @@
       {
         "type": "minor",
         "competitionId": "season1",
+        "teamId": "season1-team-cheongalice",
         "category": "team",
         "detail": "3위"
       },
       {
         "type": "minor",
         "competitionId": "season2",
+        "teamId": "season2-team-yona",
         "category": "team",
         "detail": "4위"
       },
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-namgung-hyuk",
         "category": "team",
         "detail": "4위"
       }
@@ -620,18 +674,21 @@
       {
         "type": "major",
         "competitionId": "season1",
+        "teamId": "season1-team-namgung-hyuk",
         "category": "team",
         "detail": "2위"
       },
       {
         "type": "major",
         "competitionId": "season2",
+        "teamId": "season2-team-namgung-hyuk",
         "category": "team",
         "detail": "우승"
       },
       {
         "type": "major",
         "competitionId": "season3",
+        "teamId": "season3-team-hyungdok",
         "category": "team",
         "detail": "우승"
       },
@@ -644,6 +701,7 @@
       {
         "type": "major",
         "competitionId": "season4",
+        "teamId": "season4-williams",
         "category": "team",
         "detail": "우승"
       }
@@ -661,12 +719,14 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-zen1th-hwang",
         "category": "team",
         "detail": "5위"
       },
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-alpine",
         "category": "team",
         "detail": "6위"
       }
@@ -684,6 +744,7 @@
       {
         "type": "minor",
         "competitionId": "season2",
+        "teamId": "season2-team-hyungdok",
         "category": "team",
         "detail": "3위"
       }
@@ -701,6 +762,7 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-reo",
         "category": "team",
         "detail": "3위"
       }
@@ -718,12 +780,14 @@
       {
         "type": "major",
         "competitionId": "season3",
+        "teamId": "season3-team-yona",
         "category": "team",
         "detail": "2위"
       },
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-mclaren",
         "category": "team",
         "detail": "5위(op)"
       }
@@ -741,6 +805,7 @@
       {
         "type": "major",
         "competitionId": "season2",
+        "teamId": "season2-team-cheongalice",
         "category": "team",
         "detail": "2위"
       }
@@ -758,24 +823,28 @@
       {
         "type": "minor",
         "competitionId": "season1",
+        "teamId": "season1-team-yona",
         "category": "team",
         "detail": "4위"
       },
       {
         "type": "minor",
         "competitionId": "season2",
+        "teamId": "season2-team-hyungdok",
         "category": "team",
         "detail": "3위"
       },
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-zen1th-hwang",
         "category": "team",
         "detail": "5위"
       },
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-sauber",
         "category": "team",
         "detail": "7위"
       }
@@ -793,12 +862,14 @@
       {
         "type": "major",
         "competitionId": "season2",
+        "teamId": "season2-team-cheongalice",
         "category": "team",
         "detail": "2위"
       },
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-namgung-hyuk",
         "category": "team",
         "detail": "4위"
       }
@@ -816,12 +887,14 @@
       {
         "type": "major",
         "competitionId": "season2",
+        "teamId": "season2-team-namgung-hyuk",
         "category": "team",
         "detail": "우승"
       },
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-reo",
         "category": "team",
         "detail": "3위"
       }
@@ -839,6 +912,7 @@
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-zen1th-hwang",
         "category": "team",
         "detail": "5위"
       }
@@ -856,6 +930,7 @@
       {
         "type": "major",
         "competitionId": "season3",
+        "teamId": "season3-team-hyungdok",
         "category": "team",
         "detail": "우승"
       }
@@ -873,6 +948,7 @@
       {
         "type": "minor",
         "competitionId": "season2",
+        "teamId": "season2-team-yona",
         "category": "team",
         "detail": "4위"
       }
@@ -890,12 +966,14 @@
       {
         "type": "major",
         "competitionId": "season3",
+        "teamId": "season3-team-yona",
         "category": "team",
         "detail": "2위"
       },
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-mercedes",
         "category": "team",
         "detail": "8위"
       }
@@ -913,18 +991,21 @@
       {
         "type": "minor",
         "competitionId": "season1",
+        "teamId": "season1-team-yona",
         "category": "team",
         "detail": "4위"
       },
       {
         "type": "minor",
         "competitionId": "season2",
+        "teamId": "season2-team-hyungdok",
         "category": "team",
         "detail": "3위"
       },
       {
         "type": "minor",
         "competitionId": "season3",
+        "teamId": "season3-team-zen1th-hwang",
         "category": "team",
         "detail": "5위"
       }
@@ -947,6 +1028,7 @@
       {
         "type": "major",
         "competitionId": "season4",
+        "teamId": "season4-haas",
         "category": "team",
         "detail": "2위"
       },
@@ -968,6 +1050,7 @@
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-alpine",
         "category": "team",
         "detail": "6위(op)"
       }
@@ -1004,6 +1087,7 @@
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-sauber",
         "category": "team",
         "detail": "7위"
       }
@@ -1026,6 +1110,7 @@
       {
         "type": "major",
         "competitionId": "season4",
+        "teamId": "season4-williams",
         "category": "team",
         "detail": "우승(op)"
       }
@@ -1048,6 +1133,7 @@
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-aston-martin",
         "category": "team",
         "detail": "10위"
       }
@@ -1070,6 +1156,7 @@
       {
         "type": "major",
         "competitionId": "season4",
+        "teamId": "season4-redbull",
         "category": "team",
         "detail": "3위"
       }
@@ -1092,6 +1179,7 @@
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-racing-bulls",
         "category": "team",
         "detail": "4위(op)"
       }
@@ -1107,6 +1195,7 @@
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-mclaren",
         "category": "team",
         "detail": "5위"
       }
@@ -1120,6 +1209,7 @@
       {
         "type": "minor",
         "competitionId": "season4",
+        "teamId": "season4-aston-martin",
         "category": "team",
         "detail": "6위(op)"
       }
