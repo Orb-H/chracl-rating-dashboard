@@ -43,6 +43,11 @@ export type Player = {
    * Whether the participant is not an actual player. This is used to filter out non-player entities from player lists. E.g., true for team, organization, or coach which represents a non-player entity rather than an individual player.
    */
   isNotPlayer?: boolean;
+
+  /**
+   * Whether the participant has graduated. Graduated participants are those who have completed their participation in the competition and are no longer active players. This is used to indicate that the participant has finished their competitive career, which can be relevant for historical records and statistics. E.g., true for a player who officially announced their retirement or has been marked as graduated by the competition organizers, indicating that they are no longer active in the current season or future seasons.
+   */
+  graduated?: boolean;
 };
 
 /**

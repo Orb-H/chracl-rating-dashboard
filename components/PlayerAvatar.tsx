@@ -1,3 +1,4 @@
+import { GraduationCapIcon } from "lucide-react";
 import Link from "next/link";
 import { Player } from "@/types/player";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
@@ -12,10 +13,7 @@ export function PlayerAvatar({
   return (
     <Link
       href={`/players/${player.id}`}
-      className={
-        `flex items-center underline hover:no-underline` +
-        (className ? ` ${className}` : "")
-      }
+      className={`flex items-center` + (className ? ` ${className}` : "")}
     >
       <Avatar>
         <AvatarImage
@@ -25,7 +23,17 @@ export function PlayerAvatar({
         />
         <AvatarFallback>{player.displayName.charAt(0)}</AvatarFallback>
       </Avatar>
-      <span className="ml-2 align-middle">{player.displayName}</span>
+      <span className="ml-2 align-middle">
+        <span className="underline hover:no-underline">
+          {player.displayName}
+        </span>
+        {player.graduated && (
+          <>
+            {" "}
+            <GraduationCapIcon className="inline w-5 h-5" aria-label="졸업" />
+          </>
+        )}
+      </span>
     </Link>
   );
 }

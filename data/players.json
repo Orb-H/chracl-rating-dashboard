@@ -160,7 +160,8 @@
         "category": "individual",
         "detail": "드라이버 챔피언"
       }
-    ]
+    ],
+    "graduated": true
   },
   {
     "id": "kim-toki",

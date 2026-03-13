@@ -1,4 +1,4 @@
-import { StarIcon, TrophyIcon } from "lucide-react";
+import { GraduationCapIcon, StarIcon, TrophyIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -138,6 +138,9 @@ export default async function Player({
           <AvatarFallback>{player.displayName.charAt(0)}</AvatarFallback>
         </Avatar>
         <span className="inline">{player.displayName}</span>
+        {player.graduated && (
+          <GraduationCapIcon className="inline w-10 h-10" aria-label="졸업" />
+        )}
         {player.channelId && (
           <Link href={`https://chzzk.naver.com/${player.channelId}`}>
             <Image src="/chzzk.png" alt="Chzzk" width={40} height={40} />
