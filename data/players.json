@@ -65,7 +65,13 @@
         "type": "major",
         "competitionId": "season4",
         "category": "team",
-        "detail": "2위(op)"
+        "detail": "2위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "individual",
+        "detail": "오퍼레이터"
       }
     ]
   },
@@ -367,7 +373,13 @@
         "type": "minor",
         "competitionId": "season4",
         "category": "team",
-        "detail": "7위(op)"
+        "detail": "7위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "individual",
+        "detail": "오퍼레이터"
       }
     ]
   },
@@ -431,7 +443,13 @@
         "type": "major",
         "competitionId": "season4",
         "category": "team",
-        "detail": "3위(op)"
+        "detail": "3위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "individual",
+        "detail": "오퍼레이터"
       }
     ]
   },
@@ -725,7 +743,13 @@
         "type": "minor",
         "competitionId": "season4",
         "category": "team",
-        "detail": "5위(op)"
+        "detail": "5위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "individual",
+        "detail": "오퍼레이터"
       }
     ]
   },
@@ -969,7 +993,13 @@
         "type": "minor",
         "competitionId": "season4",
         "category": "team",
-        "detail": "6위(op)"
+        "detail": "6위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "individual",
+        "detail": "오퍼레이터"
       }
     ]
   },
@@ -1027,7 +1057,13 @@
         "type": "major",
         "competitionId": "season4",
         "category": "team",
-        "detail": "우승(op)"
+        "detail": "우승"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "individual",
+        "detail": "오퍼레이터"
       }
     ]
   },
@@ -1093,7 +1129,13 @@
         "type": "minor",
         "competitionId": "season4",
         "category": "team",
-        "detail": "4위(op)"
+        "detail": "4위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "individual",
+        "detail": "오퍼레이터"
       }
     ]
   },
@@ -1121,7 +1163,13 @@
         "type": "minor",
         "competitionId": "season4",
         "category": "team",
-        "detail": "6위(op)"
+        "detail": "10위"
+      },
+      {
+        "type": "minor",
+        "competitionId": "season4",
+        "category": "individual",
+        "detail": "오퍼레이터"
       }
     ],
     "isNotPlayer": true
