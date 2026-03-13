@@ -1,4 +1,4 @@
-import { StarIcon, TrophyIcon } from "lucide-react";
+import { GraduationCapIcon, StarIcon, TrophyIcon } from "lucide-react";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
@@ -45,9 +45,20 @@ export function PlayerCard({ player }: { player: Player & Rating }) {
         <div className="w-full gap-2 flex flex-col">
           <Link
             href={`/players/${player.id}`}
-            className="font-semibold text-2xl underline hover:no-underline"
+            className="font-semibold text-2xl"
           >
-            {player.displayName}
+            <span className="underline hover:no-underline">
+              {player.displayName}
+            </span>
+            {player.graduated && (
+              <>
+                {" "}
+                <GraduationCapIcon
+                  className="inline w-7 h-7"
+                  aria-label="졸업"
+                />
+              </>
+            )}
           </Link>
           <hr className="border-foreground" />
           <Table className="table-fixed">
