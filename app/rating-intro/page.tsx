@@ -23,7 +23,8 @@ export default function RatingIntro() {
         </li>
         <li>
           경기에 많이 참여하면 레이팅의 신뢰도가 올라갑니다. 초반에는 레이팅이
-          크게 오르내릴 수 있지만, 시간이 지날수록 변동폭이 줄어듭니다.
+          크게 오르내릴 수 있지만, 시간이 지날수록 변동폭이 줄어듭니다. 같은
+          평균이라도 신뢰도가 높으면 레이팅이 높습니다.
         </li>
         <li>
           강한 상대를 이기면 레이팅이 크게 오르고, 약한 상대에게 이기면 레이팅이
@@ -86,7 +87,9 @@ export default function RatingIntro() {
           선수의 점수가 같게 나올 수 있음
         </li>
       </ul>
-      <p>이 세 가지 문제를 해결하기 위해 새로운 레이팅 시스템을 도입했어요.</p>
+      <p>
+        이 세 가지 문제를 해결하기 위해 새로운 레이팅 시스템을 도입해보았어요.
+      </p>
       <Separator />
       <h3 className="text-2xl font-semibold">
         📊 레이팅, 어떻게 읽으면 될까요?
@@ -177,6 +180,10 @@ export default function RatingIntro() {
         높아요. 한 번 잘해서 레이팅이 높은 선수보다, 매번 꾸준히 잘한 선수가 더
         높은 레이팅을 가져가는 구조입니다.
       </p>
+      <p>
+        또한 신뢰도가 높아지면 레이팅이 더 안정적으로 유지돼요. 초반에는
+        레이팅이 크게 오르내릴 수 있지만, 시간이 지날수록 값이 잘 변하지 않아요.
+      </p>
       <h4 className="text-xl font-semibold">
         3. 팀전 + 개인전, 둘 다 반영된다 🤝
       </h4>
@@ -202,13 +209,13 @@ export default function RatingIntro() {
           </TableRow>
           <TableRow>
             <TableCell>퀄리파잉</TableCell>
-            <TableCell>본선보다 낮은 비중</TableCell>
+            <TableCell>본선의 3/7배</TableCell>
           </TableRow>
         </TableBody>
       </Table>
       <p>
         팀을 위해 희생하는 플레이도, 팀을 들고 혼자 올라오는 플레이도 어느 정도
-        반영됩니다.
+        반영됩니다. 반영 비율은 기존 티어 지수를 참고했어요.
       </p>
       <Separator />
       <h3 className="text-2xl font-semibold">📋 데이터 직접 보기</h3>
