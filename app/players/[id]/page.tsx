@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { TierBadge } from "@/components/TierBadge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -255,6 +256,7 @@ function CareerList({
         <TableHeader>
           <TableRow>
             <TableHead>대회</TableHead>
+            <TableHead>팀</TableHead>
             <TableHead>성적</TableHead>
             <TableHead>티어</TableHead>
             <TableHead>레이팅(변동)</TableHead>
@@ -275,6 +277,9 @@ function CareerList({
             const teamCareer = careerItems.find(
               (item) => item.category === "team",
             );
+            const team = competition.teams.find(
+              (t) => t.id === teamCareer?.teamId,
+            );
 
             return (
               <TableRow key={competition.id}>
@@ -285,6 +290,13 @@ function CareerList({
                   >
                     {competition?.shortName ?? competition.name}
                   </Link>
+                </TableCell>
+                <TableCell>
+                  {teamCareer && team ? (
+                    <Badge className={team.style?.badge}>팀 {team.name}</Badge>
+                  ) : (
+                    "-"
+                  )}
                 </TableCell>
                 <TableCell>
                   {teamCareer && (

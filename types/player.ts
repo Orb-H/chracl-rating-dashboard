@@ -91,6 +91,11 @@ export type Career = {
   competitionId: string;
 
   /**
+   * The team associated with the career highlight, if applicable. E.g., "season1-team-a"
+   */
+  teamId?: string;
+
+  /**
    * Whether the career highlight is associated with a team or an individual. E.g., "team"
    */
   category: "team" | "individual";
