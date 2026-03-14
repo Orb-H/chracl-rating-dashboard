@@ -115,9 +115,10 @@ export function MySidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
+                  {/* TODO(#210): Add link to prediction page. */}
                   <Link href="#">
                     <BrainIcon className="inline" />{" "}
-                    <span>가상 대결 예측 (준비중)</span>
+                    <span>승부 예측 (준비중)</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
