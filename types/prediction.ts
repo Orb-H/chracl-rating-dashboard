@@ -5,12 +5,12 @@ export type Prediction = {
   reference: PredictionReference;
 
   /**
-   * The prediction results for individual players participated in this match.
+   * The prediction results for individual players participating in this match.
    */
   individual: Record<string, IndividualPredictionResult>;
 
   /**
-   * The prediction results for teams participated in this match. This field exists only when the match kind is "TEAM".
+   * The prediction results for teams participating in this match. This field exists only when the match kind is "TEAM".
    */
   team?: Record<string, TeamPredictionResult>;
 };
@@ -20,13 +20,7 @@ export type PredictionReference = ExistingReference;
 
 export type ExistingReference = {
   /**
-   * The id of the competition, where this prediction is for.
-   * E.g., `season1`
-   */
-  competitionId: string;
-
-  /**
-   * The id of the match, where this prediction is for.
+   * The id of the match this prediction is for.
    * E.g., `season1-round1-qual`
    */
   matchId: string;
@@ -46,7 +40,7 @@ export type IndividualPredictionResult = {
   rank: number;
 
   /**
-   * The expected points the player would earn from the match, calculated as the weighted average of points using the probabilities.
+   * The expected point the player would earn from the match, calculated as the weighted average of points using the probabilities.
    * This value exists only if the points scheme for the match is defined.
    * E.g., 8.5
    */
