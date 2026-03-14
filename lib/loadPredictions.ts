@@ -48,22 +48,27 @@ export function loadPredictions(): Prediction[] {
   return predictions;
 }
 
-export function loadPredictionsById(): Record<string, Prediction> {
+export function loadPredictionsByMatchId(): Record<string, Prediction> {
   if (predictionsByMatchId === undefined) {
-    const ids = loadPredictions().map((prediction) => prediction.matchId);
+    const ids = loadPredictions().map(
+      (prediction) => prediction.reference.matchId,
+    );
     if (ids.length !== new Set(ids).size) {
       throw new Error(`Duplicate match IDs found in predictions data.`);
     }
 
     predictionsByMatchId = Object.fromEntries(
-      loadPredictions().map((prediction) => [prediction.matchId, prediction]),
+      loadPredictions().map((prediction) => [
+        prediction.reference.matchId,
+        prediction,
+      ]),
     );
   }
   return predictionsByMatchId;
 }
 
 export function loadPredictionByMatchId(matchId: string): Prediction {
-  const prediction = loadPredictionsById()[matchId];
+  const prediction = loadPredictionsByMatchId()[matchId];
   if (!prediction) {
     throw new Error(`Prediction not found for match ID: ${matchId}`);
   }
