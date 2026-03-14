@@ -1,22 +1,8 @@
-import { Rating } from "./rating";
-
 export type Prediction = {
   /**
-   * The id of the competition, where this prediction is for.
-   * E.g., `season1`
+   * The reference to the match this prediction is for.
    */
-  competitionId: string;
-
-  /**
-   * The id of the match, where this prediction is for.
-   * E.g., `season1-round1-qualifying`
-   */
-  matchId: string;
-
-  /**
-   * The rating value of the players before the match starts.
-   */
-  ratings: Record<string, Rating>;
+  reference: PredictionReference;
 
   /**
    * The prediction results for individual players participated in this match.
@@ -27,6 +13,23 @@ export type Prediction = {
    * The prediction results for teams participated in this match. This field exists only when the match kind is "TEAM".
    */
   team?: Record<string, TeamPredictionResult>;
+};
+
+// TODO(#211): Introduce reference for custom setups.
+export type PredictionReference = ExistingReference;
+
+export type ExistingReference = {
+  /**
+   * The id of the competition, where this prediction is for.
+   * E.g., `season1`
+   */
+  competitionId: string;
+
+  /**
+   * The id of the match, where this prediction is for.
+   * E.g., `season1-round1-qual`
+   */
+  matchId: string;
 };
 
 export type IndividualPredictionResult = {
