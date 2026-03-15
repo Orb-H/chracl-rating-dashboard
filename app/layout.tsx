@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import { Header } from "@/components/Header";
 import { MySidebar } from "@/components/MySidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { loadUpdates } from "@/lib/loadUpdates";
 
 export const metadata: Metadata = {
   title: "치레동 레이팅 대시보드 β",
@@ -16,6 +17,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const updates = loadUpdates();
+
   return (
     // The theme provider mutates document.documentElement.classList
     // before React hydration, which can cause an intentional mismatch on <html>.
@@ -24,7 +27,7 @@ export default function RootLayout({
       <body className={`antialiased`}>
         <ThemeProvider defaultTheme="system" enableSystem attribute="class">
           <SidebarProvider>
-            <MySidebar />
+            <MySidebar updates={updates} />
             <SidebarInset>
               <Header />
               {children}
