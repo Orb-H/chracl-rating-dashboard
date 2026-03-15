@@ -153,6 +153,7 @@ export function MySidebar({ updates }: { updates: Update[] }) {
                       있습니다.
                     </SheetDescription>
                   </SheetHeader>
+                  {/* TODO(#216): Add real update content in updates.json */}
                   {updates.map((update) => (
                     <div key={update.date} className="px-4">
                       <Separator className="my-4" />
