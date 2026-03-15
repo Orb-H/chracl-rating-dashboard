@@ -30,14 +30,6 @@ export default function Home() {
       </header>
       <div className="grid w-full gap-8 grid-cols-1 md:grid-cols-2">
         <LeaderboardCard />
-        <CompetitionCard competitions={recentCompetitions} />
-        <Card>
-          <CardHeader className="text-2xl font-bold">
-            어느 팀이 이길까
-          </CardHeader>
-          {/* TODO(#70): Add relevant information when prediction page is ready */}
-          <CardContent>준비중입니다.</CardContent>
-        </Card>
         <Card>
           <CardHeader className="text-2xl font-bold">레이팅 소개</CardHeader>
           <CardContent>
@@ -53,6 +45,14 @@ export default function Home() {
               <Link href="/rating-intro">레이팅 소개 페이지 보러가기 →</Link>
             </Button>
           </CardFooter>
+        </Card>
+        <CompetitionCard competitions={recentCompetitions} />
+        <Card>
+          <CardHeader className="text-2xl font-bold">
+            어느 팀이 이길까
+          </CardHeader>
+          {/* TODO(#70): Add relevant information when prediction page is ready */}
+          <CardContent>준비중입니다.</CardContent>
         </Card>
       </div>
     </main>
