@@ -123,7 +123,7 @@ function VodCard({
         <CardHeader className="px-0">
           <Image
             src={thumbnail}
-            alt="VOD Thumbnail"
+            alt={`Thumbnail for ${title}`}
             width={640}
             height={360}
             className="w-full"
