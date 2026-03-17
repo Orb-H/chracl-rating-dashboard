@@ -121,7 +121,7 @@ function VodCard({
       <Card className="overflow-hidden pt-0">
         <CardHeader className="px-0">
           <Image
-            src={thumbnail || "/vod/default-thumbnail.png"}
+            src={thumbnail}
             alt="VOD Thumbnail"
             width={640}
             height={360}
