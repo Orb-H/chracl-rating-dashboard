@@ -151,17 +151,23 @@ export function MySidebar({ updates }: { updates: Update[] }) {
                       </SheetDescription>
                     </SheetHeader>
                     {/* TODO(#216): Add real update content in updates.json */}
-                    {updates.map((update) => (
-                      <div key={update.date} className="px-4">
-                        <Separator className="my-4" />
-                        <h3 className="font-semibold mb-4">{update.date}</h3>
-                        <ul className="text-sm list-disc list-inside">
-                          {update.content.map((item, index) => (
-                            <li key={index}>{item}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
+                    {updates
+                      .sort(
+                        (a, b) =>
+                          new Date(b.date).getTime() -
+                          new Date(a.date).getTime(),
+                      )
+                      .map((update) => (
+                        <div key={update.date} className="px-4">
+                          <Separator className="my-4" />
+                          <h3 className="font-semibold mb-4">{update.date}</h3>
+                          <ul className="text-sm list-disc list-inside">
+                            {update.content.map((item, index) => (
+                              <li key={index}>{item}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
                   </SheetContent>
                 </Sheet>
               </SidebarMenuItem>
