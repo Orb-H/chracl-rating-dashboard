@@ -9,7 +9,7 @@ import {
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { loadCompetitionsById } from "@/lib/loadCompetitions";
 
-export default function Participants() {
+export default function VodPage() {
   const competitions = loadCompetitionsById();
 
   return (
