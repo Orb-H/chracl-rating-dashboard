@@ -10,6 +10,7 @@ import {
   HomeIcon,
   PresentationIcon,
   ScrollTextIcon,
+  SendIcon,
   TrophyIcon,
   UsersIcon,
   VideoIcon,
@@ -169,6 +170,14 @@ export function MySidebar({ updates }: { updates: Update[] }) {
                   <Link href="https://www.chzzk-racing.club/">
                     <PresentationIcon className="inline" />{" "}
                     <span>치레보드</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="mailto:orbithv@orbithv.dev">
+                    <SendIcon className="inline" />{" "}
+                    <span>개발자에게 메일 보내기</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
