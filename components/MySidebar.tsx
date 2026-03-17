@@ -3,7 +3,6 @@
 import {
   BookTextIcon,
   BrainIcon,
-  ChevronRightIcon,
   ClapperboardIcon,
   GithubIcon,
   GlobeIcon,
@@ -19,12 +18,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
@@ -35,7 +28,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  useSidebar,
 } from "@/components/ui/sidebar";
 import { Update } from "@/types/update";
 import { UpdateSheet } from "./UpdateSheet";
@@ -47,8 +39,6 @@ export function MySidebar({ updates }: { updates: Update[] }) {
     if (!href || !pathname) return false;
     return pathname === href;
   };
-
-  const sidebar = useSidebar();
 
   return (
     <Sidebar>
@@ -135,6 +125,14 @@ export function MySidebar({ updates }: { updates: Update[] }) {
                   updates={updates}
                 />
               </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild isActive={isActive("/vod")}>
+                  <Link href="/vod">
+                    <ClapperboardIcon className="inline" />{" "}
+                    <span>치레동 다시보기</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
@@ -150,63 +148,6 @@ export function MySidebar({ updates }: { updates: Update[] }) {
                     <VideoIcon className="inline" /> <span>치레동 생중계</span>
                   </Link>
                 </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <DropdownMenu modal={false}>
-                  <DropdownMenuTrigger asChild>
-                    <SidebarMenuButton className="w-full">
-                      <ClapperboardIcon className="inline" />{" "}
-                      <span>치레동 다시보기</span>
-                      <ChevronRightIcon className="inline ml-auto" />
-                    </SidebarMenuButton>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent
-                    side={sidebar.isMobile ? "bottom" : "right"}
-                    align={sidebar.isMobile ? "end" : "center"}
-                    className="rounded-lg"
-                  >
-                    <DropdownMenuItem>
-                      <Link href="https://chzzk.naver.com/video/6994458">
-                        제 1회: 고속도로 배틀
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <Link href="https://chzzk.naver.com/video/7992247">
-                        제 2회: 포뮬러 그랑프리 (예선)
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <Link href="https://chzzk.naver.com/video/8108679">
-                        제 2회: 포뮬러 그랑프리 (본선)
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <Link href="https://chzzk.naver.com/video/10292130">
-                        제 3회: 레인 헬 (예선)
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <Link href="https://chzzk.naver.com/video/10393351">
-                        제 3회: 레인 헬 (본선)
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <Link href="https://chzzk.naver.com/video/12049352">
-                        제 4회: 포뮬러 챔피언쉽 (예선)
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <Link href="https://chzzk.naver.com/video/12110859">
-                        제 4회: 포뮬러 챔피언쉽 (본선 1일차)
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <Link href="https://chzzk.naver.com/video/12128240">
-                        제 4회: 포뮬러 챔피언쉽 (본선 2일차)
-                      </Link>
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
