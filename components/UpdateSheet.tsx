@@ -31,7 +31,7 @@ export function UpdateSheet({
           </SheetDescription>
         </SheetHeader>
         {/* TODO(#216): Add real update content in updates.json */}
-        {updates
+        {[...updates]
           .sort(
             (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
           )
