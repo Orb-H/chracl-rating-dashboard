@@ -14,6 +14,12 @@ export default function RatingIntro() {
   return (
     <main className="flex flex-col gap-6 min-h-screen w-full max-w-3xl mx-auto items-start py-16 px-8 md:py-32 md:px-16 bg-background">
       <h2 className="mb-6 text-4xl font-extrabold">🏁 치레동 레이팅 시스템</h2>
+      <blockquote className="p-4 border-s-4 bg-muted">
+        🚨 본 레이팅 시스템은 개인적으로 집계하는 레이팅으로, 공식적으로
+        사용되는 값이 아닙니다. 또한 시스템 내부적으로 오류가 있을 수 있으며
+        실제 실력과 완벽히 일치하지 않을 수 있습니다. 레이팅은 선수들의 실력을
+        대략적으로 비교하는 데 참고용으로 활용해주세요.
+      </blockquote>
       <h3 className="text-2xl font-semibold">세 줄? 요약</h3>
       <ol className="ml-6 list-decimal [&>li]:mt-2">
         <li>

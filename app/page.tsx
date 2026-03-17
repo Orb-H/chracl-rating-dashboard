@@ -20,13 +20,23 @@ export default function Home() {
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center justify-between py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
       <header className="mb-8 w-full">
         <h1 className="text-4xl font-bold">치레동 레이팅 대시보드 β</h1>
-        <blockquote className="p-4 my-4 border-s-4 bg-muted font-semibold">
-          🚨 아직 개발중인 사이트이므로 많은 기능이 작동하지 않을 수 있습니다.
-        </blockquote>
         <p className="mt-2 text-lg text-muted-foreground">
           치레동 레이팅 대시보드에 오신 것을 환영합니다! 아래 카드나 좌측의
           사이드바를 통해 레이팅과 대회 관련 정보를 확인해보세요.
         </p>
+        <blockquote className="p-4 my-4 border-s-4 bg-muted">
+          🚨 주의사항
+          <ul className="mt-2 ml-6 list-disc">
+            <li>
+              아직 <strong>개발중인 사이트</strong>이므로 많은 기능이 작동하지
+              않을 수 있습니다.
+            </li>
+            <li>
+              이 레이팅 시스템을 통해 계산된 레이팅은{" "}
+              <strong>공식이 아닙니다.</strong>
+            </li>
+          </ul>
+        </blockquote>
       </header>
       <div className="grid w-full gap-8 grid-cols-1 md:grid-cols-2">
         <LeaderboardCard />
