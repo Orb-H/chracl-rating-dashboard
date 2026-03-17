@@ -17,15 +17,6 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Separator } from "@/components/ui/separator";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 import {
   Sidebar,
   SidebarContent,
@@ -39,6 +30,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { Update } from "@/types/update";
+import { UpdateSheet } from "./UpdateSheet";
 
 export function MySidebar({ updates }: { updates: Update[] }) {
   const pathname = usePathname();
@@ -123,37 +115,15 @@ export function MySidebar({ updates }: { updates: Update[] }) {
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <Sheet>
-                  <SheetTrigger asChild>
+                <UpdateSheet
+                  triggerChild={
                     <SidebarMenuButton className="hover:cursor-pointer">
                       <ScrollTextIcon className="inline" />{" "}
                       <span>업데이트 내역 (준비중)</span>
                     </SidebarMenuButton>
-                  </SheetTrigger>
-                  <SheetContent side="left">
-                    <SheetHeader>
-                      <SheetTitle>업데이트 내역</SheetTitle>
-                      <SheetDescription>
-                        업데이트 날짜는 배포 날짜가 아닌 깃허브에 기능이 추가된
-                        날짜를 기준으로 합니다. 따라서 실제로 페이지가 배포되지
-                        않은 날짜에 개발이 완료되었다고 표시된 기능이 있을 수
-                        있습니다.
-                      </SheetDescription>
-                    </SheetHeader>
-                    {/* TODO(#216): Add real update content in updates.json */}
-                    {updates.map((update) => (
-                      <div key={update.date} className="px-4">
-                        <Separator className="my-4" />
-                        <h3 className="font-semibold mb-4">{update.date}</h3>
-                        <ul className="text-sm list-disc list-inside">
-                          {update.content.map((item, index) => (
-                            <li key={index}>{item}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </SheetContent>
-                </Sheet>
+                  }
+                  updates={updates}
+                />
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={isActive("/vod")}>
