@@ -17,8 +17,8 @@ export default function Participants() {
       <header className="mb-8 w-full">
         <h1 className="text-4xl font-bold">다시보기 목록</h1>
         <p className="mt-2 text-lg text-muted-foreground">
-          치레동에서 진행된 경기들의 다시보기를 확인해보세요. 일자별로 정리되어
-          있습니다. 링크를 클릭하면 치지직으로 이동합니다.
+          치레동에서 진행된 경기들의 다시보기를 확인해보세요. 일자별 다시보기가
+          정리되어 있습니다. 링크를 클릭하면 치지직으로 이동합니다.
         </p>
         <Accordion type="multiple" className="w-full mt-4">
           <AccordionItem value="season1" className="px-4 border-b">
