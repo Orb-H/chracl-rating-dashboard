@@ -176,7 +176,7 @@ export function MySidebar({ updates }: { updates: Update[] }) {
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <Link href="mailto:orbithv@orbithv.dev">
-                    <SendIcon className="inline" /> 개발자에게 메일 보내기
+                    <SendIcon className="inline" /> <span>개발자에게 메일 보내기</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
