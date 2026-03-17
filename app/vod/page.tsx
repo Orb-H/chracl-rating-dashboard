@@ -116,6 +116,7 @@ function VodCard({
     <Link
       href={url}
       target="_blank"
+      rel="noopener noreferrer"
       className="w-full underline hover:no-underline"
     >
       <Card className="overflow-hidden pt-0">
