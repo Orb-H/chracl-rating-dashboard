@@ -30,22 +30,23 @@ export function UpdateSheet({
             완료되었다고 표시된 기능이 있을 수 있습니다.
           </SheetDescription>
         </SheetHeader>
-        {/* TODO(#216): Add real update content in updates.json */}
-        {[...updates]
-          .sort(
-            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-          )
-          .map((update) => (
-            <div key={update.date} className="px-4">
-              <Separator className="my-4" />
-              <h3 className="font-semibold mb-4">{update.date}</h3>
-              <ul className="text-sm list-disc list-inside">
-                {update.content.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        <div className="flex-1 min-h-0 overflow-y-auto px-4">
+          {[...updates]
+            .sort(
+              (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+            )
+            .map((update, i) => (
+              <div key={update.date}>
+                {i !== 0 && <Separator className="my-4" />}
+                <h3 className="font-semibold mb-4">{update.date}</h3>
+                <ul className="text-sm list-disc list-inside [&>li]:mb-2">
+                  {update.content.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+        </div>
       </SheetContent>
     </Sheet>
   );
