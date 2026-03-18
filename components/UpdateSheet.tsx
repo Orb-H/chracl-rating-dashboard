@@ -31,7 +31,6 @@ export function UpdateSheet({
           </SheetDescription>
         </SheetHeader>
         <div className="overflow-y-auto px-4">
-          {/* TODO(#216): Add real update content in updates.json */}
           {[...updates]
             .sort(
               (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
