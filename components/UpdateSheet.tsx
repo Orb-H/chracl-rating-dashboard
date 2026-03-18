@@ -30,7 +30,7 @@ export function UpdateSheet({
             완료되었다고 표시된 기능이 있을 수 있습니다.
           </SheetDescription>
         </SheetHeader>
-        <div className="overflow-y-auto px-4">
+        <div className="flex-1 min-h-0 overflow-y-auto px-4">
           {[...updates]
             .sort(
               (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
