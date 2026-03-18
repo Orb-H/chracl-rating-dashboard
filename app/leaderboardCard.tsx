@@ -79,7 +79,7 @@ export function LeaderboardCard() {
           </TableBody>
         </Table>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="mt-auto">
         <Button asChild className="ml-auto">
           <Link href="/leaderboard">
             전체 순위 보러가기 <MoveRightIcon className="inline" />
