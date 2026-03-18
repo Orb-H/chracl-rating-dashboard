@@ -50,7 +50,7 @@ export default function Home() {
               지수랑 랭킹 지수는 뭔지 아는데 그래서 레이팅이 대체 뭐임?
             </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter className="mt-auto">
             <Button asChild className="ml-auto">
               <Link href="/rating-intro">레이팅 소개 페이지 보러가기 →</Link>
             </Button>

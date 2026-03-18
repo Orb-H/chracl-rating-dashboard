@@ -58,7 +58,7 @@ export function CompetitionCard({
           </CarouselContent>
         </Carousel>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="mt-auto">
         <Button asChild className="ml-auto">
           <Link href="/competitions">
             전체 대회 보러가기 <MoveRightIcon className="inline" />
