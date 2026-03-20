@@ -120,7 +120,7 @@ export function MySidebar({ updates }: { updates: Update[] }) {
                   triggerChild={
                     <SidebarMenuButton className="hover:cursor-pointer">
                       <ScrollTextIcon className="inline" />{" "}
-                      <span>업데이트 내역 (준비중)</span>
+                      <span>업데이트 내역</span>
                     </SidebarMenuButton>
                   }
                   updates={updates}
