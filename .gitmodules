@@ -1,0 +1,3 @@
+[submodule "scripts/rating"]
+	path = scripts/rating
+	url = https://github.com/Orb-H/chracl-rating-calculator.git

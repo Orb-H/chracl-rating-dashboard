@@ -6,6 +6,14 @@ A dashboard page for rating information at Chzzk Racing Club.
 
 Refer to the [blog post](https://blog.orbithv.dev/chzzk-racing-rating-1) for more information about how the rating data is composed.
 
+### Script for rating data
+
+The script for rating data is located at `scripts/rating`. It is a submodule of this repository, and it is a fork of [chracl-rating-calculator](https://github.com/Orb-H/chracl-rating-calculator). Since the original repository is private, you need access to it. Please contact the repository owner to request access. After you have access, you can run the following command to initialize the submodule:
+
+```bash
+git submodule update --init --recursive
+```
+
 ## Introduction
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
