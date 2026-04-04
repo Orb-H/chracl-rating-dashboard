@@ -16,6 +16,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { loadCompetitionById, loadCompetitions } from "@/lib/loadCompetitions";
 import { loadMatchesByCompetitionId } from "@/lib/loadMatches";
 import { loadPlayersById } from "@/lib/loadPlayers";
+import { Match } from "@/types/match";
 import { MatchesItem } from "./matchesItem";
 
 export const dynamicParams = false;
@@ -42,6 +43,9 @@ export default async function CompetitionDetail({
     }
   })();
   const matches = loadMatchesByCompetitionId(id);
+  const matchesById: Record<string, Match | undefined> = Object.fromEntries(
+    matches.map((match) => [match.id, match]),
+  );
   const players = loadPlayersById();
 
   return (
@@ -125,7 +129,7 @@ export default async function CompetitionDetail({
               </p>
             ) : (
               competition.matches.map((match) => {
-                const targetMatch = matches.find((m) => m.id === match);
+                const targetMatch = matchesById[match];
                 if (!targetMatch) {
                   return null;
                 }
