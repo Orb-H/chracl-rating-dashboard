@@ -42,6 +42,9 @@ export default async function CompetitionDetail({
     }
   })();
   const matches = loadMatchesByCompetitionId(id);
+  const matchesById = Object.fromEntries(
+    matches.map((match) => [match.id, match]),
+  );
   const players = loadPlayersById();
 
   return (
@@ -125,7 +128,7 @@ export default async function CompetitionDetail({
               </p>
             ) : (
               competition.matches.map((match) => {
-                const targetMatch = matches.find((m) => m.id === match);
+                const targetMatch = matchesById[match];
                 if (!targetMatch) {
                   return null;
                 }
