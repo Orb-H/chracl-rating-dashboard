@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   Select,
   SelectContent,
@@ -11,6 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Skeleton } from "@/components/ui/skeleton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Competition } from "@/types/competition";
 import { Entry } from "@/types/entry";
@@ -36,33 +37,50 @@ export function LeaderboardTab({
   const [playerRatingsByEntry, setPlayerRatingsByEntry] = useState<
     Record<string, (Player & Rating)[]>
   >(initialPlayerRatingsByEntry);
-  const [isLoading, setIsLoading] = useState(false);
+  const [loadingEntryId, setLoadingEntryId] = useState<string | null>(null);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const requestIdRef = useRef(0);
 
   const selectedEntryRatings = playerRatingsByEntry[selectedEntry] ?? [];
+  const isSelectedEntryLoading =
+    loadingEntryId === selectedEntry && selectedEntryRatings.length === 0;
 
   const handleEntryChange = async (entryId: string) => {
     setSelectedEntry(entryId);
+    setLoadError(null);
 
     if (playerRatingsByEntry[entryId]) {
       return;
     }
 
-    setIsLoading(true);
+    const currentRequestId = requestIdRef.current + 1;
+    requestIdRef.current = currentRequestId;
+    setLoadingEntryId(entryId);
+
     try {
       const response = await fetch(`/api/leaderboard/entries/${entryId}`, {
         cache: "force-cache",
       });
       if (!response.ok) {
+        if (requestIdRef.current === currentRequestId) {
+          setLoadError(
+            "데이터를 불러오지 못했습니다. 잠시 후 다시 시도해주세요.",
+          );
+        }
         return;
       }
 
       const data = (await response.json()) as { ratings: (Player & Rating)[] };
-      setPlayerRatingsByEntry((prev) => ({
-        ...prev,
-        [entryId]: data.ratings,
-      }));
+      if (requestIdRef.current === currentRequestId) {
+        setPlayerRatingsByEntry((prev) => ({
+          ...prev,
+          [entryId]: data.ratings,
+        }));
+      }
     } finally {
-      setIsLoading(false);
+      if (requestIdRef.current === currentRequestId) {
+        setLoadingEntryId(null);
+      }
     }
   };
 
@@ -104,17 +122,42 @@ export function LeaderboardTab({
           <TabsTrigger value="chart">그래프로 보기</TabsTrigger>
         </TabsList>
       </div>
-      {isLoading && (
+      {isSelectedEntryLoading && (
         <p className="mb-2 text-sm text-muted-foreground">
           데이터를 불러오는 중...
         </p>
       )}
+      {loadError && (
+        <p className="mb-2 text-sm text-destructive">{loadError}</p>
+      )}
       <TabsContent value="table">
-        <LeaderboardTable ratingData={selectedEntryRatings} />
+        {isSelectedEntryLoading ? (
+          <LeaderboardTableLoading />
+        ) : (
+          <LeaderboardTable ratingData={selectedEntryRatings} />
+        )}
       </TabsContent>
       <TabsContent value="chart">
-        <LeaderboardChart ratingData={selectedEntryRatings} />
+        {isSelectedEntryLoading ? (
+          <LeaderboardChartLoading />
+        ) : (
+          <LeaderboardChart ratingData={selectedEntryRatings} />
+        )}
       </TabsContent>
     </Tabs>
   );
+}
+
+function LeaderboardTableLoading() {
+  return (
+    <div className="space-y-3 mt-2">
+      {Array.from({ length: 8 }).map((_, index) => (
+        <Skeleton key={index} className="w-full h-10" />
+      ))}
+    </div>
+  );
+}
+
+function LeaderboardChartLoading() {
+  return <Skeleton className="w-full min-h-50 aspect-9/16 md:aspect-square" />;
 }
