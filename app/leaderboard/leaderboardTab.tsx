@@ -22,25 +22,52 @@ import { LeaderboardTable } from "./leaderboardTable";
 export type LeaderboardTabProps = {
   competitions: Competition[];
   entries: Entry[];
-  playerRatingsByEntry: Record<string, (Player & Rating)[]>;
+  initialPlayerRatingsByEntry: Record<string, (Player & Rating)[]>;
 };
 
 export function LeaderboardTab({
   competitions,
   entries,
-  playerRatingsByEntry,
+  initialPlayerRatingsByEntry,
 }: LeaderboardTabProps) {
   const [selectedEntry, setSelectedEntry] = useState<string>(
     entries.at(-1)!.id,
   );
+  const [playerRatingsByEntry, setPlayerRatingsByEntry] = useState<
+    Record<string, (Player & Rating)[]>
+  >(initialPlayerRatingsByEntry);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const selectedEntryRatings = playerRatingsByEntry[selectedEntry] ?? [];
+
+  const handleEntryChange = async (entryId: string) => {
+    setSelectedEntry(entryId);
+
+    if (playerRatingsByEntry[entryId]) {
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      const response = await fetch(`/api/leaderboard/entries/${entryId}`);
+      if (!response.ok) {
+        return;
+      }
+
+      const data = (await response.json()) as { ratings: (Player & Rating)[] };
+      setPlayerRatingsByEntry((prev) => ({
+        ...prev,
+        [entryId]: data.ratings,
+      }));
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <Tabs defaultValue="table" className="w-full mb-8">
       <div className="w-full flex md:flex-row flex-col justify-end items-end gap-4">
-        <Select
-          value={selectedEntry}
-          onValueChange={(value) => setSelectedEntry(value)}
-        >
+        <Select value={selectedEntry} onValueChange={handleEntryChange}>
           <SelectTrigger>
             <SelectValue placeholder="시점 선택..." />
           </SelectTrigger>
@@ -75,11 +102,16 @@ export function LeaderboardTab({
           <TabsTrigger value="chart">그래프로 보기</TabsTrigger>
         </TabsList>
       </div>
+      {isLoading && (
+        <p className="mb-2 text-sm text-muted-foreground">
+          데이터를 불러오는 중...
+        </p>
+      )}
       <TabsContent value="table">
-        <LeaderboardTable ratingData={playerRatingsByEntry[selectedEntry]} />
+        <LeaderboardTable ratingData={selectedEntryRatings} />
       </TabsContent>
       <TabsContent value="chart">
-        <LeaderboardChart ratingData={playerRatingsByEntry[selectedEntry]} />
+        <LeaderboardChart ratingData={selectedEntryRatings} />
       </TabsContent>
     </Tabs>
   );

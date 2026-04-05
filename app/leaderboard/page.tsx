@@ -1,38 +1,15 @@
 import { loadCompetitions } from "@/lib/loadCompetitions";
-import { loadEntries, loadEntriesById } from "@/lib/loadEntries";
-import { loadHistories } from "@/lib/loadHistories";
-import { loadPlayers } from "@/lib/loadPlayers";
+import { loadEntries } from "@/lib/loadEntries";
+import { loadLeaderboardRatingsByEntry } from "@/lib/loadLeaderboardRatingsByEntry";
 import { LeaderboardTab } from "./leaderboardTab";
 
 export default function Leaderboard() {
-  const players = loadPlayers().filter((player) => !player.isNotPlayer);
   const competitions = loadCompetitions();
   const entries = loadEntries();
-  const entriesById = loadEntriesById();
-  const histories = loadHistories();
-
-  const playerRatingsByEntry = Object.fromEntries(
-    entries.map((entry) => {
-      const playerRatings = players
-        .flatMap((player) => {
-          const playerHistories = histories[player.id].filter(
-            (history) =>
-              entriesById[history.entryId].sortKey <= entry.sortKey &&
-              history.entryId !== "initial",
-          );
-          return playerHistories.length > 0
-            ? [
-                {
-                  ...player,
-                  ...playerHistories[playerHistories.length - 1].rating,
-                },
-              ]
-            : [];
-        })
-        .filter((rating) => rating !== null);
-      return [entry.id, playerRatings.sort((a, b) => b.value - a.value)];
-    }),
-  );
+  const latestEntry = entries.at(-1);
+  const initialPlayerRatingsByEntry = latestEntry
+    ? { [latestEntry.id]: loadLeaderboardRatingsByEntry(latestEntry.id) }
+    : {};
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
@@ -42,11 +19,10 @@ export default function Leaderboard() {
           치레동 선수들의 레이팅 순위를 확인하세요.
         </p>
       </header>
-      {/* TODO: optimize client payload */}
       <LeaderboardTab
         competitions={competitions}
         entries={entries}
-        playerRatingsByEntry={playerRatingsByEntry}
+        initialPlayerRatingsByEntry={initialPlayerRatingsByEntry}
       />
     </main>
   );
