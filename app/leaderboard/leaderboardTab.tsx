@@ -49,7 +49,9 @@ export function LeaderboardTab({
 
     setIsLoading(true);
     try {
-      const response = await fetch(`/api/leaderboard/entries/${entryId}`);
+      const response = await fetch(`/api/leaderboard/entries/${entryId}`, {
+        cache: "force-cache",
+      });
       if (!response.ok) {
         return;
       }
