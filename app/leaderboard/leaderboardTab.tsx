@@ -96,11 +96,6 @@ export function LeaderboardTab({
           <TabsTrigger value="chart">그래프로 보기</TabsTrigger>
         </TabsList>
       </div>
-      {isPending && (
-        <p className="mb-2 text-sm text-muted-foreground">
-          데이터를 불러오는 중...
-        </p>
-      )}
       <TabsContent value="table">
         {isPending ? (
           <LeaderboardTableLoading />
