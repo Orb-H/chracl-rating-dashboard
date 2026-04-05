@@ -1,6 +1,7 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useState, useTransition } from "react";
 import {
   Select,
   SelectContent,
@@ -23,65 +24,29 @@ import { LeaderboardTable } from "./leaderboardTable";
 export type LeaderboardTabProps = {
   competitions: Competition[];
   entries: Entry[];
-  initialPlayerRatingsByEntry: Record<string, (Player & Rating)[]>;
+  selectedEntryId: string;
+  selectedEntryRatings: (Player & Rating)[];
 };
 
 export function LeaderboardTab({
   competitions,
   entries,
-  initialPlayerRatingsByEntry,
+  selectedEntryId,
+  selectedEntryRatings,
 }: LeaderboardTabProps) {
-  const [selectedEntry, setSelectedEntry] = useState<string>(
-    entries.at(-1)!.id,
-  );
-  const [playerRatingsByEntry, setPlayerRatingsByEntry] = useState<
-    Record<string, (Player & Rating)[]>
-  >(initialPlayerRatingsByEntry);
-  const [loadingEntryId, setLoadingEntryId] = useState<string | null>(null);
-  const [loadError, setLoadError] = useState<string | null>(null);
-  const requestIdRef = useRef(0);
+  const router = useRouter();
+  const [selectedEntry, setSelectedEntry] = useState(selectedEntryId);
+  const [isPending, startTransition] = useTransition();
 
-  const selectedEntryRatings = playerRatingsByEntry[selectedEntry] ?? [];
-  const isSelectedEntryLoading =
-    loadingEntryId === selectedEntry && selectedEntryRatings.length === 0;
-
-  const handleEntryChange = async (entryId: string) => {
-    setSelectedEntry(entryId);
-    setLoadError(null);
-
-    if (playerRatingsByEntry[entryId]) {
+  const handleEntryChange = (entryId: string) => {
+    if (entryId === selectedEntry) {
       return;
     }
 
-    const currentRequestId = requestIdRef.current + 1;
-    requestIdRef.current = currentRequestId;
-    setLoadingEntryId(entryId);
-
-    try {
-      const response = await fetch(`/api/leaderboard/entries/${entryId}`, {
-        cache: "force-cache",
-      });
-      if (!response.ok) {
-        if (requestIdRef.current === currentRequestId) {
-          setLoadError(
-            "데이터를 불러오지 못했습니다. 잠시 후 다시 시도해주세요.",
-          );
-        }
-        return;
-      }
-
-      const data = (await response.json()) as { ratings: (Player & Rating)[] };
-      if (requestIdRef.current === currentRequestId) {
-        setPlayerRatingsByEntry((prev) => ({
-          ...prev,
-          [entryId]: data.ratings,
-        }));
-      }
-    } finally {
-      if (requestIdRef.current === currentRequestId) {
-        setLoadingEntryId(null);
-      }
-    }
+    setSelectedEntry(entryId);
+    startTransition(() => {
+      router.push(`/leaderboard/${entryId}`);
+    });
   };
 
   return (
@@ -122,23 +87,20 @@ export function LeaderboardTab({
           <TabsTrigger value="chart">그래프로 보기</TabsTrigger>
         </TabsList>
       </div>
-      {isSelectedEntryLoading && (
+      {isPending && (
         <p className="mb-2 text-sm text-muted-foreground">
           데이터를 불러오는 중...
         </p>
       )}
-      {loadError && (
-        <p className="mb-2 text-sm text-destructive">{loadError}</p>
-      )}
       <TabsContent value="table">
-        {isSelectedEntryLoading ? (
+        {isPending ? (
           <LeaderboardTableLoading />
         ) : (
           <LeaderboardTable ratingData={selectedEntryRatings} />
         )}
       </TabsContent>
       <TabsContent value="chart">
-        {isSelectedEntryLoading ? (
+        {isPending ? (
           <LeaderboardChartLoading />
         ) : (
           <LeaderboardChart ratingData={selectedEntryRatings} />
