@@ -13,6 +13,15 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Competition } from "@/types/competition";
 import { Entry } from "@/types/entry";
@@ -112,11 +121,39 @@ export function LeaderboardTab({
 
 function LeaderboardTableLoading() {
   return (
-    <div className="space-y-3 mt-2">
-      {Array.from({ length: 8 }).map((_, index) => (
-        <Skeleton key={index} className="w-full h-10" />
-      ))}
-    </div>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead className="text-center">순위</TableHead>
+          <TableHead className="pl-12">선수</TableHead>
+          <TableHead className="text-center">티어</TableHead>
+          <TableHead className="text-center">레이팅</TableHead>
+          <TableHead className="text-center">μ값</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {Array.from({ length: 8 }).map((_, index) => (
+          <TableRow key={index}>
+            <TableCell className="text-center">
+              <Skeleton className="h-4 w-6 mx-auto" />
+            </TableCell>
+            <TableCell>
+              <Skeleton className="h-8 w-full" />
+            </TableCell>
+            <TableCell className="text-center">
+              <Skeleton className="h-4 w-8 mx-auto" />
+            </TableCell>
+            <TableCell className="text-center">
+              <Skeleton className="h-4 w-16 mx-auto" />
+            </TableCell>
+            <TableCell className="text-center">
+              <Skeleton className="h-4 w-16 mx-auto" />
+            </TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+      <TableCaption>현재 기준 레이팅 순위</TableCaption>
+    </Table>
   );
 }
 
