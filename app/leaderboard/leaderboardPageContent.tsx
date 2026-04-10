@@ -1,6 +1,7 @@
 import { loadCompetitions } from "@/lib/loadCompetitions";
 import { loadEntries } from "@/lib/loadEntries";
-import { loadLeaderboardRatingsByEntry } from "@/lib/loadLeaderboardRatingsByEntry";
+import { loadPlayers } from "@/lib/loadPlayers";
+import { loadRatingByEntryId } from "@/lib/loadRatingByEntryId";
 import { LeaderboardTab } from "./leaderboardTab";
 
 type LeaderboardPageContentProps = {
@@ -12,7 +13,17 @@ export function LeaderboardPageContent({
 }: LeaderboardPageContentProps) {
   const competitions = loadCompetitions();
   const entries = loadEntries();
-  const selectedEntryRatings = loadLeaderboardRatingsByEntry(selectedEntryId);
+  const players = loadPlayers().filter((player) => !player.isNotPlayer);
+  const ratingsByPlayerId = loadRatingByEntryId(selectedEntryId);
+  const selectedEntryRatings = players
+    .flatMap((player) => {
+      const rating = ratingsByPlayerId[player.id];
+      if (!rating) {
+        return [];
+      }
+      return [{ ...player, ...rating }];
+    })
+    .sort((a, b) => b.value - a.value);
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">

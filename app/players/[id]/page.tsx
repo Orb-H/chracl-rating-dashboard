@@ -17,11 +17,11 @@ import {
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { loadCompetitions, loadCompetitionsById } from "@/lib/loadCompetitions";
-import { loadCurrentRating } from "@/lib/loadCurrentRating";
 import { loadEntriesById } from "@/lib/loadEntries";
 import { loadHistoriesById } from "@/lib/loadHistories";
 import { loadMatches } from "@/lib/loadMatches";
 import { loadPlayerById, loadPlayers } from "@/lib/loadPlayers";
+import { loadLatestRatingByPlayerId } from "@/lib/loadRatingByEntryId";
 import { isIndividualWin, isTeamWin } from "@/lib/utils";
 import { Competition } from "@/types/competition";
 import { Entry } from "@/types/entry";
@@ -53,7 +53,7 @@ export default async function Player({
       return notFound();
     }
   })();
-  const currentRatings = loadCurrentRating();
+  const currentRatings = loadLatestRatingByPlayerId();
   const currentRating = currentRatings[id];
   const validRatings = Object.entries(currentRatings).filter(
     ([_, r]) => r.value !== 0,
