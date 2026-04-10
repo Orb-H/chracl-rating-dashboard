@@ -133,7 +133,10 @@ function LeaderboardTableLoading() {
               <Skeleton className="h-4 w-6 mx-auto" />
             </TableCell>
             <TableCell>
-              <Skeleton className="h-8 w-full" />
+              <div className="flex items-center gap-2">
+                <Skeleton className="h-8 w-8 rounded-full shrink-0" />
+                <Skeleton className="h-4 w-28" />
+              </div>
             </TableCell>
             <TableCell className="text-center">
               <Skeleton className="h-4 w-8 mx-auto" />
