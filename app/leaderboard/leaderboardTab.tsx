@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 import {
   Select,
   SelectContent,
@@ -46,6 +46,10 @@ export function LeaderboardTab({
   const router = useRouter();
   const [selectedEntry, setSelectedEntry] = useState(selectedEntryId);
   const [isPending, startTransition] = useTransition();
+
+  useEffect(() => {
+    setSelectedEntry(selectedEntryId);
+  }, [selectedEntryId]);
 
   const handleEntryChange = (entryId: string) => {
     if (entryId === selectedEntry) {
