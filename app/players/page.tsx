@@ -1,15 +1,15 @@
 import { StarIcon, TrophyIcon } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { currentSeason } from "@/lib/constants";
-import { loadCurrentRating } from "@/lib/loadCurrentRating";
 import { loadPlayers } from "@/lib/loadPlayers";
+import { loadLatestRatingByPlayerId } from "@/lib/loadRatingByEntryId";
 import { Player } from "@/types/player";
 import { Rating } from "@/types/rating";
 import { PlayerCard } from "./playerCard";
 
 export default function Participants() {
   const players = loadPlayers().filter((player) => !player.isNotPlayer);
-  const ratings = loadCurrentRating();
+  const ratings = loadLatestRatingByPlayerId();
 
   const playersWithRating = players.map((player) => ({
     ...player,

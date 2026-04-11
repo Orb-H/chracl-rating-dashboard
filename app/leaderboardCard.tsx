@@ -16,12 +16,12 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { loadCurrentRating } from "@/lib/loadCurrentRating";
 import { loadPlayerById } from "@/lib/loadPlayers";
+import { loadLatestRatingByPlayerId } from "@/lib/loadRatingByEntryId";
 import { roundToTwoDecimals } from "@/lib/utils";
 
 export function LeaderboardCard() {
-  const currentRating = loadCurrentRating();
+  const currentRating = loadLatestRatingByPlayerId();
   const top3 = Object.entries(currentRating)
     .sort((a, b) => b[1].value - a[1].value)
     .slice(0, 3)
