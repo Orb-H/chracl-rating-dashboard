@@ -11,17 +11,17 @@ import { loadUpdates } from "@/lib/loadUpdates";
 const paperlogy = localFont({
   src: [
     {
-      path: "./fonts/paperlogy/Paperlogy-4Regular.ttf",
+      path: "../fonts/paperlogy/Paperlogy-4Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/paperlogy/Paperlogy-5Medium.ttf",
+      path: "../fonts/paperlogy/Paperlogy-5Medium.ttf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "./fonts/paperlogy/Paperlogy-7Bold.ttf",
+      path: "../fonts/paperlogy/Paperlogy-7Bold.ttf",
       weight: "700",
       style: "normal",
     },
@@ -47,7 +47,9 @@ export default function RootLayout({
     // before React hydration, which can cause an intentional mismatch on <html>.
     // Keep suppressHydrationWarning on <html> to ignore this specific mismatch.
     <html lang="en" suppressHydrationWarning>
-      <body className={`${paperlogy.variable} antialiased`}>
+      <body
+        className={`${paperlogy.variable} ${paperlogy.className} antialiased`}
+      >
         <ThemeProvider defaultTheme="system" enableSystem attribute="class">
           <SidebarProvider>
             <MySidebar updates={updates} />
