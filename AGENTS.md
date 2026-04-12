@@ -1,5 +1,9 @@
 # Sample AGENTS.md file
 
+## Before starting work
+
+- Activate the current dir as project using serena
+
 ## Dev environment tips
 
 - Use `npm ci` at the repo root to install dependencies.
