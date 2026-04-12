@@ -2,7 +2,7 @@
 
 ## Before starting work
 
-- Activate the current dir as project using serena
+- Activate the current directory as a Serena MCP project (use MCP `activate_project`; do not assume a local `serena` CLI exists).
 
 ## Dev environment tips
 
