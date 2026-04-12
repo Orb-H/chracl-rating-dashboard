@@ -1,5 +1,9 @@
 # Sample AGENTS.md file
 
+## Before starting work
+
+- Activate the current directory as a Serena MCP project (use MCP `activate_project`; do not assume a local `serena` CLI exists).
+
 ## Dev environment tips
 
 - Use `npm ci` at the repo root to install dependencies.
