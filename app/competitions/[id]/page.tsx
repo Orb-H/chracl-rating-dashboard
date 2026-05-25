@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { JSX } from "react";
 import { PlayerAvatar } from "@/components/PlayerAvatar";
 import { Accordion, AccordionItem } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
@@ -18,6 +19,7 @@ import { loadMatchesByCompetitionId } from "@/lib/loadMatches";
 import { loadPlayersById } from "@/lib/loadPlayers";
 import { Match } from "@/types/match";
 import { MatchesItem } from "./matchesItem";
+import Season1Result from "./season1Result";
 
 export const dynamicParams = false;
 
@@ -28,6 +30,10 @@ export async function generateStaticParams() {
     id: competition.id,
   }));
 }
+
+const results: Record<string, JSX.Element> = {
+  season1: <Season1Result />,
+};
 
 export default async function CompetitionDetail({
   params,
@@ -143,9 +149,12 @@ export default async function CompetitionDetail({
             )}
           </Accordion>
         </TabsContent>
-        <TabsContent value="results" className="mt-8 w-full">
-          {/* TODO(#15): Add results data of this competition and render it here. */}
-          <p>대회 결과 페이지는 현재 준비 중입니다.</p>
+        <TabsContent value="results" className="w-full">
+          {results[id] ? (
+            results[id]
+          ) : (
+            <p>대회 결과 페이지는 현재 준비 중입니다.</p>
+          )}
         </TabsContent>
       </Tabs>
     </main>
