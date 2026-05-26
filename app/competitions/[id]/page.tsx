@@ -121,8 +121,8 @@ export default async function CompetitionDetail({
             </p>
           )}
         </TabsContent>
-        <TabsContent value="matches" className="mt-8 w-full">
-          <Accordion type="multiple" className="w-full border rounded-lg">
+        <TabsContent value="matches" className="w-full">
+          <Accordion type="multiple" className="w-full">
             {competition.matches.length === 0 ? (
               <p className="text-muted-foreground">
                 아직 진행된 경기가 없습니다.
@@ -135,11 +135,7 @@ export default async function CompetitionDetail({
                 }
 
                 return (
-                  <AccordionItem
-                    key={match}
-                    value={match}
-                    className="px-4 border-b last:border-b-0"
-                  >
+                  <AccordionItem key={match} value={match}>
                     <MatchesItem match={targetMatch} />
                   </AccordionItem>
                 );

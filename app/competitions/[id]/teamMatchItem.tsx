@@ -1,5 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 import {
   Table,
   TableBody,
@@ -31,6 +30,7 @@ export function TeamMatchItem({
 
   return (
     <>
+      <header className="font-semibold text-lg mb-4">경기 결과</header>
       <Table>
         <TableHeader>
           <TableRow>
@@ -137,7 +137,7 @@ export function TeamMatchItem({
       </Table>
       {match.pointsSchemeId && (
         <>
-          <Separator className="my-4" />
+          <header className="font-semibold text-lg mt-6 mb-4">팀 점수</header>
           <Table>
             <TableHeader>
               <TableRow>
