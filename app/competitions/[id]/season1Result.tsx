@@ -21,6 +21,7 @@ import { loadPlayersById } from "@/lib/loadPlayers";
 
 export default function Season1Result() {
   const teams = loadCompetitionById("season1").teams;
+  const teamsById = Object.fromEntries(teams.map((t) => [t.id, t]));
   const players = loadPlayersById();
 
   return (
@@ -33,8 +34,7 @@ export default function Season1Result() {
             <TableCell
               className={
                 "text-center text-lg font-semibold " +
-                teams.find((t) => t.id === "season1-team-hyungdok")?.style
-                  ?.badge
+                (teamsById["season1-team-hyungdok"]?.style?.badge ?? "")
               }
               colSpan={3}
             >
@@ -98,8 +98,8 @@ export default function Season1Result() {
                   <TableCell className="text-center">
                     <Badge
                       className={
-                        teams.find((t) => t.id === "season1-team-namgung-hyuk")
-                          ?.style?.badge
+                        teamsById["season1-team-namgung-hyuk"]?.style?.badge ??
+                        ""
                       }
                     >
                       남궁혁
@@ -126,8 +126,7 @@ export default function Season1Result() {
                   <TableCell className="text-center">
                     <Badge
                       className={
-                        teams.find((t) => t.id === "season1-team-hyungdok")
-                          ?.style?.badge
+                        teamsById["season1-team-hyungdok"]?.style?.badge ?? ""
                       }
                     >
                       형독
@@ -155,8 +154,7 @@ export default function Season1Result() {
                   <TableCell className="text-center">
                     <Badge
                       className={
-                        teams.find((t) => t.id === "season1-team-yona")?.style
-                          ?.badge
+                        teamsById["season1-team-yona"]?.style?.badge ?? ""
                       }
                     >
                       요나
@@ -183,8 +181,8 @@ export default function Season1Result() {
                   <TableCell className="text-center">
                     <Badge
                       className={
-                        teams.find((t) => t.id === "season1-team-cheongalice")
-                          ?.style?.badge
+                        teamsById["season1-team-cheongalice"]?.style?.badge ??
+                        ""
                       }
                     >
                       강지형
@@ -233,8 +231,7 @@ export default function Season1Result() {
                   <TableCell className="text-center">
                     <Badge
                       className={
-                        teams.find((t) => t.id === "season1-team-hyungdok")
-                          ?.style?.badge
+                        teamsById["season1-team-hyungdok"]?.style?.badge ?? ""
                       }
                     >
                       형독
@@ -262,8 +259,8 @@ export default function Season1Result() {
                   <TableCell className="text-center">
                     <Badge
                       className={
-                        teams.find((t) => t.id === "season1-team-cheongalice")
-                          ?.style?.badge
+                        teamsById["season1-team-cheongalice"]?.style?.badge ??
+                        ""
                       }
                     >
                       강지형
@@ -290,8 +287,8 @@ export default function Season1Result() {
                   <TableCell className="text-center">
                     <Badge
                       className={
-                        teams.find((t) => t.id === "season1-team-namgung-hyuk")
-                          ?.style?.badge
+                        teamsById["season1-team-namgung-hyuk"]?.style?.badge ??
+                        ""
                       }
                     >
                       남궁혁
@@ -318,8 +315,7 @@ export default function Season1Result() {
                   <TableCell className="text-center">
                     <Badge
                       className={
-                        teams.find((t) => t.id === "season1-team-yona")?.style
-                          ?.badge
+                        teamsById["season1-team-yona"]?.style?.badge ?? ""
                       }
                     >
                       요나
@@ -370,8 +366,7 @@ export default function Season1Result() {
                   <TableCell className="text-center">
                     <Badge
                       className={
-                        teams.find((t) => t.id === "season1-team-hyungdok")
-                          ?.style?.badge
+                        teamsById["season1-team-hyungdok"]?.style?.badge ?? ""
                       }
                     >
                       형독
@@ -418,8 +413,8 @@ export default function Season1Result() {
                   <TableCell className="text-center">
                     <Badge
                       className={
-                        teams.find((t) => t.id === "season1-team-namgung-hyuk")
-                          ?.style?.badge
+                        teamsById["season1-team-namgung-hyuk"]?.style?.badge ??
+                        ""
                       }
                     >
                       남궁혁
@@ -467,8 +462,8 @@ export default function Season1Result() {
                   <TableCell className="text-center">
                     <Badge
                       className={
-                        teams.find((t) => t.id === "season1-team-cheongalice")
-                          ?.style?.badge
+                        teamsById["season1-team-cheongalice"]?.style?.badge ??
+                        ""
                       }
                     >
                       강지형
@@ -516,8 +511,7 @@ export default function Season1Result() {
                   <TableCell className="text-center">
                     <Badge
                       className={
-                        teams.find((t) => t.id === "season1-team-yona")?.style
-                          ?.badge
+                        teamsById["season1-team-yona"]?.style?.badge ?? ""
                       }
                     >
                       요나

@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import { JSX } from "react";
 import { PlayerAvatar } from "@/components/PlayerAvatar";
 import { Accordion, AccordionItem } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
@@ -31,8 +30,8 @@ export async function generateStaticParams() {
   }));
 }
 
-const results: Record<string, JSX.Element> = {
-  season1: <Season1Result />,
+const results: Record<string, React.ComponentType> = {
+  season1: Season1Result,
 };
 
 export default async function CompetitionDetail({
@@ -53,6 +52,7 @@ export default async function CompetitionDetail({
     matches.map((match) => [match.id, match]),
   );
   const players = loadPlayersById();
+  const ResultComponent = results[id];
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
@@ -150,8 +150,8 @@ export default async function CompetitionDetail({
           </Accordion>
         </TabsContent>
         <TabsContent value="results" className="w-full">
-          {results[id] ? (
-            results[id]
+          {ResultComponent ? (
+            <ResultComponent />
           ) : (
             <p>대회 결과 페이지는 현재 준비 중입니다.</p>
           )}
