@@ -23,7 +23,7 @@ export function MatchesItem({ match }: { match: Match }) {
 
   return (
     <>
-      <AccordionTrigger className="text-lg font-semibold">
+      <AccordionTrigger className="text-2xl font-bold">
         {match.name}
       </AccordionTrigger>
       <AccordionContent className="w-full">
