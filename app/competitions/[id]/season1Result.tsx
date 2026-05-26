@@ -23,6 +23,14 @@ export default function Season1Result() {
   const teams = loadCompetitionById("season1").teams;
   const teamsById = Object.fromEntries(teams.map((t) => [t.id, t]));
   const players = loadPlayersById();
+  const rankedTeams = [
+    "season1-team-hyungdok",
+    "season1-team-namgung-hyuk",
+    "season1-team-cheongalice",
+    "season1-team-yona",
+  ]
+    .map((teamId) => teamsById[teamId] ?? null)
+    .filter((team): team is NonNullable<typeof team> => team !== null);
 
   return (
     <>
@@ -39,90 +47,28 @@ export default function Season1Result() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          <TableRow>
-            <TableCell className="text-center">
-              <CrownIcon className="inline-block w-4 h-4" />
-            </TableCell>
-            <TableCell className="text-center">
-              <Badge
-                className={
-                  teamsById["season1-team-hyungdok"]?.style?.badge ?? ""
-                }
-              >
-                형독
-              </Badge>
-            </TableCell>
-            <TableCell className="text-center">
-              <PlayerAvatar player={players["hyungdok"]} />
-            </TableCell>
-            <TableCell className="text-center">
-              <PlayerAvatar player={players["hamkubby"]} />
-            </TableCell>
-            <TableCell className="text-center">
-              <PlayerAvatar player={players["reo"]} />
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="text-center font-bold">2</TableCell>
-            <TableCell className="text-center">
-              <Badge
-                className={
-                  teamsById["season1-team-namgung-hyuk"]?.style?.badge ?? ""
-                }
-              >
-                남궁혁
-              </Badge>
-            </TableCell>
-            <TableCell className="text-center">
-              <PlayerAvatar player={players["namgung-hyuk"]} />
-            </TableCell>
-            <TableCell className="text-center">
-              <PlayerAvatar player={players["odanming"]} />
-            </TableCell>
-            <TableCell className="text-center">
-              <PlayerAvatar player={players["chochou"]} />
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="text-center font-bold">3</TableCell>
-            <TableCell className="text-center">
-              <Badge
-                className={
-                  teamsById["season1-team-cheongalice"]?.style?.badge ?? ""
-                }
-              >
-                강지형
-              </Badge>
-            </TableCell>
-            <TableCell className="text-center">
-              <PlayerAvatar player={players["cheongalice"]} />
-            </TableCell>
-            <TableCell className="text-center">
-              <PlayerAvatar player={players["oversleepzzz"]} />
-            </TableCell>
-            <TableCell className="text-center">
-              <PlayerAvatar player={players["hera"]} />
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="text-center font-bold">4</TableCell>
-            <TableCell className="text-center">
-              <Badge
-                className={teamsById["season1-team-yona"]?.style?.badge ?? ""}
-              >
-                요나
-              </Badge>
-            </TableCell>
-            <TableCell className="text-center">
-              <PlayerAvatar player={players["yona"]} />
-            </TableCell>
-            <TableCell className="text-center">
-              <PlayerAvatar player={players["a2-duck"]} />
-            </TableCell>
-            <TableCell className="text-center">
-              <PlayerAvatar player={players["yang-mei"]} />
-            </TableCell>
-          </TableRow>
+          {rankedTeams.map((team, index) => (
+            <TableRow key={team.id}>
+              <TableCell className="text-center font-bold">
+                {index === 0 ? (
+                  <CrownIcon
+                    className="inline-block w-4 h-4 mr-1"
+                    aria-label="1"
+                  />
+                ) : (
+                  index + 1
+                )}
+              </TableCell>
+              <TableCell className="text-center">
+                <Badge className={team.style?.badge ?? ""}>{team.name}</Badge>
+              </TableCell>
+              {team.members.map((memberId) => (
+                <TableCell className="text-center" key={memberId}>
+                  <PlayerAvatar player={players[memberId]} />
+                </TableCell>
+              ))}
+            </TableRow>
+          ))}
         </TableBody>
       </Table>
       <header className="text-lg font-semibold mb-2">MVP</header>
@@ -432,7 +378,10 @@ export default function Season1Result() {
               <TableBody>
                 <TableRow>
                   <TableCell className="text-center">
-                    <CrownIcon className="inline-block w-4 h-4" />
+                    <CrownIcon
+                      className="inline-block w-4 h-4"
+                      aria-label="1"
+                    />
                   </TableCell>
                   <TableCell className="text-center">
                     <Badge
@@ -674,7 +623,10 @@ export default function Season1Result() {
               <TableBody>
                 <TableRow>
                   <TableCell className="text-center font-bold" rowSpan={2}>
-                    <CrownIcon className="inline-block w-4 h-4" />
+                    <CrownIcon
+                      className="inline-block w-4 h-4"
+                      aria-label="1"
+                    />
                   </TableCell>
                   <TableCell className="text-center">
                     <PlayerAvatar player={players["namgung-hyuk"]} />
