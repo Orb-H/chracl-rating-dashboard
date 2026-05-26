@@ -27,29 +27,100 @@ export default function Season1Result() {
   return (
     <>
       <header className="text-2xl font-bold mb-6">결과</header>
-      <header className="text-lg font-semibold mb-2">우승팀</header>
-      <Table className="border mb-6">
+      <header className="text-lg font-semibold mb-2">팀 순위</header>
+      <Table className="mb-6">
+        <TableHeader>
+          <TableRow>
+            <TableHead className="text-center">순위</TableHead>
+            <TableHead className="text-center">팀</TableHead>
+            <TableHead className="text-center" colSpan={3}>
+              팀원
+            </TableHead>
+          </TableRow>
+        </TableHeader>
         <TableBody>
           <TableRow>
-            <TableCell
-              className={
-                "text-center text-lg font-semibold " +
-                (teamsById["season1-team-hyungdok"]?.style?.badge ?? "")
-              }
-              colSpan={3}
-            >
-              팀 형독
+            <TableCell className="text-center">
+              <CrownIcon className="inline-block w-4 h-4" />
+            </TableCell>
+            <TableCell className="text-center">
+              <Badge
+                className={
+                  teamsById["season1-team-hyungdok"]?.style?.badge ?? ""
+                }
+              >
+                형독
+              </Badge>
+            </TableCell>
+            <TableCell className="text-center">
+              <PlayerAvatar player={players["hyungdok"]} />
+            </TableCell>
+            <TableCell className="text-center">
+              <PlayerAvatar player={players["hamkubby"]} />
+            </TableCell>
+            <TableCell className="text-center">
+              <PlayerAvatar player={players["reo"]} />
             </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell className="text-center w-1/3">
-              <PlayerAvatar player={players["hyungdok"]} />
+            <TableCell className="text-center font-bold">2</TableCell>
+            <TableCell className="text-center">
+              <Badge
+                className={
+                  teamsById["season1-team-namgung-hyuk"]?.style?.badge ?? ""
+                }
+              >
+                남궁혁
+              </Badge>
             </TableCell>
-            <TableCell className="text-center w-1/3">
-              <PlayerAvatar player={players["hamkubby"]} />
+            <TableCell className="text-center">
+              <PlayerAvatar player={players["namgung-hyuk"]} />
             </TableCell>
-            <TableCell className="text-center w-1/3">
-              <PlayerAvatar player={players["reo"]} />
+            <TableCell className="text-center">
+              <PlayerAvatar player={players["odanming"]} />
+            </TableCell>
+            <TableCell className="text-center">
+              <PlayerAvatar player={players["chochou"]} />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell className="text-center font-bold">3</TableCell>
+            <TableCell className="text-center">
+              <Badge
+                className={
+                  teamsById["season1-team-cheongalice"]?.style?.badge ?? ""
+                }
+              >
+                강지형
+              </Badge>
+            </TableCell>
+            <TableCell className="text-center">
+              <PlayerAvatar player={players["cheongalice"]} />
+            </TableCell>
+            <TableCell className="text-center">
+              <PlayerAvatar player={players["oversleepzzz"]} />
+            </TableCell>
+            <TableCell className="text-center">
+              <PlayerAvatar player={players["hera"]} />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell className="text-center font-bold">4</TableCell>
+            <TableCell className="text-center">
+              <Badge
+                className={teamsById["season1-team-yona"]?.style?.badge ?? ""}
+              >
+                요나
+              </Badge>
+            </TableCell>
+            <TableCell className="text-center">
+              <PlayerAvatar player={players["yona"]} />
+            </TableCell>
+            <TableCell className="text-center">
+              <PlayerAvatar player={players["a2-duck"]} />
+            </TableCell>
+            <TableCell className="text-center">
+              <PlayerAvatar player={players["yang-mei"]} />
             </TableCell>
           </TableRow>
         </TableBody>
