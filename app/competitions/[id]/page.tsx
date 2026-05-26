@@ -18,6 +18,7 @@ import { loadMatchesByCompetitionId } from "@/lib/loadMatches";
 import { loadPlayersById } from "@/lib/loadPlayers";
 import { Match } from "@/types/match";
 import { MatchesItem } from "./matchesItem";
+import Season1Result from "./season1Result";
 
 export const dynamicParams = false;
 
@@ -28,6 +29,10 @@ export async function generateStaticParams() {
     id: competition.id,
   }));
 }
+
+const results: Record<string, React.ComponentType> = {
+  season1: Season1Result,
+};
 
 export default async function CompetitionDetail({
   params,
@@ -47,6 +52,7 @@ export default async function CompetitionDetail({
     matches.map((match) => [match.id, match]),
   );
   const players = loadPlayersById();
+  const ResultComponent = results[id];
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
@@ -143,9 +149,12 @@ export default async function CompetitionDetail({
             )}
           </Accordion>
         </TabsContent>
-        <TabsContent value="results" className="mt-8 w-full">
-          {/* TODO(#15): Add results data of this competition and render it here. */}
-          <p>대회 결과 페이지는 현재 준비 중입니다.</p>
+        <TabsContent value="results" className="w-full">
+          {ResultComponent ? (
+            <ResultComponent />
+          ) : (
+            <p>대회 결과 페이지는 현재 준비 중입니다.</p>
+          )}
         </TabsContent>
       </Tabs>
     </main>
