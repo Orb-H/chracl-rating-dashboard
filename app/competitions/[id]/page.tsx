@@ -56,10 +56,6 @@ export default async function CompetitionDetail({
   );
   const players = loadPlayersById();
   const ResultComponent = results[id];
-  const maxTeamSize = competition.teams.reduce(
-    (max, team) => Math.max(max, team.members.length),
-    0,
-  );
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
@@ -99,7 +95,13 @@ export default async function CompetitionDetail({
                   <TableHead className="text-center">팀</TableHead>
                   <TableHead
                     className="text-center"
-                    colSpan={Math.min(3, maxTeamSize)}
+                    colSpan={Math.min(
+                      3,
+                      competition.teams.reduce(
+                        (max, team) => Math.max(max, team.members.length),
+                        0,
+                      ),
+                    )}
                   >
                     팀원
                   </TableHead>
