@@ -97,9 +97,8 @@ export default async function CompetitionDetail({
                     className="text-center"
                     colSpan={Math.min(
                       3,
-                      competition.teams.reduce(
-                        (max, team) => Math.max(max, team.members.length),
-                        0,
+                      Math.max(
+                        ...competition.teams.map((team) => team.members.length),
                       ),
                     )}
                   >
