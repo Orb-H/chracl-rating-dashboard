@@ -1157,8 +1157,8 @@
     "id": "shune",
     "displayName": "슈네",
     "aliases": ["슈네1"],
-    "avatarUrl": "https://nng-phinf.pstatic.net/MjAyNTA1MDhfMTY1/MDAxNzQ2NzA1NTIzODMx.sKEk5Mslql3sEMYGIornBO3TD-XRnIBxjpaQb2jJgLMg.EHkPxmKDOzd4SUTK6sD9ibvnfsjdG0K-MfKfauCqitcg.PNG/%EC%8A%88%EB%84%A4_%EC%B9%98%EC%A7%80%EC%A7%81_%ED%94%84%EC%82%AC.png",
-    "channelId": "d430ff9fe8811a67d0ef2889255ec6af",
+    "avatarUrl": "/players/shune.jpg",
+    "channelId": "",
     "career": [
       {
         "type": "minor",
