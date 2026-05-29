@@ -386,7 +386,7 @@ export default function Season2Result() {
                   <TableCell className="text-center font-semibold" rowSpan={2}>
                     49
                     <br />
-                    <span className="text-muted-foreground">17(문호준(17)</span>
+                    <span className="text-muted-foreground">17(문호준)</span>
                   </TableCell>
                 </TableRow>
                 <TableRow>
