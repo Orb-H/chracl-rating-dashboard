@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { Fragment } from "react/jsx-runtime";
+import { Fragment } from "react";
 import { PlayerAvatar } from "@/components/PlayerAvatar";
 import { Accordion, AccordionItem } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
