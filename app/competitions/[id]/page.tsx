@@ -123,7 +123,10 @@ export default async function CompetitionDetail({
                       <TableRow>
                         <TableCell
                           className="text-center"
-                          rowSpan={Math.max(1, Math.ceil(memberCells.length / 3))}
+                          rowSpan={Math.max(
+                            1,
+                            Math.ceil(memberCells.length / 3),
+                          )}
                         >
                           <Badge className={team.style?.badge}>
                             {team.name}
