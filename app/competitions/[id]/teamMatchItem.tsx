@@ -40,12 +40,12 @@ export function TeamMatchItem({
             <TableHead className="text-center">
               레이팅
               <br />
-              (변동)
+              <span className="text-muted-foreground">(변동)</span>
             </TableHead>
             <TableHead className="text-center">
               기록
               <br />
-              (페널티)
+              <span className="text-muted-foreground">(페널티)</span>
             </TableHead>
             {match.pointsSchemeId && (
               <TableHead className="text-center">포인트</TableHead>

@@ -25,13 +25,21 @@ export function IndividualMatchItem({
   return (
     <>
       <header className="font-semibold text-lg mb-4">경기 결과</header>
-      <Table className="border rounded-lg">
+      <Table>
         <TableHeader>
           <TableRow>
             <TableHead className="text-center">순위</TableHead>
             <TableHead className="text-center">선수</TableHead>
-            <TableHead className="text-center">레이팅</TableHead>
-            <TableHead className="text-center">기록</TableHead>
+            <TableHead className="text-center">
+              레이팅
+              <br />
+              <span className="text-muted-foreground">(변동)</span>
+            </TableHead>
+            <TableHead className="text-center">
+              기록
+              <br />
+              <span className="text-muted-foreground">(페널티)</span>
+            </TableHead>
             {match.pointsSchemeId && (
               <TableHead className="text-center">포인트</TableHead>
             )}
