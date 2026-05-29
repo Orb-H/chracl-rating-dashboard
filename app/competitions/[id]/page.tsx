@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { Fragment } from "react/jsx-runtime";
 import { PlayerAvatar } from "@/components/PlayerAvatar";
 import { Accordion, AccordionItem } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
@@ -55,6 +56,10 @@ export default async function CompetitionDetail({
   );
   const players = loadPlayersById();
   const ResultComponent = results[id];
+  const maxTeamSize = competition.teams.reduce(
+    (max, team) => Math.max(max, team.members.length),
+    0,
+  );
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-3xl mx-auto items-center py-16 px-8 md:py-32 md:px-16 bg-background md:items-start">
@@ -94,33 +99,51 @@ export default async function CompetitionDetail({
                   <TableHead className="text-center">팀</TableHead>
                   <TableHead
                     className="text-center"
-                    colSpan={competition.teams.reduce(
-                      (max, team) => Math.max(max, team.members.length),
-                      0,
-                    )}
+                    colSpan={Math.min(3, maxTeamSize)}
                   >
                     팀원
                   </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {competition.teams.map((team) => (
-                  <TableRow key={team.id}>
-                    <TableCell className="text-center">
-                      <Badge className={team.style?.badge}>{team.name}</Badge>
-                    </TableCell>
-                    {team.members
-                      .filter((memberId) => players[memberId] !== undefined)
-                      .map((memberId) => (
-                        <TableCell key={memberId} className="text-center">
-                          <PlayerAvatar
-                            player={players[memberId]}
-                            className="px-2"
-                          />
+                {competition.teams.map(function (team) {
+                  const memberCells = team.members
+                    .filter((memberId) => players[memberId] !== undefined)
+                    .map((memberId) => (
+                      <TableCell key={memberId} className="text-center">
+                        <PlayerAvatar
+                          player={players[memberId]}
+                          className="px-2"
+                        />
+                      </TableCell>
+                    ));
+                  return (
+                    <Fragment key={team.id}>
+                      <TableRow>
+                        <TableCell
+                          className="text-center"
+                          rowSpan={Math.ceil(team.members.length / 3)}
+                        >
+                          <Badge className={team.style?.badge}>
+                            {team.name}
+                          </Badge>
                         </TableCell>
-                      ))}
-                  </TableRow>
-                ))}
+                        {memberCells.slice(0, 3)}
+                      </TableRow>
+                      {memberCells.length > 3 &&
+                        Array.from({
+                          length: Math.ceil(memberCells.length / 3) - 1,
+                        }).map((_, index) => (
+                          <TableRow key={`${team.id}-extra-${index}`}>
+                            {memberCells.slice(
+                              (index + 1) * 3,
+                              (index + 2) * 3,
+                            )}
+                          </TableRow>
+                        ))}
+                    </Fragment>
+                  );
+                })}
               </TableBody>
             </Table>
           ) : (
