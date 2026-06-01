@@ -21,6 +21,7 @@ import { Match } from "@/types/match";
 import { MatchesItem } from "./matchesItem";
 import Season1Result from "./season1Result";
 import Season2Result from "./season2Result";
+import Season3Result from "./season3Result";
 
 export const dynamicParams = false;
 
@@ -35,6 +36,7 @@ export async function generateStaticParams() {
 const results: Record<string, React.ComponentType> = {
   season1: Season1Result,
   season2: Season2Result,
+  season3: Season3Result,
 };
 
 export default async function CompetitionDetail({
