@@ -113,10 +113,10 @@ export default function Season3Result() {
       <header className="text-2xl font-bold mb-2">팀 세부결과</header>
       <Accordion
         type="multiple"
-        defaultValue={["final"]}
+        defaultValue={["stint1", "stint2", "stint3"]}
         className="w-full mb-4"
       >
-        <AccordionItem value="semifinal-a" className="w-full border-b">
+        <AccordionItem value="stint1" className="w-full border-b">
           <AccordionTrigger className="w-full">
             <header className="font-semibold text-lg">STINT 1 점수 집계</header>
           </AccordionTrigger>
@@ -243,7 +243,7 @@ export default function Season3Result() {
             </Table>
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="semifinal-a" className="w-full border-b">
+        <AccordionItem value="stint2" className="w-full border-b">
           <AccordionTrigger className="w-full">
             <header className="font-semibold text-lg">STINT 2 점수 집계</header>
           </AccordionTrigger>
@@ -386,7 +386,7 @@ export default function Season3Result() {
             </Table>
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="semifinal-a" className="w-full border-b">
+        <AccordionItem value="stint3" className="w-full border-b">
           <AccordionTrigger className="w-full">
             <header className="font-semibold text-lg">STINT 3 점수 집계</header>
           </AccordionTrigger>
