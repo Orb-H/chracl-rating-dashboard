@@ -4,6 +4,7 @@ import {
   BookTextIcon,
   BrainIcon,
   ClapperboardIcon,
+  FileTextIcon,
   GithubIcon,
   GlobeIcon,
   HistoryIcon,
@@ -103,6 +104,17 @@ export function MySidebar({ updates }: { updates: Update[] }) {
                   <Link href="/rating-intro">
                     <BookTextIcon className="inline" />{" "}
                     <span>레이팅 시스템 소개</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton
+                  asChild
+                  isActive={isActive("/rating-method")}
+                >
+                  <Link href="/rating-method">
+                    <FileTextIcon className="inline" />{" "}
+                    <span>레이팅 방법론 (논문)</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
