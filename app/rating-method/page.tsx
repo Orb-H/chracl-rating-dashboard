@@ -18,10 +18,9 @@ export default function RatingMethod() {
         <div>
           <h2 className="text-3xl font-extrabold">📄 레이팅 방법론</h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            치레동 레이팅의 계산 방법을 논문 형식으로 정리한 기술 노트입니다.
-            쉬운 설명은{" "}
+            치레동 레이팅의 계산 방법을 정리한 기술 노트입니다. 쉬운 설명은{" "}
             <Link href="/rating-intro" className="text-primary underline">
-              레이팅 시스템 소개
+              간략 소개
             </Link>
             를 참고하세요.
           </p>
