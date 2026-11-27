@@ -3,8 +3,8 @@
 import {
   BookTextIcon,
   BrainIcon,
+  ChevronRightIcon,
   ClapperboardIcon,
-  FileTextIcon,
   GithubIcon,
   GlobeIcon,
   HistoryIcon,
@@ -20,6 +20,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
@@ -30,6 +35,9 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
 import { Update } from "@/types/update";
 import { UpdateSheet } from "./UpdateSheet";
@@ -99,25 +107,41 @@ export function MySidebar({ updates }: { updates: Update[] }) {
           <SidebarGroupLabel>기타</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={isActive("/rating-intro")}>
-                  <Link href="/rating-intro">
-                    <BookTextIcon className="inline" />{" "}
-                    <span>레이팅 시스템 소개</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton
-                  asChild
-                  isActive={isActive("/rating-method")}
-                >
-                  <Link href="/rating-method">
-                    <FileTextIcon className="inline" />{" "}
-                    <span>레이팅 방법론 (논문)</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
+              <Collapsible asChild defaultOpen className="group/collapsible">
+                <SidebarMenuItem>
+                  <CollapsibleTrigger asChild>
+                    <SidebarMenuButton className="hover:cursor-pointer">
+                      <BookTextIcon className="inline" />{" "}
+                      <span>레이팅 시스템</span>
+                      <ChevronRightIcon className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90" />
+                    </SidebarMenuButton>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
+                    <SidebarMenuSub>
+                      <SidebarMenuSubItem>
+                        <SidebarMenuSubButton
+                          asChild
+                          isActive={isActive("/rating-intro")}
+                        >
+                          <Link href="/rating-intro">
+                            <span>간략 소개</span>
+                          </Link>
+                        </SidebarMenuSubButton>
+                      </SidebarMenuSubItem>
+                      <SidebarMenuSubItem>
+                        <SidebarMenuSubButton
+                          asChild
+                          isActive={isActive("/rating-method")}
+                        >
+                          <Link href="/rating-method">
+                            <span>상세 방법론</span>
+                          </Link>
+                        </SidebarMenuSubButton>
+                      </SidebarMenuSubItem>
+                    </SidebarMenuSub>
+                  </CollapsibleContent>
+                </SidebarMenuItem>
+              </Collapsible>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   {/* TODO(#210): Add link to prediction page. */}
